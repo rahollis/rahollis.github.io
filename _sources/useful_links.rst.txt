@@ -1,0 +1,15 @@
+
+Useful links
+============
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 2
+
+   Piazza <https://piazza.com/buffalo/fall2020/mth337/home>
+   UBLearns  <https://ublearns.buffalo.edu>
+   Markdown cheatsheet  <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>
+   LaTeX symbols  <http://artofproblemsolving.com/wiki/index.php?title=LaTeX:Symbols>
+   Python docs <https://docs.python.org/3/>
+   Project Euler <https://projecteuler.net>   

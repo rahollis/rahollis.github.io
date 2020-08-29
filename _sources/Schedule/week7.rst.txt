@@ -1,0 +1,27 @@
+Week 7: Oct 12 - Oct 16
+=======================
+
+Project 4
+~~~~~~~~~
+
+* :doc:`Tartans </Projects/tartans/tartans>`.
+
+
+Python
+~~~~~~
+
+* :doc:`Multidimensional numpy arrays </PT/PT-multidimensional_numpy_arrays/PT-multidimensional_numpy_arrays>`
+* :doc:`Image processing </PT/PT-image_processing//PT-image_processing>`
+* Dictionaries
+
+
+Week 7 notebook
+~~~~~~~~~~~~~~~
+
+- `View online <../_static/week7_in_class.html>`_
+- `Download  <../_static/week7_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+
+Sample quiz
+~~~~~~~~~~~~~
+
+- NO QUIZ

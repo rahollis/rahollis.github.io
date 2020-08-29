@@ -1,0 +1,21 @@
+
+Weekly Schedule
+===============
+
+
+.. toctree::
+   :maxdepth: 4
+
+   Week 1 <Schedule/week1>
+   Week 2 <Schedule/week2>
+   Week 3 <Schedule/week3>
+   Week 4 <Schedule/week4>
+   Week 5 <Schedule/week5>
+   Week 6 <Schedule/week6>
+   Week 7 <Schedule/week7>
+   Week 8 <Schedule/week8>
+   Week 9 <Schedule/week9>
+   Week 10 <Schedule/week10>
+   Week 11 <Schedule/week11>
+   Week 12 <Schedule/week12>
+   Week 14 <Schedule/week14>

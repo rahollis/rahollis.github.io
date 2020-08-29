@@ -1,0 +1,33 @@
+
+Computing with Text
+===================
+
+.. rubric:: (due: Tuesday, May 5 at 8 am )
+
+For this project you will work with text files of a few classical books that were obtained from the website of
+`Project Gutenberg <http://www.gutenberg.org/wiki/Main_Page>`__:
+
+-   :download:`around_world.txt <around_world.txt>`  - J.Verne, *Around the World in Eighty Days*
+-   :download:`republic.txt <republic.txt>` - Plato, *The Republic*
+-   :download:`little.txt <little.txt>` - L.M. Alcott, *Little Women*
+-   :download:`gulliver.txt <gulliver.txt>` - J.Swift, *Gulliver's Travels into Several Remote Regions of the World*
+
+
+Project
+~~~~~~~
+
+**Part 1.** For each of these texts perform the following tasks:
+
+* Create a list of several (20 or so) words most frequently appearing in the text.
+
+* Plot frequencies of all words appearing in the text against their ranks in
+  the frequency order.
+
+**Part 2.** Analyze differences and similarities between lists of most frequent words
+and plots of words frequencies for all of these texts. Describe any patterns you see.
+
+
+If you want to expand your research to additional texts you can use
+
+Project Gutenberg files or other online resources. Use ``requests`` to retrieve
+these additional files so they are accessible when you submit the report.

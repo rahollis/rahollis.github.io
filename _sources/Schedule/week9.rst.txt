@@ -1,0 +1,27 @@
+Week 9: Oct 26 - Oct 30
+=======================
+
+Project 5
+~~~~~~~~~
+
+* :doc:`Epidemics </Projects/epidemics/epidemics>`
+
+
+Python
+~~~~~~
+
+* Broadcasting for numpy arrays.
+* :doc:`Boolean numpy arrays </PT/PT-boolean_numpy_arrays/PT-boolean_numpy_arrays>`
+* :doc:`Image processing </PT/PT-image_processing//PT-image_processing>`
+
+
+Week 10 notebook
+~~~~~~~~~~~~~~~
+
+- `View online <../_static/week10_in_class.html>`_
+- `Download  <../_static/week10_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+
+Sample quiz
+~~~~~~~~~~~~~
+
+- * :download:`Sample Quiz 7 <../Quizzes/quiz7_sample.pdf>`

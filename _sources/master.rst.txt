@@ -1,0 +1,18 @@
+.. _contents:
+
+MTH 337 table of contents
+=========================
+
+Contents:
+~~~~~~~~~~~~
+
+
+.. toctree::
+   :maxdepth: 1
+
+   Syllabus <index>
+   Project Report Guide <report_guide>
+   Useful Links <useful_links>
+   Phyton Tools <python_tools>
+   Projects <projects>
+   Weekly Schedule  <weekly_schedule>

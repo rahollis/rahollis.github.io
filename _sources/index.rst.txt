@@ -1,0 +1,140 @@
+
+=================
+Syllabus
+=================
+
+| **MTH 337 Introduction to Scientific and Mathematical Computing**
+
+| **Class times:** MW 9:10 - 11:00 AM, Discord link: <https://discord.gg/pAbBc9v>`_
+| A video of the lectures will be posted on UBLearns
+
+
+Instructor
+----------
+
+
+| Richard Hollister
+| Preferred pronouns: He, Him, His
+| **Office:** 326 Mathematics Building
+| **E-mail:** `rahollis@buffalo.edu <rahollis@buffalo.edu>`_
+| **Office Hours:** MW 2:00 - 3:00 PM and by appointment, Discord link: <https://discord.gg/pAbBc9v>`_
+|
+
+Distance Learning
+-----------------
+This class will be conducted entirely through distance learning. 
+`This document <./_static/distance_learning.pdf>`_ contains information about the class.
+
+Course Resources
+----------------
+
+**Laptop.** We will be programming during all class meetings, so you should bring
+a laptop to every class. Any operating system (Windows/Mac/Linux) is fine.
+
+**Software.** We will be using the `Anaconda distribution of Python 3.7 <https://www.anaconda.com/distribution/>`_.
+This is free software. Even if you have Python already installed on your computer you should install this
+distribution since it includes Jupyter notebook and several Python modules we will need.
+
+
+
+**Textbook.** There is no required textbook for this course but the following resorces may be helpful:
+
+    * `MTH 337 notes <http://www.acsu.buffalo.edu/~adamcunn/spring2017/_downloads/MTH337ClassnotesSpring2017.pdf>`_ by prof. Adam Cunningham.
+      These notes provide a concise introduction to Jupyter notebook and Python.
+    * `Markdown cheatsheet <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>`_.  Markdown is a scheme used
+      to format text in Jupyter notebook.
+    * `LaTeX math symbols <https://www.artofproblemsolving.com/wiki/index.php/LaTeX:Symbols>`_ - this is useful reference for
+      typesetting mathematics with Jupyter notebook.
+    * `Python 3 documentation <https://docs.python.org/3/>`_. This is the official documentation of Python 3.
+      See the Tutorial section for introduction to Python and Library Reference for a systematic description of standard
+      Python tools.
+    * `matplotlib documentation <http://matplotlib.org>`_. Matplotlib is a Python module for creating graphs and plots.
+      We will use it a lot. Matplotlib documentation is unfortunately incomplete and often quite confusing, but it includes many
+      code examples that can be helpful.
+    * `numpy documentation <http://docs.scipy.org/doc/numpy/>`_. Numpy is the main scientific computing module of Python.
+      We will use it extensively.
+
+|Piazza.| This website will be used as a message board for questions concerning this course.
+If you have such a question please post it on Piazza instead of e-mailing me. In this way other students who may have
+the same problem will benefit. If you know the answer to a question somebody else posted on Piazza please answer it.
+Do not use Piazza for personal matters (concerning your grade etc.), e-mail me directly with such issues.
+
+.. |Piazza.| raw:: html
+
+   <strong><a href="http://piazza.com/buffalo/fall2020/mth337/home">Piazza.</a> </strong>
+
+
+|UBLearns| will be used mainly for submitting project reports.
+
+.. |UBLearns| raw:: html
+
+   <strong><a href="https://ublearns.buffalo.edu">UBLearns</a> </strong>
+
+
+
+
+Grading
+-------
+
+There will be no exams in this course. Instead, grades will be assigned based on
+the following components:
+
+    * Project Reports 70%
+    * Quizzes 20%
+    * Class Participation 10%
+
+
+**Project Reports.**
+One the main components of this course will be exploratory projects. You will be
+working on them largely independently, using mathematical and computing tools.
+The outcome of your work on each project will be a project report that you will
+submit for grading. Each report will be graded on the A-F scale. Extra credit may
+be assigned for an outstanding work. Reports will be submitted via UBLearns.
+The submission deadline will be 8:00 AM on Fridays. Late reports will not be accepted.
+More information about project reports is posted :doc:`here <report_guide>`.
+
+**Quizzes.** Each Monday there will be a short quiz testing your knowledge of Python.
+Sample quizzes will be posted ahead of time with the :doc:`weekly class schedule <weekly_schedule>`.
+The lowest quiz score will be dropped.
+
+**Class Participation.** This includes class attendance, asking and answering question in class
+and on `Piazza <http://piazza.com/buffalo/fall2020/mth337/home>`_ etc.  Class participation will be evaluated weekly.
+
+
+
+Useful Information
+------------------
+
+**Important Dates:**
+	
+        * Aug. 31: first day of classes
+	* Sep. 7: class will be held on Labor Day
+	* Sep. 8: last day to drop/add
+	* Nov. 13: last day to resign
+	* Dec. 11: last day of classes
+
+**Academic Integrity.**
+Students must be familiar with and abide by the university’s policies and procedures on Academic Integrity, available at the following link: `Academic Integrity <https://catalog.buffalo.edu/policies/academic_integrity_2019-20.html>`_
+
+**Accessibility Resources.**
+If you have any disability which requires reasonable accommodations to enable you to participate in this course, please contact the Office of Accessibility Resources in 60 Capen Hall, 716-645-2608 and also the instructor of this course during the first week of class. The office will provide you with information and review appropriate arrangements for reasonable accommodations, which can be found on the web at: `Accessibility Resources <http://www.buffalo.edu/studentlife/who-we-are/departments/accessibility.html>`_.
+
+**Critical Campus Resources**
+
+**Sexual Violence.**
+UB is committed to providing a safe learning environment free of all forms of discrimination and sexual harassment, including sexual assault, domestic and dating violence and stalking. If you have experienced gender-based violence (intimate partner violence, attempted or completed sexual assault, harassment, coercion, stalking, etc.), UB has resources to help. This includes academic accommodations, health and counseling services, housing accommodations, helping with legal protective orders, and assistance with reporting the incident to police or other UB officials if you so choose. Please contact UB’s Title IX Coordinator at 716-645-2266 for more information. For confidential assistance, you may also contact a Crisis Services Campus Advocate at 716-796-4399.
+
+**Mental Health.**
+As a student you may experience a range of issues that can cause barriers to learning or reduce your ability to participate in daily activities. These might include strained relationships, anxiety, high levels of stress, alcohol/drug problems, feeling down, health concerns, or unwanted sexual experiences. Counseling, Health Services, and Health Promotion are here to help with these or other issues you may experience. You can learn more about these programs and services by contacting:
+
+Counseling Services:
+
+	* 120 Richmond Quad (North Campus), 716-645-2720
+	* 202 Michael Hall (South Campus), 716-829-5800    
+Health Services:
+
+	* Michael Hall (South Campus), 716-829-3316
+Health Promotion:
+
+	* 114 Student Union (North Campus), 716-645-2837
+

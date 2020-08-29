@@ -1,0 +1,99 @@
+
+Message decryption
+==================
+
+.. rubric:: (due: Monday, April 27, 10:00 PM)
+
+
+Message encryption is necessary to ensure safe transmission of data.
+
+
+Messages can be encrypted by changing the order of the characters in the message.
+
+
+Consider the example: 'Luke, I am your father'
+
+The encryption is done following these steps:
+
+-  An integer number **c** is chosen at random. (say c=3)
+
+-  The message is then written in a **n x c  array** (extra characters '&' might be needed if the string is too short). The dimension **n** is determined by the length of the string and the value of **c**. So the corresponding array for our message looks like this:
+
++---+---+---+
+| L | u | k |
++---+---+---+
+| e | , |   |
++---+---+---+
+| I |   | a |
++---+---+---+
+| m |   | y |
++---+---+---+
+| o | u | r |
++---+---+---+
+|   | f | a |
++---+---+---+
+| t | h | e |
++---+---+---+
+| r | & | & |
++---+---+---+
+
+-  The encrypted message is obtained from the transpose array (after removing the extra characters '&'):
+
++---+---+---+---+---+---+---+---+
+| L | e | I | m | o |   | t | r |
++---+---+---+---+---+---+---+---+
+| u | , |   |   | u | f | h | & |
++---+---+---+---+---+---+---+---+
+| k |   | a | y | r | a | e | & |
++---+---+---+---+---+---+---+---+
+
+**Encrypted message**: 'LeImo tru,  ufhk ayrae'
+
+Project
+-------
+
+Each file listed below contains text (a fragment of a book in English)
+encrypted using the method described above choosing **c** at random in the [25,100] interval. 
+
+Write a function **decrypt('txtfile')** that decrypts the file assigned to you and print the decrypted message. The function should take as a variable the name of your .txt file.
+
+A dictionary of English words is available here :download:`dictionary<dictionary.txt>`
+
+
+**Note.**  This is a programming project. Your project report does not need
+include narrative, beyond comments explaining how your code works. The project will
+be graded according to the following rubrics:
+
+* Code that successfully decrypts the text file: 70%
+* Report organization and code documentation: 30%
+
+-  :download:`aswani.txt<aswani.txt>`
+-  :download:`bas.txt<bas.txt>`
+-  :download:`burlee.txt<burlee.txt>`
+-  :download:`chen.txt<chen.txt>`
+-  :download:`chu.txt<chu.txt>`
+-  :download:`diduro.txt<diduro.txt>`
+-  :download:`elkirami.txt<elkirami.txt>`
+-  :download:`fu.txt<fu.txt>`
+-  :download:`fuller.txt<fuller.txt>`
+-  :download:`hattala.txt<hattala.txt>`
+-  :download:`hernandez.txt<hernandez.txt>`
+-  :download:`huang.txt<huang.txt>`
+-  :download:`king.txt<king.txt>`
+-  :download:`lang.txt<lang.txt>`
+-  :download:`lee.txt<lee.txt>`
+-  :download:`liu.txt<liu.txt>`
+-  :download:`lyu.txt<lyu.txt>`
+-  :download:`mages.txt<mages.txt>`
+-  :download:`mcelduff.txt<mcelduff.txt>`
+-  :download:`mcnally.txt<mcnally.txt>`
+-  :download:`munmun.txt<munmun.txt>`
+-  :download:`orecki.txt<orecki.txt>`
+-  :download:`parnagian.txt<parnagian.txt>`
+-  :download:`percy.txt<percy.txt>`
+-  :download:`tai.txt<tai.txt>`
+-  :download:`wolf.txt<wolf.txt>`
+-  :download:`xu.txt<xu.txt>`
+-  :download:`zehler.txt<zehler.txt>`
+-  :download:`zhang.txt<zhang.txt>`
+-  :download:`zubairi.txt<zubairi.txt>`

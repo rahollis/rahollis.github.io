@@ -1,0 +1,479 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Numpy arrays &mdash; MTH 337</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/table_fix.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../master.html" class="icon icon-home" alt="Documentation Home"> MTH 337
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Fall 2020
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Syllabus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../report_guide.html">Project Report Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../useful_links.html">Useful Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python_tools.html">Phyton Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly_schedule.html">Weekly Schedule</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../master.html">MTH 337</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../master.html">MTH 337</a> &raquo;</li>
+        
+      <li>Numpy arrays</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/PT/PT-numpy_arrays/PT-numpy_arrays.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="numpy-arrays">
+<h1>Numpy arrays<a class="headerlink" href="#numpy-arrays" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="numpy-array-basics">
+<h2>Numpy array basics<a class="headerlink" href="#numpy-array-basics" title="Permalink to this headline">¶</a></h2>
+<p>Numpy is the standard module for doing numerical computations
+in Python. It provides tools for writing code which is both easier to
+develop and usually a lot faster than it would be without numpy.</p>
+<p>We begin by importing numpy:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+<p>The main objects provided by numpy are numpy arrays, than in their
+simplest form are similar to lists. A list can be converted into a numpy
+array using the numpy <code class="docutils literal notranslate"><span class="pre">array()</span></code> function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mylist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>[1, 2, 3]</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers_arr</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>[1 2 3]</p>
+</div>
+<p>A visible difference between lists and numpy arrays is that arrays
+are printed without commas separating their elements. We can also use the
+<code class="docutils literal notranslate"><span class="pre">type()</span></code> function to verify that <code class="docutils literal notranslate"><span class="pre">a</span></code> is a numpy array:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">mylist</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>list</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>numpy.ndarray</p>
+</div>
+<p>One advantage of using numpy arrays that many computations can be
+performed on all array elements at once:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>  <span class="c1"># multiplication by a number</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>[2 4 6]</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># exponentiation</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>[ 1  8 27]</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">+=</span> <span class="mi">10</span>  <span class="c1"># incrementing elements of an array</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>[11 12 13]</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">300</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span> <span class="c1"># addition of arrays</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>[111 212 313]</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="o">/</span><span class="n">a</span><span class="p">)</span> <span class="c1"># division of one array by another</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>[  9.09090909  16.66666667  23.07692308]</p>
+</div>
+<p>The numpy module contains implementations of many mathematical functions
+(trigonometric, logarithmic etc.) that can be applied to whole numpy
+arrays:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>  <span class="c1"># compute sine of every element of an array</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>[-0.99999021 -0.53657292  0.42016704]</p>
+</div>
+<p>In other respects numpy array behave the same way as lists. For example, <code class="docutils literal notranslate"><span class="pre">for</span></code>
+loops work with numpy arrays as usual:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">])</span>
+
+<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>1
+4
+9
+16
+25
+36
+64</p>
+</div>
+<p>Indexing and slicing operations are also unchanged:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>[100   2   3   4   5   6   8]</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>[100   2   3   4]</p>
+</div>
+</div>
+<div class="section" id="some-differences-between-lists-and-numpy-arrays">
+<h2>Some differences between lists and numpy arrays<a class="headerlink" href="#some-differences-between-lists-and-numpy-arrays" title="Permalink to this headline">¶</a></h2>
+<p><strong>1.</strong> Lists can contain objects of different types, but in numpy arrays all
+objects must be of the same type (integers, floats, strings, booleans
+etc).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">300</span><span class="p">])</span>  <span class="c1"># a is an array of integers</span>
+<span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span>                 <span class="c1"># assigning a string as an array element results in an error</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>ValueError                                Traceback (most recent call last)</p>
+<p>&lt;ipython-input-67-3c04f588b76c&gt; in &lt;module&gt;()
+1 a = np.array([100, 200, 300])  # a is an array of integers
+—-&gt; 2 a[0] = ‘hello’                 # assigning a string as an array element results in an error</p>
+<p>ValueError: invalid literal for int() with base 10: ‘hello’</p>
+</div>
+<p><strong>2.</strong> Lists can be shortened and extended (e.g. using <code class="docutils literal notranslate"><span class="pre">append</span></code>). The
+size of a numpy array is fixed when the array is created and can’t be
+changed.</p>
+<p><strong>3.</strong> Lists slicing produces a new list, independent of the
+original list. For numpy arrays slicing produces a <em>view</em> of the
+original array; changing a slice changes the original array:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">999</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;b = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>b = [999   2   3]
+a = [999   2   3   4]</p>
+</div>
+<p>We can use the <code class="docutils literal notranslate"><span class="pre">copy()</span></code> function to get an independent copy of an
+array or its slice:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">a</span><span class="p">[:</span><span class="mi">3</span><span class="p">])</span>
+<span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">999</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;b = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>b = [999   2   3]
+a = [1 2 3 4]</p>
+</div>
+</div>
+<div class="section" id="how-to-create-a-numpy-array">
+<h2>How to create a numpy array<a class="headerlink" href="#how-to-create-a-numpy-array" title="Permalink to this headline">¶</a></h2>
+<p>Numpy arrays can be created in several ways:</p>
+<p><strong>1.</strong> The <code class="docutils literal notranslate"><span class="pre">np.array()</span></code> function converts a list into a numpy array:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>[1 2 3]</p>
+</div>
+<p><strong>2.</strong> <code class="docutils literal notranslate"><span class="pre">np.zeros()</span></code> creates an array of zeros of a given length:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a0</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>[ 0.  0.  0.  0.  0.]</p>
+</div>
+<p><strong>3.</strong> <code class="docutils literal notranslate"><span class="pre">np.ones()</span></code> creates an array of ones:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>[ 1.  1.  1.  1.  1.  1.  1.]</p>
+</div>
+<p>From here we can easily get an array with any fixed value for its
+entries:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="mf">3.14</span><span class="o">*</span><span class="n">a1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>[ 3.14  3.14  3.14  3.14  3.14  3.14  3.14]</p>
+</div>
+<p><strong>4.</strong> <code class="docutils literal notranslate"><span class="pre">np.empty()</span></code> creates an array of a given length with
+unitialized entries (more precisely, values of the array will be equal
+to whatever is in the computer memory in the region allocated to the
+array) . This is useful if we want to set values of the array at some
+later point. For large arrays <code class="docutils literal notranslate"><span class="pre">np.empty()</span></code> works faster than
+<code class="docutils literal notranslate"><span class="pre">np.zeros()</span></code> and <code class="docutils literal notranslate"><span class="pre">np.ones()</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>[  4.94065646e-324   9.88131292e-324   1.48219694e-323   1.97626258e-323]</p>
+</div>
+<p><strong>Note.</strong> By default <code class="docutils literal notranslate"><span class="pre">np.zeros()</span></code>, <code class="docutils literal notranslate"><span class="pre">np.ones()</span></code>, and <code class="docutils literal notranslate"><span class="pre">np.empty()</span></code>
+create arrays of floats, but we can use the <code class="docutils literal notranslate"><span class="pre">dtype</span></code> argument to
+specify a different data type:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>   <span class="c1"># creates an array of integers</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>[0 0 0 0 0]</p>
+</div>
+<p><strong>5.</strong> <code class="docutils literal notranslate"><span class="pre">np.arange()</span></code> is similar to the <code class="docutils literal notranslate"><span class="pre">range()</span></code> function but
+it produces a numpy array:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>[0 1 2 3 4 5 6 7 8 9]</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">evens</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="c1"># start at 10, stop at 20, increment by 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">evens</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>[10 12 14 16 18]</p>
+</div>
+<p><strong>Note.</strong> Arguments of <code class="docutils literal notranslate"><span class="pre">np.arange()</span></code> need not be integers:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">w</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">)</span> <span class="c1"># start at 0.3, stop at 1.0, increment by 0.2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>[ 0.3  0.5  0.7  0.9]</p>
+</div>
+<p><strong>6.</strong> <code class="docutils literal notranslate"><span class="pre">np.linspace(a,</span> <span class="pre">b,</span> <span class="pre">n)</span></code> creates an array of <code class="docutils literal notranslate"><span class="pre">n</span></code> evenly spaced
+points between the numbers <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>[ 0.    0.25  0.5   0.75  1.  ]</p>
+</div>
+</div>
+<div class="section" id="numpy-and-matplotlib">
+<h2>Numpy and matplotlib<a class="headerlink" href="#numpy-and-matplotlib" title="Permalink to this headline">¶</a></h2>
+<p>matplotlib works directly with numpy arrays:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/PT-numpy_arrays-1.svg"><img alt="../../_images/PT-numpy_arrays-1.svg" class="align-center" src="../../_images/PT-numpy_arrays-1.svg" width="400px" /></a>
+</div>
+<div class="section" id="further-reading">
+<h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://docs.scipy.org/doc/numpy/">Numpy documentation</a> provides a
+comprehensive numpy reference and a <a class="reference external" href="https://docs.scipy.org/doc/numpy/user/quickstart.html">quickstart
+tutorial</a>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      Last updated on Aug 20, 2020.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
