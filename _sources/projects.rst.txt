@@ -5,18 +5,10 @@ Projects
 `Project rubric <./_static/rubric337.pdf>`_
 
 
-`Project 1 Afterthoughts <./_static/prj1-afterthoughts.pdf>`_
-
 .. toctree::
    :titlesonly:
    :maxdepth: 2
 
 
     A Prime or Not a Prime <Projects/prime_or_not/prime_or_not>
-    Pythagorean Triples <Projects/pythagorean_triples/pythagorean_triples>
-    Mayfly Model  <Projects/mayfly_model/mayfly_model>
-    Tartans  <Projects/tartans/tartans>
-    Epidemic  <Projects/epidemic/epidemic>
-    Message decrypt <Projects/message_decrypt/message_decrypt>
-    Computing with text <Projects/computing_with_text/computing_with_text>
-    Simple Sudoku <Projects/simple_sudoku/simple_sudoku>
+    

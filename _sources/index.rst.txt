@@ -5,9 +5,8 @@ Syllabus
 
 | **MTH 337 Introduction to Scientific and Mathematical Computing**
 
-| **Class times:** MW 9:10 - 11:00 AM, Discord link: <https://discord.gg/pAbBc9v>`_
+| **Class times:** MW 9:10 - 11:00 AM, `Zoom link <https://buffalo.zoom.us/j/2108904377?pwd=WWRXMXFvRTlhQWJwQW02bnlSdlUwZz09>`_
 | A video of the lectures will be posted on UBLearns
-
 
 Instructor
 ----------
@@ -17,7 +16,7 @@ Instructor
 | Preferred pronouns: He, Him, His
 | **Office:** 326 Mathematics Building
 | **E-mail:** `rahollis@buffalo.edu <rahollis@buffalo.edu>`_
-| **Office Hours:** MW 2:00 - 3:00 PM and by appointment, Discord link: <https://discord.gg/pAbBc9v>`_
+| **Office Hours:** MW 2:00 - 3:00 PM and by appointment
 |
 
 Distance Learning
@@ -54,17 +53,8 @@ distribution since it includes Jupyter notebook and several Python modules we wi
     * `numpy documentation <http://docs.scipy.org/doc/numpy/>`_. Numpy is the main scientific computing module of Python.
       We will use it extensively.
 
-|Piazza.| This website will be used as a message board for questions concerning this course.
-If you have such a question please post it on Piazza instead of e-mailing me. In this way other students who may have
-the same problem will benefit. If you know the answer to a question somebody else posted on Piazza please answer it.
-Do not use Piazza for personal matters (concerning your grade etc.), e-mail me directly with such issues.
 
-.. |Piazza.| raw:: html
-
-   <strong><a href="http://piazza.com/buffalo/fall2020/mth337/home">Piazza.</a> </strong>
-
-
-|UBLearns| will be used mainly for submitting project reports.
+|UBLearns| will be used mainly for submitting project reports and storing lecture videos.
 
 .. |UBLearns| raw:: html
 
@@ -98,7 +88,7 @@ Sample quizzes will be posted ahead of time with the :doc:`weekly class schedule
 The lowest quiz score will be dropped.
 
 **Class Participation.** This includes class attendance, asking and answering question in class
-and on `Piazza <http://piazza.com/buffalo/fall2020/mth337/home>`_ etc.  Class participation will be evaluated weekly.
+and on Discord etc.  Class participation will be evaluated weekly.
 
 
 
@@ -114,10 +104,25 @@ Useful Information
 	* Dec. 11: last day of classes
 
 **Academic Integrity.**
-Students must be familiar with and abide by the university’s policies and procedures on Academic Integrity, available at the following link: `Academic Integrity <https://catalog.buffalo.edu/policies/academic_integrity_2019-20.html>`_
+Academic integrity is critical to the learning process. It is your responsibility as a student to
+complete your work in an honest fashion, upholding the expectations your individual instructors
+have for you in this regard. The ultimate goal is to ensure that you learn the content in your
+courses in accordance with UB's academic integrity principles, regardless of whether instruction
+is in-person or remote. Thank you for upholding your own personal integrity and ensuring UB's
+tradition of academic excellence. The academic integrity policy is available at:
+ `Academic Integrity <https://www.buffalo.edu/academic-integrity.html>`_
+
+While you are encouraged to collaborate with your peers to problem solve while working on the projects,
+each student is responsible for producing an original project report on their own.  Collaboration of any
+on the quizzes is forbidden, as is the use of any materials not approved of by the instructor.
 
 **Accessibility Resources.**
-If you have any disability which requires reasonable accommodations to enable you to participate in this course, please contact the Office of Accessibility Resources in 60 Capen Hall, 716-645-2608 and also the instructor of this course during the first week of class. The office will provide you with information and review appropriate arrangements for reasonable accommodations, which can be found on the web at: `Accessibility Resources <http://www.buffalo.edu/studentlife/who-we-are/departments/accessibility.html>`_.
+If you have any disability which requires reasonable accommodations to enable you to participate
+in this course, please contact the Oce of Accessibility Resources in 60 Capen Hall, 716-645-2608
+and also the instructor of this course during the rst week of class. The oce will provide you
+with information and review appropriate arrangements for reasonable accommodations, which can
+be found on the web at:
+ `Accessibility Resources <http://www.buffalo.edu/studentlife/who-we-are/departments/accessibility.html>`_.
 
 **Critical Campus Resources**
 

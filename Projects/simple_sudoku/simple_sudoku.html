@@ -1,0 +1,236 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Simple Sudoku &mdash; MTH 337</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/table_fix.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../master.html" class="icon icon-home" alt="Documentation Home"> MTH 337
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Fall 2020
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Syllabus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../report_guide.html">Project Report Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../useful_links.html">Useful Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python_tools.html">Python Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly_schedule.html">Weekly Schedule</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../master.html">MTH 337</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../master.html">MTH 337</a> &raquo;</li>
+        
+      <li>Simple Sudoku</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/Projects/simple_sudoku/simple_sudoku.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="simple-sudoku">
+<h1>Simple Sudoku<a class="headerlink" href="#simple-sudoku" title="Permalink to this headline">¶</a></h1>
+<p class="rubric">(due: Saturday, May 9, 8:00 AM)</p>
+<p>(This project is optional)</p>
+<p>A <strong>susoku</strong> is a puzzle consisting of a 9x9 grid of numbers <a class="reference external" href="https://en.wikipedia.org/wiki/Sudoku">Sudoku Wiki</a>.</p>
+<p>The objective of the puzzle is to fill in the missing cells with numbers from 1-9 such that:</p>
+<ul class="simple">
+<li><p>Each row contains no repeated numbers</p></li>
+<li><p>Each column contains no repeated numbers</p></li>
+<li><p>Each of the nine 3x3 subgrids (called also boxes) contains no repeated numbers</p></li>
+</ul>
+<p>We will be working with sudokus of the <strong>Easy</strong> cathegory (that requires no recursion)</p>
+<div class="section" id="project">
+<h2>Project<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h2>
+<p>Write a function that solve a <strong>simple sodoku</strong>. Some examples of the starting grid of a simple sudoku, that you are trying to solve for this project, are given in this file: <a class="reference download internal" download="" href="../../_downloads/656f91c12ca4594f6697bb40200f5ee7/sudokus.txt"><code class="xref download docutils literal notranslate"><span class="pre">sudokus.txt</span></code></a></p>
+<p>The following function can be use to print the sudoko</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_sudoku</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span> <span class="c1"># arr is a 9x9 numpy array</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">9</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">9</span><span class="p">):</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;.&quot;</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; </span><span class="si">{x}</span><span class="s2"> &quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">j</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\u2551</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\u2550</span><span class="s2">&quot;</span><span class="o">*</span><span class="mi">9</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\u256C</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\u2550</span><span class="s2">&quot;</span><span class="o">*</span><span class="mi">9</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\u256C</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\u2550</span><span class="s2">&quot;</span><span class="o">*</span><span class="mi">9</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Note.</strong>  This is a programming project. Your project report does not need
+include narrative, beyond comments explaining how your code works. The project will
+be graded according to the following rubrics:</p>
+<ul class="simple">
+<li><p>Code that successfully solves the simple sodoku: 70%</p></li>
+<li><p>Report organization and code documentation: 30%</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      Last updated on Sep 10, 2020.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

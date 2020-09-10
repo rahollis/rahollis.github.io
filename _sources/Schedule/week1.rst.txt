@@ -25,6 +25,7 @@ Python
 * The ``print()`` function
 * Strings and string formatting
 * :doc:`Importing modules </PT/PT-importing_modules>`
+* ``for`` loops
 * Boolean expressions
 * The ``if`` statement
 * :doc:`Lists </PT/PT-lists>` 

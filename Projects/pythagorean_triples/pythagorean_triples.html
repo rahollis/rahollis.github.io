@@ -1,0 +1,249 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Pythagorean triples &mdash; MTH 337</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/table_fix.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../master.html" class="icon icon-home" alt="Documentation Home"> MTH 337
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Fall 2020
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Syllabus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../report_guide.html">Project Report Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../useful_links.html">Useful Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python_tools.html">Python Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../weekly_schedule.html">Weekly Schedule</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../master.html">MTH 337</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../master.html">MTH 337</a> &raquo;</li>
+        
+      <li>Pythagorean triples</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/Projects/pythagorean_triples/pythagorean_triples.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pythagorean-triples">
+<h1>Pythagorean triples<a class="headerlink" href="#pythagorean-triples" title="Permalink to this headline">¶</a></h1>
+<p class="rubric">due: Friday, February 28, 8:00 AM</p>
+<p>The Pythagorean Theorem says that positive numbers <span class="math notranslate nohighlight">\(a\)</span>,
+<span class="math notranslate nohighlight">\(b\)</span>, <span class="math notranslate nohighlight">\(c\)</span> are lengths of sides of a right triangle if and
+only if <span class="math notranslate nohighlight">\(a^2 + b^2 = c^2\)</span>.</p>
+<a class="reference internal image-reference" href="../../_images/pythagorean_triples-1.svg"><img alt="../../_images/pythagorean_triples-1.svg" class="align-center" src="../../_images/pythagorean_triples-1.svg" width="170px" /></a>
+<p>An interesting problem is to determine which triples of integers satisfy
+this equation.</p>
+<p><strong>Definiton.</strong> A triple of positive integers <span class="math notranslate nohighlight">\((a, b, c)\)</span> such that
+<span class="math notranslate nohighlight">\(a^2 + b^2 = c^2\)</span> is called a <em>Pythagorean triple</em>.</p>
+<p><strong>Example.</strong> <span class="math notranslate nohighlight">\((3, 4, 5)\)</span> is a Pythagorean triple since
+<span class="math notranslate nohighlight">\(3^2 + 4^2 = 5^2\)</span>.</p>
+<p><strong>Note.</strong> In order to find a Pythagorean triple it is enough to
+find a couple of positive integers <span class="math notranslate nohighlight">\((a, b)\)</span> such that
+<span class="math notranslate nohighlight">\(\sqrt{a^2 + b^2}\)</span> is also an integer. This gives a
+Pythagorean triple <span class="math notranslate nohighlight">\((a, b, c)\)</span> where
+<span class="math notranslate nohighlight">\(c = \sqrt{a^2 + b^2}\)</span>. We will say in such case that
+<span class="math notranslate nohighlight">\((a, b)\)</span> is a <em>Pythagorean tuple</em>.</p>
+<p>The goal of this project is to investigate the structure of Pythagorean
+triples.</p>
+<div class="section" id="project">
+<h2>Project<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h2>
+<p><strong>Part 1.</strong> Write a function <code class="docutils literal notranslate"><span class="pre">ptriples(n)</span></code> that takes as its argument
+a number <span class="math notranslate nohighlight">\(n\)</span> and returns a list of all  Pythagorean triples <span class="math notranslate nohighlight">\((a, b, c)\)</span>
+where <span class="math notranslate nohighlight">\(1 \leq a, b \leq n\)</span>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ptriples</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>[[3, 4, 5],
+[4, 3, 5],
+[5, 12, 13],
+[6, 8, 10],
+[8, 6, 10],
+[8, 15, 17],
+[9, 12, 15],
+[12, 5, 13],
+[12, 9, 15],
+[12, 16, 20],
+[15, 8, 17],
+[15, 20, 25],
+[16, 12, 20],
+[20, 15, 25]]</p>
+</div>
+<p><strong>Part 2.</strong> Plot all Pythagorean tuples <span class="math notranslate nohighlight">\((a, b)\)</span> where
+<span class="math notranslate nohighlight">\(1\leq a, b \leq n\)</span> for various values of <span class="math notranslate nohighlight">\(n\)</span>.</p>
+<p><strong>Part 3.</strong> Describe and analyze the structure of Pythagorean tuples.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      Last updated on Sep 10, 2020.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,7 +1,7 @@
 A prime or not a prime
 ======================
 
-.. rubric:: due: Friday, Feb 14, 8:00 AM
+.. rubric:: due: Friday, Sep. 11, 11:59 PM
 
 Prime numbers
 -------------
