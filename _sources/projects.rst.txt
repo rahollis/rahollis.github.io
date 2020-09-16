@@ -11,4 +11,4 @@ Projects
 
 
     A Prime or Not a Prime <Projects/prime_or_not/prime_or_not>
-    
+    Pythagorean Triples <Projects/pythagorean_triples/pythagorean_triples>
