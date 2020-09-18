@@ -1,0 +1,25 @@
+Week 3: Sep 14 - Sep 18
+=======================
+
+
+Python
+~~~~~~
+
+* ``while`` loops
+* Documenting code: comments and docstrings
+* :doc:`List indexing and slicing </PT/PT-lists>`
+* :doc:`Mutable and immutable objects </PT/PT-mutable_vs_immutable/PT-mutable_vs_immutable>`
+* :doc:`Functions: positional, keyword, and default arguments </PT/PT-functions>`
+* :doc:`Plotting with Matplotlib </PT/PT-matplotlib_plots/PT-matplotlib_plots>`
+
+
+Week 3 notebook
+~~~~~~~~~~~~~~~
+
+- `View online <../_static/week3_in_class.html>`_
+- `Download  <../_static/week3_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+
+Sample quiz 3
+~~~~~~~~~~~~~
+
+- :download:`Sample Quiz 3 <../Quizzes/quiz3_sample.pdf>`
