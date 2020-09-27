@@ -1,0 +1,30 @@
+Week 4: Sep 21 - Sep 25
+=======================
+
+Project 2
+~~~~~~~~~
+
+* :doc:`Pythagorean triples </Projects/pythagorean_triples/pythagorean_triples>`.
+
+Python
+~~~~~~
+
+* :doc:`Plotting with Matplotlib </PT/PT-matplotlib_plots/PT-matplotlib_plots>`
+* :doc:`List comprehensions </PT/PT-list_comprehensions/PT-list_comprehensions>`
+
+Mathematics
+~~~~~~~~~~~
+
+* Pythagorean triples
+* The greatest common divisor
+
+Week 4 notebook
+~~~~~~~~~~~~~~~
+
+- `View online <../_static/week4_in_class.html>`_
+- `Download  <../_static/week4_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+
+Sample quiz 4
+~~~~~~~~~~~~~
+
+- :download:`Sample Quiz 4 <../Quizzes/quiz4_sample.pdf>`
