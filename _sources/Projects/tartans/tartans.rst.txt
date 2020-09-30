@@ -92,6 +92,9 @@ to produce a number between 0 and 30.  You will use the corresponding tartan for
 Find that tartan and write a function `show_tartan(n)` that produces an image of 
 this tartan of dimensions n x n threads, with pattern repeating as many times as needed to fill the whole image.
 
+For bonus points, write your function to take three inputs:  the desired size n, a dictionary containing the 
+color definitions, and a string defining the pattern.  This will require additional code, primarily, a new function
+to deconstruct the pattern string into a more usable format.
 
 **Note.**  This is a programming project. Your project report does not need to
 include narrative, beyond comments explaining how your code works. The project will
