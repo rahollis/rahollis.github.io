@@ -2,7 +2,7 @@
 Mayfly model
 ============
 
-.. rubric:: due: Friday, March 13, 8:00 AM
+.. rubric:: due: Wednesday, October 21, 9:10 AM
 
 
 
