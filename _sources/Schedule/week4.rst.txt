@@ -27,4 +27,4 @@ Week 4 notebook
 Sample quiz 4
 ~~~~~~~~~~~~~
 
-- :download:`Sample Quiz 4 <../Quizzes/quiz4_sample.pdf>`
+- No quiz this week
