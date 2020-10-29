@@ -1,0 +1,33 @@
+Week 9: Oct 26 - Oct 30
+=======================
+
+Project 5
+~~~~~~~~~
+
+* :doc:`Epidemics </Projects/epidemics/epidemics>`
+
+
+Math
+~~~~
+
+* Basics of probability
+
+
+Python
+~~~~~~
+
+* Random library
+* Modeling random processes
+* Aggregating results
+
+
+Week 9 notebook
+~~~~~~~~~~~~~~~
+
+- `View online <../_static/week9_in_class.html>`_
+- `Download  <../_static/week9_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+
+Sample quiz
+~~~~~~~~~~~~~
+
+- * :download:`Sample Quiz 9 <../Quizzes/quiz9_sample.pdf>`

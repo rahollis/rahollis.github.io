@@ -14,3 +14,4 @@ Projects
     Pythagorean Triples <Projects/pythagorean_triples/pythagorean_triples>
     Tartans <Projects/tartans/tartans>
     Mayfly Model <Projects/mayfly_model/mayfly_model>
+    Epidemic Model <Projects/epidemic/epidemic>
