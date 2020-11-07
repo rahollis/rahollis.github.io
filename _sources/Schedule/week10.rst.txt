@@ -1,0 +1,27 @@
+Week 10: Nov 2 - Nov 6
+======================
+
+Project 5
+~~~~~~~~~
+
+* :doc:`Epidemics </Projects/epidemic/epidemic>`
+
+
+Python
+~~~~~~
+
+* Broadcasting for numpy arrays.
+* :doc:`Boolean numpy arrays </PT/PT-boolean_numpy_arrays/PT-boolean_numpy_arrays>`
+* random module
+* Animation
+
+Week 11 notebook
+~~~~~~~~~~~~~~~~
+
+- `View online <../_static/week10_in_class.html>`_
+- `Download  <../_static/week10_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+
+Sample quiz
+~~~~~~~~~~~~~
+
+- * :download:`Sample Quiz 10 <../Quizzes/quiz10_sample.pdf>`
