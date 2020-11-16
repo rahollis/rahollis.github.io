@@ -1,0 +1,25 @@
+Week 12: Nov 16 - Nov 20
+========================
+
+Project 6
+~~~~~~~~~
+
+* :doc:`Computing with text </Projects/computing_with_text/computing_with_text>`
+
+
+Python
+~~~~~~
+
+* Bar plots.
+* Requests.
+
+Week 12 notebook
+~~~~~~~~~~~~~~~
+
+- `View online <../_static/week12_in_class.html>`_
+- `Download  <../_static/week12_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+
+Sample quiz
+~~~~~~~~~~~~~
+
+- No quiz for this week.
