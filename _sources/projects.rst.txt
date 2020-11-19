@@ -16,3 +16,4 @@ Projects
     Mayfly Model <Projects/mayfly_model/mayfly_model>
     Epidemic Model <Projects/epidemic/epidemic>
     Computing with Text <Projects/computing_with_text/computing_with_text>
+    Message Decryption <Projects/message_decrypt/message_decrypt>
