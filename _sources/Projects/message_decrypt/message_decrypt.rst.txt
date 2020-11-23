@@ -55,7 +55,8 @@ Project
 Each file listed below contains text (a fragment of a book in English)
 encrypted using the method described above choosing **c** at random in the [25,100] interval. 
 
-Write a function **decrypt('txtfile')** that decrypts the file assigned to you and print the decrypted message. The function should take as a variable the name of your .txt file.
+Write a function **decrypt('txtfile')** that decrypts the file corresponding to your UB Person Number modulo
+30 and print the decrypted message. The function should take as a variable the name of your .txt file.
 
 A dictionary of English words is available here :download:`dictionary<dictionary.txt>`
 
@@ -67,33 +68,33 @@ be graded according to the following rubrics:
 * Code that successfully decrypts the text file: 70%
 * Report organization and code documentation: 30%
 
--  :download:`aswani.txt<aswani.txt>`
--  :download:`bas.txt<bas.txt>`
--  :download:`burlee.txt<burlee.txt>`
--  :download:`chen.txt<chen.txt>`
--  :download:`chu.txt<chu.txt>`
--  :download:`diduro.txt<diduro.txt>`
--  :download:`elkirami.txt<elkirami.txt>`
--  :download:`fu.txt<fu.txt>`
--  :download:`fuller.txt<fuller.txt>`
--  :download:`hattala.txt<hattala.txt>`
--  :download:`hernandez.txt<hernandez.txt>`
--  :download:`huang.txt<huang.txt>`
--  :download:`king.txt<king.txt>`
--  :download:`lang.txt<lang.txt>`
--  :download:`lee.txt<lee.txt>`
--  :download:`liu.txt<liu.txt>`
--  :download:`lyu.txt<lyu.txt>`
--  :download:`mages.txt<mages.txt>`
--  :download:`mcelduff.txt<mcelduff.txt>`
--  :download:`mcnally.txt<mcnally.txt>`
--  :download:`munmun.txt<munmun.txt>`
--  :download:`orecki.txt<orecki.txt>`
--  :download:`parnagian.txt<parnagian.txt>`
--  :download:`percy.txt<percy.txt>`
--  :download:`tai.txt<tai.txt>`
--  :download:`wolf.txt<wolf.txt>`
--  :download:`xu.txt<xu.txt>`
--  :download:`zehler.txt<zehler.txt>`
--  :download:`zhang.txt<zhang.txt>`
--  :download:`zubairi.txt<zubairi.txt>`
+0.  :download:`aswani.txt<aswani.txt>`
+1.  :download:`bas.txt<bas.txt>`
+2.  :download:`burlee.txt<burlee.txt>`
+3.  :download:`chen.txt<chen.txt>`
+4.  :download:`chu.txt<chu.txt>`
+5.  :download:`diduro.txt<diduro.txt>`
+6.  :download:`elkirami.txt<elkirami.txt>`
+7.  :download:`fu.txt<fu.txt>`
+8.  :download:`fuller.txt<fuller.txt>`
+9.  :download:`hattala.txt<hattala.txt>`
+10. :download:`hernandez.txt<hernandez.txt>`
+11. :download:`huang.txt<huang.txt>`
+12. :download:`king.txt<king.txt>`
+13. :download:`lang.txt<lang.txt>`
+14. :download:`lee.txt<lee.txt>`
+15. :download:`liu.txt<liu.txt>`
+16. :download:`lyu.txt<lyu.txt>`
+17. :download:`mages.txt<mages.txt>`
+18. :download:`mcelduff.txt<mcelduff.txt>`
+19. :download:`mcnally.txt<mcnally.txt>`
+20. :download:`munmun.txt<munmun.txt>`
+21. :download:`orecki.txt<orecki.txt>`
+22. :download:`parnagian.txt<parnagian.txt>`
+23. :download:`percy.txt<percy.txt>`
+24. :download:`tai.txt<tai.txt>`
+25. :download:`wolf.txt<wolf.txt>`
+26. :download:`xu.txt<xu.txt>`
+27. :download:`zehler.txt<zehler.txt>`
+28. :download:`zhang.txt<zhang.txt>`
+29. :download:`zubairi.txt<zubairi.txt>`
