@@ -1,0 +1,24 @@
+Week 14: Nov 30 - Dec 4
+=======================
+
+Project 7
+~~~~~~~~~
+
+* :doc:`Message Decryption </Projects/message_decrypt/message_decrypt>`
+
+
+Python
+~~~~~~
+
+* Where to put the ampersands
+
+Week 14 notebook
+~~~~~~~~~~~~~~~
+
+- `View online <../_static/week14_in_class.html>`_
+- `Download  <../_static/week14_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+
+Sample quiz
+~~~~~~~~~~~~~
+
+- * :download:`Sample Quiz 14 <../Quizzes/quiz14_sample.pdf>`
