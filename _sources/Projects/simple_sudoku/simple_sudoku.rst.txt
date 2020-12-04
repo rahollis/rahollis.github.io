@@ -2,11 +2,11 @@
 Simple Sudoku
 ==================
 
-.. rubric:: (due: Saturday, May 9, 8:00 AM)
+.. rubric:: (due: Saturday, Dec 13, 11:00 PM)
 
 (This project is optional) 
 
-A **susoku** is a puzzle consisting of a 9x9 grid of numbers `Sudoku Wiki <https://en.wikipedia.org/wiki/Sudoku>`__.
+A **sudoku** is a puzzle consisting of a 9x9 grid of numbers `Sudoku Wiki <https://en.wikipedia.org/wiki/Sudoku>`__.
 
 The objective of the puzzle is to fill in the missing cells with numbers from 1-9 such that:
 
@@ -19,7 +19,7 @@ We will be working with sudokus of the **Easy** cathegory (that requires no recu
 Project
 -------
 
-Write a function that solve a **simple sodoku**. Some examples of the starting grid of a simple sudoku, that you are trying to solve for this project, are given in this file: :download:`sudokus.txt <sudokus.txt>`
+Write a function that will solve a **simple sodoku**. Some examples of the starting grid of a simple sudoku, that you are trying to solve for this project, are given in this file: :download:`sudokus.txt <sudokus.txt>`
 
 
 The following function can be use to print the sudoko

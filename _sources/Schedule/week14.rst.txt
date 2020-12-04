@@ -5,12 +5,18 @@ Project 7
 ~~~~~~~~~
 
 * :doc:`Message Decryption </Projects/message_decrypt/message_decrypt>`
+* :doc:`Solving Sudoku </Projects/simple_sudoku/simple_sudoku>`
 
 
 Python
 ~~~~~~
 
 * Where to put the ampersands
+
+Math
+~~~~
+
+* Sudoku puzzles, strategies for solving
 
 Week 14 notebook
 ~~~~~~~~~~~~~~~
