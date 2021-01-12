@@ -10,6 +10,7 @@ You are free to discuss projects with your classmates. However, each project rep
 must be solely your own work: it must be written by you in its entirety, including
 all computer code. Plagiarism will result in the zero score on a report, and
 possibly in additional sanctions (an F grade, an academic disciplinary action etc.).
+Any external sources used in writing the report must be properly cited.
 
 
 Using external resources
@@ -119,7 +120,8 @@ description.
 Report conclusions
 ~~~~~~~~~~~~~~~~~~
 
-The final section of the report must summarize your results and conclusions.
+The final section of the report must summarize your results and conclusions as well 
+as the process of obtaining them.
 
 
 Report organization
@@ -127,6 +129,7 @@ Report organization
 
 Beside the sections with introduction and conclusions the body of the
 report should be logically organized into sections reflecting its content.
+Section titles should be descriptive, but short.
 
 
 
@@ -157,7 +160,8 @@ Python code should be split into possibly short code cells that accomplish a sin
 well defined task.  In particular you should not define several functions in one cell
 or define a function and execute it in the same cell.
 
-You should explain (even if very briefly) the purpose of each piece of code. As a rule,
+You should introduce each block of code (even if very briefly) with the purpose of the code
+along with where it fits into the project plan as a whole. As a rule,
 you should not have in a report two consecutive code cells without any text between them.
 
 
@@ -210,7 +214,7 @@ Output size
 
 Your report should contain only code output that serves some purpose
 and that you expect someone to read. As a general rule, do not print more
-than 30 lines of output unless you have a good reason for it.
+than 20 lines of output unless you have a good reason for it.
 
 
 .. toctree::

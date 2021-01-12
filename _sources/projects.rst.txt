@@ -11,10 +11,4 @@ Projects
 
 
     A Prime or Not a Prime <Projects/prime_or_not/prime_or_not>
-    Pythagorean Triples <Projects/pythagorean_triples/pythagorean_triples>
-    Tartans <Projects/tartans/tartans>
-    Mayfly Model <Projects/mayfly_model/mayfly_model>
-    Epidemic Model <Projects/epidemic/epidemic>
-    Computing with Text <Projects/computing_with_text/computing_with_text>
-    Message Decryption <Projects/message_decrypt/message_decrypt>
-    Simple Sudoku <Projects/simple_sudoku/simple_sudoku>
+    

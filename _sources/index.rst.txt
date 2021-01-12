@@ -5,7 +5,9 @@ Syllabus
 
 | **MTH 337 Introduction to Scientific and Mathematical Computing**
 
-| **Class times:** MW 9:10 - 11:00 AM, `Zoom link <https://buffalo.zoom.us/j/2108904377?pwd=WWRXMXFvRTlhQWJwQW02bnlSdlUwZz09>`_
+| **Class times:** MW 9:10 - 11:00 AM,
+| `Zoom link: <https://buffalo.zoom.us/j/93950721194>`_
+| Meeting ID:  939 5072 1194
 | A video of the lectures will be posted on UBLearns
 
 Instructor
@@ -16,7 +18,7 @@ Instructor
 | Preferred pronouns: He, Him, His
 | **Office:** 326 Mathematics Building
 | **E-mail:** `rahollis@buffalo.edu <rahollis@buffalo.edu>`_
-| **Office Hours:** MW 2:00 - 3:00 PM and by appointment
+| **Office Hours:** TBA and by appointment on Discord
 |
 
 Distance Learning
@@ -30,7 +32,7 @@ Course Resources
 **Laptop.** We will be programming during all class meetings, so you should bring
 a laptop to every class. Any operating system (Windows/Mac/Linux) is fine.
 
-**Software.** We will be using the `Anaconda distribution of Python 3.7 <https://www.anaconda.com/distribution/>`_.
+**Software.** We will be using the `Anaconda distribution of Python 3.8 <https://www.anaconda.com/distribution/>`_.
 This is free software. Even if you have Python already installed on your computer you should install this
 distribution since it includes Jupyter notebook and several Python modules we will need.
 
@@ -75,12 +77,13 @@ the following components:
 
 
 **Project Reports.**
-One the main components of this course will be exploratory projects. You will be
+The main component of this course will be exploratory projects. You will be
 working on them largely independently, using mathematical and computing tools.
 The outcome of your work on each project will be a project report that you will
 submit for grading. Each report will be graded on the A-F scale. Extra credit may
 be assigned for an outstanding work. Reports will be submitted via UBLearns.
-The submission deadline will be 8:00 AM on Fridays. Late reports will not be accepted.
+Late reports will not be accepted.  Your project report must be an original, 
+even if you worked on some components of the project in a group.
 More information about project reports is posted :doc:`here <report_guide>`.
 
 **Quizzes.** Each Monday there will be a short quiz testing your knowledge of Python.
@@ -97,11 +100,10 @@ Useful Information
 
 **Important Dates:**
 	
-        * Aug. 31: first day of classes
-	* Sep. 7: class will be held on Labor Day
-	* Sep. 8: last day to drop/add
-	* Nov. 13: last day to resign
-	* Dec. 11: last day of classes
+        * Feb. 1: first day of classes
+	* Feb. 8: last day to drop/add
+	* April 16: last day to resign
+	* May 7: last day of classes
 
 **Academic Integrity.**
 Academic integrity is critical to the learning process. It is your responsibility as a student to
@@ -113,8 +115,12 @@ tradition of academic excellence. The academic integrity policy is available at:
  `Academic Integrity <https://www.buffalo.edu/academic-integrity.html>`_
 
 While you are encouraged to collaborate with your peers to problem solve while working on the projects,
-each student is responsible for producing an original project report on their own.  Collaboration of any
-on the quizzes is forbidden, as is the use of any materials not approved of by the instructor.
+each student is responsible for producing an original project report on their own.  Any outside resource 
+that is used during the project (this includes code taken from class notes or other sources) or while 
+writing the report must be properly cited in the report. 
+
+Collaboration of any kind on the quizzes is forbidden, as is the use of any materials not approved of 
+by the instructor.
 
 **Accessibility Resources.**
 If you have any disability which requires reasonable accommodations to enable you to participate

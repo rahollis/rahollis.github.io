@@ -1,4 +1,4 @@
-Week 2: Sep 7 - Sep 11
+Week 2: Feb 8 - Feb 12
 ======================
 
 
@@ -20,7 +20,7 @@ Mathematics
 Project 1
 ~~~~~~~~~
 
-Due: Friday, February 14, 8:00 AM.
+Due: Monday, February 15, 9:00 AM.
 
 * :doc:`A Prime or Not a Prime </Projects/prime_or_not/prime_or_not>`.
 
