@@ -10,5 +10,5 @@ Projects
    :maxdepth: 2
 
 
-    A Prime or Not a Prime <Projects/prime_or_not/prime_or_not>
+    
     
