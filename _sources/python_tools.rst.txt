@@ -9,3 +9,6 @@ Python tools
 
    Importing modules </PT/PT-importing_modules>
    Lists, ranges, and "for" loops </PT/PT-lists>
+   Functions </PT/PT-functions>
+   List comprehensions </PT/PT-list_comprehensions/PT-list/comprehensions>
+   matplotlib plots </PT/PT-matplotlib_plots/PT-matplotlib_plots>

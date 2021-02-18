@@ -10,5 +10,6 @@ Projects
    :maxdepth: 2
 
    Prime or not Prime <Projects/prime_or_not/prime_or_not>
+   Pythagorean Triples <Projects/pythagorean_triples/pythagorean_triples>
     
     
