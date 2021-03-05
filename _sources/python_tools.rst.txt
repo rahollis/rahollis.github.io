@@ -11,4 +11,6 @@ Python tools
    Lists, ranges, and "for" loops </PT/PT-lists>
    Functions </PT/PT-functions>
    List comprehensions </PT/PT-list_comprehensions/PT-list/comprehensions>
-   matplotlib plots </PT/PT-matplotlib_plots/PT-matplotlib_plots>
+   Matplotlib plots </PT/PT-matplotlib_plots/PT-matplotlib_plots>
+   Matplotlib subplots </PT/PT-matplotlib_subplots/PT-matplotlib_subplots>
+   Numpy arrays </PT/PT-numpy_arrays/PT-numpy_arrays>
