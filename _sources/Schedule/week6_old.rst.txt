@@ -1,28 +1,22 @@
 Week 6: Mar 8 - Mar 12
 ======================
 
-Project 5
+Project 3
 ~~~~~~~~~
 
-* :doc:`Epidemics </Projects/epidemics/epidemics>`
-
-
-Math
-~~~~
-
-* Basics of probability
-
+* :doc:`Tartans project </Projects/tartans/tartans>`.
 
 Python
 ~~~~~~
 
-* Random library
-* Modeling random processes
-* Aggregating results
-* Numpy arrays
+* :doc:`numpy arrays </PT/PT-numpy_arrays/PT-numpy_arrays>`
 
+Mathematics
+~~~~~~~~~~~
 
-Week 9 notebook
+* 3-dimensional arrays
+
+Week 6 notebook
 ~~~~~~~~~~~~~~~
 
 - `View online <../_static/week6_in_class.html>`_
@@ -31,4 +25,4 @@ Week 9 notebook
 Sample quiz
 ~~~~~~~~~~~~~
 
-- * :download:`Sample Quiz 6 <../Quizzes/quiz6_sample.pdf>`
+- No quiz this week
