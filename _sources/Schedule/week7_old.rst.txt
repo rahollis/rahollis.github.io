@@ -1,22 +1,27 @@
 Week 7: Mar 15 - Mar 19
-======================
+=======================
 
-Project 5
+Project 4
 ~~~~~~~~~
 
-* :doc:`Epidemics </Projects/epidemic/epidemic>`
+* :doc:`Mayfly Model </Projects/mayfly_model/mayfly_model>`.
 
 
 Python
 ~~~~~~
 
-* Broadcasting for numpy arrays.
-* :doc:`Boolean numpy arrays </PT/PT-boolean_numpy_arrays/PT-boolean_numpy_arrays>`
-* random module
-* Animation
+* Plots
+
+Math
+~~~~
+
+* Sequences
+* Recursive equations
+* Fibonacci sequences
+
 
 Week 7 notebook
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 - `View online <../_static/week7_in_class.html>`_
 - `Download  <../_static/week7_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
@@ -24,4 +29,4 @@ Week 7 notebook
 Sample quiz
 ~~~~~~~~~~~~~
 
-- * No Quiz
+- No quiz this week
