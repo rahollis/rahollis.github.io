@@ -1,7 +1,7 @@
 Week 6: Mar 8 - Mar 12
 ======================
 
-Project 5
+Project 4
 ~~~~~~~~~
 
 * :doc:`Epidemics </Projects/epidemics/epidemics>`

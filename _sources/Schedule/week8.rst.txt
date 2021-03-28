@@ -1,33 +1,36 @@
 Week 8: Mar 22 - Mar 26
-=======================
+=====================
 
-Project 4
+Project 5
 ~~~~~~~~~
 
-* :doc:`Mayfly Model </Projects/mayfly_model/mayfly_model>`.
-
-
-Mathematics
-~~~~~~~~~~~
-
-* Recursive models
-* Model dependence on parameters
-* Bifurcation diagrams
-
+* :doc:`Making a Tartan </Projects/tartans/tartans>`.
 
 Python
 ~~~~~~
 
-* Advanced plotting techniques
+* :doc:`numpy arrays </PT/PT-numpy_arrays/PT-numpy_arrays>`
+* methods of creating a numpy array
+* indexing and slicing of numpy arrays
+* numpy arrays and matplotlib
+* color plots
+* :doc:`Matplotlib subplots </PT/PT-matplotlib_subplots/PT-matplotlib_subplots>`
+* :doc:`List comprehensions </PT/PT-list_comprehensions/PT-list_comprehensions>`
+
+Mathematics
+~~~~~~~~~~~
+
+* Multidimensional arrays
+* RGB colors
 
 
-Week 8 notebook
+Week 5 notebook
 ~~~~~~~~~~~~~~~
 
 - `View online <../_static/week8_in_class.html>`_
 - `Download  <../_static/week8_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
 
-Sample quiz
+Sample quiz 5
 ~~~~~~~~~~~~~
 
-- * :download:`Sample Quiz 8 <../Quizzes/quiz8_sample.pdf>`
+- :download:`Sample Quiz 8 <../Quizzes/quiz8_sample.pdf>`

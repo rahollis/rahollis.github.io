@@ -12,3 +12,4 @@ Weekly Schedule
    Week 5 <Schedule/week5>
    Week 6 <Schedule/week6>
    Week 7 <Schedule/week7>
+   Week 8 <Schedule/week8>
