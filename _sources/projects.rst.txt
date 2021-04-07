@@ -14,4 +14,5 @@ Projects
    Mayfly Model <Projects/mayfly_model/mayfly_model>
    Epidemic Model <Projects/epidemic/epidemic>
    Making a Tartan <Projects/tartans/tartans>
+   Word analysis <Projects/computing_with_text/computing_with_text>
     

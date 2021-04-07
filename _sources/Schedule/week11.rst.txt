@@ -1,4 +1,4 @@
-Week 11: Apr 12 - Apr 16
+Week 9: Apr 5 - Apr 9
 ========================
 
 Project 6
@@ -14,13 +14,13 @@ Python
 * File operations.
 * Dictionaries.
 
-Week 11 notebook
+Week 9 notebook
 ~~~~~~~~~~~~~~~
 
-- `View online <../_static/week11_in_class.html>`_
-- `Download  <../_static/week11_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+- `View online <../_static/week9_in_class.html>`_
+- `Download  <../_static/week9_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
 
 Sample quiz
 ~~~~~~~~~~~~~
 
-- * :download:`Sample Quiz 11 <../Quizzes/quiz11_sample.pdf>`
+- * :download:`Sample Quiz 9 <../Quizzes/quiz9_sample.pdf>`
