@@ -1,25 +1,17 @@
-Week 9: Mar 29 - Apr 2
-======================
+Week 9: Apr 5 - Apr 9
+========================
 
-Project 5
+Project 6
 ~~~~~~~~~
 
-* :doc:`Epidemics </Projects/epidemics/epidemics>`
-
-
-Math
-~~~~
-
-* Basics of probability
+* :doc:`Computing with text </Projects/computing_with_text/computing_with_text>`
 
 
 Python
 ~~~~~~
 
-* Random library
-* Modeling random processes
-* Aggregating results
-
+* String processing.
+* File operations.
 
 Week 9 notebook
 ~~~~~~~~~~~~~~~
@@ -30,4 +22,4 @@ Week 9 notebook
 Sample quiz
 ~~~~~~~~~~~~~
 
-- * :download:`Sample Quiz 9 <../Quizzes/quiz9_sample.pdf>`
+- * No quiz this week.

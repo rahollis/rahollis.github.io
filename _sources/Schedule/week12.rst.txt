@@ -1,4 +1,4 @@
-Week 12: Apr 19 - Apr 23
+Week 10: Apr 12 - Apr 16
 ========================
 
 Project 6
@@ -12,14 +12,15 @@ Python
 
 * Bar plots.
 * Requests.
+* Dictionaries.
 
 Week 12 notebook
 ~~~~~~~~~~~~~~~
 
-- `View online <../_static/week12_in_class.html>`_
-- `Download  <../_static/week12_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+- `View online <../_static/week10_in_class.html>`_
+- `Download  <../_static/week10_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
 
 Sample quiz
 ~~~~~~~~~~~~~
 
-- No quiz for this week.
+- :download:`Sample Quiz 10 <../Quizzes/quiz10_sample.pdf>`
