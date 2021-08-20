@@ -6,9 +6,7 @@ Syllabus
 | **MTH 337 Introduction to Scientific and Mathematical Computing**
 
 | **Class times:** MW 9:10 - 11:00 AM,
-| `Zoom link: <https://buffalo.zoom.us/j/93950721194>`_
-| Meeting ID:  939 5072 1194
-| A video of the lectures will be posted on UBLearns
+| Location: Math 150
 
 Instructor
 ----------
@@ -18,13 +16,8 @@ Instructor
 | Preferred pronouns: He, Him, His
 | **Office:** 326 Mathematics Building
 | **E-mail:** `rahollis@buffalo.edu <rahollis@buffalo.edu>`_
-| **Office Hours:** TBA and by appointment on Discord
+| **Office Hours:** MW 11:00 AM - 12:00 PM
 |
-
-Distance Learning
------------------
-This class will be conducted entirely through distance learning. 
-`This document <./_static/distance_learning.pdf>`_ contains information about the class.
 
 Course Resources
 ----------------
@@ -56,7 +49,7 @@ distribution since it includes Jupyter notebook and several Python modules we wi
       We will use it extensively.
 
 
-|UBLearns| will be used mainly for submitting project reports and storing lecture videos.
+|UBLearns| will be used mainly for submitting project reports.  Grades will be available upon request during office hours.
 
 .. |UBLearns| raw:: html
 
@@ -85,13 +78,14 @@ be assigned for an outstanding work. Reports will be submitted via UBLearns.
 Late reports will not be accepted.  Your project report must be an original, 
 even if you worked on some components of the project in a group.
 More information about project reports is posted :doc:`here <report_guide>`.
+The lowest project score will be dropped at the end of the semester.
 
 **Quizzes.** Each Monday there will be a short quiz testing your knowledge of Python.
 Sample quizzes will be posted ahead of time with the :doc:`weekly class schedule <weekly_schedule>`.
-The lowest quiz score will be dropped.
+The lowest two quiz score will be dropped.
 
 **Class Participation.** This includes class attendance, asking and answering question in class
-and on Discord etc.  Class participation will be evaluated weekly.
+and during office hours.  Class participation will be evaluated weekly.
 
 
 
@@ -100,10 +94,12 @@ Useful Information
 
 **Important Dates:**
 	
-        * Feb. 1: first day of classes
-	* Feb. 8: last day to drop/add
-	* April 16: last day to resign
-	* May 7: last day of classes
+        * Aug. 30: first day of classes
+	* Sep. 6: Labor Day recess
+	* Sep. 7: last day to drop/add
+	* Nov. 12: last day to resign
+	* Nov. 24 - 27: Fall recess
+	* Dec. 10: last day of classes
 
 **Academic Integrity.**
 Academic integrity is critical to the learning process. It is your responsibility as a student to
@@ -125,7 +121,7 @@ by the instructor.
 **Accessibility Resources.**
 If you have any disability which requires reasonable accommodations to enable you to participate
 in this course, please contact the Oce of Accessibility Resources in 60 Capen Hall, 716-645-2608
-and also the instructor of this course during the rst week of class. The oce will provide you
+and also the instructor of this course during the first week of class. The office will provide you
 with information and review appropriate arrangements for reasonable accommodations, which can
 be found on the web at:
  `Accessibility Resources <http://www.buffalo.edu/studentlife/who-we-are/departments/accessibility.html>`_.
