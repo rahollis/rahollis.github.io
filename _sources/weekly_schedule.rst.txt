@@ -6,4 +6,4 @@ Weekly Schedule
 .. toctree::
    :maxdepth: 4
 
-   
+   Week 1 </Schedule/week1>
