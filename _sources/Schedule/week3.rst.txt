@@ -1,17 +1,15 @@
-Week 3: Feb 15 - Sep 19
+Week 3: Sep 13 - Sep 17
 =======================
 
+Project Report
+~~~~~~~~~~~~~~
+
+* expectations
 
 Python
 ~~~~~~
 
-* ``while`` loops
-* Documenting code: comments and docstrings
-* :doc:`List indexing and slicing </PT/PT-lists>`
-* :doc:`Mutable and immutable objects </PT/PT-mutable_vs_immutable/PT-mutable_vs_immutable>`
-* :doc:`Functions: positional, keyword, and default arguments </PT/PT-functions>`
-* :doc:`Plotting with Matplotlib </PT/PT-matplotlib_plots/PT-matplotlib_plots>`
-
+* nbextensions
 
 Week 3 notebook
 ~~~~~~~~~~~~~~~

@@ -1,0 +1,55 @@
+
+A funny function
+================
+
+.. rubric:: due: Friday, Sep 24, 11:59 PM
+
+Consider the function of positive integers where for each 
+positive integer :math:`n`, :math:`\phi(n)` is equal to the number
+of integers between 0 and :math:`n` are relatively prime to :math:`n`.
+
+Relative primeness is an important concept in many areas of mathematics
+from number theory to linear algebra.  Two positive integers are relatively 
+prime if they have no divisors in common; 
+i.e. their GCD (greatest common divisor) is 1.
+
+In order to calculate the values of this function for a given 
+:math:`n`, it is important to be able to calculate the GCD of any
+two positive integers :math:`a` and :math:`b`.  One way to do this is to use
+the Euclidean division algorithm.
+
+Assume that :math:`a\geq b`.  The algorithm works by first dividing :math:`b`
+into :math:`a` to get the quotient :math:`q_1` and remainder :math:`r_1` so
+that 
+:math:`a = q_1\cdot b + r_1.`
+If :math:`r_1 = 0`, then the GCD is :math:`b`.  If not, then the algorithm
+continues by dividing :math:`r_1` into :math:`b` to obtain quotient :math:`q_2`
+and remainder :math:`r_2` such that
+:math:`b = q_2 \cdot r_1 + r_2.`
+If :math:`r_2 = 0`, then the GCD is :math:`r_1`.  If not, the algorithm 
+continues in general by dividing :math:`r_j` into :math:`r_{j-1}` obtaining
+quotient :math:`q_{j+1}` and remainder :math:`r_{j+1}` such that
+:math:`r_{j-1} = q_{j+1} \cdot r_j + r_{j+1}.`
+If :math:`r_{j+1} = 0`, then the GCD is :math:`r_j`. If not, continue.
+
+The goal of this project is to investigate properties of :math:`\phi(n)`
+graphically using Python, and algebraically.
+
+Project
+-------
+
+Write a Python function that will calculate the value of :math:`\phi(n)`
+given a positive integer :math:`n`.  Then use this function to graph Euler's
+totient up to some :math:`N`, and make observations of any patterns you see
+in the graph.  Next, hypothesize algebraic properties of :math:`\phi` to explain
+any patterns you see, and then test your hypotheses using Python.
+
+**Note.** I do not expect all your hypotheses to be correct.  What I want to see
+is that you are not only thinking deeply about the patterns and trying to explain
+them, but also following through with your hypotheses by designed some simple 
+Python experiments.
+
+**Values of** :math:`\phi(n)`. The first 20 values of the function are given below, 
+starting with the input of 1.
+
+0,1,2,2,4,2,6,4,6,4,10,4,12,6,8,8,16,6,18,8
