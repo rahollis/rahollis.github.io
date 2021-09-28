@@ -1,10 +1,10 @@
-Week 4: Feb 22 - Feb 26
+Week 4: Sep 20 - Sep 24
 =======================
 
 Project 2
 ~~~~~~~~~
 
-* :doc:`Pythagorean triples </Projects/pythagorean_triples/pythagorean_triples>`.
+* :doc:`A Funny Function </Projects/funny_function/funny_function>`.
 
 Python
 ~~~~~~
@@ -15,8 +15,8 @@ Python
 Mathematics
 ~~~~~~~~~~~
 
-* Pythagorean triples
-* The greatest common divisor
+* Relatively prime integers
+* GCD
 
 Week 4 notebook
 ~~~~~~~~~~~~~~~
