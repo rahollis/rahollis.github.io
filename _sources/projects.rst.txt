@@ -12,4 +12,5 @@ Projects
    A Particular Sequence </Projects/part_sequence/part_sequence>
    A Funny Function </Projects/funny_function/funny_function>
    Mayfly Model </Projects/mayfly_model/mayfly_model>
+   Image Denoise </Projects/image_denoise/image_denoise>
     
