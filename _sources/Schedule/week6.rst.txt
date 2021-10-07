@@ -1,25 +1,25 @@
-Week 6: Mar 8 - Mar 12
-======================
+Week 6: Oct 4 - Oct 8
+=====================
 
 Project 4
 ~~~~~~~~~
 
-* :doc:`Epidemics </Projects/epidemics/epidemics>`
+* :doc:`Image Denoising </Projects/image_denoise/image_denoise>`
 
 
 Math
 ~~~~
 
-* Basics of probability
+* Image noise filtering.
 
 
 Python
 ~~~~~~
 
 * Random library
-* Modeling random processes
-* Aggregating results
+* Numpy library
 * Numpy arrays
+* Converting an image to an array, and back again
 
 
 Week 9 notebook
@@ -31,4 +31,4 @@ Week 9 notebook
 Sample quiz
 ~~~~~~~~~~~~~
 
-- * :download:`Sample Quiz 6 <../Quizzes/quiz6_sample.pdf>`
+- * :download:`Sample Quiz 5 <../Quizzes/quiz5_sample.pdf>`
