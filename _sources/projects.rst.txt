@@ -13,4 +13,5 @@ Projects
    A Funny Function </Projects/funny_function/funny_function>
    Mayfly Model </Projects/mayfly_model/mayfly_model>
    Image Denoising </Projects/image_denoise/image_denoise>
+   Tartans </Projects/tartans/tartans>
     
