@@ -1,19 +1,17 @@
-Week 7: Mar 15 - Mar 19
-======================
+Week 7: Oct 11 - Oct 15
+=======================
 
 Project 4
 ~~~~~~~~~
 
-* :doc:`Epidemics </Projects/epidemic/epidemic>`
+* :doc:`Tartans </Projects/tartans/tartans>`
 
 
 Python
 ~~~~~~
 
-* Broadcasting for numpy arrays.
-* :doc:`Boolean numpy arrays </PT/PT-boolean_numpy_arrays/PT-boolean_numpy_arrays>`
-* random module
-* Animation
+* 3D numpy arrays.
+* Color coordinates.
 
 Week 7 notebook
 ~~~~~~~~~~~~~~~~
@@ -24,4 +22,4 @@ Week 7 notebook
 Sample quiz
 ~~~~~~~~~~~~~
 
-- * No Quiz
+- * :download:`Sample Quiz 6 <../Quizzes/quiz6_sample.pdf>`
