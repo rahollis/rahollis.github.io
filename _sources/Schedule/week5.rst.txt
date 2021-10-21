@@ -21,7 +21,7 @@ Python
 * Advanced plotting techniques
 
 
-Week 8 notebook
+Week 5 notebook
 ~~~~~~~~~~~~~~~
 
 - `View online <../_static/week5_in_class.html>`_

@@ -1,5 +1,5 @@
-Week 8: Mar 22 - Mar 26
-=====================
+Week 8: Oct 18 - Oct 22
+=======================
 
 Project 5
 ~~~~~~~~~
@@ -24,13 +24,13 @@ Mathematics
 * RGB colors
 
 
-Week 5 notebook
+Week 8 notebook
 ~~~~~~~~~~~~~~~
 
 - `View online <../_static/week8_in_class.html>`_
 - `Download  <../_static/week8_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
 
-Sample quiz 5
-~~~~~~~~~~~~~
+Sample quiz
+~~~~~~~~~~~
 
-- :download:`Sample Quiz 8 <../Quizzes/quiz8_sample.pdf>`
+- No quiz

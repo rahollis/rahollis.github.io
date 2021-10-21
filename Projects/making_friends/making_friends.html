@@ -192,8 +192,8 @@ relationships; in particular, we will be looking at the friendship network
 of a group of individuals and how it can change over time.</p>
 <p>In order to model the friendship network, we need to know a little more
 about networks from a mathematical point of view.</p>
-<p>A _network_ (or _graph_) is a collection of points called _nodes_ (or
-_vertices_) connected by lines called _edges_.  There can only be one edge
+<p>A <em>network</em> (or <em>graph</em>) is a collection of points called <em>nodes</em> (or
+<em>vertices</em>) connected by lines called <em>edges</em>.  There can only be one edge
 connecting two distinct nodes,and there cannot be an edge connecting a
 node to itself.  In the friendship network, the nodes will represent people,
 and the edges will represent a friendship between two people.  Below is an
@@ -212,26 +212,26 @@ probability of adding an edge between nodes <span class="math notranslate nohigh
 <div class="math notranslate nohighlight">
 \[Pr_{add}(i,j) = 1 - (1 - p_{add})^{N(i,j)}\]</div>
 <p>where <span class="math notranslate nohighlight">\(N(i,j)\)</span> is the number of nodes that are adjacent to both
-<span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span>.  Note that if <span class="math notranslate nohighlight">\(N(i,j) = 0\)</span>, then
+<span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span>, and <span class="math notranslate nohighlight">\(p_{add}\)</span> is the probability of forming
+a friendship per mutual friend.  Note that if <span class="math notranslate nohighlight">\(N(i,j) = 0\)</span>, then
 <span class="math notranslate nohighlight">\(Pr_{add}(i,j) = 0\)</span>.</p>
 <p>To model the fading of friendships, we can use the rule “The more friends
-you have, the more likely it is to lose a friendship.”  Mathematically, the
-probability of removing an edge between nodes <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span> is</p>
+you have, the more likely it is to lose touch with one of them.”
+Mathematically, the probability of removing an edge between nodes <span class="math notranslate nohighlight">\(i\)</span>
+and <span class="math notranslate nohighlight">\(j\)</span> is</p>
 <div class="math notranslate nohighlight">
 \[Pr_{rem}(i,j) = 1 - (1 - p_{rem})^{D(i)+D(j)-2}\]</div>
-<p>where <span class="math notranslate nohighlight">\(D(i)\)</span> is the number of nodes adjacent to node <span class="math notranslate nohighlight">\(i\)</span>,
-similarly for <span class="math notranslate nohighlight">\(D(j)\)</span>.  Note that if <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span> have no
-other friends than each other, the probability of removing the friendship
-between them is 0.</p>
+<p>where <span class="math notranslate nohighlight">\(D(u)\)</span> is the number of nodes adjacent to node <span class="math notranslate nohighlight">\(u\)</span>, and
+<span class="math notranslate nohighlight">\(p_{rem}\)</span> is the probability of losing touch with a friend per current
+friend.  Note that if <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span> have no other friends than each
+other, the probability of removing the friendship between them is 0.</p>
 <div class="section" id="project">
 <h2>Project<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h2>
-<p><strong>Part 1.</strong> Write functions to generate a cyclic graph with <span class="math notranslate nohighlight">\(n\)</span>
-vertices, a linear graph with <span class="math notranslate nohighlight">\(n\)</span> vertices, and a complete graph
-with <span class="math notranslate nohighlight">\(n\)</span> vertices.</p>
-<p><strong>Part 2.</strong> Write a function that models the changes to a friendship
+<p><strong>Part 1.</strong> Write a function that models the changes to a friendship
 network after one time step.</p>
 <p><strong>Part 2.</strong> Modify the following code to produce an animation of the
-dynamic changes the friendship network undergoes.</p>
+dynamic changes the friendship network undergoes.  Note that the function
+<code class="code docutils literal notranslate"><span class="pre">generate_random_edges</span></code> used below can be found in the class notes.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">notebook</span>
 
 <span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
@@ -276,7 +276,7 @@ with one-way friendships (respect network).</p>
 
   <div role="contentinfo">
     <p>
-      Last updated on Oct 16, 2021.
+      Last updated on Oct 20, 2021.
 
     </p>
   </div> 

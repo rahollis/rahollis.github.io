@@ -22,7 +22,7 @@ Python
 * Converting an image to an array, and back again
 
 
-Week 9 notebook
+Week 6 notebook
 ~~~~~~~~~~~~~~~
 
 - `View online <../_static/week6_in_class.html>`_

@@ -10,8 +10,8 @@ of a group of individuals and how it can change over time.
 In order to model the friendship network, we need to know a little more
 about networks from a mathematical point of view.
 
-A _network_ (or _graph_) is a collection of points called _nodes_ (or 
-_vertices_) connected by lines called _edges_.  There can only be one edge
+A *network* (or *graph*) is a collection of points called *nodes* (or 
+*vertices*) connected by lines called *edges*.  There can only be one edge
 connecting two distinct nodes,and there cannot be an edge connecting a 
 node to itself.  In the friendship network, the nodes will represent people,
 and the edges will represent a friendship between two people.  Below is an
@@ -34,33 +34,32 @@ probability of adding an edge between nodes :math:`i` and :math:`j` is
 .. math:: Pr_{add}(i,j) = 1 - (1 - p_{add})^{N(i,j)}
 
 where :math:`N(i,j)` is the number of nodes that are adjacent to both 
-:math:`i` and :math:`j`.  Note that if :math:`N(i,j) = 0`, then 
+:math:`i` and :math:`j`, and :math:`p_{add}` is the probability of forming
+a friendship per mutual friend.  Note that if :math:`N(i,j) = 0`, then 
 :math:`Pr_{add}(i,j) = 0`.
 
 To model the fading of friendships, we can use the rule "The more friends
-you have, the more likely it is to lose a friendship."  Mathematically, the
-probability of removing an edge between nodes :math:`i` and :math:`j` is
+you have, the more likely it is to lose touch with one of them."  
+Mathematically, the probability of removing an edge between nodes :math:`i`
+and :math:`j` is
 
 .. math:: Pr_{rem}(i,j) = 1 - (1 - p_{rem})^{D(i)+D(j)-2}
 
-where :math:`D(i)` is the number of nodes adjacent to node :math:`i`, 
-similarly for :math:`D(j)`.  Note that if :math:`i` and :math:`j` have no
-other friends than each other, the probability of removing the friendship
-between them is 0.
+where :math:`D(u)` is the number of nodes adjacent to node :math:`u`, and
+:math:`p_{rem}` is the probability of losing touch with a friend per current
+friend.  Note that if :math:`i` and :math:`j` have no other friends than each 
+other, the probability of removing the friendship between them is 0.
 
 
 Project
 -------
 
-**Part 1.** Write functions to generate a cyclic graph with :math:`n`
-vertices, a linear graph with :math:`n` vertices, and a complete graph
-with :math:`n` vertices.
-
-**Part 2.** Write a function that models the changes to a friendship 
+**Part 1.** Write a function that models the changes to a friendship 
 network after one time step.
 
 **Part 2.** Modify the following code to produce an animation of the 
-dynamic changes the friendship network undergoes.
+dynamic changes the friendship network undergoes.  Note that the function
+:code:`generate_random_edges` used below can be found in the class notes.
 
 .. code:: python
 
