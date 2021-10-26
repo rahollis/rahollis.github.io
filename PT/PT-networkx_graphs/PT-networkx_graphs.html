@@ -105,6 +105,7 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">NetworkX library</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#the-networkx-library">The NetworkX library</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#graphs">Graphs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#weighted-edges">Weighted Edges</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#digraphs">Digraphs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#multigraphs">Multigraphs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#further-reading">Further reading</a></li>
@@ -224,7 +225,7 @@ labeled with positive integers, and an edge between two nodes is given
 by an ordered pair.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
 <span class="n">G</span><span class="o">.</span><span class="n">add_nodes_from</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
-<span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
 <span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -235,7 +236,8 @@ edges can either be added individually or from a list using different methods.</
 <div class="figure align-center">
 <a class="reference internal image-reference" href="../../_images/graph1.png"><img alt="../../_images/graph1.png" src="../../_images/graph1.png" style="width: 450px;" /></a>
 </div>
-<p>Notice that the layout of the nodes seems almost random.  To make the
+<p>Notice that the layout of the nodes is not ideal, and we do not know which
+node is which.  To make the
 graph come out looking better, we can add some additional arguments to
 the <code class="code docutils literal notranslate"><span class="pre">draw</span></code> function.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">nx</span><span class="o">.</span><span class="n">circular_layout</span><span class="p">(</span><span class="n">G</span><span class="p">),</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -244,6 +246,10 @@ the <code class="code docutils literal notranslate"><span class="pre">draw</span
 <div class="figure align-center">
 <a class="reference internal image-reference" href="../../_images/graph1_circular.png"><img alt="../../_images/graph1_circular.png" src="../../_images/graph1_circular.png" style="width: 450px;" /></a>
 </div>
+<p>In the above code, the argument <code class="code docutils literal notranslate"><span class="pre">pos=nx.circular_layout(G)</span></code> arranges
+the nodes in a circle going counterclockwise with the first node on the right.
+The argument <code class="code docutils literal notranslate"><span class="pre">with_labels=True</span></code> turns on the node labels so we can tell
+which node is which.</p>
 <p>To modify the graph, we do not need to start over from scratch, we can
 simply add additional nodes and edges using the methods <code class="code docutils literal notranslate"><span class="pre">add_node</span></code>,
 <code class="code docutils literal notranslate"><span class="pre">add_nodes_from</span></code>, <code class="code docutils literal notranslate"><span class="pre">add_edge</span></code>, and <code class="code docutils literal notranslate"><span class="pre">add_edges_from</span></code>.</p>
@@ -255,6 +261,10 @@ simply add additional nodes and edges using the methods <code class="code docuti
 <div class="figure align-center">
 <a class="reference internal image-reference" href="../../_images/graph2.png"><img alt="../../_images/graph2.png" src="../../_images/graph2.png" style="width: 450px;" /></a>
 </div>
+<p>We can also remove nodes and edges in a similar fashion using the methods
+<code class="code docutils literal notranslate"><span class="pre">remove_node</span></code>, <code class="code docutils literal notranslate"><span class="pre">remove_nodes_from</span></code>, <code class="code docutils literal notranslate"><span class="pre">remove_edge</span></code>, and
+<code class="code docutils literal notranslate"><span class="pre">remove_edges_from</span></code>.  When removing nodes, any edges containing the
+removed node will also be removed.</p>
 <p>You can take at look at the nodes and edges in your graph at anytime
 using the <code class="code docutils literal notranslate"><span class="pre">nodes</span></code> and <code class="code docutils literal notranslate"><span class="pre">edges</span></code> methods.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">G</span><span class="o">.</span><span class="n">nodes</span><span class="p">()</span>
@@ -291,6 +301,34 @@ the degree of a node.</p>
 </div>
 <div class="output docutils container">
 <p>3</p>
+</div>
+</div>
+<div class="section" id="weighted-edges">
+<h2>Weighted Edges<a class="headerlink" href="#weighted-edges" title="Permalink to this headline">¶</a></h2>
+<p>NetworkX also makes it possible to assign different attributes to each
+edge, the most common of which are edge weights.  An <em>edge weight</em> is
+a real number associated to an edge, typically representing the
+importance of the connection between the two corresponding nodes.</p>
+<p>A weighted edge between nodes <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> with weight <span class="math notranslate nohighlight">\(w\)</span>
+is represented by the triple <span class="math notranslate nohighlight">\((x,y,w)\)</span>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">W</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
+<span class="n">W</span><span class="o">.</span><span class="n">add_weighted_edges_from</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mf">1.3</span><span class="p">),(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mf">1.9</span><span class="p">),(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mf">0.8</span><span class="p">),(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mf">2.3</span><span class="p">)])</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">W</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">nx</span><span class="o">.</span><span class="n">circular_layout</span><span class="p">(</span><span class="n">W</span><span class="p">),</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/weighted_graph1.png"><img alt="../../_images/weighted_graph1.png" src="../../_images/weighted_graph1.png" style="width: 450px;" /></a>
+</div>
+<p>Notice that <code class="code docutils literal notranslate"><span class="pre">nx.draw</span></code> does not draw the edge weights.  For that
+we will need some additional commands.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">weights</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">get_edge_attributes</span><span class="p">(</span><span class="n">W</span><span class="p">,</span><span class="s1">&#39;weight&#39;</span><span class="p">)</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">W</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">nx</span><span class="o">.</span><span class="n">circular_layout</span><span class="p">(</span><span class="n">W</span><span class="p">),</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edge_labels</span><span class="p">(</span><span class="n">W</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">nx</span><span class="o">.</span><span class="n">circular_layout</span><span class="p">(</span><span class="n">W</span><span class="p">),</span> <span class="n">edge_labels</span><span class="o">=</span><span class="n">weights</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/weighted_graph2.png"><img alt="../../_images/weighted_graph2.png" src="../../_images/weighted_graph2.png" style="width: 450px;" /></a>
 </div>
 </div>
 <div class="section" id="digraphs">
@@ -372,7 +410,7 @@ official documentation for the NetworkX library.</p>
 
   <div role="contentinfo">
     <p>
-      Last updated on Oct 20, 2021.
+      Last updated on Oct 26, 2021.
 
     </p>
   </div> 

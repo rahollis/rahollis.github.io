@@ -14,4 +14,5 @@ Projects
    Mayfly Model </Projects/mayfly_model/mayfly_model>
    Image Denoising </Projects/image_denoise/image_denoise>
    Tartans </Projects/tartans/tartans>
+   Making Friends </Projects/making_friends/making_friends>
     
