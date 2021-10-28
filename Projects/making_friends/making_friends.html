@@ -39,7 +39,9 @@
 
     
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Weekly Schedule" href="../../weekly_schedule.html" />
+    <link rel="prev" title="Tartans" href="../tartans/tartans.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -88,12 +90,23 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">Syllabus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../report_guide.html">Project Report Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../useful_links.html">Useful Links</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../python_tools.html">Python Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../projects.html">Projects</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../projects.html">Projects</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../part_sequence/part_sequence.html">A Particular Sequence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../funny_function/funny_function.html">A Funny Function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mayfly_model/mayfly_model.html">Mayfly Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../image_denoise/image_denoise.html">Image Denoising</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tartans/tartans.html">Tartans</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Making Friends</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#project">Project</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../weekly_schedule.html">Weekly Schedule</a></li>
 </ul>
 
@@ -141,6 +154,8 @@
     
       <li><a href="../../master.html">MTH 337</a> &raquo;</li>
         
+          <li><a href="../../projects.html">Projects</a> &raquo;</li>
+        
       <li>Making Friends</li>
     
     
@@ -186,7 +201,7 @@
 </style>
 <div class="section" id="making-friends">
 <h1>Making Friends<a class="headerlink" href="#making-friends" title="Permalink to this headline">¶</a></h1>
-<p class="rubric">(due: Friday, Nov 5, 11:59 PM)</p>
+<p class="rubric">(due: Wednesday, Nov 10, 9:00 PM)</p>
 <p>In this project we will be exploring ways to model changing social
 relationships; in particular, we will be looking at the friendship network
 of a group of individuals and how it can change over time.</p>
@@ -239,14 +254,14 @@ dynamic changes the friendship network undergoes.  Note that the function
 <span class="kn">from</span> <span class="nn">matplotlib.animation</span> <span class="kn">import</span> <span class="n">FuncAnimation</span>
 
 <span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
-<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_nodes_from</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">])</span>
 
 <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
 <span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">nx</span><span class="o">.</span><span class="n">circular_layout</span><span class="p">(</span><span class="n">G</span><span class="p">))</span>
 
 <span class="k">def</span> <span class="nf">animate</span><span class="p">(</span><span class="n">frame</span><span class="p">):</span>
     <span class="n">fig</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-    <span class="n">edges_to_add</span> <span class="o">=</span> <span class="n">generate_random_edges</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mf">0.2</span><span class="p">)</span>
+    <span class="n">edges_to_add</span> <span class="o">=</span> <span class="p">[(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span><span class="o">&lt;</span><span class="mf">0.2</span><span class="p">]</span>
     <span class="n">edges_to_remove</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">edges</span><span class="p">()</span>
     <span class="n">G</span><span class="o">.</span><span class="n">remove_edges_from</span><span class="p">(</span><span class="n">edges_to_remove</span><span class="p">)</span>
     <span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">(</span><span class="n">edges_to_add</span><span class="p">)</span>
@@ -276,7 +291,7 @@ with one-way friendships (respect network).</p>
 
   <div role="contentinfo">
     <p>
-      Last updated on Oct 20, 2021.
+      Last updated on Oct 28, 2021.
 
     </p>
   </div> 

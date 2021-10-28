@@ -1,17 +1,24 @@
-Week 9: Apr 5 - Apr 9
+Week 9: Oct 25 - Oct 29
 ========================
 
 Project 6
 ~~~~~~~~~
 
-* :doc:`Computing with text </Projects/computing_with_text/computing_with_text>`
+* :doc:`Making Friends </Projects/making_friends/making_friends>`
+
+Mathematics
+~~~~~~~~~~~
+
+* Networks/graphs
+* Dynamic network models
 
 
 Python
 ~~~~~~
 
-* String processing.
-* File operations.
+* :doc:`NetworkX Library </PT/PT-networkx_graphs/PT-networkx_graphs>`
+* Creating, manipulating, and displaying networks
+* Animation
 
 Week 9 notebook
 ~~~~~~~~~~~~~~~
@@ -22,4 +29,4 @@ Week 9 notebook
 Sample quiz
 ~~~~~~~~~~~~~
 
-- * No quiz this week.
+- :download:`Sample quiz 7 <../Quizzes/quiz7_sample.pdf>`

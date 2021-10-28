@@ -1,7 +1,7 @@
 Making Friends
 ==============
 
-.. rubric:: (due: Friday, Nov 5, 11:59 PM)
+.. rubric:: (due: Wednesday, Nov 10, 9:00 PM)
 
 In this project we will be exploring ways to model changing social 
 relationships; in particular, we will be looking at the friendship network
@@ -71,14 +71,14 @@ dynamic changes the friendship network undergoes.  Note that the function
 	from matplotlib.animation import FuncAnimation
 
 	G = nx.Graph()
-	G.add_edges_from([0,1,2,3,4,5,6,7,8,9])
+	G.add_nodes_from([0,1,2,3,4,5,6,7,8,9])
 
 	fig = plt.figure(figsize = (5,5))
 	nx.draw(G, pos=nx.circular_layout(G))
 
 	def animate(frame):
 	    fig.clear()
-	    edges_to_add = generate_random_edges(10,0.2)
+	    edges_to_add = [(i,j) for i in range(10) for j in range(i+1,10) if random.random()<0.2]
 	    edges_to_remove = G.edges()
 	    G.remove_edges_from(edges_to_remove)
 	    G.add_edges_from(edges_to_add)
