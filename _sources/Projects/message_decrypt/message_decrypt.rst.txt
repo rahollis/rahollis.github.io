@@ -2,7 +2,7 @@
 Message decryption
 ==================
 
-.. rubric:: (due: Wednesday, April 28, 9:00 AM)
+.. rubric:: (due: Friday, Nov. 19, 11:00PM)
 
 
 Message encryption is necessary to ensure safe transmission of data.

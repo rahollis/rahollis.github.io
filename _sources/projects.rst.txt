@@ -15,4 +15,5 @@ Projects
    Image Denoising </Projects/image_denoise/image_denoise>
    Tartans </Projects/tartans/tartans>
    Making Friends </Projects/making_friends/making_friends>
+   Encryption/Decryption </Projects/message_decrypt/message_decrypt>
     
