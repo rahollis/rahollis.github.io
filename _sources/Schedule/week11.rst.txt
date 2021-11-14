@@ -1,5 +1,5 @@
-Week 11: Apr 19 - Apr 23
-========================
+Week 11: Nov 8 - Nov 12
+=======================
 
 Project 7
 ~~~~~~~~~
@@ -14,7 +14,7 @@ Math
 Python
 ~~~~~~
 
-* reshape in numpy
+* Encrypting using shift cipher
 
 Week 11 notebook
 ~~~~~~~~~~~~~~~~
@@ -25,4 +25,4 @@ Week 11 notebook
 Sample quiz
 ~~~~~~~~~~~
 
-- No quiz this week.
+- :download:`Sample Quiz 8 <../Quizzes/quiz8_sample.pdf>`
