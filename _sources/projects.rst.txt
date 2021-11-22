@@ -16,4 +16,5 @@ Projects
    Tartans </Projects/tartans/tartans>
    Making Friends </Projects/making_friends/making_friends>
    Encryption/Decryption </Projects/message_decrypt/message_decrypt>
+   Solving Sudoku </Projects/simple_sudoku/simple_sudoku>
     
