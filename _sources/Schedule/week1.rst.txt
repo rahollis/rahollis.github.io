@@ -1,5 +1,5 @@
-Week 1: Feb 1 - Feb 5
-=====================
+Week 1: Aug 30 - Sep 3
+======================
 
 Logistics
 ~~~~~~~~~
@@ -13,7 +13,6 @@ Jupyter Notebook
 * Copying/deleting/moving cells
 * Code cells and markdown cells
 * Markdown basics
-* LaTeX
 
 
 Python

@@ -9,12 +9,12 @@ Projects
    :titlesonly:
    :maxdepth: 2
 
-   Prime or not Prime <Projects/prime_or_not/prime_or_not>
-   Pythagorean Triples <Projects/pythagorean_triples/pythagorean_triples>
-   Mayfly Model <Projects/mayfly_model/mayfly_model>
-   Epidemic Model <Projects/epidemic/epidemic>
-   Making a Tartan <Projects/tartans/tartans>
-   Word analysis <Projects/computing_with_text/computing_with_text>
-   Message Decryption <Projects/message_decrypt/message_decrypt>
-   Simple Sudoku Solver <Projects/simple_sudoku/simple_sudoku>
+   A Particular Sequence </Projects/part_sequence/part_sequence>
+   A Funny Function </Projects/funny_function/funny_function>
+   Mayfly Model </Projects/mayfly_model/mayfly_model>
+   Image Denoising </Projects/image_denoise/image_denoise>
+   Tartans </Projects/tartans/tartans>
+   Making Friends </Projects/making_friends/making_friends>
+   Encryption/Decryption </Projects/message_decrypt/message_decrypt>
+   Solving Sudoku </Projects/simple_sudoku/simple_sudoku>
     

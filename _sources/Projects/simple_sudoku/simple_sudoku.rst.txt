@@ -2,7 +2,7 @@
 Simple Sudoku
 ==================
 
-.. rubric:: (due: Monday, May 10, 9:00 AM)
+.. rubric:: (due: Monday, Dec 10, 11:00 PM)
 
 A **sudoku** is a puzzle consisting of a 9x9 grid of numbers `Sudoku Wiki <https://en.wikipedia.org/wiki/Sudoku>`__.
 

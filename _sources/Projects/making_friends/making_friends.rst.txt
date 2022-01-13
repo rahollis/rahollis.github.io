@@ -1,0 +1,100 @@
+Making Friends
+==============
+
+.. rubric:: (due: Wednesday, Nov 10, 9:00 PM)
+
+In this project we will be exploring ways to model changing social 
+relationships; in particular, we will be looking at the friendship network
+of a group of individuals and how it can change over time.
+
+In order to model the friendship network, we need to know a little more
+about networks from a mathematical point of view.
+
+A *network* (or *graph*) is a collection of points called *nodes* (or 
+*vertices*) connected by lines called *edges*.  There can only be one edge
+connecting two distinct nodes,and there cannot be an edge connecting a 
+node to itself.  In the friendship network, the nodes will represent people,
+and the edges will represent a friendship between two people.  Below is an
+example of a network.
+
+.. figure:: network1.png
+   :width: 450px
+   :align: center
+
+To create and manipulate networks in Python we will use the :code:`NetworkX`
+library.  This library contains objects called :code:`Graphs` along with
+methods to add/removes nodes and edges as well as display the graph.
+
+Since we wish to explore the dynamics of friendship networks, we need to
+have rules for how friendships can be created and destroyed.  To begin with
+we will use the simple rule "The more mutual friends you have with someone,
+the more likely it is to form a friendship."  Mathematically, the
+probability of adding an edge between nodes :math:`i` and :math:`j` is
+
+.. math:: Pr_{add}(i,j) = 1 - (1 - p_{add})^{N(i,j)}
+
+where :math:`N(i,j)` is the number of nodes that are adjacent to both 
+:math:`i` and :math:`j`, and :math:`p_{add}` is the probability of forming
+a friendship per mutual friend.  Note that if :math:`N(i,j) = 0`, then 
+:math:`Pr_{add}(i,j) = 0`.
+
+To model the fading of friendships, we can use the rule "The more friends
+you have, the more likely it is to lose touch with one of them."  
+Mathematically, the probability of removing an edge between nodes :math:`i`
+and :math:`j` is
+
+.. math:: Pr_{rem}(i,j) = 1 - (1 - p_{rem})^{D(i)+D(j)-2}
+
+where :math:`D(u)` is the number of nodes adjacent to node :math:`u`, and
+:math:`p_{rem}` is the probability of losing touch with a friend per current
+friend.  Note that if :math:`i` and :math:`j` have no other friends than each 
+other, the probability of removing the friendship between them is 0.
+
+
+Project
+-------
+
+**Part 1.** Write a function that models the changes to a friendship 
+network after one time step.
+
+**Part 2.** Modify the following code to produce an animation of the 
+dynamic changes the friendship network undergoes.  Note that the function
+:code:`generate_random_edges` used below can be found in the class notes.
+
+.. code:: python
+
+
+	%matplotlib notebook
+
+	import networkx as nx
+	import matplotlib.pyplot as plt
+	from matplotlib.animation import FuncAnimation
+
+	G = nx.Graph()
+	G.add_nodes_from([0,1,2,3,4,5,6,7,8,9])
+
+	fig = plt.figure(figsize = (5,5))
+	nx.draw(G, pos=nx.circular_layout(G))
+
+	def animate(frame):
+	    fig.clear()
+	    edges_to_add = [(i,j) for i in range(10) for j in range(i+1,10) if random.random()<0.2]
+	    edges_to_remove = G.edges()
+	    G.remove_edges_from(edges_to_remove)
+	    G.add_edges_from(edges_to_add)
+	    nx.draw(G, pos=nx.circular_layout(G))
+
+	anim = FuncAnimation(fig=fig, func=animate,  interval=100, blit=True, repeat=False)
+	plt.show()
+
+
+
+
+**Part 3.** Explore the effects of different starting configurations (cycles, paths,
+complete graph), different values of :math:`p_{add}`, and different values of :math:`p_{rem}`.
+
+**Bonus.** How might we modify our model to more accurately reflect the evolving nature
+of friendships?  Some ideas:  other methods for determining the probability of adding or
+removing edges, weighted edges that reflect the strength of the friendship, directed graphs
+with one-way friendships (respect network).
+

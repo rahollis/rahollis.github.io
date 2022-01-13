@@ -1,13 +1,11 @@
-Week 2: Feb 8 - Feb 12
+Week 2: Sep 8 - Sep 10
 ======================
 
 
 Python
 ~~~~~~
 
-* :doc:`Lists and "for" loops </PT/PT-lists>`
-* ``range()``
-* Fine-tuning loops: ``break`` and ``continue``
+* If/else statements
 * :doc:`Functions </PT/PT-functions>`
 * Logical operators: ``not``, ``and``, ``or``
 
@@ -15,14 +13,14 @@ Python
 Mathematics
 ~~~~~~~~~~~
 
-* Congruences
+* Sequences and series
 
 Project 1
 ~~~~~~~~~
 
-Due: Monday, February 15, 9:00 AM.
+Due: Friday Sep 17, 11:59 PM
 
-* :doc:`A Prime or Not a Prime </Projects/prime_or_not/prime_or_not>`.
+* :doc:`A Particular Sequence </Projects/part_sequence/part_sequence>`.
 
 
 
