@@ -5,8 +5,8 @@ Syllabus
 
 | **MTH 337 Introduction to Scientific and Mathematical Computing**
 
-| **Class times:** MW 9:10 - 11:00 AM,
-| Location: Math 150
+| **Class times:** MW 9:00 - 10:50 AM,
+| Location: Math 250
 
 Instructor
 ----------
@@ -92,14 +92,22 @@ and during office hours.  Class participation will be evaluated weekly.
 Useful Information
 ------------------
 
+**COVID-19 Information**
+Due to the continuing COVID-19 pandemic, high-quality masks must be worn at all times during class.  If I notice that you
+do not have a mask on, I will ask you to either put one on or leave the classroom.  Please make sure your
+mask covers both your mouth and nose and fits tightly on your face without gaps between your mask and your
+face.  I may ask you to leave the classroom if your mask does not fit tightly.  As per University policy, 
+cloth masks, scarves, bandanas, etc. do not count as high-quality masks, please use an N95 or KN95 or similar
+mask.  For more information at the pandemic health and safety policies, please see the
+`Health and Safety Guidelines <https://www.buffalo.edu/coronavirus/health-and-safety/health-safety-guidelines.html>`_.
+
 **Important Dates:**
 	
-        * Aug. 30: first day of classes
-	* Sep. 6: Labor Day recess
-	* Sep. 7: last day to drop/add
-	* Nov. 12: last day to resign
-	* Nov. 24 - 27: Fall recess
-	* Dec. 10: last day of classes
+        * Jan 31: first day of classes
+	* Feb 7: last day to drop/add
+	* Mar 21 - 25: Fall recess
+	* Apr 22: last day to resign
+	* May 13: last day of classes
 
 **Academic Integrity.**
 Academic integrity is critical to the learning process. It is your responsibility as a student to
