@@ -1,4 +1,4 @@
-Week 1: Aug 30 - Sep 3
+Week 1: Jan 31 - Jan 4
 ======================
 
 Logistics
@@ -29,10 +29,6 @@ Python
 * The ``if`` statement
 * :doc:`Lists </PT/PT-lists>` 
 
-
-Mathematics
-~~~~~~~~~~~
-* Prime numbers
 
 
 Week 1 notebook
