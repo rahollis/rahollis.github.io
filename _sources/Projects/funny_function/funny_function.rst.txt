@@ -2,7 +2,7 @@
 A funny function
 ================
 
-.. rubric:: due: Friday, Sep 24, 11:59 PM
+.. rubric:: due: Wednesday, Mar 2, 11:59 PM
 
 Consider the function of positive integers where for each 
 positive integer :math:`n`, :math:`\phi(n)` is equal to the number

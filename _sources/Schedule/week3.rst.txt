@@ -1,4 +1,4 @@
-Week 3: Sep 13 - Sep 17
+Week 3: Feb 14 - Feb 18
 =======================
 
 Project Report
@@ -9,7 +9,7 @@ Project Report
 Python
 ~~~~~~
 
-* nbextensions
+* Plotting
 
 Week 3 notebook
 ~~~~~~~~~~~~~~~
