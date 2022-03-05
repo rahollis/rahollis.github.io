@@ -1,4 +1,4 @@
-Week 5: Sep 27 - Oct 1
+Week 5: Feb 28 - Mar 4
 ======================
 
 Project 3
@@ -10,15 +10,9 @@ Project 3
 Mathematics
 ~~~~~~~~~~~
 
-* Recursive models
+* Population models
 * Model dependence on parameters
 * Bifurcation diagrams
-
-
-Python
-~~~~~~
-
-* Advanced plotting techniques
 
 
 Week 5 notebook
