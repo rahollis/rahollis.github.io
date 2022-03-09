@@ -4,22 +4,13 @@ Week 6: Oct 4 - Oct 8
 Project 4
 ~~~~~~~~~
 
-* :doc:`Image Denoising </Projects/image_denoise/image_denoise>`
+* :doc:`Mayfly Model </Projects/mayfly_model/mayfly_model>`.
 
 
 Math
 ~~~~
 
-* Image noise filtering.
-
-
-Python
-~~~~~~
-
-* Random library
-* Numpy library
-* Numpy arrays
-* Converting an image to an array, and back again
+* Bifurcation
 
 
 Week 6 notebook
@@ -31,4 +22,4 @@ Week 6 notebook
 Sample quiz
 ~~~~~~~~~~~~~
 
-- * :download:`Sample Quiz 5 <../Quizzes/quiz5_sample.pdf>`
+- * No Quiz this week.
