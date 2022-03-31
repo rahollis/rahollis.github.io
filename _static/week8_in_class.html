@@ -12947,8 +12947,13 @@ ul.typeahead-list  > li > a.pull-right {
 /*# sourceMappingURL=style.min.css.map */
     </style>
 <style type="text/css">
-    .highlight .hll { background-color: #ffffcc }
-.highlight  { background: #f8f8f8; }
+    pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.highlight .hll { background-color: #ffffcc }
+.highlight { background: #f8f8f8; }
 .highlight .c { color: #408080; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
 .highlight .k { color: #008000; font-weight: bold } /* Keyword */
@@ -13017,6 +13022,19 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
+<style type="text/css">
+    /*This file contains any manual css for this page that needs to override the global styles.
+This is only required when different pages style the same element differently. This is just
+a hack to deal with our current css styles and no new styling should be added in this file.*/
+
+#ipython-main-app {
+    position: relative;
+}
+#jupyter-main-app {
+    position: relative;
+}
+
+    </style>
 
 
 <style type="text/css">
@@ -13077,37 +13095,90 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Week-8">Week 8<a class="anchor-link" href="#Week-8">&#182;</a></h1><h2 id="Quiz-5">Quiz 5<a class="anchor-link" href="#Quiz-5">&#182;</a></h2><ol>
-<li><p>Write some code to loop through the characters in the string <code>'AB27'</code> and separate the letters from numbers. 
-The result should be a tuple <code>('AB',27)</code>.</p>
-</li>
-<li><p>What colors correspond to the following RGB color tuples</p>
+<h1 id="Week-8">Week 8<a class="anchor-link" href="#Week-8">&#182;</a></h1><h2 id="Quiz-5">Quiz 5<a class="anchor-link" href="#Quiz-5">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li><p>Match the following RGB colors with their Python color coordinate tuples.</p>
 <ul>
-<li>(1,1,0)</li>
-<li>(1,1,1)</li>
-<li>(0,1,1)</li>
+<li>colors<ul>
+<li>Red</li>
+<li>Yellow</li>
+<li>Cyan</li>
 </ul>
+</li>
+<li>coordinate tuples<ul>
+<li>(1,1,0)</li>
+<li>(0,1,1)</li>
+<li>(1,0,0)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Write a function that takes an 3D color pixel array as input, extract the <em>red</em> sheet from it, and plots the red sheet using the 'inferno' color map.</p>
+</li>
+<li><p>Build the following array in Python using the <code>concatenate</code> function.
+$$ \left[\begin{array}{ccccccccc} 1 &amp; 1 &amp; 1 &amp; 2 &amp; 2 &amp; 2 &amp; 3 &amp; 3 &amp; 3 \\ 1 &amp; 1 &amp; 1 &amp; 2 &amp; 2 &amp; 2 &amp; 3 &amp; 3 &amp; 3 \\ 1 &amp; 1 &amp; 1 &amp; 2 &amp; 2 &amp; 2 &amp; 3 &amp; 3 &amp; 3 \end{array}\right] $$</p>
 </li>
 </ol>
 
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<table>
+<thead><tr>
+<th>Color</th>
+<th>coordinate tuple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Red</td>
+<td>(1,0,0)</td>
+</tr>
+<tr>
+<td>Yellow</td>
+<td>(1,1,0)</td>
+</tr>
+<tr>
+<td>Cyan</td>
+<td>(0,1,1)</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">plot_red</span><span class="p">(</span><span class="n">color_array</span><span class="p">):</span>
+    <span class="n">red_sheet</span> <span class="o">=</span> <span class="n">color_array</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">red_sheet</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;inferno&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">str1</span> <span class="o">=</span> <span class="s1">&#39;AB27&#39;</span>
-<span class="n">num_str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-<span class="n">let_str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-<span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">str1</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">char</span> <span class="ow">in</span> <span class="s1">&#39;0123456789&#39;</span><span class="p">:</span>
-        <span class="n">num_str</span> <span class="o">+=</span> <span class="n">char</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">let_str</span> <span class="o">+=</span> <span class="n">char</span>
-<span class="n">str_tup</span> <span class="o">=</span> <span class="p">(</span><span class="n">let_str</span><span class="p">,</span><span class="nb">int</span><span class="p">(</span><span class="n">num_str</span><span class="p">))</span>
-<span class="n">str_tup</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span><span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">),</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span><span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">),</span><span class="mi">3</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span><span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)],</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13126,7 +13197,9 @@ The result should be a tuple <code>('AB',27)</code>.</p>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>(&#39;AB&#39;, 27)</pre>
+<pre>array([[1, 1, 1, 2, 2, 2, 3, 3, 3],
+       [1, 1, 1, 2, 2, 2, 3, 3, 3],
+       [1, 1, 1, 2, 2, 2, 3, 3, 3]])</pre>
 </div>
 
 </div>
@@ -13138,18 +13211,13 @@ The result should be a tuple <code>('AB',27)</code>.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>(1,1,0) = yellow</li>
-<li>(1,1,1) = white</li>
-<li>(0,1,1) = cyan</li>
-</ul>
-
+<h2 id="Notes">Notes<a class="anchor-link" href="#Notes">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -13162,23 +13230,87 @@ The result should be a tuple <code>('AB',27)</code>.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">color_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;DR&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">140</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span><span class="s1">&#39;DN&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">108</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span><span class="s1">&#39;K&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span><span class="s1">&#39;DW&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">176</span><span class="p">,</span> <span class="mi">176</span><span class="p">,</span> <span class="mi">176</span><span class="p">]}</span>
+<span class="n">pattern</span> <span class="o">=</span> <span class="s1">&#39;DR15 DN40 DW12 K8 DN20 DW44 K56 DN12 DR12 DW44 DN12 DR4 DW24 K4 DW6 DN20 DW6 K4 DW24 DR4 DN12 DW44 DR12 DN12 K56 DW44 DN20 K8 DW12 DN40 DR15&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pattern</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[30]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;DR15&#39;,
+ &#39;DN40&#39;,
+ &#39;DW12&#39;,
+ &#39;K8&#39;,
+ &#39;DN20&#39;,
+ &#39;DW44&#39;,
+ &#39;K56&#39;,
+ &#39;DN12&#39;,
+ &#39;DR12&#39;,
+ &#39;DW44&#39;,
+ &#39;DN12&#39;,
+ &#39;DR4&#39;,
+ &#39;DW24&#39;,
+ &#39;K4&#39;,
+ &#39;DW6&#39;,
+ &#39;DN20&#39;,
+ &#39;DW6&#39;,
+ &#39;K4&#39;,
+ &#39;DW24&#39;,
+ &#39;DR4&#39;,
+ &#39;DN12&#39;,
+ &#39;DW44&#39;,
+ &#39;DR12&#39;,
+ &#39;DN12&#39;,
+ &#39;K56&#39;,
+ &#39;DW44&#39;,
+ &#39;DN20&#39;,
+ &#39;K8&#39;,
+ &#39;DW12&#39;,
+ &#39;DN40&#39;,
+ &#39;DR15&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]])</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">A</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">color_dict</span><span class="p">[</span><span class="s1">&#39;DN&#39;</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -13191,15 +13323,13 @@ The result should be a tuple <code>('AB',27)</code>.</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[4]:</div>
+    <div class="prompt output_prompt">Out[2]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[1, 2, 3],
-       [4, 5, 6],
-       [7, 8, 9]])</pre>
+<pre>[100, 108, 100]</pre>
 </div>
 
 </div>
@@ -13210,10 +13340,10 @@ The result should be a tuple <code>('AB',27)</code>.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">32</span><span class="o">+</span><span class="mi">42</span><span class="o">+</span><span class="mi">32</span><span class="o">+</span><span class="mi">12</span><span class="o">+</span><span class="mi">8</span><span class="o">+</span><span class="mi">12</span><span class="o">+</span><span class="mi">32</span><span class="o">+</span><span class="mi">42</span><span class="o">+</span><span class="mi">32</span>
 </pre></div>
 
     </div>
@@ -13226,15 +13356,13 @@ The result should be a tuple <code>('AB',27)</code>.</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[5]:</div>
+    <div class="prompt output_prompt">Out[3]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[1, 4, 7],
-       [2, 5, 8],
-       [3, 6, 9]])</pre>
+<pre>244</pre>
 </div>
 
 </div>
@@ -13243,124 +13371,28 @@ The result should be a tuple <code>('AB',27)</code>.</p>
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
-</pre></div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Set up color dictionary.</li>
+<li>Function that takes the height <code>n</code> and the color code (e.g. <code>DN32</code>) as input and returns a single stripe.</li>
+<li>Function that will loop through the pattern and generate all the stripes and concatenate them together.</li>
+</ol>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">B</span><span class="p">,(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">)))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[8]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>(3, 2, 4)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-<span class="n">C</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[15]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([[0., 0., 0.],
-       [0., 0., 0.],
-       [0., 0., 0.],
-       [0., 0., 0.]])</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">A</span><span class="p">,</span><span class="n">C</span><span class="p">],</span><span class="mi">0</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[16]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([[1., 2., 3.],
-       [4., 5., 6.],
-       [7., 8., 9.],
-       [0., 0., 0.],
-       [0., 0., 0.],
-       [0., 0., 0.],
-       [0., 0., 0.]])</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13370,46 +13402,20 @@ The result should be a tuple <code>('AB',27)</code>.</p>
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">A</span><span class="p">,</span><span class="n">C</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">],</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">ValueError</span>                                Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-17-bca18a42c4f7&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>np<span class="ansi-yellow-intense-fg ansi-bold">.</span>concatenate<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">[</span>A<span class="ansi-yellow-intense-fg ansi-bold">,</span>C<span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">,</span><span class="ansi-cyan-intense-fg ansi-bold">1</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-
-<span class="ansi-green-intense-fg ansi-bold">&lt;__array_function__ internals&gt;</span> in <span class="ansi-cyan-fg">concatenate</span><span class="ansi-blue-intense-fg ansi-bold">(*args, **kwargs)</span>
-
-<span class="ansi-red-intense-fg ansi-bold">ValueError</span>: all the input array dimensions for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 3 and the array at index 1 has size 4</pre>
-</div>
-</div>
-
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst1</span> <span class="o">=</span> <span class="p">[</span><span class="n">A</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
-<span class="n">lst1</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13422,42 +13428,51 @@ The result should be a tuple <code>('AB',27)</code>.</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[5]:</div>
+    <div class="prompt output_prompt">Out[18]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[array([[1, 2, 3],
-        [4, 5, 6],
-        [7, 8, 9]]),
- array([[1, 2, 3],
-        [4, 5, 6],
-        [7, 8, 9]]),
- array([[1, 2, 3],
-        [4, 5, 6],
-        [7, 8, 9]]),
- array([[1, 2, 3],
-        [4, 5, 6],
-        [7, 8, 9]]),
- array([[1, 2, 3],
-        [4, 5, 6],
-        [7, 8, 9]])]</pre>
+<pre>(3, 5, 4)</pre>
 </div>
 
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Transpose to get the horizontal stripe array.</li>
+<li>Weave them together into the final tartan.</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">At</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">A</span><span class="p">,(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span><span class="n">lst1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">D</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">At</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13470,119 +13485,13 @@ The result should be a tuple <code>('AB',27)</code>.</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[28]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3],
-       [4, 5, 6, 4, 5, 6, 4, 5, 6, 4, 5, 6, 4, 5, 6],
-       [7, 8, 9, 7, 8, 9, 7, 8, 9, 7, 8, 9, 7, 8, 9]])</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst2</span> <span class="o">=</span> <span class="p">[</span><span class="n">D</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">E</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span><span class="n">lst2</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">E</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[9]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([[1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3],
-       [4, 5, 6, 4, 5, 6, 4, 5, 6, 4, 5, 6, 4, 5, 6],
-       [7, 8, 9, 7, 8, 9, 7, 8, 9, 7, 8, 9, 7, 8, 9],
-       [1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3],
-       [4, 5, 6, 4, 5, 6, 4, 5, 6, 4, 5, 6, 4, 5, 6],
-       [7, 8, 9, 7, 8, 9, 7, 8, 9, 7, 8, 9, 7, 8, 9],
-       [1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3],
-       [4, 5, 6, 4, 5, 6, 4, 5, 6, 4, 5, 6, 4, 5, 6],
-       [7, 8, 9, 7, 8, 9, 7, 8, 9, 7, 8, 9, 7, 8, 9],
-       [1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3],
-       [4, 5, 6, 4, 5, 6, 4, 5, 6, 4, 5, 6, 4, 5, 6],
-       [7, 8, 9, 7, 8, 9, 7, 8, 9, 7, 8, 9, 7, 8, 9],
-       [1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3],
-       [4, 5, 6, 4, 5, 6, 4, 5, 6, 4, 5, 6, 4, 5, 6],
-       [7, 8, 9, 7, 8, 9, 7, 8, 9, 7, 8, 9, 7, 8, 9]])</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">C</span><span class="p">[:</span><span class="mi">11</span><span class="p">,:</span><span class="mi">11</span><span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[10]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([[1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2],
-       [4, 5, 6, 4, 5, 6, 4, 5, 6, 4, 5],
-       [7, 8, 9, 7, 8, 9, 7, 8, 9, 7, 8],
-       [1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2],
-       [4, 5, 6, 4, 5, 6, 4, 5, 6, 4, 5],
-       [7, 8, 9, 7, 8, 9, 7, 8, 9, 7, 8],
-       [1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2],
-       [4, 5, 6, 4, 5, 6, 4, 5, 6, 4, 5],
-       [7, 8, 9, 7, 8, 9, 7, 8, 9, 7, 8],
-       [1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2],
-       [4, 5, 6, 4, 5, 6, 4, 5, 6, 4, 5]])</pre>
+<pre>(5, 3, 2)</pre>
 </div>
 
 </div>
