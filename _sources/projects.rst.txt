@@ -13,3 +13,4 @@ Projects
    A Funny Function </Projects/funny_function/funny_function>
    The Mayfly Model </Projects/mayfly_model/mayfly_model>
    Tartans </Projects/tartans/tartans>
+   Making Friends </Projects/making_friends/making_friends>

@@ -38,17 +38,16 @@ where :math:`N(i,j)` is the number of nodes that are adjacent to both
 a friendship per mutual friend.  Note that if :math:`N(i,j) = 0`, then 
 :math:`Pr_{add}(i,j) = 0`.
 
-To model the fading of friendships, we can use the rule "The more friends
-you have, the more likely it is to lose touch with one of them."  
+To model the breaking of friendships, we can use the rule "The more mutual friends
+you have, the less likely it is you will break a the friendship."  
 Mathematically, the probability of removing an edge between nodes :math:`i`
 and :math:`j` is
 
-.. math:: Pr_{rem}(i,j) = 1 - (1 - p_{rem})^{D(i)+D(j)-2}
+.. math:: Pr_{rem}(i,j) = p_{rem}^{N(i,j)}
 
-where :math:`D(u)` is the number of nodes adjacent to node :math:`u`, and
-:math:`p_{rem}` is the probability of losing touch with a friend per current
-friend.  Note that if :math:`i` and :math:`j` have no other friends than each 
-other, the probability of removing the friendship between them is 0.
+where :math:`p_{rem}` is the probability of breaking the friendship
+between node :math:`i` and node :math:`j` per mutual friend.  Notice that the
+higher the number of mutual friends, the lower :math:`Pr_{rem}(i,j)`.
 
 
 Project

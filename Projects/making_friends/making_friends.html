@@ -39,7 +39,9 @@
 
     
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Weekly Schedule" href="../../weekly_schedule.html" />
+    <link rel="prev" title="Tartans" href="../tartans/tartans.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -88,12 +90,22 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">Syllabus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../report_guide.html">Project Report Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../useful_links.html">Useful Links</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../python_tools.html">Python Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../projects.html">Projects</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../projects.html">Projects</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../part_sequence/part_sequence.html">A Particular Sequence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../funny_function/funny_function.html">A Funny Function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mayfly_model/mayfly_model.html">The Mayfly Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tartans/tartans.html">Tartans</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Making Friends</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#project">Project</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../weekly_schedule.html">Weekly Schedule</a></li>
 </ul>
 
@@ -140,6 +152,8 @@
   <ul class="wy-breadcrumbs">
     
       <li><a href="../../master.html">MTH 337</a> &raquo;</li>
+        
+          <li><a href="../../projects.html">Projects</a> &raquo;</li>
         
       <li>Making Friends</li>
     
@@ -215,16 +229,15 @@ probability of adding an edge between nodes <span class="math notranslate nohigh
 <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span>, and <span class="math notranslate nohighlight">\(p_{add}\)</span> is the probability of forming
 a friendship per mutual friend.  Note that if <span class="math notranslate nohighlight">\(N(i,j) = 0\)</span>, then
 <span class="math notranslate nohighlight">\(Pr_{add}(i,j) = 0\)</span>.</p>
-<p>To model the fading of friendships, we can use the rule “The more friends
-you have, the more likely it is to lose touch with one of them.”
+<p>To model the breaking of friendships, we can use the rule “The more mutual friends
+you have, the less likely it is you will break a the friendship.”
 Mathematically, the probability of removing an edge between nodes <span class="math notranslate nohighlight">\(i\)</span>
 and <span class="math notranslate nohighlight">\(j\)</span> is</p>
 <div class="math notranslate nohighlight">
-\[Pr_{rem}(i,j) = 1 - (1 - p_{rem})^{D(i)+D(j)-2}\]</div>
-<p>where <span class="math notranslate nohighlight">\(D(u)\)</span> is the number of nodes adjacent to node <span class="math notranslate nohighlight">\(u\)</span>, and
-<span class="math notranslate nohighlight">\(p_{rem}\)</span> is the probability of losing touch with a friend per current
-friend.  Note that if <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span> have no other friends than each
-other, the probability of removing the friendship between them is 0.</p>
+\[Pr_{rem}(i,j) = p_{rem}^{N(i,j)}\]</div>
+<p>where <span class="math notranslate nohighlight">\(p_{rem}\)</span> is the probability of breaking the friendship
+between node <span class="math notranslate nohighlight">\(i\)</span> and node <span class="math notranslate nohighlight">\(j\)</span> per mutual friend.  Notice that the
+higher the number of mutual friends, the lower <span class="math notranslate nohighlight">\(Pr_{rem}(i,j)\)</span>.</p>
 <div class="section" id="project">
 <h2>Project<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h2>
 <p><strong>Part 1.</strong> Write a function that models the changes to a friendship
@@ -276,7 +289,7 @@ with one-way friendships (respect network).</p>
 
   <div role="contentinfo">
     <p>
-      Last updated on Jan 21, 2022.
+      Last updated on Apr 03, 2022.
 
     </p>
   </div> 
