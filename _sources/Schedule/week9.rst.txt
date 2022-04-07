@@ -1,5 +1,5 @@
-Week 9: Oct 25 - Oct 29
-========================
+Week 9: April 4 - April 8
+=========================
 
 Project 6
 ~~~~~~~~~
@@ -18,7 +18,7 @@ Python
 
 * :doc:`NetworkX Library </PT/PT-networkx_graphs/PT-networkx_graphs>`
 * Creating, manipulating, and displaying networks
-* Animation
+
 
 Week 9 notebook
 ~~~~~~~~~~~~~~~
@@ -29,4 +29,4 @@ Week 9 notebook
 Sample quiz
 ~~~~~~~~~~~~~
 
-- :download:`Sample quiz 7 <../Quizzes/quiz7_sample.pdf>`
+- :download:`Sample quiz 7 <../Quizzes/quiz6_sample.pdf>`
