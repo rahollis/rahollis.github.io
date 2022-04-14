@@ -1,7 +1,7 @@
 Making Friends
 ==============
 
-.. rubric:: (due: Friday, April 15, 11:59 PM)
+.. rubric:: (due: Wednesday, April 20, 11:59 PM)
 
 In this project we will be exploring ways to model changing social 
 relationships; in particular, we will be looking at the friendship network

@@ -2,7 +2,7 @@
 Computing with Text
 ===================
 
-.. rubric:: (due: Wednesday April 16 at 11 pm )
+.. rubric:: (due: Friday April 29 at 11 pm )
 
 For this project you will work with text files of a few classical books that were obtained from the website of
 `Project Gutenberg <http://www.gutenberg.org/wiki/Main_Page>`__:
@@ -25,6 +25,7 @@ Project
 
 **Part 2.** Analyze differences and similarities between lists of most frequent words
 and plots of words frequencies for all of these texts. Describe any patterns you see.
+Can you make inferences about the book based on the list of most frequent words?
 
 
 If you want to expand your research to additional texts you can use

@@ -1,18 +1,16 @@
-Week 10: Apr 12 - Apr 16
+Week 10: Apr 11 - Apr 15
 ========================
 
 Project 6
 ~~~~~~~~~
 
-* :doc:`Computing with text </Projects/computing_with_text/computing_with_text>`
+* :doc:`Making Friends </Projects/making_friends/making_friends>`
 
 
 Python
 ~~~~~~
 
-* Bar plots.
-* Requests.
-* Dictionaries.
+* Animation
 
 Week 12 notebook
 ~~~~~~~~~~~~~~~
@@ -23,4 +21,4 @@ Week 12 notebook
 Sample quiz
 ~~~~~~~~~~~~~
 
-- :download:`Sample Quiz 10 <../Quizzes/quiz10_sample.pdf>`
+- :download:`Sample Quiz 7 <../Quizzes/quiz7_sample.pdf>`

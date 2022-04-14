@@ -14,3 +14,4 @@ Projects
    The Mayfly Model </Projects/mayfly_model/mayfly_model>
    Tartans </Projects/tartans/tartans>
    Making Friends </Projects/making_friends/making_friends>
+   Computing with Text </Projects/computing_with_text/computing_with_text>
