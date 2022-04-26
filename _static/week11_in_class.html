@@ -12947,8 +12947,13 @@ ul.typeahead-list  > li > a.pull-right {
 /*# sourceMappingURL=style.min.css.map */
     </style>
 <style type="text/css">
-    .highlight .hll { background-color: #ffffcc }
-.highlight  { background: #f8f8f8; }
+    pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.highlight .hll { background-color: #ffffcc }
+.highlight { background: #f8f8f8; }
 .highlight .c { color: #408080; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
 .highlight .k { color: #008000; font-weight: bold } /* Keyword */
@@ -13017,6 +13022,19 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
+<style type="text/css">
+    /*This file contains any manual css for this page that needs to override the global styles.
+This is only required when different pages style the same element differently. This is just
+a hack to deal with our current css styles and no new styling should be added in this file.*/
+
+#ipython-main-app {
+    position: relative;
+}
+#jupyter-main-app {
+    position: relative;
+}
+
+    </style>
 
 
 <style type="text/css">
@@ -13077,18 +13095,28 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Week-11">Week 11<a class="anchor-link" href="#Week-11">&#182;</a></h1><h2 id="Text-files">Text files<a class="anchor-link" href="#Text-files">&#182;</a></h2>
+<h1 id="Week-11">Week 11<a class="anchor-link" href="#Week-11">&#182;</a></h1><h2 id="Quiz-7">Quiz 7<a class="anchor-link" href="#Quiz-7">&#182;</a></h2><ol>
+<li><p>What NetworkX command allows you to organize the nodes of a network into a circle for drawing the network?</p>
+</li>
+<li><p>Describe how to generate a random network on $n$ nodes with probability $p$.</p>
+</li>
+<li><p>What does <code>interval=100</code> mean in</p>
+<p><code>anim = FuncAnimation(fig=fig, func=animate,  interval=100, blit=True, repeat=False)</code>?</p>
+</li>
+</ol>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;sample.txt&#39;</span><span class="p">)</span>
-<span class="n">text</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">),(</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">),(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)])</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">pos</span><span class="o">=</span><span class="n">nx</span><span class="o">.</span><span class="n">circular_layout</span><span class="p">(</span><span class="n">G</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -13104,25 +13132,84 @@ div#notebook {
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>November 10, 2021
 
-This is a sample text file.  We will use this file as an example of text files, and what we can do with text in Python.
-We will open this file in Jupyter and read the contents using Python commands.  We print this file line by line in
-and copy the contents onto a new file.  Finally, we will use this file as an example of encryption using a simple shift
-cipher and the subsequent decryption process.  It is my hope that this will help you with the upcoming project on 
-encryption and decryption.
-</pre>
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Start with $n$ nodes</li>
+<li>Loop through all the possible edges</li>
+<li>Run a probability check<ul>
+<li>generate a random and check if it is less than $p$</li>
+<li>if it is, we include the edge</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The interval tells Python how many milliseconds to wait before producing the next frame.  The time in milliseconds between frames.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Notes:--Reading-and-Writing-text-files">Notes:  Reading and Writing text files<a class="anchor-link" href="#Notes:--Reading-and-Writing-text-files">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;sample.txt&#39;</span><span class="p">)</span>
+<span class="n">text</span><span class="o">=</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;sample_copy.txt&#39;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span>
@@ -13138,13 +13225,13 @@ encryption and decryption.
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[2]:</div>
+    <div class="prompt output_prompt">Out[9]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;November 10, 2021\n\nThis is a sample text file.  We will use this file as an example of text files, and what we can do with text in Python.\nWe will open this file in Jupyter and read the contents using Python commands.  We print this file line by line in\nand copy the contents onto a new file.  Finally, we will use this file as an example of encryption using a simple shift\ncipher and the subsequent decryption process.  It is my hope that this will help you with the upcoming project on \nencryption and decryption.&#39;</pre>
+<pre>&#39;April 20, 2022\n\nThis is a sample text file.  We will use this file as an example of text files, and what we can do with text in Python.\nWe will open this file in Jupyter and read the contents using Python commands.  We print this file line by line in\nand copy the contents onto a new file.  Finally, we will analyze the words in this file and use Python to generate a\nlist of the 10 most common words used.  It is my hope that this will give you a good start for the &#34;Computing with Text&#34;\nproject.\n\nGood luck!&#39;</pre>
 </div>
 
 </div>
@@ -13155,12 +13242,10 @@ encryption and decryption.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;sample.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">]</span>
-<span class="n">lines</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -13173,131 +13258,15 @@ encryption and decryption.
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[3]:</div>
+    <div class="prompt output_prompt">Out[10]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&#39;November 10, 2021\n&#39;,
- &#39;\n&#39;,
- &#39;This is a sample text file.  We will use this file as an example of text files, and what we can do with text in Python.\n&#39;,
- &#39;We will open this file in Jupyter and read the contents using Python commands.  We print this file line by line in\n&#39;,
- &#39;and copy the contents onto a new file.  Finally, we will use this file as an example of encryption using a simple shift\n&#39;,
- &#39;cipher and the subsequent decryption process.  It is my hope that this will help you with the upcoming project on \n&#39;,
- &#39;encryption and decryption.&#39;]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">just_text</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">]</span>
-<span class="n">just_text</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[4]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[&#39;November 10, 2021&#39;,
- &#39;&#39;,
- &#39;This is a sample text file.  We will use this file as an example of text files, and what we can do with text in Python.&#39;,
- &#39;We will open this file in Jupyter and read the contents using Python commands.  We print this file line by line in&#39;,
- &#39;and copy the contents onto a new file.  Finally, we will use this file as an example of encryption using a simple shift&#39;,
- &#39;cipher and the subsequent decryption process.  It is my hope that this will help you with the upcoming project on &#39;,
- &#39;encryption and decryption.&#39;]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">one_line_of_text</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">just_text</span><span class="p">:</span>
-    <span class="n">one_line_of_text</span> <span class="o">+=</span> <span class="n">line</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span>
-<span class="n">one_line_of_text</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[6]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;November 10, 2021  This is a sample text file.  We will use this file as an example of text files, and what we can do with text in Python. We will open this file in Jupyter and read the contents using Python commands.  We print this file line by line in and copy the contents onto a new file.  Finally, we will use this file as an example of encryption using a simple shift cipher and the subsequent decryption process.  It is my hope that this will help you with the upcoming project on  encryption and decryption. &#39;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">list_of_words</span> <span class="o">=</span> <span class="n">one_line_of_text</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-<span class="n">list_of_words</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[7]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[&#39;November&#39;,
- &#39;10,&#39;,
- &#39;2021&#39;,
+<pre>[&#39;April&#39;,
+ &#39;20,&#39;,
+ &#39;2022&#39;,
  &#39;This&#39;,
  &#39;is&#39;,
  &#39;a&#39;,
@@ -13357,24 +13326,26 @@ encryption and decryption.
  &#39;Finally,&#39;,
  &#39;we&#39;,
  &#39;will&#39;,
- &#39;use&#39;,
+ &#39;analyze&#39;,
+ &#39;the&#39;,
+ &#39;words&#39;,
+ &#39;in&#39;,
  &#39;this&#39;,
  &#39;file&#39;,
- &#39;as&#39;,
- &#39;an&#39;,
- &#39;example&#39;,
- &#39;of&#39;,
- &#39;encryption&#39;,
- &#39;using&#39;,
- &#39;a&#39;,
- &#39;simple&#39;,
- &#39;shift&#39;,
- &#39;cipher&#39;,
  &#39;and&#39;,
+ &#39;use&#39;,
+ &#39;Python&#39;,
+ &#39;to&#39;,
+ &#39;generate&#39;,
+ &#39;a&#39;,
+ &#39;list&#39;,
+ &#39;of&#39;,
  &#39;the&#39;,
- &#39;subsequent&#39;,
- &#39;decryption&#39;,
- &#39;process.&#39;,
+ &#39;10&#39;,
+ &#39;most&#39;,
+ &#39;common&#39;,
+ &#39;words&#39;,
+ &#39;used.&#39;,
  &#39;It&#39;,
  &#39;is&#39;,
  &#39;my&#39;,
@@ -13382,148 +13353,19 @@ encryption and decryption.
  &#39;that&#39;,
  &#39;this&#39;,
  &#39;will&#39;,
- &#39;help&#39;,
+ &#39;give&#39;,
  &#39;you&#39;,
- &#39;with&#39;,
- &#39;the&#39;,
- &#39;upcoming&#39;,
- &#39;project&#39;,
- &#39;on&#39;,
- &#39;encryption&#39;,
- &#39;and&#39;,
- &#39;decryption.&#39;]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">no_punctuation</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">list_of_words</span><span class="p">:</span>
-    <span class="n">no_punctuation</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;.,!?;:0123456789&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
-<span class="n">no_punctuation</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[9]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[&#39;november&#39;,
- &#39;&#39;,
- &#39;&#39;,
- &#39;this&#39;,
- &#39;is&#39;,
  &#39;a&#39;,
- &#39;sample&#39;,
- &#39;text&#39;,
- &#39;file&#39;,
- &#39;we&#39;,
- &#39;will&#39;,
- &#39;use&#39;,
- &#39;this&#39;,
- &#39;file&#39;,
- &#39;as&#39;,
- &#39;an&#39;,
- &#39;example&#39;,
- &#39;of&#39;,
- &#39;text&#39;,
- &#39;files&#39;,
- &#39;and&#39;,
- &#39;what&#39;,
- &#39;we&#39;,
- &#39;can&#39;,
- &#39;do&#39;,
+ &#39;good&#39;,
+ &#39;start&#39;,
+ &#39;for&#39;,
+ &#39;the&#39;,
+ &#39;&#34;Computing&#39;,
  &#39;with&#39;,
- &#39;text&#39;,
- &#39;in&#39;,
- &#39;python&#39;,
- &#39;we&#39;,
- &#39;will&#39;,
- &#39;open&#39;,
- &#39;this&#39;,
- &#39;file&#39;,
- &#39;in&#39;,
- &#39;jupyter&#39;,
- &#39;and&#39;,
- &#39;read&#39;,
- &#39;the&#39;,
- &#39;contents&#39;,
- &#39;using&#39;,
- &#39;python&#39;,
- &#39;commands&#39;,
- &#39;we&#39;,
- &#39;print&#39;,
- &#39;this&#39;,
- &#39;file&#39;,
- &#39;line&#39;,
- &#39;by&#39;,
- &#39;line&#39;,
- &#39;in&#39;,
- &#39;and&#39;,
- &#39;copy&#39;,
- &#39;the&#39;,
- &#39;contents&#39;,
- &#39;onto&#39;,
- &#39;a&#39;,
- &#39;new&#39;,
- &#39;file&#39;,
- &#39;finally&#39;,
- &#39;we&#39;,
- &#39;will&#39;,
- &#39;use&#39;,
- &#39;this&#39;,
- &#39;file&#39;,
- &#39;as&#39;,
- &#39;an&#39;,
- &#39;example&#39;,
- &#39;of&#39;,
- &#39;encryption&#39;,
- &#39;using&#39;,
- &#39;a&#39;,
- &#39;simple&#39;,
- &#39;shift&#39;,
- &#39;cipher&#39;,
- &#39;and&#39;,
- &#39;the&#39;,
- &#39;subsequent&#39;,
- &#39;decryption&#39;,
- &#39;process&#39;,
- &#39;it&#39;,
- &#39;is&#39;,
- &#39;my&#39;,
- &#39;hope&#39;,
- &#39;that&#39;,
- &#39;this&#39;,
- &#39;will&#39;,
- &#39;help&#39;,
- &#39;you&#39;,
- &#39;with&#39;,
- &#39;the&#39;,
- &#39;upcoming&#39;,
- &#39;project&#39;,
- &#39;on&#39;,
- &#39;encryption&#39;,
- &#39;and&#39;,
- &#39;decryption&#39;]</pre>
+ &#39;Text&#34;&#39;,
+ &#39;project.&#39;,
+ &#39;Good&#39;,
+ &#39;luck!&#39;]</pre>
 </div>
 
 </div>
@@ -13537,10 +13379,7 @@ encryption and decryption.
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;sample.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">text</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">This is a copy.&#39;</span>
-<span class="n">text</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;We&#39;</span> <span class="o">==</span> <span class="s1">&#39;we&#39;</span>
 </pre></div>
 
     </div>
@@ -13559,7 +13398,7 @@ encryption and decryption.
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;November 10, 2021\n\nThis is a sample text file.  We will use this file as an example of text files, and what we can do with text in Python.\nWe will open this file in Jupyter and read the contents using Python commands.  We print this file line by line in\nand copy the contents onto a new file.  Finally, we will use this file as an example of encryption using a simple shift\ncipher and the subsequent decryption process.  It is my hope that this will help you with the upcoming project on \nencryption and decryption.\n\nThis is a copy.&#39;</pre>
+<pre>False</pre>
 </div>
 
 </div>
@@ -13570,14 +13409,33 @@ encryption and decryption.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;sample_copy.txt&#39;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;&lt;Python.&gt;&#39;</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;.&lt;&gt;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[14]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;python&#39;</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -13585,173 +13443,10 @@ encryption and decryption.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Shift-cipher">Shift cipher<a class="anchor-link" href="#Shift-cipher">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;Luke, I am your father&#39;</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">alphabet</span> <span class="o">=</span> <span class="s1">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz.,!? &#39;</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">shift_cipher</span><span class="p">(</span><span class="n">message</span><span class="p">,</span><span class="n">alphabet</span><span class="p">,</span><span class="n">key</span><span class="p">):</span>
-    <span class="n">encrypted_message</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-    <span class="n">shifted_alphabet</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">alphabet</span><span class="p">)):</span>
-        <span class="n">shifted_alphabet</span> <span class="o">+=</span> <span class="n">alphabet</span><span class="p">[(</span><span class="n">i</span><span class="o">+</span><span class="n">key</span><span class="p">)</span><span class="o">%</span><span class="k">len</span>(alphabet)]
-    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">message</span><span class="p">:</span>
-        <span class="n">ind</span> <span class="o">=</span> <span class="n">alphabet</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
-        <span class="n">new_char</span> <span class="o">=</span> <span class="n">shifted_alphabet</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span>
-        <span class="n">encrypted_message</span> <span class="o">+=</span> <span class="n">new_char</span>
-    <span class="k">return</span> <span class="n">encrypted_message</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">shift_cipher</span><span class="p">(</span><span class="n">message</span><span class="p">,</span><span class="n">alphabet</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[26]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;QzpjBENEfrE?tzwEkfymjw&#39;</pre>
-</div>
-
-</div>
+<p>Write a function that takes a single string variable as input, breaks it up into shorter "words", strips away any special characters, and makes all the letters lowercase.  Return this list of lowercase words.</p>
 
 </div>
 </div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">alphabet</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[24]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>0</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">shift_cipher1</span><span class="p">(</span><span class="n">mes</span><span class="p">,</span><span class="n">alph</span><span class="p">,</span><span class="n">key</span><span class="p">):</span>
-    <span class="n">encrypted_message</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">mes</span><span class="p">:</span>
-        <span class="n">encrypted_message</span> <span class="o">+=</span> <span class="n">alph</span><span class="p">[(</span><span class="n">alph</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">char</span><span class="p">)</span><span class="o">+</span><span class="n">key</span><span class="p">)</span><span class="o">%</span><span class="k">len</span>(alph)]
-    <span class="k">return</span> <span class="n">encrypted_message</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">shift_cipher1</span><span class="p">(</span><span class="n">message</span><span class="p">,</span><span class="n">alphabet</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[29]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;QzpjBENEfrE?tzwEkfymjw&#39;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
