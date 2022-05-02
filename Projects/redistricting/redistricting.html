@@ -192,7 +192,7 @@ Each state is partitioned into several congressional districts, and one represen
 district.  These congressional districts are also used when the state is distributing money for schools,
 infrastructure, social programs, and more.</p>
 <p>Every 10 years, after the decennial national census, the congressional district borders in every state are
-redrawn in a process known as _redistricting_.  There are many criteria that those in charge of the
+redrawn in a process known as <em>redistricting</em>.  There are many criteria that those in charge of the
 redistricting process use when redrawing the congressional district lines, including</p>
 <ul class="simple">
 <li><p>equal population in each district,</p></li>
@@ -248,16 +248,19 @@ population metric.</p>
 criteria listed above.  In particular, we will use a monte carlo Markov chain process to go from a randomly
 generated district map to an acceptable district map by making changes that will equalize the population of
 each district and make the shapes more regular.</p>
-<p>Our maps will consist of a 20x20 array of _blocks_, each having the same population.  The districts will be
-made up of groups of neighboring blocks.  Here is an example of what this might look like.</p>
-<p>…</p>
-<p><em>Exercise:</em>  Write a function that will generate a random district map of a given size with a given number
+<p>Our maps will consist of a <span class="math notranslate nohighlight">\(n \times n\)</span> array of <em>blocks</em>, each having the same population.  The
+districts will be made up of groups of neighboring blocks.  Below is an example of what this might look like
+with a 100x100 map of 7 districts.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/random_districts.png"><img alt="../../_images/random_districts.png" src="../../_images/random_districts.png" style="width: 450px;" /></a>
+</div>
+<p><strong>Exercise:</strong>  Write a function that will generate a random district map of a given size with a given number
 of districts.  To do this, randomly select blocks to be the “center” of each district, and assign each block
 to the district whose center is closest.</p>
-<p><em>Exercise:</em>  Write a function that will calculate the map score of an given district map.</p>
+<p><strong>Exercise:</strong>  Write a function that will calculate the map score of an given district map.</p>
 <div class="section" id="monte-carlo-simulation">
 <h2>Monte carlo simulation<a class="headerlink" href="#monte-carlo-simulation" title="Permalink to this headline">¶</a></h2>
-<p>A _monte carlo <a href="#id1"><span class="problematic" id="id2">simulation_</span></a> is a mathematical modeling technique where the state of a dynamical system
+<p>A <em>monte carlo simulation</em> is a mathematical modeling technique where the state of a dynamical system
 (changes over time) is updated to a new state that is randomly chosen from the collection of all the
 possible states based on the current state.</p>
 <p>For this project, we will update the district map by randomly selecting a block on the border of its district
@@ -266,25 +269,44 @@ that differs from the current map by one border block.</p>
 </div>
 <div class="section" id="markov-chain">
 <h2>Markov Chain<a class="headerlink" href="#markov-chain" title="Permalink to this headline">¶</a></h2>
-<p>A _Markov <a href="#id3"><span class="problematic" id="id4">chain_</span></a> is a sequence of states of a system where each state is generated from the previous
+<p>A <em>Markov chain</em> is a sequence of states of a system where each state is generated from the previous
 based on a set of stocastic rules (based on probability).</p>
 <p>Once a new district map is selected that differs from the current by one border block, the new map and the
 map will be scored.  If the new map has a better score, we will keep it.  If the new map does not have a
 better score, we have a probability <span class="math notranslate nohighlight">\(p\)</span> of keeping it anyways.  Thus we will have a Markov chain of
 district maps.</p>
-<p><em>Exercise:</em>  Write a function that will update a given district map based on the rules described above.</p>
+<p><strong>Exercise:</strong>  Write a function that will update a given district map based on the rules described above.</p>
 </div>
 </div>
 <div class="section" id="project">
 <h1>Project<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h1>
 <p>Simulate the redistricting process by animating the Markov chain described above using the following code.</p>
-<p><em>Extra Credit 1:</em> To make the simulation more realistic, allow the blocks to have different populations, and
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">notebook</span>
+
+<span class="n">dist_map</span> <span class="o">=</span> <span class="n">GenerateRandomDistricts</span><span class="p">(</span><span class="n">size</span><span class="p">,</span><span class="n">num_districts</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+<span class="n">im</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">dist_map</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">animate</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">dist_map</span>
+
+    <span class="n">dist_map</span> <span class="o">=</span> <span class="n">UpdateDistrictMap</span><span class="p">(</span><span class="n">dist_map</span><span class="p">,</span><span class="n">size</span><span class="p">,</span><span class="n">alpha</span><span class="p">)</span>
+    <span class="n">im</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">dist_map</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">im</span>
+
+<span class="n">anim</span> <span class="o">=</span> <span class="n">FuncAnimation</span><span class="p">(</span><span class="n">fig</span><span class="o">=</span><span class="n">fig</span><span class="p">,</span> <span class="n">func</span><span class="o">=</span><span class="n">animate</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">blit</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">repeat</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Extra Credit 1:</strong> To make the simulation more realistic, allow the blocks to have different populations, and
 update your map score calculation accordingly.</p>
-<p><em>Extra Credit 2:</em> Gerrymandering is when the district borders are drawn to favor one political party over
+<p><strong>Extra Credit 2:</strong> Gerrymandering is when the district borders are drawn to favor one political party over
 another.  One way to try to avoid this is to require that the percentage of districts that favor party A must
 closely match the percentage of blocks that favor party A.  Include this in your simulation.</p>
-<p><em>Extra Credit 3:</em> Another way to measure the shape of a district is to use the _centering <a href="#id5"><span class="problematic" id="id6">metric_</span></a>.  This
-metric calculates the _center_ of the district and takes the standard deviation of distance from the center
+<p><strong>Extra Credit 3:</strong> Another way to measure the shape of a district is to use the <em>centering metric</em>.  This
+metric calculates the <em>center</em> of the district and takes the standard deviation of distance from the center
 of each block in the district. To normalize, you can divide by <span class="math notranslate nohighlight">\(\sqrt{2}\cdot n\)</span> where <span class="math notranslate nohighlight">\(n\)</span> is
 size of the map.  Include this metric in your map score.</p>
 </div>
@@ -300,7 +322,7 @@ size of the map.  Include this metric in your map score.</p>
 
   <div role="contentinfo">
     <p>
-      Last updated on Apr 26, 2022.
+      Last updated on May 01, 2022.
 
     </p>
   </div> 

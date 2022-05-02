@@ -9,7 +9,7 @@ district.  These congressional districts are also used when the state is distrib
 infrastructure, social programs, and more.
 
 Every 10 years, after the decennial national census, the congressional district borders in every state are
-redrawn in a process known as _redistricting_.  There are many criteria that those in charge of the
+redrawn in a process known as *redistricting*.  There are many criteria that those in charge of the
 redistricting process use when redrawing the congressional district lines, including
 
 * equal population in each district,
@@ -76,21 +76,24 @@ criteria listed above.  In particular, we will use a monte carlo Markov chain pr
 generated district map to an acceptable district map by making changes that will equalize the population of
 each district and make the shapes more regular.
 
-Our maps will consist of a 20x20 array of _blocks_, each having the same population.  The districts will be
-made up of groups of neighboring blocks.  Here is an example of what this might look like.
+Our maps will consist of a :math:`n \times n` array of *blocks*, each having the same population.  The 
+districts will be made up of groups of neighboring blocks.  Below is an example of what this might look like 
+with a 100x100 map of 7 districts.
 
-...
+.. figure:: random_districts.png
+    :width: 450px
+    :align: center
 
-*Exercise:*  Write a function that will generate a random district map of a given size with a given number
+**Exercise:**  Write a function that will generate a random district map of a given size with a given number
 of districts.  To do this, randomly select blocks to be the "center" of each district, and assign each block
 to the district whose center is closest.
 
-*Exercise:*  Write a function that will calculate the map score of an given district map.
+**Exercise:**  Write a function that will calculate the map score of an given district map.
 
 Monte carlo simulation
 ~~~~~~~~~~~~~~~~~~~~~~
 
-A _monte carlo simulation_ is a mathematical modeling technique where the state of a dynamical system 
+A *monte carlo simulation* is a mathematical modeling technique where the state of a dynamical system 
 (changes over time) is updated to a new state that is randomly chosen from the collection of all the 
 possible states based on the current state.
 
@@ -101,7 +104,7 @@ that differs from the current map by one border block.
 Markov Chain
 ~~~~~~~~~~~~
 
-A _Markov chain_ is a sequence of states of a system where each state is generated from the previous
+A *Markov chain* is a sequence of states of a system where each state is generated from the previous
 based on a set of stocastic rules (based on probability).
 
 Once a new district map is selected that differs from the current by one border block, the new map and the 
@@ -109,22 +112,42 @@ map will be scored.  If the new map has a better score, we will keep it.  If the
 better score, we have a probability :math:`p` of keeping it anyways.  Thus we will have a Markov chain of 
 district maps.
 
-*Exercise:*  Write a function that will update a given district map based on the rules described above.
+**Exercise:**  Write a function that will update a given district map based on the rules described above.
 
 Project
 =======
 
 Simulate the redistricting process by animating the Markov chain described above using the following code.
 
+.. code:: python
+    
+    %matplotlib notebook
+    
+    dist_map = GenerateRandomDistricts(size,num_districts)
+    
+    fig = plt.figure(figsize = (5,5))
+    ax = plt.subplot(111)
+    im = ax.imshow(dist_map)
+    
+    def animate(i):
+        global dist_map
+        
+        dist_map = UpdateDistrictMap(dist_map,size,alpha)
+        im.set_data(dist_map)
+        return im
+    
+    anim = FuncAnimation(fig=fig, func=animate, interval=100, blit=True, repeat=False)
+    plt.show()
 
-*Extra Credit 1:* To make the simulation more realistic, allow the blocks to have different populations, and 
+
+**Extra Credit 1:** To make the simulation more realistic, allow the blocks to have different populations, and 
 update your map score calculation accordingly.
 
-*Extra Credit 2:* Gerrymandering is when the district borders are drawn to favor one political party over
+**Extra Credit 2:** Gerrymandering is when the district borders are drawn to favor one political party over
 another.  One way to try to avoid this is to require that the percentage of districts that favor party A must
 closely match the percentage of blocks that favor party A.  Include this in your simulation.
 
-*Extra Credit 3:* Another way to measure the shape of a district is to use the _centering metric_.  This
-metric calculates the _center_ of the district and takes the standard deviation of distance from the center
+**Extra Credit 3:** Another way to measure the shape of a district is to use the *centering metric*.  This
+metric calculates the *center* of the district and takes the standard deviation of distance from the center
 of each block in the district. To normalize, you can divide by :math:`\sqrt{2}\cdot n` where :math:`n` is
 size of the map.  Include this metric in your map score.
