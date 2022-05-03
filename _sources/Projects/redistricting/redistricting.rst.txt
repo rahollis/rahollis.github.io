@@ -63,13 +63,13 @@ maximum value of the PAR is 4.  The shape metric will be the sum of the PARs for
 
 Assuming there are :math:`k` districts and a total population of :math:`m`, the map score is
 
-.. math:: \alpha\cdot\text{SD}(\text{district popuations}) + (1-\alpha)\cdot\frac{1}{4k}\sum_{i=1}^k \text{PAR}(\text{district }i),
+.. math:: \alpha\cdot\text{SD}(\text{district popuations}) + (1-\alpha)\cdot\frac{1}{4}\sum_{i=1}^k \text{PAR}(\text{district }i),
 
 where :math:`\alpha` is a parameter between 0 and 1 which indicates how much priority is given to the 
 population metric.
 
 Automating redistricting
-========================
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 The goal of this project is to write code that can model the redistricting process using the first two
 criteria listed above.  In particular, we will use a monte carlo Markov chain process to go from a randomly
@@ -115,7 +115,7 @@ district maps.
 **Exercise:**  Write a function that will update a given district map based on the rules described above.
 
 Project
-=======
+~~~~~~~
 
 Simulate the redistricting process by animating the Markov chain described above using the following code.
 
@@ -149,5 +149,4 @@ closely match the percentage of blocks that favor party A.  Include this in your
 
 **Extra Credit 3:** Another way to measure the shape of a district is to use the *centering metric*.  This
 metric calculates the *center* of the district and takes the standard deviation of distance from the center
-of each block in the district. To normalize, you can divide by :math:`\sqrt{2}\cdot n` where :math:`n` is
-size of the map.  Include this metric in your map score.
+of each block in the district.  Include this metric in your map score.

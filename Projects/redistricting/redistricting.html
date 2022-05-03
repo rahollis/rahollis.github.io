@@ -39,7 +39,9 @@
 
     
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Weekly Schedule" href="../../weekly_schedule.html" />
+    <link rel="prev" title="Computing with Text" href="../computing_with_text/computing_with_text.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -88,12 +90,30 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">Syllabus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../report_guide.html">Project Report Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../useful_links.html">Useful Links</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../python_tools.html">Python Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../projects.html">Projects</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../projects.html">Projects</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../part_sequence/part_sequence.html">A Particular Sequence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../funny_function/funny_function.html">A Funny Function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mayfly_model/mayfly_model.html">The Mayfly Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tartans/tartans.html">Tartans</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../making_friends/making_friends.html">Making Friends</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../computing_with_text/computing_with_text.html">Computing with Text</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Redistricting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#equal-population">Equal population</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#district-shapes">District shapes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scoring-a-district-map">Scoring a district map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#automating-redistricting">Automating redistricting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#monte-carlo-simulation">Monte carlo simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#markov-chain">Markov Chain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#project">Project</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../weekly_schedule.html">Weekly Schedule</a></li>
 </ul>
 
@@ -140,6 +160,8 @@
   <ul class="wy-breadcrumbs">
     
       <li><a href="../../master.html">MTH 337</a> &raquo;</li>
+        
+          <li><a href="../../projects.html">Projects</a> &raquo;</li>
         
       <li>Redistricting</li>
     
@@ -237,13 +259,12 @@ maximum value of the PAR is 4.  The shape metric will be the sum of the PARs for
 4 times the number the districts.</p>
 <p>Assuming there are <span class="math notranslate nohighlight">\(k\)</span> districts and a total population of <span class="math notranslate nohighlight">\(m\)</span>, the map score is</p>
 <div class="math notranslate nohighlight">
-\[\alpha\cdot\text{SD}(\text{district popuations}) + (1-\alpha)\cdot\frac{1}{4k}\sum_{i=1}^k \text{PAR}(\text{district }i),\]</div>
+\[\alpha\cdot\text{SD}(\text{district popuations}) + (1-\alpha)\cdot\frac{1}{4}\sum_{i=1}^k \text{PAR}(\text{district }i),\]</div>
 <p>where <span class="math notranslate nohighlight">\(\alpha\)</span> is a parameter between 0 and 1 which indicates how much priority is given to the
 population metric.</p>
 </div>
-</div>
 <div class="section" id="automating-redistricting">
-<h1>Automating redistricting<a class="headerlink" href="#automating-redistricting" title="Permalink to this headline">¶</a></h1>
+<h2>Automating redistricting<a class="headerlink" href="#automating-redistricting" title="Permalink to this headline">¶</a></h2>
 <p>The goal of this project is to write code that can model the redistricting process using the first two
 criteria listed above.  In particular, we will use a monte carlo Markov chain process to go from a randomly
 generated district map to an acceptable district map by making changes that will equalize the population of
@@ -258,6 +279,7 @@ with a 100x100 map of 7 districts.</p>
 of districts.  To do this, randomly select blocks to be the “center” of each district, and assign each block
 to the district whose center is closest.</p>
 <p><strong>Exercise:</strong>  Write a function that will calculate the map score of an given district map.</p>
+</div>
 <div class="section" id="monte-carlo-simulation">
 <h2>Monte carlo simulation<a class="headerlink" href="#monte-carlo-simulation" title="Permalink to this headline">¶</a></h2>
 <p>A <em>monte carlo simulation</em> is a mathematical modeling technique where the state of a dynamical system
@@ -277,9 +299,8 @@ better score, we have a probability <span class="math notranslate nohighlight">\
 district maps.</p>
 <p><strong>Exercise:</strong>  Write a function that will update a given district map based on the rules described above.</p>
 </div>
-</div>
 <div class="section" id="project">
-<h1>Project<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h1>
+<h2>Project<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h2>
 <p>Simulate the redistricting process by animating the Markov chain described above using the following code.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">notebook</span>
 
@@ -307,8 +328,8 @@ another.  One way to try to avoid this is to require that the percentage of dist
 closely match the percentage of blocks that favor party A.  Include this in your simulation.</p>
 <p><strong>Extra Credit 3:</strong> Another way to measure the shape of a district is to use the <em>centering metric</em>.  This
 metric calculates the <em>center</em> of the district and takes the standard deviation of distance from the center
-of each block in the district. To normalize, you can divide by <span class="math notranslate nohighlight">\(\sqrt{2}\cdot n\)</span> where <span class="math notranslate nohighlight">\(n\)</span> is
-size of the map.  Include this metric in your map score.</p>
+of each block in the district.  Include this metric in your map score.</p>
+</div>
 </div>
 
 
@@ -322,7 +343,7 @@ size of the map.  Include this metric in your map score.</p>
 
   <div role="contentinfo">
     <p>
-      Last updated on May 01, 2022.
+      Last updated on May 03, 2022.
 
     </p>
   </div> 
