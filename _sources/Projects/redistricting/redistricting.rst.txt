@@ -1,7 +1,7 @@
 Redistricting
 =============
 
-.. rubric:: (due: Sunday, May 15, 11:59 PM)
+.. rubric:: (due: Wednesday, Nov 2 at 11:59 PM)
 
 In the US, the people are represented in Congress by representatives elected by the people of their state.
 Each state is partitioned into several congressional districts, and one representative is elected from each

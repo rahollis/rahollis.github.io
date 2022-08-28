@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Simple Sudoku &mdash; MTH 337</title>
+  <title>Mix ‘Em Up &mdash; MTH 337</title>
   
 
   
@@ -141,13 +141,13 @@
     
       <li><a href="../../master.html">MTH 337</a> &raquo;</li>
         
-      <li>Simple Sudoku</li>
+      <li>Mix ‘Em Up</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/Projects/simple_sudoku/simple_sudoku.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/Projects/shuffle/shuffle.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -184,40 +184,71 @@
     text-align: unset;
 }
 </style>
-<div class="section" id="simple-sudoku">
-<h1>Simple Sudoku<a class="headerlink" href="#simple-sudoku" title="Permalink to this headline">¶</a></h1>
-<p class="rubric">(due: Sunday, Dec 11, 11:59 PM)</p>
-<p>A <strong>sudoku</strong> is a puzzle consisting of a 9x9 grid of numbers <a class="reference external" href="https://en.wikipedia.org/wiki/Sudoku">Sudoku Wiki</a>.</p>
-<p>The objective of the puzzle is to fill in the missing cells with numbers from 1-9 such that:</p>
-<ul class="simple">
-<li><p>Each row contains no repeated numbers</p></li>
-<li><p>Each column contains no repeated numbers</p></li>
-<li><p>Each of the nine 3x3 subgrids (called also boxes) contains no repeated numbers</p></li>
-</ul>
-<p>We will be working with sudokus of the <strong>Easy</strong> cathegory (that requires no recursion)</p>
+<div class="section" id="mix-em-up">
+<h1>Mix ‘Em Up<a class="headerlink" href="#mix-em-up" title="Permalink to this headline">¶</a></h1>
+<p class="rubric">(due: Monday, Sep 19 at 11:59 PM)</p>
+<div class="section" id="shuffling-cards">
+<h2>Shuffling cards<a class="headerlink" href="#shuffling-cards" title="Permalink to this headline">¶</a></h2>
+<p>Shuffling is the process of randomizing a deck of cards.  In this
+project, we will investigate different methods used to shuffle cards,
+with the goal of comparing how each method randomizes a deck.</p>
+<p>This project will require extensive use of the <code class="code docutils literal notranslate"><span class="pre">random</span></code> library.</p>
+<p><strong>Exercise:</strong> Write a Python function that takes a positive integer
+as input and returns a “deck” containing the specified number of cards.
+In other words, you want to return a list of integers between 1 and
+<span class="math notranslate nohighlight">\(n\)</span>.</p>
+<p>We will consider three methods of shuffling:  the classic riffle,
+the middle-out method, and the top-to-bottom re-stack.</p>
+<div class="section" id="the-classic-riffle">
+<h3><em>The classic riffle</em><a class="headerlink" href="#the-classic-riffle" title="Permalink to this headline">¶</a></h3>
+<p>For this method, the deck is divided roughly in half and the halves
+held in separate hands.  A new deck is built from the bottom up by
+selecting at random either the bottom card from the left hand or right
+hand.  This is done repeatedly until all the cards are gone from
+either hand, at which point any remaining cards (in the other hand)
+are placed on the top of the deck.</p>
+</div>
+<div class="section" id="the-middle-out-method">
+<h3><em>The middle-out method</em><a class="headerlink" href="#the-middle-out-method" title="Permalink to this headline">¶</a></h3>
+<p>Simpler than the riffle, this method first divides the deck into
+roughly thirds.  The middle third is then placed randomly on the top
+or the bottom of the deck.</p>
+</div>
+<div class="section" id="top-to-bottom-re-stack">
+<h3><em>Top-to-bottom re-stack</em><a class="headerlink" href="#top-to-bottom-re-stack" title="Permalink to this headline">¶</a></h3>
+<p>This methods begins by dividing the deck into a random number of
+sections.  Then the deck is “re-stacked” by reversing the order of
+the sections.</p>
+</div>
+</div>
+<div class="section" id="measuring-randomness">
+<h2>Measuring randomness<a class="headerlink" href="#measuring-randomness" title="Permalink to this headline">¶</a></h2>
+<p>Given a list of integers</p>
+<div class="math notranslate nohighlight">
+\[[n_1,n_2,...,n_k],\]</div>
+<p>how random are they distributed?  One possible measure of randomness
+is to compute the average distances between adjacent integers</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{k}\sum_{i=1}^{k-1}|n_{i+1}-n_i|.\]</div>
+<p>This measure is fine, but it has some drawbacks.  Consider the follwing
+deck</p>
+<div class="math notranslate nohighlight">
+\[[1,27,2,28,3,29,4,30,...,26,52].\]</div>
+<p>The above measure would be about 23.25, about as high as possible;
+however, we can clearly see that this is not a random deck.  How
+might we modify the measure to avoid this drawback?</p>
+<p><strong>Exercise:</strong> Write a function that takes a randomized deck as input
+and returns its measure of randomness.</p>
+</div>
 <div class="section" id="project">
 <h2>Project<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h2>
-<p>Write a function that will solve a <strong>simple sodoku</strong>. Some examples of the starting grid of a simple sudoku, that you are trying to solve for this project, are given in this file: <a class="reference download internal" download="" href="../../_downloads/656f91c12ca4594f6697bb40200f5ee7/sudokus.txt"><code class="xref download docutils literal notranslate"><span class="pre">sudokus.txt</span></code></a></p>
-<p>The following function can be use to print the sudoko</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_sudoku</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span> <span class="c1"># arr is a 9x9 numpy array</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">9</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">9</span><span class="p">):</span>
-            <span class="n">x</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;.&quot;</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; </span><span class="si">{x}</span><span class="s2"> &quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-            <span class="k">if</span> <span class="n">j</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\u2551</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\u2550</span><span class="s2">&quot;</span><span class="o">*</span><span class="mi">9</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\u256C</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\u2550</span><span class="s2">&quot;</span><span class="o">*</span><span class="mi">9</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\u256C</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\u2550</span><span class="s2">&quot;</span><span class="o">*</span><span class="mi">9</span><span class="p">)</span>
-</pre></div>
-</div>
-<p><strong>Note.</strong>  This is a programming project. Your project report does not need
-include narrative, beyond comments explaining how your code works. The project will
-be graded according to the following rubrics:</p>
-<ul class="simple">
-<li><p>Code that successfully solves the simple sodoku: 70%</p></li>
-<li><p>Report organization and code documentation: 30%</p></li>
-</ul>
+<p><strong>Part 1:</strong>  For each of the three shuffling methods, write a function
+that takes a “deck of cards” as input and returns the shuffled deck.</p>
+<p><strong>Part 2:</strong>  Compare the performance of the methods.  Which method acheived
+the most randomness?  Which method achieved an acceptable level of
+randomness the fastest?</p>
+<p><strong>Extra credit:</strong>  Write a function to perform a different shuffling
+method and compare to the other three.</p>
 </div>
 </div>
 
