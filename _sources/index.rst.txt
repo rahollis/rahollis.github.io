@@ -16,7 +16,7 @@ Instructor
 | Preferred pronouns: He, Him, His
 | **Office:** 321 Mathematics Building
 | **E-mail:** `rahollis@buffalo.edu <rahollis@buffalo.edu>`_
-| **Office Hours:** Tu 2:00 AM - 4:00 PM
+| **Office Hours:** Tu 2:00 PM - 4:00 PM
 |
 
 Course Resources
@@ -80,7 +80,7 @@ even if you worked on some components of the project in a group.
 More information about project reports is posted :doc:`here <report_guide>`.
 The lowest project score will be dropped at the end of the semester.
 
-**Quizzes.** Each Monday there will be a short quiz testing your knowledge of Python.
+**Quizzes.** Each Tuesday there will be a short quiz testing your knowledge of Python.
 Sample quizzes will be posted ahead of time with the :doc:`weekly class schedule <weekly_schedule>`.
 The lowest two quiz score will be dropped.
 
