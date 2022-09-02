@@ -5,7 +5,7 @@ Weekly Schedule
 
 .. toctree::
    :maxdepth: 4
-..
+
    Week 1 </Schedule/week1>
 ..
    Week 2 </Schedule/week2>
