@@ -7,7 +7,7 @@ Weekly Schedule
    :maxdepth: 4
 
    Week 1 </Schedule/week1>
-..
+
    Week 2 </Schedule/week2>
 ..
    Week 3 </Schedule/week3>

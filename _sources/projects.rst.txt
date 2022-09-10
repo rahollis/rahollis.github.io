@@ -10,7 +10,7 @@ Projects
    :maxdepth: 2
 
    Prime or Not </Projects/prime_or_not/prime_or_not>
-..
+
    Shuffle Them Cards </Projects/shuffle/shuffle>
 ..
    A Particular Sequence </Projects/part_sequence/part_sequence>
