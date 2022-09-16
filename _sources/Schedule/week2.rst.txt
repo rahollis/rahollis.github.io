@@ -11,7 +11,7 @@ Python
 Project 1
 ~~~~~~~~~
 
-Due: Friday Sep 17, 11:59 PM
+Due: Monday, Sep 12, 11:59 PM
 
 * :doc:`Prime or Not </Projects/prime_or_not/prime_or_not>`.
 
