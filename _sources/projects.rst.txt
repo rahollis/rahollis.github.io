@@ -12,12 +12,12 @@ Projects
    Prime or Not </Projects/prime_or_not/prime_or_not>
 
    Shuffle Them Cards </Projects/shuffle/shuffle>
+
+   The Mayfly Model </Projects/mayfly_model/mayfly_model>
 ..
    A Particular Sequence </Projects/part_sequence/part_sequence>
 ..
    A Funny Function </Projects/funny_function/funny_function>
-..
-   The Mayfly Model </Projects/mayfly_model/mayfly_model>
 ..
    Image Denoising </Prjects/image_denoise/image_denoise>
 ..
