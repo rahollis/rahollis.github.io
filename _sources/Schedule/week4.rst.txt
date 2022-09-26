@@ -1,10 +1,10 @@
-Week 4: Feb 21 - Feb 25
+Week 4: Sep 19 - Sep 23
 =======================
 
 Project 2
 ~~~~~~~~~
 
-* :doc:`A Funny Function </Projects/funny_function/funny_function>`.
+* :doc:`Mayfly Model </Projects/mayfly_model/mayfly_model>`.
 
 Python
 ~~~~~~
@@ -15,8 +15,8 @@ Python
 Mathematics
 ~~~~~~~~~~~
 
-* Relatively prime integers
-* GCD
+* Population models
+* Bifurcation
 
 Week 4 notebook
 ~~~~~~~~~~~~~~~
