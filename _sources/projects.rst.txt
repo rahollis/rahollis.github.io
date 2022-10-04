@@ -14,12 +14,8 @@ Projects
    Shuffle Them Cards </Projects/shuffle/shuffle>
 
    The Mayfly Model </Projects/mayfly_model/mayfly_model>
-..
-   A Particular Sequence </Projects/part_sequence/part_sequence>
-..
-   A Funny Function </Projects/funny_function/funny_function>
-..
-   Image Denoising </Prjects/image_denoise/image_denoise>
+
+   Image Denoising </Projects/image_denoise/image_denoise>
 ..
    Tartans </Projects/tartans/tartans>
 ..
@@ -34,3 +30,7 @@ Projects
    Decrypting a Message </Projects/message_decrypt/message_decrypt>
 ..
    Solving Sudoku </Projects/simple_sudoku/simple_sudoku>
+..
+   A Particular Sequence </Projects/part_sequence/part_sequence>
+..
+   A Funny Function </Projects/funny_function/funny_function>
