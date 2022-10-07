@@ -39,7 +39,9 @@
 
     
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Weekly Schedule" href="../../weekly_schedule.html" />
+    <link rel="prev" title="Mayfly model" href="../mayfly_model/mayfly_model.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -88,12 +90,26 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">Syllabus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../report_guide.html">Project Report Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../useful_links.html">Useful Links</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../python_tools.html">Python Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../projects.html">Projects</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../projects.html">Projects</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../prime_or_not/prime_or_not.html">Prime or Not</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shuffle/shuffle.html">Shuffle Them Cards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mayfly_model/mayfly_model.html">The Mayfly Model</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Image Denoising</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#image-noise">Image noise</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mean-filter">Mean filter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#median-filter">Median filter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#edge-pixels">Edge pixels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#project">Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#extra-credit">Extra credit</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../weekly_schedule.html">Weekly Schedule</a></li>
 </ul>
 
@@ -140,6 +156,8 @@
   <ul class="wy-breadcrumbs">
     
       <li><a href="../../master.html">MTH 337</a> &raquo;</li>
+        
+          <li><a href="../../projects.html">Projects</a> &raquo;</li>
         
       <li>Image denoising</li>
     
@@ -366,10 +384,10 @@ campus, which were obscured by salt and pepper noise. For extra credit
 noise in these images, find locations where the photos were taken, take photos
 showing you at the same locations, and include these photos in your report.</p>
 <ul class="simple">
-<li><p><a class="reference download internal" download="" href="../../_downloads/db6ba0c6e0d1a7ed0a93c822d52c067e/ub_noisy1.png"><code class="xref download docutils literal notranslate"><span class="pre">ub_noisy1.png</span></code></a></p></li>
-<li><p><a class="reference download internal" download="" href="../../_downloads/e5e65565b1ddee0ac502806208943459/ub_noisy2.png"><code class="xref download docutils literal notranslate"><span class="pre">ub_noisy2.png</span></code></a></p></li>
-<li><p><a class="reference download internal" download="" href="../../_downloads/f8c18bd4f3871efe63eeaa62c66648fa/ub_noisy3.png"><code class="xref download docutils literal notranslate"><span class="pre">ub_noisy3.png</span></code></a></p></li>
-<li><p><a class="reference download internal" download="" href="../../_downloads/c77501c4b3c35668ffdddc84fe896bfb/ub_noisy4.png"><code class="xref download docutils literal notranslate"><span class="pre">ub_noisy4.png</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/e796f6092ff7469a60ce021937b411c1/noisy_ub1.png"><code class="xref download docutils literal notranslate"><span class="pre">noisy_ub1.png</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/4da38125ed21da88bd9ca91b41ea4e67/noisy_ub2.png"><code class="xref download docutils literal notranslate"><span class="pre">noisy_ub2.png</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/49df6d5a32993e18686abadaeacd125d/noisy_ub3.png"><code class="xref download docutils literal notranslate"><span class="pre">noisy_ub3.png</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/caeb55c5e3ced4af4339e20529b780ad/noisy_ub4.png"><code class="xref download docutils literal notranslate"><span class="pre">noisy_ub4.png</span></code></a></p></li>
 </ul>
 <p><strong>Note 1.</strong> To qualify for the extra credit your report must include
 both code producing images with noise removed to the extent that they are
@@ -403,7 +421,7 @@ photo file:</p></li>
 
   <div role="contentinfo">
     <p>
-      Last updated on Aug 28, 2022.
+      Last updated on Oct 07, 2022.
 
     </p>
   </div> 

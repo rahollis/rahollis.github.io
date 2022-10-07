@@ -1,5 +1,5 @@
-Week 5: Feb 28 - Mar 4
-======================
+Week 5: Sep 26 - Sep 30
+=======================
 
 Project 3
 ~~~~~~~~~
@@ -24,4 +24,4 @@ Week 5 notebook
 Sample quiz
 ~~~~~~~~~~~~~
 
-- * :download:`Sample Quiz 4 <../Quizzes/quiz4_sample.pdf>`
+- No quiz
