@@ -1,10 +1,10 @@
-Week 7: Mar 14 - Mar 18
+Week 7: Oct 10 - Oct 14
 =======================
 
 Project 4
 ~~~~~~~~~
 
-* :doc:`Tartans </Projects/tartans/tartans>`
+* :doc:`Image Denoising </Projects/image_denoise/image_denoise>`
 
 
 Python
@@ -22,4 +22,4 @@ Week 7 notebook
 Sample quiz
 ~~~~~~~~~~~~~
 
-- * :download:`Sample Quiz 5 <../Quizzes/quiz5_sample.pdf>`
+- No quiz.

@@ -17,15 +17,15 @@ redistricting process use when redrawing the congressional district lines, inclu
 * political lean of each district,
 * majority minority districts to ensure representation of the minority.
 
-In this project we will focus on the first two of these criteria.
+In this project we will focus on the first three of these criteria.
 
 Equal population
 ~~~~~~~~~~~~~~~~
 
 In order to guarantee that each person gets equal representation, each representative sent to Congress
 should be representing the same number of persons.  This means that a "good" district map should have
-districts with equal population.  This means that districts in less populated areas are going to be bigger
-than districts in densely populated areas.
+districts with equal population.  For our model, we will assume that each "census block" has exactly 
+the same population.
 
 District shapes
 ~~~~~~~~~~~~~~~
@@ -37,7 +37,17 @@ Consider the following district map, and notice the shape of the district labele
     :width: 450px
     :align: center
 
-This district does not have a "regular" shape.
+This district does not have a "regular" shape.  The more "centralized" (circular) a district is, the better.
+
+Political lean
+~~~~~~~~~~~~~~
+
+A major problem with drawing district maps is that it is often done in order to favor one political party
+over another.  This is called "gerrymandering" and is accomplished by using two methods to cheat the system:
+"cracking" and "packing".  Cracking is when an area with a high concentration of people who favor the
+opposing party is split into two or more districts in order to dilute their political power.  Packing is
+when disparate communities are packed into an oddly shaped district in order to concentrate the political 
+power of the opposing party into one district.
 
 Scoring a district map
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -45,61 +55,70 @@ Scoring a district map
 For any given map, there is an astromonically large number of possible ways to draw the district borders,
 but not all of these are "good", in fact most of them are quite bad.  Imagine you are the person responsible
 for redrawing the district lines.  How do you compare two different district maps?  One way to do this would
-be to assign a numerical score to each district map and keep the map with the better score.  For the purposes
-of this project, this score would have to take into consideration both the populations and shapes of the
-districts.
+be to assign a numerical score to each district map and keep the map with the better score.  
 
-To measure how equally distributed the population is among the districts, we can use the statistical 
-standard deviation (SD) of the district populations.  The higher the SD, the less evenly
-distributed the population is among the districts.  Dividing by the total population will normalize this
-population metric to a value between 0 and 1.
+In reality, the way a map is scored can be very complicated due to all the factors taken into account.  We
+will make a few simplifying assumptions to make this more managable.  The first assumption is that we will 
+only be working with maps in which all the districts have the same size (or as close to the same size as
+possible).  We will also assume that each "census block" has exactly the same number of people, making all
+blocks equal population.  Thus we can measure population in terms of blocks, so the population of a district
+is equal to its area.
 
 To measure how regularly shaped the districts are, we can calculate the perimeter-area ratio (PAR) of each 
 district.  The shape with the lowest PAR is a circle with a value of :math:`2\sqrt{\frac{\pi}{A}}` where 
 :math:`A` is the area of the circle.  All other shapes with the same area will have a PAR larger than this, 
-and as the area increases, this lower bound will decrease to zero.  For the purposes of this project, the
-maximum value of the PAR is 4.  The shape metric will be the sum of the PARs for each district, divided by
-4 times the number the districts.
+and as the area increases, this lower bound will decrease to zero.  The shape metric will be the PAR of a 
+circle with area equal to that of the average district divided by the average of the district PARs.
 
-Assuming there are :math:`k` districts and a total population of :math:`m`, the map score is
+There will be two political parties, party A and party B.  Assume we know the overall political lean of the 
+map in terms of a percentage favoring party A, :math:`p`.  We can calculate the percentage of the districts 
+that favor party A, :math:`p_{map}` and measure how well the map reflects the overall political lean using 
+percent difference, :math:`1-\frac{|p-p_{map}|}{p}`.
 
-.. math:: \alpha\cdot\text{SD}(\text{district popuations}) + (1-\alpha)\cdot\frac{1}{4}\sum_{i=1}^k \text{PAR}(\text{district }i),
+Assuming there are :math:`k` districts with average area :math:`A` and political lean :math:`p`, the map
+score is
 
-where :math:`\alpha` is a parameter between 0 and 1 which indicates how much priority is given to the 
-population metric.
+.. math:: \alpha\cdot\left(\frac{2k\sqrt{\pi}}{A\sum\{\text{district PARs}\}}\right) + (1-\alpha)\cdot\left(1-\frac{|p-p_{map}|}{p}\right)
+
+where :math:`\alpha` is a parameter between 0 and 1 which indicates how much priority is given to the shape
+metric.
 
 Automating redistricting
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-The goal of this project is to write code that can model the redistricting process using the first two
-criteria listed above.  In particular, we will use a monte carlo Markov chain process to go from a randomly
-generated district map to an acceptable district map by making changes that will equalize the population of
-each district and make the shapes more regular.
+The goal of this project is to write code that can model the redistricting process using the
+criteria listed above.  In particular, we will use a monte carlo Markov chain process to go from a starting
+map to an acceptable district map by making changes that will increase the map score in the long term.
 
-Our maps will consist of a :math:`n \times n` array of *blocks*, each having the same population.  The 
-districts will be made up of groups of neighboring blocks.  Below is an example of what this might look like 
-with a 100x100 map of 7 districts.
+Our maps will consist of a :math:`n \times n` array of *census blocks*, each treated as having population 1. 
+The districts will be made up of groups of neighboring blocks with the same array value.  Below is an example
+of what this might look like with a 100x100 map of 7 districts.
 
 .. figure:: random_districts.png
     :width: 450px
     :align: center
 
-**Exercise:**  Write a function that will generate a random district map of a given size with a given number
-of districts.  To do this, randomly select blocks to be the "center" of each district, and assign each block
-to the district whose center is closest.
+You will be given a map containing voter information for each census block in the form of an array of 0s and 
+1s.  A census block with a value of 1 indicates that it favors party A, and a block with value 0 favors party
+B.
 
-**Exercise:**  Write a function that will calculate the map score of an given district map.
+**Exercise:**  Write a function that will generate a starting district map of a given size and with a given 
+number of districts.  Remember that the districts should have as close to the same population as possible.
+
+**Exercise:**  Write a function that will calculate the map score of an given district map with given
+political lean.
 
 Monte carlo simulation
 ~~~~~~~~~~~~~~~~~~~~~~
 
 A *monte carlo simulation* is a mathematical modeling technique where the state of a dynamical system 
-(changes over time) is updated to a new state that is randomly chosen from the collection of all the 
+(system that changes over time) is updated to a new state by randomly choosing from the collection of all the 
 possible states based on the current state.
 
-For this project, we will update the district map by randomly selecting a block on the border of its district
-and switching it to one of the other districts it is bordering.  Effectively choosing at random a new map
-that differs from the current map by one border block.
+For this project, we will update the district map by first randomly selecting a district and one of its
+neighboring districts.  Then a border block for each district is chosen at random and reassigned to the other
+district. This is effectively choosing at random a new map that differs from the current map in only two
+border positions.
 
 Markov Chain
 ~~~~~~~~~~~~
@@ -107,10 +126,13 @@ Markov Chain
 A *Markov chain* is a sequence of states of a system where each state is generated from the previous
 based on a set of stocastic rules (based on probability).
 
-Once a new district map is selected that differs from the current by one border block, the new map and the 
-map will be scored.  If the new map has a better score, we will keep it.  If the new map does not have a
-better score, we have a probability :math:`p` of keeping it anyways.  Thus we will have a Markov chain of 
-district maps.
+Once a new district map is selected that differs from the current one in two border positions, the new map 
+and the old map will be scored, and the scores compared.  If the new map has a higher score (closer to 1), 
+we will keep it.  If the old map has a higher score, we have a probability :math:`p` of keeping it anyways.
+
+We are effectively trying to maximize the map score, but we do not want to settle for a local maximum.  The
+reason for using a Markov chain is to avoid getting stuck at a local maximum by giving a way of escaping
+by passing a probability test.
 
 **Exercise:**  Write a function that will update a given district map based on the rules described above.
 
@@ -132,7 +154,7 @@ Simulate the redistricting process by animating the Markov chain described above
     def animate(i):
         global dist_map
         
-        dist_map = UpdateDistrictMap(dist_map,size,alpha)
+        dist_map = UpdateDistrictMap(dist_map,vote_map,alpha)
         im.set_data(dist_map)
         return im
     
@@ -143,10 +165,10 @@ Simulate the redistricting process by animating the Markov chain described above
 **Extra Credit 1:** To make the simulation more realistic, allow the blocks to have different populations, and 
 update your map score calculation accordingly.
 
-**Extra Credit 2:** Gerrymandering is when the district borders are drawn to favor one political party over
-another.  One way to try to avoid this is to require that the percentage of districts that favor party A must
-closely match the percentage of blocks that favor party A.  Include this in your simulation.
+**Extra Credit 2:** Add into your model a way to guarantee at least one majority minority district based on a
+demographic map.
 
 **Extra Credit 3:** Another way to measure the shape of a district is to use the *centering metric*.  This
 metric calculates the *center* of the district and takes the standard deviation of distance from the center
-of each block in the district.  Include this metric in your map score.
+of each block in the district.  Include this metric in your map score.  Be sure to calibrate using centering
+metric of a circle with area equal to that of the average district in your map.
