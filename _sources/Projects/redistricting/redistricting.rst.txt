@@ -65,20 +65,22 @@ blocks equal population.  Thus we can measure population in terms of blocks, so 
 is equal to its area.
 
 To measure how regularly shaped the districts are, we can calculate the perimeter-area ratio (PAR) of each 
-district.  The shape with the lowest PAR is a circle with a value of :math:`2\sqrt{\frac{\pi}{A}}` where 
-:math:`A` is the area of the circle.  All other shapes with the same area will have a PAR larger than this, 
-and as the area increases, this lower bound will decrease to zero.  The shape metric will be the PAR of a 
-circle with area equal to that of the average district divided by the average of the district PARs.
+district.  The shape with the lowest PAR is a circle with a value of 
+
+.. math:: PAR_{circ} = 2\sqrt{\frac{\pi}{A}}
+
+where :math:`A` is the area of the circle.  All other shapes with the same area will have a PAR larger than 
+this, and as the area increases, this lower bound will decrease to zero.  The shape metric will be the percent
+difference between the average of the district PARs and the PAR of a circle with the same area.
 
 There will be two political parties, party A and party B.  Assume we know the overall political lean of the 
 map in terms of a percentage favoring party A, :math:`p`.  We can calculate the percentage of the districts 
-that favor party A, :math:`p_{map}` and measure how well the map reflects the overall political lean using 
-percent difference, :math:`1-\frac{|p-p_{map}|}{p}`.
+that favor party A, :math:`p_{dist}` and measure how well the map reflects the overall political lean using 
+percent difference, :math:`\frac{|p-p_{dist}|}{p}`.
 
-Assuming there are :math:`k` districts with average area :math:`A` and political lean :math:`p`, the map
-score is
+Let the average PAR of the districts be :math:`PAR_{avg}`.  Then the map score is
 
-.. math:: \alpha\cdot\left(\frac{2k\sqrt{\pi}}{A\sum\{\text{district PARs}\}}\right) + (1-\alpha)\cdot\left(1-\frac{|p-p_{map}|}{p}\right)
+.. math:: \alpha\cdot\left(\frac{PAR_{circ}-PAR_{avg}}{PAR_{circ}}\right) + (1-\alpha)\cdot\left(\frac{|p-p_{map}|}{p}\right)
 
 where :math:`\alpha` is a parameter between 0 and 1 which indicates how much priority is given to the shape
 metric.
@@ -139,13 +141,21 @@ by passing a probability test.
 Project
 ~~~~~~~
 
-Simulate the redistricting process by animating the Markov chain described above using the following code.
+This is a coding project, so there will be no narrative grade.  The grade breakdown is 70% code and 30% 
+presentation.
+
+Your task is to use your assigned vote map in order to generate a district map that adheres to the criteria
+set forth in the above description.  To figure out which map you will use, in the a code cell at the top of
+your notebook type (your PN)%31.  The maps are included below as black and white PNG files.  Download the
+and load it into Jupyter.  Remember that when you do so, it will come as a 3D array.
+
+You may simulate the redistricting process by animating the Markov chain using the following code.
 
 .. code:: python
     
     %matplotlib notebook
     
-    dist_map = GenerateRandomDistricts(size,num_districts)
+    dist_map = GenerateDistrictMap(size,num_districts)
     
     fig = plt.figure(figsize = (5,5))
     ax = plt.subplot(111)
@@ -172,3 +182,38 @@ demographic map.
 metric calculates the *center* of the district and takes the standard deviation of distance from the center
 of each block in the district.  Include this metric in your map score.  Be sure to calibrate using centering
 metric of a circle with area equal to that of the average district in your map.
+
+Vote map files
+~~~~~~~~~~~~~~
+
+0.  :download:`0.png<0.png>`
+1.  :download:`1.png<1.png>`
+2.  :download:`2.png<2.png>`
+3.  :download:`3.png<3.png>`
+4.  :download:`4.png<4.png>`
+5.  :download:`5.png<5.png>`
+6.  :download:`6.png<6.png>`
+7.  :download:`7.png<7.png>`
+8.  :download:`8.png<8.png>`
+9.  :download:`9.png<9.png>`
+10.  :download:`10.png<10.png>`
+11.  :download:`11.png<11.png>`
+12.  :download:`12.png<12.png>`
+13.  :download:`13.png<13.png>`
+14.  :download:`14.png<14.png>`
+15.  :download:`15.png<15.png>`
+16.  :download:`16.png<16.png>`
+17.  :download:`17.png<17.png>`
+18.  :download:`18.png<18.png>`
+19.  :download:`19.png<19.png>`
+20.  :download:`20.png<20.png>`
+21.  :download:`21.png<21.png>`
+22.  :download:`22.png<22.png>`
+23.  :download:`23.png<23.png>`
+24.  :download:`24.png<24.png>`
+25.  :download:`25.png<25.png>`
+26.  :download:`26.png<26.png>`
+27.  :download:`27.png<27.png>`
+28.  :download:`28.png<28.png>`
+29.  :download:`29.png<29.png>`
+30.  :download:`30.png<30.png>`

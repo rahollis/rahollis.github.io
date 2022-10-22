@@ -109,6 +109,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#monte-carlo-simulation">Monte carlo simulation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#markov-chain">Markov Chain</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#project">Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vote-map-files">Vote map files</a></li>
 </ul>
 </li>
 </ul>
@@ -260,18 +261,19 @@ possible).  We will also assume that each “census block” has exactly the sam
 blocks equal population.  Thus we can measure population in terms of blocks, so the population of a district
 is equal to its area.</p>
 <p>To measure how regularly shaped the districts are, we can calculate the perimeter-area ratio (PAR) of each
-district.  The shape with the lowest PAR is a circle with a value of <span class="math notranslate nohighlight">\(2\sqrt{\frac{\pi}{A}}\)</span> where
-<span class="math notranslate nohighlight">\(A\)</span> is the area of the circle.  All other shapes with the same area will have a PAR larger than this,
-and as the area increases, this lower bound will decrease to zero.  The shape metric will be the PAR of a
-circle with area equal to that of the average district divided by the average of the district PARs.</p>
+district.  The shape with the lowest PAR is a circle with a value of</p>
+<div class="math notranslate nohighlight">
+\[PAR_{circ} = 2\sqrt{\frac{\pi}{A}}\]</div>
+<p>where <span class="math notranslate nohighlight">\(A\)</span> is the area of the circle.  All other shapes with the same area will have a PAR larger than
+this, and as the area increases, this lower bound will decrease to zero.  The shape metric will be the percent
+difference between the average of the district PARs and the PAR of a circle with the same area.</p>
 <p>There will be two political parties, party A and party B.  Assume we know the overall political lean of the
 map in terms of a percentage favoring party A, <span class="math notranslate nohighlight">\(p\)</span>.  We can calculate the percentage of the districts
-that favor party A, <span class="math notranslate nohighlight">\(p_{map}\)</span> and measure how well the map reflects the overall political lean using
-percent difference, <span class="math notranslate nohighlight">\(1-\frac{|p-p_{map}|}{p}\)</span>.</p>
-<p>Assuming there are <span class="math notranslate nohighlight">\(k\)</span> districts with average area <span class="math notranslate nohighlight">\(A\)</span> and political lean <span class="math notranslate nohighlight">\(p\)</span>, the map
-score is</p>
+that favor party A, <span class="math notranslate nohighlight">\(p_{dist}\)</span> and measure how well the map reflects the overall political lean using
+percent difference, <span class="math notranslate nohighlight">\(\frac{|p-p_{dist}|}{p}\)</span>.</p>
+<p>Let the average PAR of the districts be <span class="math notranslate nohighlight">\(PAR_{avg}\)</span>.  Then the map score is</p>
 <div class="math notranslate nohighlight">
-\[\alpha\cdot\left(\frac{2k\sqrt{\pi}}{A\sum\{\text{district PARs}\}}\right) + (1-\alpha)\cdot\left(1-\frac{|p-p_{map}|}{p}\right)\]</div>
+\[\alpha\cdot\left(\frac{PAR_{circ}-PAR_{avg}}{PAR_{circ}}\right) + (1-\alpha)\cdot\left(\frac{|p-p_{map}|}{p}\right)\]</div>
 <p>where <span class="math notranslate nohighlight">\(\alpha\)</span> is a parameter between 0 and 1 which indicates how much priority is given to the shape
 metric.</p>
 </div>
@@ -318,10 +320,16 @@ by passing a probability test.</p>
 </div>
 <div class="section" id="project">
 <h2>Project<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h2>
-<p>Simulate the redistricting process by animating the Markov chain described above using the following code.</p>
+<p>This is a coding project, so there will be no narrative grade.  The grade breakdown is 70% code and 30%
+presentation.</p>
+<p>Your task is to use your assigned vote map in order to generate a district map that adheres to the criteria
+set forth in the above description.  To figure out which map you will use, in the a code cell at the top of
+your notebook type (your PN)%31.  The maps are included below as black and white PNG files.  Download the
+and load it into Jupyter.  Remember that when you do so, it will come as a 3D array.</p>
+<p>You may simulate the redistricting process by animating the Markov chain using the following code.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">notebook</span>
 
-<span class="n">dist_map</span> <span class="o">=</span> <span class="n">GenerateRandomDistricts</span><span class="p">(</span><span class="n">size</span><span class="p">,</span><span class="n">num_districts</span><span class="p">)</span>
+<span class="n">dist_map</span> <span class="o">=</span> <span class="n">GenerateDistrictMap</span><span class="p">(</span><span class="n">size</span><span class="p">,</span><span class="n">num_districts</span><span class="p">)</span>
 
 <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
@@ -347,6 +355,42 @@ metric calculates the <em>center</em> of the district and takes the standard dev
 of each block in the district.  Include this metric in your map score.  Be sure to calibrate using centering
 metric of a circle with area equal to that of the average district in your map.</p>
 </div>
+<div class="section" id="vote-map-files">
+<h2>Vote map files<a class="headerlink" href="#vote-map-files" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple" start="0">
+<li><p><a class="reference download internal" download="" href="../../_downloads/5830a82367e79b1c1146b7b62b316910/0.png"><code class="xref download docutils literal notranslate"><span class="pre">0.png</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/77f14a0cc69ef57630a7500aeed92996/1.png"><code class="xref download docutils literal notranslate"><span class="pre">1.png</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/d7d835eee9a9a8fc7009908beac10785/2.png"><code class="xref download docutils literal notranslate"><span class="pre">2.png</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/b98087e800f13473c7f0efe0ce3a22f5/3.png"><code class="xref download docutils literal notranslate"><span class="pre">3.png</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/7bbdcdba90ffae45e1766988c8b5cf7c/4.png"><code class="xref download docutils literal notranslate"><span class="pre">4.png</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/5853f061637cbb3398b8c5e9d9a86f7b/5.png"><code class="xref download docutils literal notranslate"><span class="pre">5.png</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/5512e08e361950e8e36354ae0fa0c227/6.png"><code class="xref download docutils literal notranslate"><span class="pre">6.png</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/527487a49cf15ab6306cb4d789502fea/7.png"><code class="xref download docutils literal notranslate"><span class="pre">7.png</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/72d5d82bebe18e5da9d15b50fc8a1c10/8.png"><code class="xref download docutils literal notranslate"><span class="pre">8.png</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/298f6d2022be5ef44135f8139a42a952/9.png"><code class="xref download docutils literal notranslate"><span class="pre">9.png</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/f181197aa9056193fc95b93e221569f5/10.png"><code class="xref download docutils literal notranslate"><span class="pre">10.png</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/7a75354baf11b35a74f30737cd4d1a91/11.png"><code class="xref download docutils literal notranslate"><span class="pre">11.png</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/217cdeb1824d533dff6dacaef75c2814/12.png"><code class="xref download docutils literal notranslate"><span class="pre">12.png</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/a2aee0188f20eae270eca86b81f9cc5f/13.png"><code class="xref download docutils literal notranslate"><span class="pre">13.png</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/901cd023b797a260b140e8380df1da68/14.png"><code class="xref download docutils literal notranslate"><span class="pre">14.png</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/b2309ec9332493fa91aa6ca1bb84a4cb/15.png"><code class="xref download docutils literal notranslate"><span class="pre">15.png</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/eed70ea4e82643ad4b5d2534ba55bb14/16.png"><code class="xref download docutils literal notranslate"><span class="pre">16.png</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/6de38a46e184248de561b5df223d7bf7/17.png"><code class="xref download docutils literal notranslate"><span class="pre">17.png</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/fb8237290e4a065f196ec6d53fb7530e/18.png"><code class="xref download docutils literal notranslate"><span class="pre">18.png</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/c7ce3c96f46d6ab8791a3cfe49685051/19.png"><code class="xref download docutils literal notranslate"><span class="pre">19.png</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/b77f3c99d7fd11917d48143f0605d224/20.png"><code class="xref download docutils literal notranslate"><span class="pre">20.png</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/fa0d0adb353b8c2815c67a5bfdbfc5c4/21.png"><code class="xref download docutils literal notranslate"><span class="pre">21.png</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/ec1d243a8fc03698eb33a6157254b3ba/22.png"><code class="xref download docutils literal notranslate"><span class="pre">22.png</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/f5ed11609495101d1a898732f036cad5/23.png"><code class="xref download docutils literal notranslate"><span class="pre">23.png</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/ab76ecc5f2b1f875d8fb81e8826bf666/24.png"><code class="xref download docutils literal notranslate"><span class="pre">24.png</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/c485247edc4120efc5cb726a59c60f16/25.png"><code class="xref download docutils literal notranslate"><span class="pre">25.png</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/58c822eb2d2e20adb85bf3801c6e7983/26.png"><code class="xref download docutils literal notranslate"><span class="pre">26.png</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/5b2ed5d40869d1bbf1e7be2444878ff5/27.png"><code class="xref download docutils literal notranslate"><span class="pre">27.png</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/1a225926f5d4003151023b0cc52ee097/28.png"><code class="xref download docutils literal notranslate"><span class="pre">28.png</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/54a986d360ebc2015a8f0acf3a2c5440/29.png"><code class="xref download docutils literal notranslate"><span class="pre">29.png</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/6ca3db6bc2249248385964713c21b683/30.png"><code class="xref download docutils literal notranslate"><span class="pre">30.png</span></code></a></p></li>
+</ol>
+</div>
 </div>
 
 
@@ -360,7 +404,7 @@ metric of a circle with area equal to that of the average district in your map.<
 
   <div role="contentinfo">
     <p>
-      Last updated on Oct 17, 2022.
+      Last updated on Oct 22, 2022.
 
     </p>
   </div> 

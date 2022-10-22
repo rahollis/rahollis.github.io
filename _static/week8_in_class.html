@@ -13095,36 +13095,27 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Week-8">Week 8<a class="anchor-link" href="#Week-8">&#182;</a></h1><h2 id="Quiz-5">Quiz 5<a class="anchor-link" href="#Quiz-5">&#182;</a></h2>
+<h1 id="Week-8">Week 8<a class="anchor-link" href="#Week-8">&#182;</a></h1><h2 id="Notes:--redistricting-project">Notes:  redistricting project<a class="anchor-link" href="#Notes:--redistricting-project">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li><p>Match the following RGB colors with their Python color coordinate tuples.</p>
+<h3 id="Redistricting">Redistricting<a class="anchor-link" href="#Redistricting">&#182;</a></h3><p><em>Redistricting</em> is the process by which the congressional districts are redrawn every 10 years following the census.</p>
 <ul>
-<li>colors<ul>
-<li>Red</li>
-<li>Yellow</li>
-<li>Cyan</li>
+<li>Congressional districts are made up of small <em>census blocks</em><ul>
+<li>For the purposes of the project, we will assume each census block has population 1, so the population of a district is equal to its area.</li>
 </ul>
 </li>
-<li>coordinate tuples<ul>
-<li>(1,1,0)</li>
-<li>(0,1,1)</li>
-<li>(1,0,0)</li>
+<li>Congressional districts should<ul>
+<li>have equal populations (we will assume this is true for the project),</li>
+<li>have centralized shapes (measured by perimeter-to-area ratio, or PAR),</li>
+<li>accurately reflect the political lean of the map.</li>
 </ul>
 </li>
+<li>The objective of redistricting is to redraw the boundaries between districts to better reflect changes to the population distribution and political lean of the state.</li>
 </ul>
-</li>
-<li><p>Write a function that takes an 3D color pixel array as input, extract the <em>red</em> sheet from it, and plots the red sheet using the 'inferno' color map.</p>
-</li>
-<li><p>Build the following array in Python using the <code>concatenate</code> function.
-$$ \left[\begin{array}{ccccccccc} 1 &amp; 1 &amp; 1 &amp; 2 &amp; 2 &amp; 2 &amp; 3 &amp; 3 &amp; 3 \\ 1 &amp; 1 &amp; 1 &amp; 2 &amp; 2 &amp; 2 &amp; 3 &amp; 3 &amp; 3 \\ 1 &amp; 1 &amp; 1 &amp; 2 &amp; 2 &amp; 2 &amp; 3 &amp; 3 &amp; 3 \end{array}\right] $$</p>
-</li>
-</ol>
 
 </div>
 </div>
@@ -13132,45 +13123,10 @@ $$ \left[\begin{array}{ccccccccc} 1 &amp; 1 &amp; 1 &amp; 2 &amp; 2 &amp; 2 &amp
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<table>
-<thead><tr>
-<th>Color</th>
-<th>coordinate tuple</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Red</td>
-<td>(1,0,0)</td>
-</tr>
-<tr>
-<td>Yellow</td>
-<td>(1,1,0)</td>
-</tr>
-<tr>
-<td>Cyan</td>
-<td>(0,1,1)</td>
-</tr>
-</tbody>
-</table>
+<h3 id="Starting-information">Starting information<a class="anchor-link" href="#Starting-information">&#182;</a></h3><p>You will start the project with a map (array) of census blocks (entries) and their individual political lean (entry values of 0 or 1).  Your task is to create an initial district map (also an array) indicating which district each census block belongs to (entries are integers indicating district).</p>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">plot_red</span><span class="p">(</span><span class="n">color_array</span><span class="p">):</span>
-    <span class="n">red_sheet</span> <span class="o">=</span> <span class="n">color_array</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">red_sheet</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;inferno&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -13178,129 +13134,11 @@ $$ \left[\begin{array}{ccccccccc} 1 &amp; 1 &amp; 1 &amp; 2 &amp; 2 &amp; 2 &amp
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span><span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">),</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span><span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">),</span><span class="mi">3</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span><span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)],</span><span class="mi">1</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">colors</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[1]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([[1, 1, 1, 2, 2, 2, 3, 3, 3],
-       [1, 1, 1, 2, 2, 2, 3, 3, 3],
-       [1, 1, 1, 2, 2, 2, 3, 3, 3]])</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Notes">Notes<a class="anchor-link" href="#Notes">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">color_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;DR&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">140</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span><span class="s1">&#39;DN&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">108</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span><span class="s1">&#39;K&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span><span class="s1">&#39;DW&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">176</span><span class="p">,</span> <span class="mi">176</span><span class="p">,</span> <span class="mi">176</span><span class="p">]}</span>
-<span class="n">pattern</span> <span class="o">=</span> <span class="s1">&#39;DR15 DN40 DW12 K8 DN20 DW44 K56 DN12 DR12 DW44 DN12 DR4 DW24 K4 DW6 DN20 DW6 K4 DW24 DR4 DN12 DW44 DR12 DN12 K56 DW44 DN20 K8 DW12 DN40 DR15&#39;</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pattern</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[30]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[&#39;DR15&#39;,
- &#39;DN40&#39;,
- &#39;DW12&#39;,
- &#39;K8&#39;,
- &#39;DN20&#39;,
- &#39;DW44&#39;,
- &#39;K56&#39;,
- &#39;DN12&#39;,
- &#39;DR12&#39;,
- &#39;DW44&#39;,
- &#39;DN12&#39;,
- &#39;DR4&#39;,
- &#39;DW24&#39;,
- &#39;K4&#39;,
- &#39;DW6&#39;,
- &#39;DN20&#39;,
- &#39;DW6&#39;,
- &#39;K4&#39;,
- &#39;DW24&#39;,
- &#39;DR4&#39;,
- &#39;DN12&#39;,
- &#39;DW44&#39;,
- &#39;DR12&#39;,
- &#39;DN12&#39;,
- &#39;K56&#39;,
- &#39;DW44&#39;,
- &#39;DN20&#39;,
- &#39;K8&#39;,
- &#39;DW12&#39;,
- &#39;DN40&#39;,
- &#39;DR15&#39;]</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13310,7 +13148,268 @@ $$ \left[\begin{array}{ccccccccc} 1 &amp; 1 &amp; 1 &amp; 2 &amp; 2 &amp; 2 &amp
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">color_dict</span><span class="p">[</span><span class="s1">&#39;DN&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">example_vote_map</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">example_vote_map</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[0 0 0 0 1 1]
+ [0 0 1 1 0 1]
+ [0 0 1 1 0 0]
+ [1 0 0 0 0 1]
+ [1 1 0 0 1 1]
+ [1 1 1 0 0 1]]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">example_vote_map</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="n">colors</span><span class="o">.</span><span class="n">ListedColormap</span><span class="p">([</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="s1">&#39;blue&#39;</span><span class="p">]))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">example_dist_map</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">example_dist_map</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[0 0 0 1 1 1]
+ [0 0 2 2 1 1]
+ [0 2 2 3 3 1]
+ [2 2 4 4 3 3]
+ [2 4 4 4 4 3]
+ [5 5 5 5 5 5]]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">example_dist_map</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Scoring-the-map">Scoring the map<a class="anchor-link" href="#Scoring-the-map">&#182;</a></h3><p>Our map score will take into account a shape score based on the district map array and a political score based on the vote map array.</p>
+<ul>
+<li>Shape score:  $$ \frac{2k\sqrt{\pi}}{A\sum_{i=1}^k PAR_i} $$ if there are $ k $ districts with average area $ A $.</li>
+<li>Partisan score:  $$ 1 - \frac{|p - p_{dist}|}{p} $$ where $ p $ is the partisan lean of the vote map and $ p_{dist} $ is the partisan lean of the district map.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">PARs</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">16</span><span class="o">/</span><span class="mi">7</span><span class="p">,</span><span class="mi">12</span><span class="o">/</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">14</span><span class="o">/</span><span class="mi">6</span><span class="p">]</span>
+<span class="n">shape_score</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="mi">6</span><span class="o">*</span><span class="mf">1.77</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">6</span><span class="o">*</span><span class="nb">sum</span><span class="p">(</span><span class="n">PARs</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">shape_score</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0.2719092904169715
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">example_vote_map</span><span class="p">)</span><span class="o">/</span><span class="mi">36</span>
+<span class="n">p_dist</span> <span class="o">=</span> <span class="mi">4</span><span class="o">/</span><span class="mi">7</span>
+<span class="n">part_score</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="nb">abs</span><span class="p">(</span><span class="n">p</span> <span class="o">-</span> <span class="n">p_dist</span><span class="p">)</span><span class="o">/</span><span class="n">p</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">part_score</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0.7899159663865547
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If a district is exactly tied in the vote count (as is the case for district 1 in this toy example) it should be "duplicated" with one copy being counter for party A and one for party B.  This means that the total number of districts is artificially increase by 1.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Managing-the-data">Managing the data<a class="anchor-link" href="#Managing-the-data">&#182;</a></h3><p>The most important aspect of this project is the way you are storing and managing the data needed for the various calculations.  All of this data can be obtained from the vote and district maps, but it may not be easy to do.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Dictionaries">Dictionaries<a class="anchor-link" href="#Dictionaries">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dict1</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;banana&#39;</span><span class="p">:</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span><span class="s1">&#39;apples&#39;</span><span class="p">:</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="s1">&#39;grapes&#39;</span><span class="p">:</span><span class="s1">&#39;purple&#39;</span><span class="p">,</span><span class="mi">4</span><span class="p">:</span><span class="mi">7</span><span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dict1</span><span class="p">[</span><span class="s1">&#39;banana&#39;</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -13329,7 +13428,7 @@ $$ \left[\begin{array}{ccccccccc} 1 &amp; 1 &amp; 1 &amp; 2 &amp; 2 &amp; 2 &amp
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[100, 108, 100]</pre>
+<pre>&#39;yellow&#39;</pre>
 </div>
 
 </div>
@@ -13343,7 +13442,10 @@ $$ \left[\begin{array}{ccccccccc} 1 &amp; 1 &amp; 1 &amp; 2 &amp; 2 &amp; 2 &amp
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">32</span><span class="o">+</span><span class="mi">42</span><span class="o">+</span><span class="mi">32</span><span class="o">+</span><span class="mi">12</span><span class="o">+</span><span class="mi">8</span><span class="o">+</span><span class="mi">12</span><span class="o">+</span><span class="mi">32</span><span class="o">+</span><span class="mi">42</span><span class="o">+</span><span class="mi">32</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dict2</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">count</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">dict2</span><span class="p">[</span><span class="mf">0.1</span><span class="o">*</span><span class="n">count</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.1</span><span class="o">*</span><span class="n">count</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">dict2</span>
 </pre></div>
 
     </div>
@@ -13362,60 +13464,30 @@ $$ \left[\begin{array}{ccccccccc} 1 &amp; 1 &amp; 1 &amp; 2 &amp; 2 &amp; 2 &amp
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>244</pre>
+<pre>{0.0: 0.0,
+ 0.1: 0.010000000000000002,
+ 0.2: 0.04000000000000001,
+ 0.30000000000000004: 0.09000000000000002,
+ 0.4: 0.16000000000000003,
+ 0.5: 0.25,
+ 0.6000000000000001: 0.3600000000000001,
+ 0.7000000000000001: 0.4900000000000001,
+ 0.8: 0.6400000000000001,
+ 0.9: 0.81}</pre>
 </div>
 
 </div>
 
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li>Set up color dictionary.</li>
-<li>Function that takes the height <code>n</code> and the color code (e.g. <code>DN32</code>) as input and returns a single stripe.</li>
-<li>Function that will loop through the pattern and generate all the stripes and concatenate them together.</li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
-<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
-</pre></div>
-
-    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">],</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dict1</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -13428,51 +13500,27 @@ $$ \left[\begin{array}{ccccccccc} 1 &amp; 1 &amp; 1 &amp; 2 &amp; 2 &amp; 2 &amp
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[18]:</div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>(3, 5, 4)</pre>
+<pre>dict_keys([&#39;banana&#39;, &#39;apples&#39;, &#39;grapes&#39;])</pre>
 </div>
 
 </div>
 
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li>Transpose to get the horizontal stripe array.</li>
-<li>Weave them together into the final tartan.</li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">At</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">A</span><span class="p">,(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
-</pre></div>
-
-    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">At</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dict1</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -13485,13 +13533,13 @@ $$ \left[\begin{array}{ccccccccc} 1 &amp; 1 &amp; 1 &amp; 2 &amp; 2 &amp; 2 &amp
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[28]:</div>
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>(5, 3, 2)</pre>
+<pre>dict_values([&#39;yellow&#39;, &#39;red&#39;, &#39;purple&#39;])</pre>
 </div>
 
 </div>
@@ -13499,6 +13547,55 @@ $$ \left[\begin{array}{ccccccccc} 1 &amp; 1 &amp; 1 &amp; 2 &amp; 2 &amp; 2 &amp
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">dict1</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">dict1</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>yellow
+red
+purple
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Suggestion">Suggestion<a class="anchor-link" href="#Suggestion">&#182;</a></h4><p>Write a function that will take the district and the vote maps as inputs, and outputs a dictionary that stores all the necessary information for computing the map score.</p>
+<ul>
+<li>Which blocks are in each district, and whether or not they are on the border</li>
+<li>What the perimeter is</li>
+<li>What the area is</li>
+<li>What the PAR is</li>
+<li>What the political lean is</li>
+</ul>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
