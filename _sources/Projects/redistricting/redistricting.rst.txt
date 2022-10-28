@@ -80,7 +80,7 @@ percent difference, :math:`\frac{|p-p_{dist}|}{p}`.
 
 Let the average PAR of the districts be :math:`PAR_{avg}`.  Then the map score is
 
-.. math:: \alpha\cdot\left(\frac{PAR_{circ}-PAR_{avg}}{PAR_{circ}}\right) + (1-\alpha)\cdot\left(\frac{|p-p_{map}|}{p}\right)
+.. math:: \alpha\cdot\left(\frac{|PAR_{circ}-PAR_{avg}|}{PAR_{circ}}\right) + (1-\alpha)\cdot\left(\frac{|p-p_{map}|}{p}\right)
 
 where :math:`\alpha` is a parameter between 0 and 1 which indicates how much priority is given to the shape
 metric.
@@ -144,16 +144,17 @@ Project
 This is a coding project, so there will be no narrative grade.  The grade breakdown is 70% code and 30% 
 presentation.
 
-Your task is to use your assigned vote map in order to generate a district map that adheres to the criteria
-set forth in the above description.  To figure out which map you will use, in the a code cell at the top of
-your notebook type (your PN)%31.  The maps are included below as black and white PNG files.  Download the
-and load it into Jupyter.  Remember that when you do so, it will come as a 3D array.
+Your task is to use your assigned vote map in order to generate a district map containing 5 districts that 
+adheres to the criteria set forth in the above description.  To figure out which map you will use, in the a 
+code cell at the top of your notebook type (your PN)%31.  The maps are included below as black and white PNG
+files.  Download the file and load it into Jupyter.  Remember that when you do so, it will come as a 3D array.
 
 You may simulate the redistricting process by animating the Markov chain using the following code.
 
 .. code:: python
     
     %matplotlib notebook
+    from matplotlib.animation import FuncAnimation
     
     dist_map = GenerateDistrictMap(size,num_districts)
     

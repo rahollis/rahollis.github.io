@@ -1,23 +1,16 @@
-Week 9: April 4 - April 8
-=========================
+Week 9: Oct 24 - Oct 28
+=======================
 
-Project 6
+Project 5
 ~~~~~~~~~
 
-* :doc:`Making Friends </Projects/making_friends/making_friends>`
-
-Mathematics
-~~~~~~~~~~~
-
-* Networks/graphs
-* Dynamic network models
+* :doc:`Redistricting </Projects/redistricting/redistricting>`.
 
 
 Python
 ~~~~~~
 
-* :doc:`NetworkX Library </PT/PT-networkx_graphs/PT-networkx_graphs>`
-* Creating, manipulating, and displaying networks
+* Animations using FuncAnimation
 
 
 Week 9 notebook
@@ -29,4 +22,4 @@ Week 9 notebook
 Sample quiz
 ~~~~~~~~~~~~~
 
-- :download:`Sample quiz 7 <../Quizzes/quiz6_sample.pdf>`
+- :download:`Sample week 9 quiz <../Quizzes/quiz9_sample.pdf>`

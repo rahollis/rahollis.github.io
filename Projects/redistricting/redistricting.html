@@ -273,7 +273,7 @@ that favor party A, <span class="math notranslate nohighlight">\(p_{dist}\)</spa
 percent difference, <span class="math notranslate nohighlight">\(\frac{|p-p_{dist}|}{p}\)</span>.</p>
 <p>Let the average PAR of the districts be <span class="math notranslate nohighlight">\(PAR_{avg}\)</span>.  Then the map score is</p>
 <div class="math notranslate nohighlight">
-\[\alpha\cdot\left(\frac{PAR_{circ}-PAR_{avg}}{PAR_{circ}}\right) + (1-\alpha)\cdot\left(\frac{|p-p_{map}|}{p}\right)\]</div>
+\[\alpha\cdot\left(\frac{|PAR_{circ}-PAR_{avg}|}{PAR_{circ}}\right) + (1-\alpha)\cdot\left(\frac{|p-p_{map}|}{p}\right)\]</div>
 <p>where <span class="math notranslate nohighlight">\(\alpha\)</span> is a parameter between 0 and 1 which indicates how much priority is given to the shape
 metric.</p>
 </div>
@@ -322,12 +322,13 @@ by passing a probability test.</p>
 <h2>Project<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h2>
 <p>This is a coding project, so there will be no narrative grade.  The grade breakdown is 70% code and 30%
 presentation.</p>
-<p>Your task is to use your assigned vote map in order to generate a district map that adheres to the criteria
-set forth in the above description.  To figure out which map you will use, in the a code cell at the top of
-your notebook type (your PN)%31.  The maps are included below as black and white PNG files.  Download the
-and load it into Jupyter.  Remember that when you do so, it will come as a 3D array.</p>
+<p>Your task is to use your assigned vote map in order to generate a district map containing 5 districts that
+adheres to the criteria set forth in the above description.  To figure out which map you will use, in the a
+code cell at the top of your notebook type (your PN)%31.  The maps are included below as black and white PNG
+files.  Download the file and load it into Jupyter.  Remember that when you do so, it will come as a 3D array.</p>
 <p>You may simulate the redistricting process by animating the Markov chain using the following code.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">notebook</span>
+<span class="kn">from</span> <span class="nn">matplotlib.animation</span> <span class="kn">import</span> <span class="n">FuncAnimation</span>
 
 <span class="n">dist_map</span> <span class="o">=</span> <span class="n">GenerateDistrictMap</span><span class="p">(</span><span class="n">size</span><span class="p">,</span><span class="n">num_districts</span><span class="p">)</span>
 
@@ -404,7 +405,7 @@ metric of a circle with area equal to that of the average district in your map.<
 
   <div role="contentinfo">
     <p>
-      Last updated on Oct 22, 2022.
+      Last updated on Oct 28, 2022.
 
     </p>
   </div> 
