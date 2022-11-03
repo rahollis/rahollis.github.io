@@ -18,12 +18,12 @@ Projects
    Image Denoising </Projects/image_denoise/image_denoise>
 
    Redistricting </Projects/redistricting/redistricting>
+
+   Computing with Text </Projects/computing_with_text/computing_with_text>
 ..
    Making Friends </Projects/making_friends/making_friends>
 ..
    Epidemic Model </Projects/epidemic/epidemic>
-..
-   Computing with Text </Projects/computing_with_text/computing_with_text>
 ..
    Decrypting a Message </Projects/message_decrypt/message_decrypt>
 ..
