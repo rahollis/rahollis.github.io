@@ -1,4 +1,4 @@
-Week 11: April 18 - April 22
+Week 11: Nov 7 - Nov 11
 ============================
 
 Project 6
@@ -10,8 +10,8 @@ Project 6
 Python
 ~~~~~~
 
-* Opening, reading, writing text files.
-* Working with strings
+* Bar graphs
+* Requests
 
 Week 11 notebook
 ~~~~~~~~~~~~~~~~
@@ -22,4 +22,4 @@ Week 11 notebook
 Sample quiz
 ~~~~~~~~~~~
 
-- No quiz.
+- :download:`Sample Quiz 11 <../Quizzes/quiz11_sample.pdf>`

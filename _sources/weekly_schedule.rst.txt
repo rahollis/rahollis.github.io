@@ -23,9 +23,9 @@ Weekly Schedule
    Week 8 </Schedule/week8>
 
    Week 9 </Schedule/week9>
-..
+
    Week 10 </Schedule/week10>
-..
+
    Week 11 </Schedule/week11>
 ..
    Week 12 </Schedule/week12>
