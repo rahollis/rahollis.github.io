@@ -1,17 +1,17 @@
-Week 12: April 25 - April 29
+Week 12: Nov 12 - Nov 18
 ============================
 
 Project 6
 ~~~~~~~~~
 
-* :doc:`Computing with Text </Projects/computing_with_text/computing_with_text>`
+* :doc:`Encryption/decryption </Projects/message_decrypt/message_decrypt>`
 
 
-Python
+Math
 ~~~~~~
 
-* Bar graphs
-* Requests library
+* Shift Cipher
+* Encrypting and decrypting a message
 
 Week 12 notebook
 ~~~~~~~~~~~~~~~
@@ -22,4 +22,4 @@ Week 12 notebook
 Sample quiz
 ~~~~~~~~~~~~~
 
-- * :download:`Sample Quiz 8 <../Quizzes/quiz8_sample.pdf>`
+- * :download:`Sample Week 12 Quiz <../Quizzes/quiz12_sample.pdf>`
