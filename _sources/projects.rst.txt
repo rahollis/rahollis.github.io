@@ -22,6 +22,8 @@ Projects
    Computing with Text </Projects/computing_with_text/computing_with_text>
 
    Decrypting a Message </Projects/message_decrypt/message_decrypt>
+
+   Wordle </Projects/wordle/wordle>
 ..
    Making Friends </Projects/making_friends/making_friends>
 ..
