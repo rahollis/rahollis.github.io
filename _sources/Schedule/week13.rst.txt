@@ -1,28 +1,25 @@
-Week 13: Apr 26 - Apr 30
-========================
+Week 12: Nov 28 - Dec 2
+============================
 
-Project 7
+Project 6
 ~~~~~~~~~
 
-* :doc:`Message Decryption </Projects/message_decrypt/message_decrypt>`
+* :doc:`Wordle </Projects/wordle/wordle>`
 
-Math
-~~~~
-
-* Encryption/decryption using simple alphabet shift
 
 Python
 ~~~~~~
 
-* reshape in numpy
+* input function
+* Recursion
 
-Week 13 notebook
-~~~~~~~~~~~~~~~~
+Week 12 notebook
+~~~~~~~~~~~~~~~
 
 - `View online <../_static/week13_in_class.html>`_
 - `Download  <../_static/week13_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
 
 Sample quiz
-~~~~~~~~~~~
+~~~~~~~~~~~~~
 
-- No quiz this week.
+- * :download:`Sample Week 14 Quiz <../Quizzes/quiz14_sample.pdf>`
