@@ -1,0 +1,25 @@
+Week 6: Oct 4 - Oct 8
+=====================
+
+Project 4
+~~~~~~~~~
+
+* :doc:`Mayfly Model </Projects/mayfly_model/mayfly_model>`.
+
+
+Math
+~~~~
+
+* Bifurcation
+
+
+Week 6 notebook
+~~~~~~~~~~~~~~~
+
+- `View online <../../_static/MTH_337/week6_in_class.html>`_
+- `Download  <../../_static/MTH_337/week6_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+
+Sample quiz
+~~~~~~~~~~~~~
+
+- * No Quiz this week.

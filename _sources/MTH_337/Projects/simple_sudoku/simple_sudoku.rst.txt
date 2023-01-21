@@ -1,0 +1,47 @@
+
+Simple Sudoku
+==================
+
+.. rubric:: (due: Sunday, Dec 11, 11:59 PM)
+
+A **sudoku** is a puzzle consisting of a 9x9 grid of numbers `Sudoku Wiki <https://en.wikipedia.org/wiki/Sudoku>`__.
+
+The objective of the puzzle is to fill in the missing cells with numbers from 1-9 such that:
+
+- Each row contains no repeated numbers
+- Each column contains no repeated numbers
+- Each of the nine 3x3 subgrids (called also boxes) contains no repeated numbers  
+
+We will be working with sudokus of the **Easy** cathegory (that requires no recursion)
+
+Project
+-------
+
+Write a function that will solve a **simple sodoku**. Some examples of the starting grid of a simple sudoku, that you are trying to solve for this project, are given in this file: :download:`sudokus.txt <sudokus.txt>`
+
+
+The following function can be use to print the sudoko
+
+.. code:: python
+
+	def print_sudoku(arr): # arr is a 9x9 numpy array
+	    for i in range(9):
+        	for j in range(9):
+	            x = arr[i, j] if arr[i, j] != 0 else "."
+	            print(f" {x} ", end="")
+	            if j in [2, 5]:
+	                print("\u2551", end="")
+	        print("")
+	        if i in [2, 5]:
+	            print("\u2550"*9 + "\u256C" + "\u2550"*9 + "\u256C" + "\u2550"*9)
+
+
+
+**Note.**  This is a programming project. Your project report does not need
+include narrative, beyond comments explaining how your code works. The project will
+be graded according to the following rubrics:
+
+* Code that successfully solves the simple sodoku: 70%
+* Report organization and code documentation: 30%
+
+

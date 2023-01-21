@@ -1,0 +1,283 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Making Friends &mdash; Spring 2023 Courses</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/table_fix.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../master.html" class="icon icon-home"> Prof. Hollister's Classes
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Spring 2023
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../mth337.html">MTH 337</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../MTH_309/mth309.html">MTH 309</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../master.html">Prof. Hollister's Classes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+<div class="git-ribbon">
+  <a href="http://github.com/SwissDataScienceCenter" rel="me">Join us on GitHub</a>
+</div>
+
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../master.html">MTH 337</a> &raquo;</li>
+        
+      <li>Making Friends</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/MTH_337/Projects/making_friends/making_friends.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="making-friends">
+<h1>Making Friends<a class="headerlink" href="#making-friends" title="Permalink to this headline">¶</a></h1>
+<p class="rubric">(due: Wednesday, April 20, 11:59 PM)</p>
+<p>In this project we will be exploring ways to model changing social
+relationships; in particular, we will be looking at the friendship network
+of a group of individuals and how it can change over time.</p>
+<p>In order to model the friendship network, we need to know a little more
+about networks from a mathematical point of view.</p>
+<p>A <em>network</em> (or <em>graph</em>) is a collection of points called <em>nodes</em> (or
+<em>vertices</em>) connected by lines called <em>edges</em>.  There can only be one edge
+connecting two distinct nodes,and there cannot be an edge connecting a
+node to itself.  In the friendship network, the nodes will represent people,
+and the edges will represent a friendship between two people.  Below is an
+example of a network.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../../_images/network1.png"><img alt="../../../_images/network1.png" src="../../../_images/network1.png" style="width: 450px;" /></a>
+</div>
+<p>To create and manipulate networks in Python we will use the <code class="code docutils literal notranslate"><span class="pre">NetworkX</span></code>
+library.  This library contains objects called <code class="code docutils literal notranslate"><span class="pre">Graphs</span></code> along with
+methods to add/removes nodes and edges as well as display the graph.</p>
+<p>Since we wish to explore the dynamics of friendship networks, we need to
+have rules for how friendships can be created and destroyed.  To begin with
+we will use the simple rule “The more mutual friends you have with someone,
+the more likely it is to form a friendship.”  Mathematically, the
+probability of adding an edge between nodes <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[Pr_{add}(i,j) = 1 - (1 - p_{add})^{N(i,j)}\]</div>
+<p>where <span class="math notranslate nohighlight">\(N(i,j)\)</span> is the number of nodes that are adjacent to both
+<span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span>, and <span class="math notranslate nohighlight">\(p_{add}\)</span> is the probability of forming
+a friendship per mutual friend.  Note that if <span class="math notranslate nohighlight">\(N(i,j) = 0\)</span>, then
+<span class="math notranslate nohighlight">\(Pr_{add}(i,j) = 0\)</span>.</p>
+<p>To model the breaking of friendships, we can use the rule “The more mutual friends
+you have, the less likely it is you will break a the friendship.”
+Mathematically, the probability of removing an edge between nodes <span class="math notranslate nohighlight">\(i\)</span>
+and <span class="math notranslate nohighlight">\(j\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[Pr_{rem}(i,j) = p_{rem}^{N(i,j)}\]</div>
+<p>where <span class="math notranslate nohighlight">\(p_{rem}\)</span> is the probability of breaking the friendship
+between node <span class="math notranslate nohighlight">\(i\)</span> and node <span class="math notranslate nohighlight">\(j\)</span> per mutual friend.  Notice that the
+higher the number of mutual friends, the lower <span class="math notranslate nohighlight">\(Pr_{rem}(i,j)\)</span>.</p>
+<div class="section" id="project">
+<h2>Project<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h2>
+<p><strong>Part 1.</strong> Write a function that models the changes to a friendship
+network after one time step.</p>
+<p><strong>Part 2.</strong> Modify the following code to produce an animation of the
+dynamic changes the friendship network undergoes.  Note that the function
+<code class="code docutils literal notranslate"><span class="pre">generate_random_edges</span></code> used below can be found in the class notes.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">notebook</span>
+
+<span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib.animation</span> <span class="kn">import</span> <span class="n">FuncAnimation</span>
+
+<span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_nodes_from</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">])</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">nx</span><span class="o">.</span><span class="n">circular_layout</span><span class="p">(</span><span class="n">G</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">animate</span><span class="p">(</span><span class="n">frame</span><span class="p">):</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+    <span class="n">edges_to_add</span> <span class="o">=</span> <span class="p">[(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span><span class="o">&lt;</span><span class="mf">0.2</span><span class="p">]</span>
+    <span class="n">edges_to_remove</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">edges</span><span class="p">()</span>
+    <span class="n">G</span><span class="o">.</span><span class="n">remove_edges_from</span><span class="p">(</span><span class="n">edges_to_remove</span><span class="p">)</span>
+    <span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">(</span><span class="n">edges_to_add</span><span class="p">)</span>
+    <span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">nx</span><span class="o">.</span><span class="n">circular_layout</span><span class="p">(</span><span class="n">G</span><span class="p">))</span>
+
+<span class="n">anim</span> <span class="o">=</span> <span class="n">FuncAnimation</span><span class="p">(</span><span class="n">fig</span><span class="o">=</span><span class="n">fig</span><span class="p">,</span> <span class="n">func</span><span class="o">=</span><span class="n">animate</span><span class="p">,</span>  <span class="n">interval</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">blit</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">repeat</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Part 3.</strong> Explore the effects of different starting configurations (cycles, paths,
+complete graph), different values of <span class="math notranslate nohighlight">\(p_{add}\)</span>, and different values of <span class="math notranslate nohighlight">\(p_{rem}\)</span>.</p>
+<p><strong>Bonus.</strong> How might we modify our model to more accurately reflect the evolving nature
+of friendships?  Some ideas:  other methods for determining the probability of adding or
+removing edges, weighted edges that reflect the strength of the friendship, directed graphs
+with one-way friendships (respect network).</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      Last updated on Jan 18, 2023.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,290 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Mayfly model &mdash; Spring 2023 Courses</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/table_fix.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../master.html" class="icon icon-home"> Prof. Hollister's Classes
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Spring 2023
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../mth337.html">MTH 337</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../MTH_309/mth309.html">MTH 309</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../master.html">Prof. Hollister's Classes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+<div class="git-ribbon">
+  <a href="http://github.com/SwissDataScienceCenter" rel="me">Join us on GitHub</a>
+</div>
+
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../master.html">MTH 337</a> &raquo;</li>
+        
+      <li>Mayfly model</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/MTH_337/Projects/mayfly_model/mayfly_model.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mayfly-model">
+<h1>Mayfly model<a class="headerlink" href="#mayfly-model" title="Permalink to this headline">¶</a></h1>
+<p class="rubric">(due: Monday, Oct 3 at 11:59 PM)</p>
+<div class="section" id="population-models">
+<h2>Population models<a class="headerlink" href="#population-models" title="Permalink to this headline">¶</a></h2>
+<p>An interesting problem in mathematics is to try to predict changes in
+populations of people, animals, insects, bacteria etc. How many people
+will live in the United States in 20 years? If a cell culture in a lab
+is started with <span class="math notranslate nohighlight">\(x\)</span> cells how many cells will it consist of in 24
+hours? Mathematical models used to make such predictions are often
+complex and involve many factors. Here we will consider a simple
+population model that may be applicable e.g. to predicting population
+changes of <a class="reference external" href="https://en.wikipedia.org/wiki/Mayfly">mayflies</a>. These
+insects spend a year (or a few years - depending on species) at the
+bottom of a river, then over a course of a few days emerge from the
+water, mate, lay eggs and die. In effect only one generation of mayflies
+is alive at any time. We will assume that the size of population of
+mayflies in a given year depends only on the size of population in the
+previous year. If <span class="math notranslate nohighlight">\(x_n\)</span> denotes the size of population in year
+<span class="math notranslate nohighlight">\(n\)</span> then we can write:</p>
+<div class="math notranslate nohighlight">
+\[x_{n} = g(x_{n-1})\cdot x_{n-1} \ \ \ \ \ \ \ \ \ \ \ (\ast)\]</div>
+<p>where <span class="math notranslate nohighlight">\(g(x_{n-1})\)</span> is the growth rate of the population (which may
+depend on <span class="math notranslate nohighlight">\(x_{n-1}\)</span>). Properties of this model will depend of
+course on what the function <span class="math notranslate nohighlight">\(g(x)\)</span> is.</p>
+</div>
+<div class="section" id="id1">
+<h2>Mayfly model<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>In a small population there is little competition for resources such
+as food, space etc. This allows for fast population growth. As the
+population increases the competition for these resources increases as
+well, and we can expect that the growth rate will go down. This means
+that the function <span class="math notranslate nohighlight">\(g(x)\)</span> describing the growth rate should be a
+decreasing function.</p></li>
+<li><p>It is also reasonable to assume that the population can grow only up
+to some maximal size <span class="math notranslate nohighlight">\(M\)</span> which is the largest population that
+the environment can support. As the population size approaches
+<span class="math notranslate nohighlight">\(M\)</span> the growth rate should approach <span class="math notranslate nohighlight">\(0\)</span>. In effect we can
+assume that <span class="math notranslate nohighlight">\(g(M) = 0\)</span>.</p></li>
+</ul>
+<p>The simplest function satisfying the above conditions is the linear
+function</p>
+<div class="math notranslate nohighlight">
+\[g(x) = a(M-x)\]</div>
+<p>for some <span class="math notranslate nohighlight">\(a&gt;0\)</span>.</p>
+<a class="reference internal image-reference" href="../../../_images/mayfly_model-2.svg"><img alt="../../../_images/mayfly_model-2.svg" class="align-center" src="../../../_images/mayfly_model-2.svg" width="250px" /></a>
+<p>If we use this function then the equation <span class="math notranslate nohighlight">\((\ast)\)</span> becomes</p>
+<div class="math notranslate nohighlight">
+\[x_n = a(M-x_{n-1})x_{n-1} \ \ \ \ \ \ \ \ \ \ (\ast\ast)\]</div>
+<p>This equation involves two parameters: <span class="math notranslate nohighlight">\(M\)</span> and <span class="math notranslate nohighlight">\(a\)</span>. We can
+reduce them to one parameter as follows. Define</p>
+<div class="math notranslate nohighlight">
+\[y_n = \frac{x_n}{M}\]</div>
+<p>The equation <span class="math notranslate nohighlight">\((\ast\ast)\)</span> now becomes</p>
+<div class="math notranslate nohighlight">
+\[M y_n = a(M- My_{n-1}) My_{n-1}\]</div>
+<p>Simplifying we obtain</p>
+<div class="math notranslate nohighlight">
+\[y_n = aM(1-y_{n-1})y_{n-1}\]</div>
+<p>If we denote <span class="math notranslate nohighlight">\(b = aM\)</span> then we get</p>
+<div class="math notranslate nohighlight">
+\[y_n = b(1-y_{n-1})y_{n-1}\]</div>
+<p>for some <span class="math notranslate nohighlight">\(b\geq 0\)</span>. This is the equation we will be interested in.
+We will call the population model described by this equation the <em>mayfly
+model</em>.</p>
+<p><strong>Note.</strong></p>
+<ol class="arabic simple">
+<li><p>In the mayfly model meaningful values of <span class="math notranslate nohighlight">\(y_n\)</span> are
+the ones between <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(1\)</span> since <span class="math notranslate nohighlight">\(y_n = x_n/M\)</span> and
+by assumption <span class="math notranslate nohighlight">\(0\leq x_n \leq M\)</span>.</p></li>
+<li><p>For <span class="math notranslate nohighlight">\(b\geq 0\)</span> the maximal value of the function <span class="math notranslate nohighlight">\(b(1-y)y\)</span>
+is attained at <span class="math notranslate nohighlight">\(y=1/2\)</span> and it is equal to <span class="math notranslate nohighlight">\(b/4\)</span>. This
+means that the mayfly model may break if <span class="math notranslate nohighlight">\(b&gt;4\)</span>, since in such
+case for <span class="math notranslate nohighlight">\(y_n = 1/2\)</span> we will get <span class="math notranslate nohighlight">\(y_{n+1} = b/4 &gt; 1\)</span>. To
+avoid such problems we will assume that <span class="math notranslate nohighlight">\(0\leq b \leq 4\)</span>.</p></li>
+<li><p>Notice that beside the choice of <span class="math notranslate nohighlight">\(b\)</span> the model depends also on
+the value of the initial population <span class="math notranslate nohighlight">\(y_0\)</span>.</p></li>
+</ol>
+</div>
+<div class="section" id="project">
+<h2>Project<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h2>
+<p>Analyze behavior of the mayfly model for various values of <span class="math notranslate nohighlight">\(b\)</span> and
+<span class="math notranslate nohighlight">\(y_0\)</span>. Describe your findings, observations and conclusions.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      Last updated on Jan 18, 2023.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

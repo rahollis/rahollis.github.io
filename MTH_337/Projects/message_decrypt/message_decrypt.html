@@ -1,0 +1,347 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Message decryption &mdash; Spring 2023 Courses</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/table_fix.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../master.html" class="icon icon-home"> Prof. Hollister's Classes
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Spring 2023
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../mth337.html">MTH 337</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../MTH_309/mth309.html">MTH 309</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../master.html">Prof. Hollister's Classes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+<div class="git-ribbon">
+  <a href="http://github.com/SwissDataScienceCenter" rel="me">Join us on GitHub</a>
+</div>
+
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../master.html">MTH 337</a> &raquo;</li>
+        
+      <li>Message decryption</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/MTH_337/Projects/message_decrypt/message_decrypt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="message-decryption">
+<h1>Message decryption<a class="headerlink" href="#message-decryption" title="Permalink to this headline">¶</a></h1>
+<p class="rubric">(due: Monday, Nov 28 at 11:59 PM)</p>
+<p>Message encryption is necessary to ensure safe transmission of data.</p>
+<p>Messages can be encrypted by changing the order of the characters in the message.</p>
+<p>Consider the example: ‘Luke, I am your father’</p>
+<p>The encryption is done following these steps:</p>
+<ul class="simple">
+<li><p>An integer number <strong>c</strong> is chosen at random. (say c=3)</p></li>
+<li><p>The message is then written in a <strong>n x c  array</strong> (extra characters ‘&amp;’ might be needed if the string is too short). The dimension <strong>n</strong> is determined by the length of the string and the value of <strong>c</strong>. So the corresponding array for our message looks like this:</p></li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>L</p></td>
+<td><p>u</p></td>
+<td><p>k</p></td>
+</tr>
+<tr class="row-even"><td><p>e</p></td>
+<td><p>,</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>I</p></td>
+<td></td>
+<td><p>a</p></td>
+</tr>
+<tr class="row-even"><td><p>m</p></td>
+<td></td>
+<td><p>y</p></td>
+</tr>
+<tr class="row-odd"><td><p>o</p></td>
+<td><p>u</p></td>
+<td><p>r</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>f</p></td>
+<td><p>a</p></td>
+</tr>
+<tr class="row-odd"><td><p>t</p></td>
+<td><p>h</p></td>
+<td><p>e</p></td>
+</tr>
+<tr class="row-even"><td><p>r</p></td>
+<td><p>&amp;</p></td>
+<td><p>&amp;</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>The encrypted message is obtained from the transpose array (after removing the extra characters ‘&amp;’):</p></li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>L</p></td>
+<td><p>e</p></td>
+<td><p>I</p></td>
+<td><p>m</p></td>
+<td><p>o</p></td>
+<td></td>
+<td><p>t</p></td>
+<td><p>r</p></td>
+</tr>
+<tr class="row-even"><td><p>u</p></td>
+<td><p>,</p></td>
+<td></td>
+<td></td>
+<td><p>u</p></td>
+<td><p>f</p></td>
+<td><p>h</p></td>
+<td><p>&amp;</p></td>
+</tr>
+<tr class="row-odd"><td><p>k</p></td>
+<td></td>
+<td><p>a</p></td>
+<td><p>y</p></td>
+<td><p>r</p></td>
+<td><p>a</p></td>
+<td><p>e</p></td>
+<td><p>&amp;</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Encrypted message</strong>: ‘LeImo tru,  ufhk ayrae’</p>
+<div class="section" id="project">
+<h2>Project<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h2>
+<p>Each file listed below contains text (a fragment of a book in English)
+encrypted using the method described above choosing <strong>c</strong> at random in the [25,100] interval.</p>
+<p>Write a function <strong>decrypt(‘txtfile’)</strong> that decrypts the file corresponding to your UB Person Number modulo
+30 and print the decrypted message. The function should take as a variable the name of your .txt file.</p>
+<p>A dictionary of English words is available here <a class="reference download internal" download="" href="../../../_downloads/26231664540346675b92e58a31a7a5cd/dictionary.txt"><code class="xref download docutils literal notranslate"><span class="pre">dictionary</span></code></a></p>
+<p><strong>Note.</strong>  This is a programming project. Your project report does not need
+include narrative, beyond comments explaining how your code works. The project will
+be graded according to the following rubrics:</p>
+<ul class="simple">
+<li><p>Code that successfully decrypts the text file: 70%</p></li>
+<li><p>Report organization and code documentation: 30%</p></li>
+</ul>
+<ol class="arabic simple" start="0">
+<li><p><a class="reference download internal" download="" href="../../../_downloads/218337b60f23eeb927638a71f649a66d/text0.txt"><code class="xref download docutils literal notranslate"><span class="pre">text0.txt</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/fbe3dfb1cd8b192847c2cc2b0753e71f/text1.txt"><code class="xref download docutils literal notranslate"><span class="pre">text1.txt</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/8cd950278ba1dddb3f8f1b716eb3345e/text2.txt"><code class="xref download docutils literal notranslate"><span class="pre">text2.txt</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/88c1d36fc9fb1bc58066bc64f01f7ac3/text3.txt"><code class="xref download docutils literal notranslate"><span class="pre">text3.txt</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/297e6fab89f7a32c7c89415aa5d5b8a6/text4.txt"><code class="xref download docutils literal notranslate"><span class="pre">text4.txt</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/65d7b31905e0a420fde26e192cdd0463/text5.txt"><code class="xref download docutils literal notranslate"><span class="pre">text5.txt</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/ec8638c2e8a4191c97d9dcdad7f60497/text6.txt"><code class="xref download docutils literal notranslate"><span class="pre">text6.txt</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/5616f476412b159173d4fec59077c304/text7.txt"><code class="xref download docutils literal notranslate"><span class="pre">text7.txt</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/c18bc05ce5100797737d49e41dc7f240/text8.txt"><code class="xref download docutils literal notranslate"><span class="pre">text8.txt</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/0c8c171e4c0d5f9355e9efc3696ce06f/text9.txt"><code class="xref download docutils literal notranslate"><span class="pre">text9.txt</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/aa86f1cf5b891c1638250836ab84b445/text10.txt"><code class="xref download docutils literal notranslate"><span class="pre">text10.txt</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/8899394db160d423219d05febca04712/text11.txt"><code class="xref download docutils literal notranslate"><span class="pre">text11.txt</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/cbf6afc4ea8ca5b07780188e5247c139/text12.txt"><code class="xref download docutils literal notranslate"><span class="pre">text12.txt</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/8bfb63b95f0ff5bae7a5931206a578fb/text13.txt"><code class="xref download docutils literal notranslate"><span class="pre">text13.txt</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/113f6373477b2771d31e04ced1c20d3c/text14.txt"><code class="xref download docutils literal notranslate"><span class="pre">text14.txt</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/37e2864bd9765f33c76d3d7346171cf8/text15.txt"><code class="xref download docutils literal notranslate"><span class="pre">text15.txt</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/0735b87d3da20d915d3c8cb6e729ade8/text16.txt"><code class="xref download docutils literal notranslate"><span class="pre">text16.txt</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/c2b4e543febf55039ffa954b8fc38703/text17.txt"><code class="xref download docutils literal notranslate"><span class="pre">text17.txt</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/9c7afa9fffbc562b7b64ce6bb114f698/text18.txt"><code class="xref download docutils literal notranslate"><span class="pre">text18.txt</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/951a430e672f22b753d360a3f5504f83/text19.txt"><code class="xref download docutils literal notranslate"><span class="pre">text19.txt</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/c7a08d14c199d7126dcef508c111af65/text20.txt"><code class="xref download docutils literal notranslate"><span class="pre">text20.txt</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/3fbb0b9b5f5190967fd5cc0145fb1b3c/text21.txt"><code class="xref download docutils literal notranslate"><span class="pre">text21.txt</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/47dcba1810ce2f42630a227190df7cb7/text22.txt"><code class="xref download docutils literal notranslate"><span class="pre">text22.txt</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/8db136d43883952e1d1ff4a528a91971/text23.txt"><code class="xref download docutils literal notranslate"><span class="pre">text23.txt</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/e24bab3ac51b12891ea086a59a0863f8/text24.txt"><code class="xref download docutils literal notranslate"><span class="pre">text24.txt</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/6949a69598f5b24c6ca16f7661d86a88/text25.txt"><code class="xref download docutils literal notranslate"><span class="pre">text25.txt</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/fccf3e61b40abbb028e29fa208f399c9/text26.txt"><code class="xref download docutils literal notranslate"><span class="pre">text26.txt</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/76e2303f17236c4f3d33a180b6b5bfbd/text27.txt"><code class="xref download docutils literal notranslate"><span class="pre">text27.txt</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/68a1772b25f71a2d89778e5fb241cc13/text28.txt"><code class="xref download docutils literal notranslate"><span class="pre">text28.txt</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/7befe4bda78947fdd9e35595d634bf8e/text29.txt"><code class="xref download docutils literal notranslate"><span class="pre">text29.txt</span></code></a></p></li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      Last updated on Jan 18, 2023.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

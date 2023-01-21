@@ -1,0 +1,81 @@
+A particular sequence
+======================
+
+.. rubric:: due: Friday, Feb. 18, 11:59 PM
+
+A sequence is an ordered list of numbers (*terms*). A sequence with a finite number of terms is called *finite*, whereas a sequence with infinitely many terms is called *infinite*. The list of all positive even numbers is an example of infinite sequence
+
+.. math:: a_n = \{2, 4, 6, 8, 10,\ldots\}
+
+Sequences can sometimes be written in a condensed form, where each term of the sequence can be expressed as a function of its position :math:`n`:
+
+.. math:: a_n = \{2, 4, 6, 8, 10,\ldots\} = \left\{ 2n \right\}_{n=1}^\infty
+
+Some famous infinite sequences are:
+
+* the Fibonacci numbers 
+
+	:math:`\begin{array}{l} a_0=1, \, a_1=1, \\ a_n = \{1,1,2,3,5,8,13,\ldots\} = \{a_{n-2}+a_{n-1}\}_{n=2}^\infty\end{array}`
+
+* the Square Numbers sequence 
+
+	:math:`a_n = \{1,4,9,16,25,36,\ldots\} = \left\{n^2\right\}_{n=1}^\infty`
+
+* the Lazy Caterer’s sequence (describing the maximum number of pieces in which a pizza can be cut with :math:`n` straight cuts)
+
+	:math:`a_n = \{1,2,4,7,11,16,\ldots\} = \left\{\dfrac{n^2+n+2}{2}\right\}_{n=0}^\infty`
+	
+
+The finite sequence you will explore is defined as follows:
+
+	1. Define :math:`f(x) = \left\{ \begin{array}{ll} \dfrac{x}{2}, & \text{if } x \text{ is even} \\  3x+1, & \text{if } x \text{ is odd} \end{array} \right.`
+	
+	2. Let :math:`a_1=k`, where `k` is a positive integer
+	
+	3. For :math:`n>1`, compute :math:`a_n=f(a_{n-1})`
+	
+	4. The sequence ends when :math:`a_n=1`
+
+For example the sequence for :math:`k=5` is:
+
+.. math:: \{5,16,8,4,2,1\}
+
+
+**Exercise 1.** Write a Python function ``single_step(x)`` that implements the function described in 1. above. This function will compute a single step of the sequence
+
+.. code:: python
+
+    single_step(5)
+
+
+.. container:: output
+
+    16
+
+
+**Exercise 2.** Write a Python function ``full_sequence(k)`` that for each positive
+integer ``k`` returns its corresponding sequence
+
+.. math:: [a_1,a_2,a_3,\ldots]
+
+For example
+
+.. code:: python
+
+    full_sequence(5)
+
+.. container:: output
+
+    [5,16,8,4,2,1]
+
+
+Project
+-------
+
+Explore the properties (length, highest number reached,...) of the sequences obtained and analyze the results. Can you find any patterns or similarities? 
+
+
+Sample Report
+-------------
+
+- `Sample A-report <../../_static/sample_project_report.html>`_

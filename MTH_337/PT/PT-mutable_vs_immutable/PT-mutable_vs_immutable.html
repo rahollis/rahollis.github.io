@@ -1,0 +1,427 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Mutable vs. immutable objects &mdash; Spring 2023 Courses</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/table_fix.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../master.html" class="icon icon-home"> Prof. Hollister's Classes
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Spring 2023
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../mth337.html">MTH 337</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../MTH_309/mth309.html">MTH 309</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../master.html">Prof. Hollister's Classes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+<div class="git-ribbon">
+  <a href="http://github.com/SwissDataScienceCenter" rel="me">Join us on GitHub</a>
+</div>
+
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../master.html">MTH 337</a> &raquo;</li>
+        
+      <li>Mutable vs. immutable objects</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/MTH_337/PT/PT-mutable_vs_immutable/PT-mutable_vs_immutable.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mutable-vs-immutable-objects">
+<h1>Mutable vs. immutable objects<a class="headerlink" href="#mutable-vs-immutable-objects" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="two-examples">
+<h2>Two examples<a class="headerlink" href="#two-examples" title="Permalink to this headline">¶</a></h2>
+<p>Objects used in Python can be separated into two major categories: some
+objects are <em>mutable</em> while other objects are <em>immutable</em>. The
+difference between these categories is illustrated by the following two
+examples.</p>
+<p><strong>Example 1.</strong> In the code below we assign a variable <code class="docutils literal notranslate"><span class="pre">m</span></code> to the
+integer 2, and set <code class="docutils literal notranslate"><span class="pre">n</span></code> equal to <code class="docutils literal notranslate"><span class="pre">m</span></code>. In effect both of these
+variables have value 2:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">n</span> <span class="o">=</span> <span class="n">m</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;m=</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;n=</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>m=2
+n=2</p>
+</div>
+<p>When we change the value of <code class="docutils literal notranslate"><span class="pre">n</span></code> the value of <code class="docutils literal notranslate"><span class="pre">m</span></code> is not affected,
+it is still 2:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;m=</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;n=</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>m=2
+n=3</p>
+</div>
+<p><strong>Example 2.</strong> Here we perform the same operations as in above, but we
+assign to the first variable a list and then make the second variable
+equal to the first one. Again the result is that these variables have the
+same value:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">n</span> <span class="o">=</span> <span class="n">m</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;m = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;n = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>m = [1, 2, 3]
+n = [1, 2, 3]</p>
+</div>
+<p>Next, we modify the value of <code class="docutils literal notranslate"><span class="pre">n</span></code> by changing the first element of the
+list:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;m = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;n = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>m = [100, 2, 3]
+n = [100, 2, 3]</p>
+</div>
+<p>The value of <code class="docutils literal notranslate"><span class="pre">n</span></code> changed as expected, but value of <code class="docutils literal notranslate"><span class="pre">m</span></code> changed as
+well even though we did not use this variable.</p>
+<p>The difference in the behavior of variables in Example 1 and Example 2
+comes from the fact that integers are immutable objects while lists are
+mutable.</p>
+</div>
+<div class="section" id="how-this-works">
+<h2>How this works<a class="headerlink" href="#how-this-works" title="Permalink to this headline">¶</a></h2>
+<p>When a variable is a assigned to some object (a number, string, list
+etc.) the variable does not store this object, but rather a computer memory
+address  where the object resides. We can use the <code class="docutils literal notranslate"><span class="pre">id()</span></code>
+function to check this memory address:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;id(m) = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">m</span><span class="p">)))</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>id(m) = 400004</p>
+</div>
+<p>When we execute <code class="docutils literal notranslate"><span class="pre">n=m</span></code> the variable <code class="docutils literal notranslate"><span class="pre">n</span></code> stores the same address
+as <code class="docutils literal notranslate"><span class="pre">m</span></code>, and in effect both variables point to the same object:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="n">m</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;id(n) = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">n</span><span class="p">)))</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>id(n) = 400004</p>
+</div>
+<a class="reference internal image-reference" href="../../../_images/PT-mutable_vs_immutable1.svg"><img alt="../../../_images/PT-mutable_vs_immutable1.svg" class="align-center" src="../../../_images/PT-mutable_vs_immutable1.svg" width="400px" /></a>
+<p>Immutable objects (e.g. integers) are objects that cannot be modified
+without copying them to a new memory location. Thus, if we change the
+value of <code class="docutils literal notranslate"><span class="pre">n</span></code> its memory address will also change:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;n = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;id(n) = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">n</span><span class="p">)))</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>n = 3
+id(n) = 400002</p>
+</div>
+<p>Meanwhile, the address stored by the variable <code class="docutils literal notranslate"><span class="pre">m</span></code> is unchanged, so this
+variable points to the same object as before:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;m = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;id(m) = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">m</span><span class="p">)))</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>m = 2
+id(m) = 400004</p>
+</div>
+<a class="reference internal image-reference" href="../../../_images/PT-mutable_vs_immutable2.svg"><img alt="../../../_images/PT-mutable_vs_immutable2.svg" class="align-center" src="../../../_images/PT-mutable_vs_immutable2.svg" width="400px" /></a>
+<p>Next, we perform the same operations using lists instead of integers:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">n</span> <span class="o">=</span> <span class="n">m</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;id(m) = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">m</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;id(n) = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">n</span><span class="p">)))</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>id(m) = 400004
+id(n) = 400004</p>
+</div>
+<p>As before we get two variables that store the same memory location, and
+so point to the same object.</p>
+<a class="reference internal image-reference" href="../../../_images/PT-mutable_vs_immutable3.svg"><img alt="../../../_images/PT-mutable_vs_immutable3.svg" class="align-center" src="../../../_images/PT-mutable_vs_immutable3.svg" width="400px" /></a>
+<p>The difference is that a list is a mutable object, which means that it can
+be modified “in place” i.e. without changing its memory location. If we
+change one element of the list <code class="docutils literal notranslate"><span class="pre">n</span></code> then the list will change, but its
+memory location will not:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;n = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;id(n) = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">n</span><span class="p">)))</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>n = [100, 2, 3]
+id(n) = 400004</p>
+</div>
+<p>Since the address stored by the variable <code class="docutils literal notranslate"><span class="pre">m</span></code> is still the same as the
+address stored by <code class="docutils literal notranslate"><span class="pre">n</span></code>, the value of <code class="docutils literal notranslate"><span class="pre">m</span></code> will be equal to the new
+value of <code class="docutils literal notranslate"><span class="pre">n</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;m = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;id(m) = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">m</span><span class="p">)))</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>m = [100, 2, 3]
+id(m) = 400004</p>
+</div>
+<a class="reference internal image-reference" href="../../../_images/PT-mutable_vs_immutable4.svg"><img alt="../../../_images/PT-mutable_vs_immutable4.svg" class="align-center" src="../../../_images/PT-mutable_vs_immutable4.svg" width="400px" /></a>
+</div>
+<div class="section" id="why-it-works-this-way">
+<h2>Why it works this way<a class="headerlink" href="#why-it-works-this-way" title="Permalink to this headline">¶</a></h2>
+<p>Lists are often very large objects, consisting of thousands or millions
+of elements. If lists were immutable changing even a single element of a
+list would require copying the whole list which could slow a program a
+lot. Since lists are mutable this is avoided: changing an element of a
+list is done without touching any other elements.</p>
+<p>On the other hand, integers usually take very little space in computer
+memory and can be copied to new memory locations quickly. Having
+immutable integers does not affect program efficiency in a substantial
+way, and it assures that by changing value of one integer variable we
+will not inadvertently change some other variable.</p>
+</div>
+<div class="section" id="additional-remarks">
+<h2>Additional remarks<a class="headerlink" href="#additional-remarks" title="Permalink to this headline">¶</a></h2>
+<p><strong>1)</strong> Some examples of immutable objects are:</p>
+<ul class="simple">
+<li><p>integers</p></li>
+<li><p>floats</p></li>
+<li><p>booleans</p></li>
+<li><p>strings</p></li>
+<li><p>tuples</p></li>
+</ul>
+<p>Mutable objects include:</p>
+<ul class="simple">
+<li><p>lists</p></li>
+<li><p>dictionaries</p></li>
+<li><p>sets</p></li>
+<li><p>numpy arrays</p></li>
+</ul>
+<p><strong>2)</strong> Lists (as well as other mutable objects) have a <code class="docutils literal notranslate"><span class="pre">copy()</span></code> method
+that creates a copy of a list that can be modified independently of the
+original:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">n</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="c1">#makes a copy of the list</span>
+<span class="n">n</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;n = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>  <span class="c1"># n was modified</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;m = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>  <span class="c1"># but m is unchanged</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>n = [100, 2, 3]
+m = [1, 2, 3]</p>
+</div>
+<p><strong>3)</strong> The <code class="docutils literal notranslate"><span class="pre">is</span></code> operator checks if two variables point to the same
+memory location:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="s1">&#39;hello world!&#39;</span>
+<span class="n">n</span> <span class="o">=</span> <span class="n">m</span>
+<span class="n">m</span> <span class="ow">is</span> <span class="n">n</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>True</p>
+</div>
+<p>The meaning of <code class="docutils literal notranslate"><span class="pre">is</span></code> is different that the meaning of <code class="docutils literal notranslate"><span class="pre">==</span></code>. The
+equality operator <code class="docutils literal notranslate"><span class="pre">==</span></code> checks is two variables have the same value,
+which may be the case even if these variables point to different
+locations in the computer memory:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="s1">&#39;hello world!&#39;</span>
+<span class="n">n</span> <span class="o">=</span> <span class="s1">&#39;hello world!&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">==</span> <span class="n">n</span> <span class="c1"># checks if m, n have the same value</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>True</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="ow">is</span> <span class="n">n</span> <span class="c1"># checks if m, n point to the same  memory locations</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>False</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      Last updated on Jan 18, 2023.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

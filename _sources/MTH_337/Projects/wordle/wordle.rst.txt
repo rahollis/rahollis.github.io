@@ -1,0 +1,26 @@
+
+Worlde
+==================
+
+.. rubric:: (due: Sunday, Dec 11, 11:59 PM)
+
+**Wordle** is a word puzzle where you try to guess a hidden word.  Each time you make a guess, you are told
+which letters are correct, which letters are correct but in the wrong position, and which letters are
+incorrect.  The best way to learn is to play. `<https://www.nytimes.com/games/wordle/index.html>`__.
+
+The standard wordle uses a hidden 5-letter word, and the player has 6 guesses to get the right answer.
+
+Project
+-------
+
+Write a function that, when called, allows the user to play wordle.  For this project, you will need to use
+the :code:`input` function to allow the user to make their guesses.
+
+**Note.**  This is a programming project. Your project report does not need
+include narrative, beyond comments explaining how your code works. The project will
+be graded according to the following rubrics:
+
+* Code that successfully solves the simple sodoku: 70%
+* Report organization and code documentation: 30%
+
+

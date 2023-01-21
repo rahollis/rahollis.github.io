@@ -1,0 +1,15 @@
+.. _contents:
+
+MTH 337 table of contents
+=========================
+
+Contents:
+~~~~~~~~~~~~
+
+
+.. toctree::
+   :maxdepth: 1
+
+   Syllabus <syllabus>
+   Class activities <activities>
+   Proficiency exams <exams>

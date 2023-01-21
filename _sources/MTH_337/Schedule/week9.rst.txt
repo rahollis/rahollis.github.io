@@ -1,0 +1,32 @@
+Week 9: April 4 - April 8
+=========================
+
+Project 6
+~~~~~~~~~
+
+* :doc:`Making Friends </Projects/making_friends/making_friends>`
+
+Mathematics
+~~~~~~~~~~~
+
+* Networks/graphs
+* Dynamic network models
+
+
+Python
+~~~~~~
+
+* :doc:`NetworkX Library </PT/PT-networkx_graphs/PT-networkx_graphs>`
+* Creating, manipulating, and displaying networks
+
+
+Week 9 notebook
+~~~~~~~~~~~~~~~
+
+- `View online <../../_static/MTH_337/week9_in_class.html>`_
+- `Download  <../../_static/MTH_337/week9_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+
+Sample quiz
+~~~~~~~~~~~~~
+
+- :download:`Sample quiz 7 <../Quizzes/quiz6_sample.pdf>`

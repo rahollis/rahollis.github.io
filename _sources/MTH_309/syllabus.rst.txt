@@ -1,0 +1,274 @@
+
+=================
+Syllabus
+=================
+
+| **MTH 309 Introduction to Linear Algebra**
+
+| **Class times:** TuTh 8:00 - 9:20 AM,
+| Location: NSC 218
+
+
+Instructor Information
+----------------------
+
+| Richard Hollister
+| Preferred pronouns: He, Him, His
+| **Office:** 321 Mathematics Building
+| **E-mail:** `rahollis@buffalo.edu <rahollis@buffalo.edu>`_
+| **Office Hours:** Tu 1:30 - 2:30 PM and by appointment
+|
+| I am a mathematician specializing in linear algebra research.  I also have an interest in numerical analysis and approximation theory.  
+| This is my third year at UB, and I am looking forward to teaching the subject that I love.
+| Outside of academics, I enjoy hiking, biking, snowboarding, XC skiing, and playing MMORPGs on my Xbox.
+
+
+Course Information
+------------------
+
+**Text book:** "Introduction to Applied Linear Algebra: Vectors, Matrices, and Least Squares" by Boyd and Vandenberghe.
+You can find the book as a free PDF `here <https://web.stanford.edu/~boyd/vmls/>`_.
+
+**Software.** We will be using the `Anaconda distribution of Python 3.8 <https://www.anaconda.com/distribution/>`_.
+This is free software. Even if you have Python already installed on your computer you should install this
+distribution since it includes Jupyter notebook and several Python modules we will need.
+
+**Laptop.** Since we will be using Jupyter notebook every week, you should have a laptop or tablet with you during class.
+Lecture notes will also be digital.
+
+**Useful links for Jupyter.**
+
+    * `Markdown cheatsheet <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>`_.  Markdown is a scheme used
+      to format text in Jupyter notebook.
+    * `LaTeX math symbols <https://www.artofproblemsolving.com/wiki/index.php/LaTeX:Symbols>`_ - this is useful reference for
+      typesetting mathematics with Jupyter notebook.
+    * `Python 3 documentation <https://docs.python.org/3/>`_. This is the official documentation of Python 3.
+      See the Tutorial section for introduction to Python and Library Reference for a systematic description of standard
+      Python tools.
+    * `matplotlib documentation <http://matplotlib.org>`_. Matplotlib is a Python module for creating graphs and plots.
+      We will use it a lot. Matplotlib documentation is unfortunately incomplete and often quite confusing, but it includes many
+      code examples that can be helpful.
+    * `numpy documentation <http://docs.scipy.org/doc/numpy/>`_. Numpy is the main scientific computing module of Python.
+      We will use it extensively.
+
+**Learning Goals:**
+
+    * Construct a system of linear equations from an application.
+    * Represent a system of linear equations in matrix form.
+    * Solve a system of equations with and without the aid of technology.
+    * Determine if a given set of vectors is a subspace of :math:`\mathbb{R}^n`.
+    * Find a basis for a given subspace of :math:`\mathbb{R}^n` and determine its dimension.
+    * Convert a vector from one coordinate basis to another.
+    * Find a matrix representation of a linear transformation between :math:`\mathbb{R}^n` and :math:`\mathbb{R}^m`.
+    * Add, multiply, and transpose matrices.
+    * Determine if a matrix is invertible and compute its inverse if it is.
+    * Identify if a set of vectors is orthogonal.
+    * Identify if a matrix is orthogonal.
+    * Construct an orthonormal basis for a given subspace.
+    * Compute the orthonormal projection of a vector onto a subspace.
+    * Calculate the area of a parallelogram using determinant.
+    * Understand the connection between determinant and the geometry of linear transformations.
+    * Calculate the eigenvalues and eigenvectors of a matrix.
+    * Apply eigenvalues/vectors to solve systems of LODEs.
+    * Solve the least squares problem.
+    * Compute the singular value decomposition.
+    * Understand how to use computer software to aid in all of the above.
+
+
+Recitation Information
+----------------------
+
+| **Instructor:** Baoming Zhang
+| **Section 19218:** Tu 9:30 - 10:20 AM in Obrian 214
+| **Section 19219:** Tu 11:00 - 11:50 AM in Obrian 209
+| **Office hours:** TBA
+
+
+Grade Information
+-----------------
+
+Grades will be calculated as follows:
+
++----------+--------------------------+-------------------+------------+
+| Homework | Recitation Participation | Proficiency Exams | Final Exam |
++----------+--------------------------+-------------------+------------+
+|   20%    |           10%            |         70%       |     20%    |
++----------+--------------------------+-------------------+------------+
+This table adds up to 120%! For an explanation, check under *Final Exam*.
+
+Grades will be calculated using a 4-pt scale:
+
++-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+|  F  |  D  |  D+ |  C- |  C  |  C+ |  B- |  B  |  B+ |  A- |  A  |
++-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+| 0.0 | 1.0 | 1.3 | 1.6 | 1.9 | 2.2 | 2.5 | 2.8 | 3.1 | 3.4 | 3.7 |
++-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
+Please note that the values in this table are the lower threshold for each letter grade.
+
+*Homework:* We will be using `UBx <https://learning.buffalo.edu/>`_ for homework.  There will be one assignment every week, but assignments will all be due at the end of the semester.
+
+UBx uses Python to automatically generate and grade questions.  In addition that are some problems that will require you to work in Jupyter notebook, so you will need to download and install the latest version of `Anaconda <https://www.anaconda.com/>`_.
+Don't worry, any programming you will need to do will be thoroughly explained in the problem.
+
+*In-class activities:* In addition to weekly homework, I plan on posting a Jupyter notebook activity `here <activities>`_ every week.  These activities will be done during class or recitation and will not be graded.
+
+*Recitation participation:* It couldn't be easier to get 10% of the final grade, just show up and engage.  Participation will be evaluated by the TA on a weekly basis.
+
+*Proficiency exams:* Exams in this class will be handled differently than what you may be used to.  
+Instead of having one or two midterms covering multiple sections of material, we will have short, 30 minute exams **every other Thursday at the beginning of class** covering only the material from the previous 4 classes.
+
+Each exam will have 4 questions worth 4 points each for a total of 16 points.  If your score is 10 or more, you pass the exam and will receive full credit.
+If your score is less than 10, you do not pass and will need to retake the exam.  You can retake each exam up to 2 additional times. 
+**Exam retakes will take place during the first 30 minutes of class on Tuesdays.**
+If you do not need to retake the exam, you do not need to show up to the first 30 minutes of class on that Tuesday.
+
+Your aggregate score for the proficiency exams portion of the final grade will be the average of the individual exam grades (4.0 for passing, 0.0 for failing).
+There will be a total of seven proficiency exams, so to get a C, you must pass at least four of the seven exams.
+
+*Final exam:* **If you did not pass at least 4 proficiency exams**, you will be required to take the final exam.
+If you passed at least 4 of the proficiency exams, you may opt out of the final exam.
+
+For those of you that end up taking the final exam, I will reduce the weight of the proficiency exams from 70% of the final grade to 50%, with the final exam making up the remaining 20%.
+The final exam will take place on TBA, and you will be given two hours to complete 8 questions.
+
+
+Topics by Week
+--------------
+
+
++---------+----------------------------------------------+
+|  Week   | Topics and exam schedule                     |
++=========+==============================================+
+| Week 1  | | Tu: Systems of equations                   |
+|         | | Th: The system matrix and elimination      |
++---------+----------------------------------------------+
+| Week 2  | | Tu: Solving applications                   |
+|         | | Th: Exam 1; vector spaces                  |
++---------+----------------------------------------------+
+| Week 3  | | Tu: Exam 1 retake 1; subspace and span     |
+|         | | Th: Linear independence and basis          |
++---------+----------------------------------------------+
+| Week 4  | | Tu: Exam 1 retake 2; coordinates           |
+|         | | Th: Exam 2; linear transformations         |
++---------+----------------------------------------------+
+| Week 5  | | Tu: Exam 2 retake 1; matrix representation |
+|         | | Th: 1-1 and onto                           |
++---------+----------------------------------------------+
+| Week 6  | | Tu: Exam 2 retake 2; change of basis       |
+|         | | Th: Exam 3; matrix times vector            |
++---------+----------------------------------------------+
+| Week 7  | | Tu: Exam 3 retake 1; matrix times matrix   |
+|         | | Th: Inverse of a matrix                    |
++---------+----------------------------------------------+
+| Week 8  | | Tu: Exam 3 retake 2; applications          |
+|         | | Th: Exam 4; determinants                   | 
++---------+----------------------------------------------+
+| Week 9  | | Tu: Exam 4 retake 1; systems of LODEs      |
+|         | | Th: Eigenvalues and eigenvectors           |
++---------+----------------------------------------------+
+| Week 10 | | Tu: Exam 4 retake 2; diagonalization       |
+|         | | Th: Exam 5; length of a vector             |
++---------+----------------------------------------------+
+| Week 11 | | Tu: Exam 5 retake 1; angle between vectors |
+|         | | Th: Projections and reflections            |
++---------+----------------------------------------------+
+| Week 12 | | Tu: Exam 5 retake 2; orthogonal vectors    |
+|         | | Th: Exam 6; inconsistent systems           |
++---------+----------------------------------------------+
+| Week 13 | | Tu: Exam 6 retake 1; least squares         |
+|         | | Th: Singular value decomposition           |
++---------+----------------------------------------------+
+| Week 14 | | Tu: Exam 6 retake 2; applications          |
+|         | | Th: Exam 7; floating point numbers         |
++---------+----------------------------------------------+
+| Week 15 | | Tu: Exam 7 retake 1; numerical LA          |
+|         | | Th: Exam 7 retake 2; condition number      |
++---------+----------------------------------------------+
+| Week 16 | Final exam, TBA                              |
++---------+----------------------------------------------+
+
+
+Proficiency Exams by Topics:
+----------------------------
+
+
++--------+------------------------------------------------------------------------+
+| Exam 1 | Systems of linear equations, solutions, matrix equations, applications |
++--------+------------------------------------------------------------------------+
+| Exam 2 | Vector spaces, subspaces, basis, dimension, coordinates                |
++--------+------------------------------------------------------------------------+
+| Exam 3 | Linear transformations, matrix representation, 1-1 and onto            |
++--------+------------------------------------------------------------------------+
+| Exam 4 | Matrix algebra and its applications                                    |
++--------+------------------------------------------------------------------------+
+| Exam 5 | Determinant, eigenvalues and eigenvectors, systems of LODEs            |
++--------+------------------------------------------------------------------------+
+| Exam 6 | Vector geometry, norms, inner products, orthogonality                  |
++--------+------------------------------------------------------------------------+
+| Exam 7 | Linear least squares, SVD, applications                                |
++--------+------------------------------------------------------------------------+
+| Final  | One questions from each of the above exams with one more on NLA        |
++--------+------------------------------------------------------------------------+
+
+
+Useful Information
+------------------
+
+**COVID-19 Information**
+Due to the continuing COVID-19 pandemic, high-quality masks are recommended during class and office hours.
+High-quality masks include N95 or KN95 or similarly rated masks.  If you are feeling sick,
+stay home and contact me via email.  For more information at the pandemic health and safety policies, please see the
+`Health and Safety Guidelines <https://www.buffalo.edu/coronavirus/health-and-safety/health-safety-guidelines.html>`_.
+
+**Important Dates:**
+	
+        * Jan 30: first day of classes
+        * Feb 6: last day to add/drop
+        * Mar 20 - 25: Spring break
+	* April 21: last day to resign
+	* May 12: last day of classes
+
+**Academic Integrity.**
+Academic integrity is critical to the learning process. It is your responsibility as a student to
+complete your work in an honest fashion, upholding the expectations your individual instructors
+have for you in this regard. The ultimate goal is to ensure that you learn the content in your
+courses in accordance with UB's academic integrity principles, regardless of whether instruction
+is in-person or remote. Thank you for upholding your own personal integrity and ensuring UB's
+tradition of academic excellence. The academic integrity policy is available at:
+ `Academic Integrity <https://www.buffalo.edu/academic-integrity.html>`_
+
+While you are encouraged to collaborate with your peers to problem solve while working on the projects,
+each student is responsible for producing an original project report on their own.  Any outside resource 
+that is used during the project (this includes code taken from class notes or other sources) or while 
+writing the report must be properly cited in the report. 
+
+Collaboration of any kind on the quizzes is forbidden, as is the use of any materials not approved of 
+by the instructor.
+
+**Accessibility Resources.**
+If you have any disability which requires reasonable accommodations to enable you to participate
+in this course, please contact the Oce of Accessibility Resources in 60 Capen Hall, 716-645-2608
+and also the instructor of this course during the first week of class. The office will provide you
+with information and review appropriate arrangements for reasonable accommodations, which can
+be found on the web at:
+ `Accessibility Resources <http://www.buffalo.edu/studentlife/who-we-are/departments/accessibility.html>`_.
+
+**Critical Campus Resources**
+
+**Sexual Violence.**
+UB is committed to providing a safe learning environment free of all forms of discrimination and sexual harassment, including sexual assault, domestic and dating violence and stalking. If you have experienced gender-based violence (intimate partner violence, attempted or completed sexual assault, harassment, coercion, stalking, etc.), UB has resources to help. This includes academic accommodations, health and counseling services, housing accommodations, helping with legal protective orders, and assistance with reporting the incident to police or other UB officials if you so choose. Please contact UB’s Title IX Coordinator at 716-645-2266 for more information. For confidential assistance, you may also contact a Crisis Services Campus Advocate at 716-796-4399.
+
+**Mental Health.**
+As a student you may experience a range of issues that can cause barriers to learning or reduce your ability to participate in daily activities. These might include strained relationships, anxiety, high levels of stress, alcohol/drug problems, feeling down, health concerns, or unwanted sexual experiences. Counseling, Health Services, and Health Promotion are here to help with these or other issues you may experience. You can learn more about these programs and services by contacting:
+
+Counseling Services:
+
+	* 120 Richmond Quad (North Campus), 716-645-2720
+	* 202 Michael Hall (South Campus), 716-829-5800    
+Health Services:
+
+	* Michael Hall (South Campus), 716-829-3316
+Health Promotion:
+
+	* 114 Student Union (North Campus), 716-645-2837
+

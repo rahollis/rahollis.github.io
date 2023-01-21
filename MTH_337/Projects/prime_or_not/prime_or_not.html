@@ -1,0 +1,362 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>A prime or not a prime &mdash; Spring 2023 Courses</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/table_fix.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../master.html" class="icon icon-home"> Prof. Hollister's Classes
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Spring 2023
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../mth337.html">MTH 337</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../MTH_309/mth309.html">MTH 309</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../master.html">Prof. Hollister's Classes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+<div class="git-ribbon">
+  <a href="http://github.com/SwissDataScienceCenter" rel="me">Join us on GitHub</a>
+</div>
+
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../master.html">MTH 337</a> &raquo;</li>
+        
+      <li>A prime or not a prime</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/MTH_337/Projects/prime_or_not/prime_or_not.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="a-prime-or-not-a-prime">
+<h1>A prime or not a prime<a class="headerlink" href="#a-prime-or-not-a-prime" title="Permalink to this headline">¶</a></h1>
+<p class="rubric">(due: Wednesday, Sep 7 at 11:59 PM)</p>
+<div class="section" id="prime-numbers">
+<h2>Prime numbers<a class="headerlink" href="#prime-numbers" title="Permalink to this headline">¶</a></h2>
+<p>A <em>prime number</em> is an integer greater than 1 which is divisible only by
+1 and by itself. For example, 5 is a prime but 6 is not since 6 is
+divisible by 1, 2, 3, and 6. There are infinitely many prime numbers.
+Here is the list of all primes smaller than 50:</p>
+<div class="math notranslate nohighlight">
+\[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47\]</div>
+<p>Prime numbers are the building blocks of integers: any integer
+<span class="math notranslate nohighlight">\(n&gt;1\)</span> can be written in a unique way as a product of
+primes</p>
+<div class="math notranslate nohighlight">
+\[n = p_{1}\cdot p_{2} \cdot {\dots} \cdot p_{m}\]</div>
+<p>such that <span class="math notranslate nohighlight">\(p_{1} \leq p_{2} \leq {\dots} \leq p_{m}\)</span>. This
+product called the <em>primary decomposition</em> of <span class="math notranslate nohighlight">\(n\)</span>. For example:
+<span class="math notranslate nohighlight">\(12 = 2\cdot 2\cdot 3\)</span>, <span class="math notranslate nohighlight">\(25 = 5\cdot 5\)</span>,
+<span class="math notranslate nohighlight">\(90 = 2\cdot 3\cdot 3\cdot 5\)</span>.</p>
+<p><strong>Exercise 1.</strong> Write a Python function <code class="docutils literal notranslate"><span class="pre">myprimes(n)</span></code> that returns the
+list of all primes smaller or equal to <code class="docutils literal notranslate"><span class="pre">n</span></code>, ordered from the smallest
+to the largest:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">myprimes</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>[2, 3, 5, 7]</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">myprimes</span><span class="p">(</span><span class="mi">29</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>[2, 3, 5, 7, 11, 13, 17, 19, 23, 29]</p>
+</div>
+<p><strong>Exercise 2.</strong> Write a Python function <code class="docutils literal notranslate"><span class="pre">primary(n)</span></code> that for each
+integer <code class="docutils literal notranslate"><span class="pre">n</span></code> greater than 1 returns a list</p>
+<div class="math notranslate nohighlight">
+\[[p_{1}, p_{2}, \dots, p_{m}]\]</div>
+<p>where <span class="math notranslate nohighlight">\(p_{1}, \dots, p_{m}\)</span> are primes such that
+<span class="math notranslate nohighlight">\(p_{1} \leq p_{2} \leq {\dots} \leq p_{m}\)</span> and
+<span class="math notranslate nohighlight">\(n = p_{1}\cdot p_{2} \cdot {\dots} \cdot p_{m}\)</span>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">primary</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>[2, 5]</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">primary</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>[2, 3, 3, 5]</p>
+</div>
+</div>
+<div class="section" id="primes-and-false-primes">
+<h2>Primes and false primes<a class="headerlink" href="#primes-and-false-primes" title="Permalink to this headline">¶</a></h2>
+<p>Prime numbers are important in mathematics as well as in some practical
+applications. For example, they are used to encrypts data (credit card
+numbers etc.) so that it can be transmitted securely. For this reason it
+is interesting to look for new methods that can help us recognize which
+numbers are prime and which are not. Here we will explore one such
+possible method.</p>
+<div class="section" id="congruences">
+<h3>Congruences<a class="headerlink" href="#congruences" title="Permalink to this headline">¶</a></h3>
+<p>Given integers <span class="math notranslate nohighlight">\(m, n\)</span> and <span class="math notranslate nohighlight">\(k\)</span> we say that <span class="math notranslate nohighlight">\(m\)</span> and
+<span class="math notranslate nohighlight">\(n\)</span> are <em>congruent modulo</em> <span class="math notranslate nohighlight">\(k\)</span> if the reminder from dividing
+<span class="math notranslate nohighlight">\(m\)</span> by <span class="math notranslate nohighlight">\(k\)</span> is the same as the reminder from dividing
+<span class="math notranslate nohighlight">\(n\)</span> by <span class="math notranslate nohighlight">\(k\)</span>. In such situation we write
+<span class="math notranslate nohighlight">\(m \equiv n \ (\text{mod } 7)\)</span>. For example
+<span class="math notranslate nohighlight">\(19 \equiv 47 \ (\text{mod } 7)\)</span> since</p>
+<div class="math notranslate nohighlight">
+\[19 = 2\cdot 7 + 5 \ \ \ \ \ \ \ 47 = 6\cdot 7 + 5\]</div>
+<p>so the reminder from division of both 19 and 47 by 7 is 5.</p>
+<p><strong>Note.</strong> The congruence relation is preserved by the arithmetic
+operations: if <span class="math notranslate nohighlight">\(m_{1} \equiv n_{1} \ (\text{mod } k)\)</span> and
+<span class="math notranslate nohighlight">\(m_{2} \equiv n_{2} \ (\text{mod } k)\)</span> then
+<span class="math notranslate nohighlight">\(m_{1}+ m_{2} \equiv n_{1}+n_{2} \ (\text{mod } k)\)</span> and
+<span class="math notranslate nohighlight">\(m_{1}m_{2} \equiv n_{1}n_{2} \ (\text{mod } k)\)</span>.</p>
+</div>
+<div class="section" id="congruences-and-prime-numbers">
+<h3>Congruences and prime numbers<a class="headerlink" href="#congruences-and-prime-numbers" title="Permalink to this headline">¶</a></h3>
+<p>Here is a basic fact in number theory that relates prime numbers and
+congruences:</p>
+<p><strong>Theorem.</strong> If <span class="math notranslate nohighlight">\(p\)</span> is a prime number then</p>
+<div class="math notranslate nohighlight">
+\[a^{p} \equiv a \ (\text{mod } p)\]</div>
+<p>for any integer <span class="math notranslate nohighlight">\(p &gt; a \geq 0\)</span>.</p>
+<p>For example, for <span class="math notranslate nohighlight">\(p=3\)</span> we have</p>
+<div class="math notranslate nohighlight">
+\[1^{3} = \phantom{2}1  \equiv 1 \ (\text{mod } 3)\]</div>
+<div class="math notranslate nohighlight">
+\[2^{3} = \phantom{2}8  \equiv 2 \ (\text{mod } 3)\]</div>
+<div class="math notranslate nohighlight">
+\[3^{3} = 27 \equiv 3 \ (\text{mod } 3)\]</div>
+<div class="math notranslate nohighlight">
+\[4^{3} = 64 \equiv 4 \ (\text{mod } 3)\]</div>
+<p>which shows that the formula <span class="math notranslate nohighlight">\(a^{3} \equiv a \ (\text{mod } 3)\)</span>
+holds for <span class="math notranslate nohighlight">\(a= 1, 2, 3, 4\)</span>.</p>
+<p>The formula from the above theorem does not hold in general if <span class="math notranslate nohighlight">\(p\)</span>
+is not a prime number. For example for <span class="math notranslate nohighlight">\(p = 4\)</span> and <span class="math notranslate nohighlight">\(a = 2\)</span>
+we have <span class="math notranslate nohighlight">\(2^{4}= 16\)</span> which is not congruent to 2 modulo 4.</p>
+<p>If it would turn out that the only numbers <span class="math notranslate nohighlight">\(p\)</span> that satisfy the
+formula <span class="math notranslate nohighlight">\(a^{p} \equiv a \ (\text{mod } p)\)</span> for all <span class="math notranslate nohighlight">\(0 \leq a &lt; p\)</span> are
+prime numbers we would get a new way of recognizing which numbers are
+prime. It turns out, however, that there are numbers <span class="math notranslate nohighlight">\(p\geq 2\)</span> such that:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(p\)</span> is not a prime</p></li>
+<li><p>the formula <span class="math notranslate nohighlight">\(a^{p} \equiv a \ (\text{mod } p)\)</span> holds for all
+<span class="math notranslate nohighlight">\(0 \leq a &lt; p\)</span></p></li>
+</ul>
+<p>We will call such numbers <em>false primes</em>. The smallest number which is a
+false prime is 561.</p>
+</div>
+</div>
+<div class="section" id="project">
+<h2>Project<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h2>
+<p><strong>Part 1.</strong> Write a Python script to find the first 20 false primes.</p>
+<p><strong>Hint.</strong> Call a number <span class="math notranslate nohighlight">\(p\)</span> <em>prime-like</em> if <span class="math notranslate nohighlight">\(p\geq 2\)</span> and the formula
+<span class="math notranslate nohighlight">\(a^{p} \equiv a \ (\text{mod } p)\)</span> holds for all <span class="math notranslate nohighlight">\(0 \leq a &lt; p\)</span>.
+You can start your work on part 1  by writing a function <code class="docutils literal notranslate"><span class="pre">isprimelike(n)</span></code> that returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if <code class="docutils literal notranslate"><span class="pre">n</span></code> is
+prime-like and returns <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise. Once you know that an integer is prime-like you just need to
+check that it is not a prime number.</p>
+<p><strong>Part 2.</strong> Compute the primary decomposition of each false prime you found.</p>
+<p><strong>Part 3.</strong> What can you say or conjecture about properties of false
+primes?</p>
+<p><strong>Note.</strong> In order to compute with Python the reminder from division of
+the number <span class="math notranslate nohighlight">\(a^{n}\)</span> by <span class="math notranslate nohighlight">\(k\)</span> we can use the command
+<code class="docutils literal notranslate"><span class="pre">(a**n)%k</span></code>. For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">7</span><span class="o">**</span><span class="mi">2</span> <span class="o">%</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>4</p>
+</div>
+<p>This method is however inefficient, since Python computes first
+<span class="math notranslate nohighlight">\(a^{n}\)</span>, which can be a very large number, and only then
+calculates the reminder from division by <span class="math notranslate nohighlight">\(k\)</span>. A much faster way of
+performing the same computation is by using the function <code class="docutils literal notranslate"><span class="pre">pow()</span></code> which
+uses modular arithmetic to compute the power and the reminder at the
+same time. The result of the command <code class="docutils literal notranslate"><span class="pre">pow(a,n,k)</span></code> is exactly the same
+as that of <code class="docutils literal notranslate"><span class="pre">(a**n)%k</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">pow</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>4</p>
+</div>
+<p>The function <code class="docutils literal notranslate"><span class="pre">pow()</span></code> can be also used with two arguments. The command
+<code class="docutils literal notranslate"><span class="pre">pow(a,n)</span></code> returns simply the power <span class="math notranslate nohighlight">\(a^{n}\)</span>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">pow</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>49</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      Last updated on Jan 18, 2023.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

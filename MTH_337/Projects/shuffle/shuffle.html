@@ -1,0 +1,271 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Mix ‘Em Up &mdash; Spring 2023 Courses</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/table_fix.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../master.html" class="icon icon-home"> Prof. Hollister's Classes
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Spring 2023
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../mth337.html">MTH 337</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../MTH_309/mth309.html">MTH 309</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../master.html">Prof. Hollister's Classes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+<div class="git-ribbon">
+  <a href="http://github.com/SwissDataScienceCenter" rel="me">Join us on GitHub</a>
+</div>
+
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../master.html">MTH 337</a> &raquo;</li>
+        
+      <li>Mix ‘Em Up</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/MTH_337/Projects/shuffle/shuffle.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mix-em-up">
+<h1>Mix ‘Em Up<a class="headerlink" href="#mix-em-up" title="Permalink to this headline">¶</a></h1>
+<p class="rubric">(due: Monday, Sep 19 at 11:59 PM)</p>
+<div class="section" id="shuffling-cards">
+<h2>Shuffling cards<a class="headerlink" href="#shuffling-cards" title="Permalink to this headline">¶</a></h2>
+<p>Shuffling is the process of randomizing a deck of cards.  In this
+project, we will investigate different methods used to shuffle cards,
+with the goal of comparing how each method randomizes a deck.</p>
+<p>This project will require extensive use of the <code class="code docutils literal notranslate"><span class="pre">random</span></code> library.</p>
+<p><strong>Exercise:</strong> Write a Python function that takes a positive integer
+as input and returns a “deck” containing the specified number of cards.
+In other words, you want to return a list of integers between 1 and
+<span class="math notranslate nohighlight">\(n\)</span>.</p>
+<p>We will consider three methods of shuffling:  the classic riffle,
+the middle-out method, and the top-to-bottom re-stack.</p>
+<div class="section" id="the-classic-riffle">
+<h3><em>The classic riffle</em><a class="headerlink" href="#the-classic-riffle" title="Permalink to this headline">¶</a></h3>
+<p>For this method, the deck is divided roughly in half and the halves
+held in separate hands.  A new deck is built from the bottom up by
+selecting at random either the bottom card from the left hand or right
+hand.  This is done repeatedly until all the cards are gone from
+either hand, at which point any remaining cards (in the other hand)
+are placed on the top of the deck.</p>
+</div>
+<div class="section" id="the-middle-out-method">
+<h3><em>The middle-out method</em><a class="headerlink" href="#the-middle-out-method" title="Permalink to this headline">¶</a></h3>
+<p>Simpler than the riffle, this method first divides the deck into
+roughly thirds.  The middle third is then placed randomly on the top
+or the bottom of the deck.</p>
+</div>
+<div class="section" id="top-to-bottom-re-stack">
+<h3><em>Top-to-bottom re-stack</em><a class="headerlink" href="#top-to-bottom-re-stack" title="Permalink to this headline">¶</a></h3>
+<p>This methods begins by dividing the deck into a random number of
+sections.  Then the deck is “re-stacked” by reversing the order of
+the sections.</p>
+</div>
+</div>
+<div class="section" id="measuring-randomness">
+<h2>Measuring randomness<a class="headerlink" href="#measuring-randomness" title="Permalink to this headline">¶</a></h2>
+<p>Given a list of integers</p>
+<div class="math notranslate nohighlight">
+\[[n_1,n_2,...,n_k],\]</div>
+<p>how random are they distributed?  One possible measure of randomness
+is to compute the average distances between adjacent integers</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{k}\sum_{i=1}^{k-1}|n_{i+1}-n_i|.\]</div>
+<p>This measure is fine, but it has some drawbacks.  Consider the follwing
+deck</p>
+<div class="math notranslate nohighlight">
+\[[1,27,2,28,3,29,4,30,...,26,52].\]</div>
+<p>The above measure would be about 23.25, about as high as possible;
+however, we can clearly see that this is not a random deck.  How
+might we modify the measure to avoid this drawback?</p>
+<p><strong>Exercise:</strong> Write a function that takes a randomized deck as input
+and returns its measure of randomness.</p>
+</div>
+<div class="section" id="project">
+<h2>Project<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h2>
+<p><strong>Part 1:</strong>  For each of the three shuffling methods, write a function
+that takes a “deck of cards” as input and returns the shuffled deck.</p>
+<p><strong>Part 2:</strong>  Compare the performance of the methods.  Which method acheived
+the most randomness?  Which method achieved an acceptable level of
+randomness the fastest?</p>
+<p><strong>Extra credit:</strong>  Write a function to perform a different shuffling
+method and compare to the other three.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      Last updated on Jan 18, 2023.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

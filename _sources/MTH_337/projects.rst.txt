@@ -1,0 +1,37 @@
+
+Projects
+========
+
+`Project rubric <../_static/MTH_337/rubric337.pdf>`_
+
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 2
+
+..
+   Prime or Not <./Projects/prime_or_not/prime_or_not>
+..
+   Shuffle Them Cards </Projects/shuffle/shuffle>
+..
+   A Particular Sequence </Projects/part_sequence/part_sequence>
+..
+   A Funny Function </Projects/funny_function/funny_function>
+..
+   The Mayfly Model </Projects/mayfly_model/mayfly_model>
+..
+   Image Denoising </Prjects/image_denoise/image_denoise>
+..
+   Tartans </Projects/tartans/tartans>
+..
+   Redistricting </Projects/redistricting/redistricting>
+..
+   Making Friends </Projects/making_friends/making_friends>
+..
+   Epidemic Model </Projects/epidemic/epidemic>
+..
+   Computing with Text </Projects/computing_with_text/computing_with_text>
+..
+   Decrypting a Message </Projects/message_decrypt/message_decrypt>
+..
+   Solving Sudoku </Projects/simple_sudoku/simple_sudoku>

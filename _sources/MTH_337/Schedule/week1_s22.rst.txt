@@ -1,0 +1,44 @@
+Week 1: Jan 31 - Jan 4
+======================
+
+Logistics
+~~~~~~~~~
+
+* Syllabus and class organization
+
+Jupyter Notebook
+~~~~~~~~~~~~~~~~
+
+* Working with files and folders
+* Copying/deleting/moving cells
+* Code cells and markdown cells
+* Markdown basics
+
+
+Python
+~~~~~~
+
+* Basic mathematical operations
+* Numbers in Python: integers and floats
+* Variable assignment
+* The ``print()`` function
+* Strings and string formatting
+* :doc:`Importing modules </PT/PT-importing_modules>`
+* ``for`` loops
+* Boolean expressions
+* The ``if`` statement
+* :doc:`Lists </PT/PT-lists>` 
+
+
+
+Week 1 notebook
+~~~~~~~~~~~~~~~
+- `View online <../../_static/MTH_337/week1_in_class.html>`_
+- `Download  <../../_static/MTH_337/week1_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+
+
+Sample quiz 1
+~~~~~~~~~~~~~
+
+- :download:`Sample Quiz 1 <../Quizzes/quiz1_sample.pdf>`
+

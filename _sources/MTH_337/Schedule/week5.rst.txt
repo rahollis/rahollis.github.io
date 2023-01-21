@@ -1,0 +1,27 @@
+Week 5: Feb 28 - Mar 4
+======================
+
+Project 3
+~~~~~~~~~
+
+* :doc:`Mayfly Model </Projects/mayfly_model/mayfly_model>`.
+
+
+Mathematics
+~~~~~~~~~~~
+
+* Population models
+* Model dependence on parameters
+* Bifurcation diagrams
+
+
+Week 5 notebook
+~~~~~~~~~~~~~~~
+
+- `View online <../../_static/MTH_337/week5_in_class.html>`_
+- `Download  <../../_static/MTH_337/week5_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+
+Sample quiz
+~~~~~~~~~~~~~
+
+- * :download:`Sample Quiz 4 <../Quizzes/quiz4_sample.pdf>`

@@ -1,18 +1,14 @@
 .. _contents:
 
-MTH 337 table of contents
+Spring 2023 Courses
 =========================
 
-Contents:
-~~~~~~~~~~~~
+Choose your course:
+~~~~~~~~~~~~~~~~~~~
 
 
 .. toctree::
    :maxdepth: 1
 
-   Syllabus <index>
-   Project Report Guide <report_guide>
-   Useful Links <useful_links>
-   Python Tools <python_tools>
-   Projects <projects>
-   Weekly Schedule  <weekly_schedule>
+   MTH 337 <MTH_337/mth337>
+   MTH 309 <MTH_309/mth309>

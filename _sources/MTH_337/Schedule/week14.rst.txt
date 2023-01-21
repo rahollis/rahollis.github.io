@@ -1,0 +1,30 @@
+Week 14: May 3 - May 7
+======================
+
+Project 7
+~~~~~~~~~
+
+* :doc:`Message Decryption </Projects/message_decrypt/message_decrypt>`
+* :doc:`Solving Sudoku </Projects/simple_sudoku/simple_sudoku>`
+
+
+Python
+~~~~~~
+
+* Where to put the ampersands
+
+Math
+~~~~
+
+* Sudoku puzzles, strategies for solving
+
+Week 14 notebook
+~~~~~~~~~~~~~~~
+
+- `View online <../../_static/MTH_337/week14_in_class.html>`_
+- `Download  <../../_static/MTH_337/week14_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+
+Sample quiz
+~~~~~~~~~~~~~
+
+- * :download:`Sample Quiz 14 <../Quizzes/quiz14_sample.pdf>`

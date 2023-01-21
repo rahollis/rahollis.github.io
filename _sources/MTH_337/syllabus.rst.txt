@@ -1,0 +1,152 @@
+
+=================
+Syllabus
+=================
+
+| **MTH 337 Introduction to Scientific and Mathematical Computing**
+
+| **Class times:** TuTh 11:00 AM - 12:50 PM,
+| Location: Math 150
+
+Instructor
+----------
+
+
+| Richard Hollister
+| Preferred pronouns: He, Him, His
+| **Office:** 321 Mathematics Building
+| **E-mail:** `rahollis@buffalo.edu <rahollis@buffalo.edu>`_
+| **Office Hours:** Th 1:30 AM - 2:30 PM
+|
+
+Course Resources
+----------------
+
+**Laptop.** We will be programming during all class meetings, so you should bring
+a laptop to every class. Any operating system (Windows/Mac/Linux) is fine.
+
+**Software.** We will be using the `Anaconda distribution of Python 3.8 <https://www.anaconda.com/distribution/>`_.
+This is free software. Even if you have Python already installed on your computer you should install this
+distribution since it includes Jupyter notebook and several Python modules we will need.
+
+
+
+**Textbook.** There is no required textbook for this course but the following resorces may be helpful:
+
+    * `MTH 337 notes <http://www.acsu.buffalo.edu/~adamcunn/spring2017/_downloads/MTH337ClassnotesSpring2017.pdf>`_ by prof. Adam Cunningham.
+      These notes provide a concise introduction to Jupyter notebook and Python.
+    * `Markdown cheatsheet <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>`_.  Markdown is a scheme used
+      to format text in Jupyter notebook.
+    * `LaTeX math symbols <https://www.artofproblemsolving.com/wiki/index.php/LaTeX:Symbols>`_ - this is useful reference for
+      typesetting mathematics with Jupyter notebook.
+    * `Python 3 documentation <https://docs.python.org/3/>`_. This is the official documentation of Python 3.
+      See the Tutorial section for introduction to Python and Library Reference for a systematic description of standard
+      Python tools.
+    * `matplotlib documentation <http://matplotlib.org>`_. Matplotlib is a Python module for creating graphs and plots.
+      We will use it a lot. Matplotlib documentation is unfortunately incomplete and often quite confusing, but it includes many
+      code examples that can be helpful.
+    * `numpy documentation <http://docs.scipy.org/doc/numpy/>`_. Numpy is the main scientific computing module of Python.
+      We will use it extensively.
+
+
+|UBLearns| will be used mainly for submitting project reports.  Grades will be available upon request during office hours.
+
+.. |UBLearns| raw:: html
+
+   <strong><a href="https://ublearns.buffalo.edu">UBLearns</a> </strong>
+
+
+
+
+Grading
+-------
+
+There will be no exams in this course. Instead, grades will be assigned based on
+the following components:
+
+    * Project Reports 70%
+    * Quizzes 20%
+    * Class Participation 10%
+
+
+**Project Reports.**
+The main component of this course will be exploratory projects. You will be
+working on them largely independently, using mathematical and computing tools.
+The outcome of your work on each project will be a project report that you will
+submit for grading. Each report will be graded on the A-F scale. Extra credit may
+be assigned for an outstanding work. Reports will be submitted via UBLearns.
+Late reports will not be accepted.  Your project report must be an original, 
+even if you worked on some components of the project in a group.
+More information about project reports is posted :doc:`here <report_guide>`.
+The lowest project score will be dropped at the end of the semester.
+
+**Quizzes.** Each Monday there will be a short quiz testing your knowledge of Python.
+Sample quizzes will be posted ahead of time with the :doc:`weekly class schedule <weekly_schedule>`.
+The lowest two quiz score will be dropped.
+
+**Class Participation.** This includes class attendance, asking and answering question in class
+and during office hours.  Class participation will be evaluated weekly.
+
+
+
+Useful Information
+------------------
+
+**COVID-19 Information**
+Due to the continuing COVID-19 pandemic, high-quality masks are recommended to be worn at all times during class
+and office hours.  High-quality masks include N95 or KN95 or similarly rated masks.  If you are feeling sick,
+stay home and contact me via email.  For more information at the pandemic health and safety policies, please see the
+`Health and Safety Guidelines <https://www.buffalo.edu/coronavirus/health-and-safety/health-safety-guidelines.html>`_.
+
+**Important Dates:**
+	
+        * Jan 30: first day of classes
+        * Feb 6: last day to add/drop
+        * Mar 20 - 25: Spring break
+	* April 21: last day to resign
+	* May 12: last day of classes
+
+**Academic Integrity.**
+Academic integrity is critical to the learning process. It is your responsibility as a student to
+complete your work in an honest fashion, upholding the expectations your individual instructors
+have for you in this regard. The ultimate goal is to ensure that you learn the content in your
+courses in accordance with UB's academic integrity principles, regardless of whether instruction
+is in-person or remote. Thank you for upholding your own personal integrity and ensuring UB's
+tradition of academic excellence. The academic integrity policy is available at:
+ `Academic Integrity <https://www.buffalo.edu/academic-integrity.html>`_
+
+While you are encouraged to collaborate with your peers to problem solve while working on the projects,
+each student is responsible for producing an original project report on their own.  Any outside resource 
+that is used during the project (this includes code taken from class notes or other sources) or while 
+writing the report must be properly cited in the report. 
+
+Collaboration of any kind on the quizzes is forbidden, as is the use of any materials not approved of 
+by the instructor.
+
+**Accessibility Resources.**
+If you have any disability which requires reasonable accommodations to enable you to participate
+in this course, please contact the Oce of Accessibility Resources in 60 Capen Hall, 716-645-2608
+and also the instructor of this course during the first week of class. The office will provide you
+with information and review appropriate arrangements for reasonable accommodations, which can
+be found on the web at:
+ `Accessibility Resources <http://www.buffalo.edu/studentlife/who-we-are/departments/accessibility.html>`_.
+
+**Critical Campus Resources**
+
+**Sexual Violence.**
+UB is committed to providing a safe learning environment free of all forms of discrimination and sexual harassment, including sexual assault, domestic and dating violence and stalking. If you have experienced gender-based violence (intimate partner violence, attempted or completed sexual assault, harassment, coercion, stalking, etc.), UB has resources to help. This includes academic accommodations, health and counseling services, housing accommodations, helping with legal protective orders, and assistance with reporting the incident to police or other UB officials if you so choose. Please contact UB’s Title IX Coordinator at 716-645-2266 for more information. For confidential assistance, you may also contact a Crisis Services Campus Advocate at 716-796-4399.
+
+**Mental Health.**
+As a student you may experience a range of issues that can cause barriers to learning or reduce your ability to participate in daily activities. These might include strained relationships, anxiety, high levels of stress, alcohol/drug problems, feeling down, health concerns, or unwanted sexual experiences. Counseling, Health Services, and Health Promotion are here to help with these or other issues you may experience. You can learn more about these programs and services by contacting:
+
+Counseling Services:
+
+	* 120 Richmond Quad (North Campus), 716-645-2720
+	* 202 Michael Hall (South Campus), 716-829-5800    
+Health Services:
+
+	* Michael Hall (South Campus), 716-829-3316
+Health Promotion:
+
+	* 114 Student Union (North Campus), 716-645-2837
+

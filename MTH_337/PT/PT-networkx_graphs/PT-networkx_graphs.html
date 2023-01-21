@@ -1,0 +1,396 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>NetworkX Graphs &mdash; Spring 2023 Courses</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/table_fix.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../master.html" class="icon icon-home"> Prof. Hollister's Classes
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Spring 2023
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../mth337.html">MTH 337</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../MTH_309/mth309.html">MTH 309</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../master.html">Prof. Hollister's Classes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+<div class="git-ribbon">
+  <a href="http://github.com/SwissDataScienceCenter" rel="me">Join us on GitHub</a>
+</div>
+
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../master.html">MTH 337</a> &raquo;</li>
+        
+      <li>NetworkX Graphs</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/MTH_337/PT/PT-networkx_graphs/PT-networkx_graphs.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="networkx-graphs">
+<h1>NetworkX Graphs<a class="headerlink" href="#networkx-graphs" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="the-networkx-library">
+<h2>The NetworkX library<a class="headerlink" href="#the-networkx-library" title="Permalink to this headline">¶</a></h2>
+<p>NetworkX is a Python library for creating, manipulating, and displaying
+mathematical objects called <em>graphs</em>, or <em>networks</em>.</p>
+<p>We begin by importing the library:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="graphs">
+<h2>Graphs<a class="headerlink" href="#graphs" title="Permalink to this headline">¶</a></h2>
+<p>A graph is a mathematical object that consists of points called <em>nodes</em>
+together with lines connecting them called <em>edges</em>.  Nodes are typically
+labeled with positive integers, and an edge between two nodes is given
+by an ordered pair.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_nodes_from</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In the above code, the function <code class="code docutils literal notranslate"><span class="pre">Graph()</span></code> creates an empty graph
+object in Python that we can then fill with nodes and edges.  Nodes and
+edges can either be added individually or from a list using different methods.</p>
+<p>Below is the graph G generated by the code above.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../../_images/graph1.png"><img alt="../../../_images/graph1.png" src="../../../_images/graph1.png" style="width: 450px;" /></a>
+</div>
+<p>Notice that the layout of the nodes is not ideal, and we do not know which
+node is which.  To make the
+graph come out looking better, we can add some additional arguments to
+the <code class="code docutils literal notranslate"><span class="pre">draw</span></code> function.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">nx</span><span class="o">.</span><span class="n">circular_layout</span><span class="p">(</span><span class="n">G</span><span class="p">),</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../../_images/graph1_circular.png"><img alt="../../../_images/graph1_circular.png" src="../../../_images/graph1_circular.png" style="width: 450px;" /></a>
+</div>
+<p>In the above code, the argument <code class="code docutils literal notranslate"><span class="pre">pos=nx.circular_layout(G)</span></code> arranges
+the nodes in a circle going counterclockwise with the first node on the right.
+The argument <code class="code docutils literal notranslate"><span class="pre">with_labels=True</span></code> turns on the node labels so we can tell
+which node is which.</p>
+<p>To modify the graph, we do not need to start over from scratch, we can
+simply add additional nodes and edges using the methods <code class="code docutils literal notranslate"><span class="pre">add_node</span></code>,
+<code class="code docutils literal notranslate"><span class="pre">add_nodes_from</span></code>, <code class="code docutils literal notranslate"><span class="pre">add_edge</span></code>, and <code class="code docutils literal notranslate"><span class="pre">add_edges_from</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">),(</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">),(</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">),(</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">)])</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">nx</span><span class="o">.</span><span class="n">circular_layout</span><span class="p">(</span><span class="n">G</span><span class="p">),</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../../_images/graph2.png"><img alt="../../../_images/graph2.png" src="../../../_images/graph2.png" style="width: 450px;" /></a>
+</div>
+<p>We can also remove nodes and edges in a similar fashion using the methods
+<code class="code docutils literal notranslate"><span class="pre">remove_node</span></code>, <code class="code docutils literal notranslate"><span class="pre">remove_nodes_from</span></code>, <code class="code docutils literal notranslate"><span class="pre">remove_edge</span></code>, and
+<code class="code docutils literal notranslate"><span class="pre">remove_edges_from</span></code>.  When removing nodes, any edges containing the
+removed node will also be removed.</p>
+<p>You can take at look at the nodes and edges in your graph at anytime
+using the <code class="code docutils literal notranslate"><span class="pre">nodes</span></code> and <code class="code docutils literal notranslate"><span class="pre">edges</span></code> methods.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">G</span><span class="o">.</span><span class="n">nodes</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>NodeView((1, 2, 3, 4, 5, 6, 7))</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">G</span><span class="o">.</span><span class="n">edges</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>EdgeView([(1, 2), (1, 3), (1, 4), (2, 4), (3, 5), (3, 6), (5, 7)])</p>
+</div>
+<p>The data structure of graph objects is composed of dictionaries with the
+nodes as keys.  If you input the node <span class="math notranslate nohighlight">\(x\)</span>, you will get a dictionary
+containing the nodes connected to <span class="math notranslate nohighlight">\(x\)</span> by an edge.  Such nodes are
+called <em>adjacent</em> or <em>neighbors</em>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">G</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>AtlasView({2: {}, 3: {}, 4: {}})</p>
+</div>
+<p>The <em>neighborhood</em> of a node is the collection of all its neighbors.  For
+example, the our graph <span class="math notranslate nohighlight">\(G\)</span>, the neighborhood of node 1 is the
+collection of nodes 2, 3, and 4.</p>
+<p>The number of nodes in the neighborhood of <span class="math notranslate nohighlight">\(x\)</span> is called the degree
+of the node <span class="math notranslate nohighlight">\(x\)</span>.  In our example, the degree of node 1 is 3 since
+node 1 has 3 neighbors.  You can use the <code class="code docutils literal notranslate"><span class="pre">degree</span></code> method to obtain
+the degree of a node.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">G</span><span class="o">.</span><span class="n">degree</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>3</p>
+</div>
+</div>
+<div class="section" id="weighted-edges">
+<h2>Weighted Edges<a class="headerlink" href="#weighted-edges" title="Permalink to this headline">¶</a></h2>
+<p>NetworkX also makes it possible to assign different attributes to each
+edge, the most common of which are edge weights.  An <em>edge weight</em> is
+a real number associated to an edge, typically representing the
+importance of the connection between the two corresponding nodes.</p>
+<p>A weighted edge between nodes <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> with weight <span class="math notranslate nohighlight">\(w\)</span>
+is represented by the triple <span class="math notranslate nohighlight">\((x,y,w)\)</span>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">W</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
+<span class="n">W</span><span class="o">.</span><span class="n">add_weighted_edges_from</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mf">1.3</span><span class="p">),(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mf">1.9</span><span class="p">),(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mf">0.8</span><span class="p">),(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mf">2.3</span><span class="p">)])</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">W</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">nx</span><span class="o">.</span><span class="n">circular_layout</span><span class="p">(</span><span class="n">W</span><span class="p">),</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../../_images/weighted_graph1.png"><img alt="../../../_images/weighted_graph1.png" src="../../../_images/weighted_graph1.png" style="width: 450px;" /></a>
+</div>
+<p>Notice that <code class="code docutils literal notranslate"><span class="pre">nx.draw</span></code> does not draw the edge weights.  For that
+we will need some additional commands.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">weights</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">get_edge_attributes</span><span class="p">(</span><span class="n">W</span><span class="p">,</span><span class="s1">&#39;weight&#39;</span><span class="p">)</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">W</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">nx</span><span class="o">.</span><span class="n">circular_layout</span><span class="p">(</span><span class="n">W</span><span class="p">),</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edge_labels</span><span class="p">(</span><span class="n">W</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">nx</span><span class="o">.</span><span class="n">circular_layout</span><span class="p">(</span><span class="n">W</span><span class="p">),</span> <span class="n">edge_labels</span><span class="o">=</span><span class="n">weights</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../../_images/weighted_graph2.png"><img alt="../../../_images/weighted_graph2.png" src="../../../_images/weighted_graph2.png" style="width: 450px;" /></a>
+</div>
+</div>
+<div class="section" id="digraphs">
+<h2>Digraphs<a class="headerlink" href="#digraphs" title="Permalink to this headline">¶</a></h2>
+<p>A <em>directed graph</em> or <em>digraph</em> is a graph where the edges have direction.
+The edge, often called an <em>arrow</em>, <span class="math notranslate nohighlight">\((x,y)\)</span> starts at node <span class="math notranslate nohighlight">\(x\)</span>
+and goes to node <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">D</span> <span class="o">=</span> <span class="n">DiGraph</span><span class="p">()</span>
+<span class="n">D</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">),(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">),(</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">),(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">)])</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">D</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">nx</span><span class="o">.</span><span class="n">circular_layout</span><span class="p">(</span><span class="n">D</span><span class="p">),</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../../_images/digraph1.png"><img alt="../../../_images/digraph1.png" src="../../../_images/digraph1.png" style="width: 450px;" /></a>
+</div>
+<p>A node <span class="math notranslate nohighlight">\(x\)</span> in a digraph <span class="math notranslate nohighlight">\(D\)</span> has two neighborhoods, the out-neighborhood
+and the in-neighborhood.  The <em>out-neighborhood</em> contains all the nodes
+<span class="math notranslate nohighlight">\(y\)</span> such that <span class="math notranslate nohighlight">\(D\)</span> contains the arrow <span class="math notranslate nohighlight">\((x,y)\)</span>.  The
+<em>in-neighborhood</em> of <span class="math notranslate nohighlight">\(x\)</span> contains all the nodes <span class="math notranslate nohighlight">\(w\)</span> such
+that <span class="math notranslate nohighlight">\(D\)</span> contains the arrow <span class="math notranslate nohighlight">\((w,x)\)</span>.  Thus every node will
+also have an out-degree and an in-degree.</p>
+<p>It is easy to get the out-neighborhood of a node in a NetworkX digraph.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>AtlasView({2: {}, 4: {}})</p>
+</div>
+<p>The out-degree and in-degree can be obtained using the methods
+<code class="code docutils literal notranslate"><span class="pre">out_degree</span></code> and <code class="code docutils literal notranslate"><span class="pre">in_degree</span></code> respectively.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="o">.</span><span class="n">out_degree</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span><span class="n">D</span><span class="o">.</span><span class="n">in_degree</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>(2,1)</p>
+</div>
+</div>
+<div class="section" id="multigraphs">
+<h2>Multigraphs<a class="headerlink" href="#multigraphs" title="Permalink to this headline">¶</a></h2>
+<p>A <em>multigraph</em> is a graph that can have multiples edges connecting the
+same two nodes.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">MultiGraph</span><span class="p">()</span>
+<span class="n">M</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">),(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">),(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)])</span>
+</pre></div>
+</div>
+<p>Multigraphs also allow for edges to start and stop at the same node.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">M</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The neighborhood and degree are defined the same way as for graphs.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">M</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>AdjacencyView({2: {0: {}}, 3: {0: {}, 1: {}, 2: {}}, 1: {0: {}}})</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">M</span><span class="o">.</span><span class="n">degree</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>6</p>
+</div>
+</div>
+<div class="section" id="further-reading">
+<h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://networkx.org/">NetworkX website</a> can be used to access the
+official documentation for the NetworkX library.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      Last updated on Jan 18, 2023.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

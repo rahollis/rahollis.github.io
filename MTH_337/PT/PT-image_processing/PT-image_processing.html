@@ -1,0 +1,534 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Image processing &mdash; Spring 2023 Courses</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/table_fix.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../master.html" class="icon icon-home"> Prof. Hollister's Classes
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Spring 2023
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../mth337.html">MTH 337</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../MTH_309/mth309.html">MTH 309</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../master.html">Prof. Hollister's Classes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+<div class="git-ribbon">
+  <a href="http://github.com/SwissDataScienceCenter" rel="me">Join us on GitHub</a>
+</div>
+
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../master.html">MTH 337</a> &raquo;</li>
+        
+      <li>Image processing</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/MTH_337/PT/PT-image_processing/PT-image_processing.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="image-processing">
+<h1>Image processing<a class="headerlink" href="#image-processing" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="imshow">
+<h2>imshow<a class="headerlink" href="#imshow" title="Permalink to this headline">¶</a></h2>
+<p>The matplotlib function <code class="docutils literal notranslate"><span class="pre">imshow()</span></code> creates an image from a
+2-dimensional numpy array. The image will have one square for each
+element of the array. The color of each square is determined by the value of the corresponding
+array element and the color map used by <code class="docutils literal notranslate"><span class="pre">imshow()</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="c1"># create an nxn numpy array</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">**</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">n</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mf">4.5</span><span class="p">))</span>
+
+<span class="c1">#use imshow to plot the array</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">131</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">a</span><span class="p">,</span>                         <span class="c1">#numpy array generating the image</span>
+           <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;gray&#39;</span><span class="p">,</span>             <span class="c1">#color map used to specify colors</span>
+           <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span>    <span class="c1">#algorithm used to blend square colors; with &#39;nearest&#39; colors will not be blended</span>
+          <span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Gray color map, no blending&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.02</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="c1">#the same array as above, but with different color map</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">132</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;viridis&#39;</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Viridis color map, no blending&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.02</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="c1">#the same array as above, but with blending</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">133</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;viridis&#39;</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;bicubic&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Viridis color map, bicubic blending&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.02</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/PT-image_processing1.svg"><img alt="../../../_images/PT-image_processing1.svg" class="align-center" src="../../../_images/PT-image_processing1.svg" width="600px" /></a>
+<p><strong>Note.</strong> Color maps assign colors to numbers from the range [0, 1].
+By default <code class="docutils literal notranslate"><span class="pre">imshow()</span></code> scales elements of the numpy array so that the smallest element
+becomes 0, the largest becomes 1, and intermediate values are mapped to the interval
+[0, 1] by a linear function. Optionally <code class="docutils literal notranslate"><span class="pre">imshow()</span></code> can be called with arguments <code class="docutils literal notranslate"><span class="pre">vmin</span></code>
+and <code class="docutils literal notranslate"><span class="pre">vmax</span></code>. In such case all elements of the array smaller or equal to <code class="docutils literal notranslate"><span class="pre">vmin</span></code> are mapped
+to 0, all elements greater or equal to <code class="docutils literal notranslate"><span class="pre">vmax</span></code> are sent to 1, and the elements between
+<code class="docutils literal notranslate"><span class="pre">vmin</span></code> and <code class="docutils literal notranslate"><span class="pre">vmax</span></code> are mapped in a linear fashion into the interval [0,1].</p>
+</div>
+<div class="section" id="imsave">
+<h2>imsave<a class="headerlink" href="#imsave" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">imsave()</span></code> function is similar to <code class="docutils literal notranslate"><span class="pre">imshow()</span></code>, but instead of
+displaying an image it saves it to a file. In the file each
+element of the numpy array describes one pixel. The <code class="docutils literal notranslate"><span class="pre">imsave()</span></code>
+function does not have the <code class="docutils literal notranslate"><span class="pre">interpolation</span></code> argument.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">500</span>
+
+<span class="c1"># create an nxn numpy array</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">n</span><span class="p">,</span><span class="n">n</span><span class="p">))</span>
+
+<span class="c1"># save the image to a file &#39;test.png&#39; using  the &#39;jet&#39; color map to specify colors</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imsave</span><span class="p">(</span><span class="s1">&#39;test.png&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;inferno&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="../../_static/test.png">Here</a> is a file created by the above code.</p>
+</div>
+<div class="section" id="rgb-colors">
+<h2>RGB Colors<a class="headerlink" href="#rgb-colors" title="Permalink to this headline">¶</a></h2>
+<p>RGB is a color model commonly used to describe colors displayed on
+computer screens. RGB uses three basic colors: red, green, and blue.
+Other colors are obtained by mixing these basic components in various
+proportions.</p>
+<a class="reference internal image-reference" href="../../../_images/PT-image_processing2.svg"><img alt="../../../_images/PT-image_processing2.svg" class="align-center" src="../../../_images/PT-image_processing2.svg" width="250px" /></a>
+<p>In the RGB model each color is described by three numbers that give
+intensities of red, green, and blue. In matplotlib these numbers are
+between 0 (full off) to 1 (full on), but in many other computer
+applications they are taken to be integers between 0 and 255. The triple
+<code class="docutils literal notranslate"><span class="pre">(0,0,0)</span></code> represents the black color and <code class="docutils literal notranslate"><span class="pre">(1,1,1)</span></code> (or
+<code class="docutils literal notranslate"><span class="pre">(255,255,255)</span></code>) represents white.</p>
+<p>RGB coordinates can be used to specify colors in all matplotlib plotting
+functions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="c1"># three nxm numpy arrays with randomly selected RGB coordinates</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">))</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">))</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">aspect</span><span class="o">=</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">3.7</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">19.7</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="p">[(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">)]:</span>
+  <span class="c1">#plot a square with color given by RGB coordinates</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">],</span> <span class="n">g</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">],</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]),</span> <span class="n">markeredgecolor</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_axis_bgcolor</span><span class="p">(</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/PT-image_processing3.svg"><img alt="../../../_images/PT-image_processing3.svg" class="align-center" src="../../../_images/PT-image_processing3.svg" width="600px" /></a>
+</div>
+<div class="section" id="imshow-and-imsave-with-rgb-colors">
+<h2>imshow and imsave with RGB colors<a class="headerlink" href="#imshow-and-imsave-with-rgb-colors" title="Permalink to this headline">¶</a></h2>
+<p>The functions <code class="docutils literal notranslate"><span class="pre">imshow()</span></code> and <code class="docutils literal notranslate"><span class="pre">imsave()</span></code> can create images with
+colors specified by RGB coordinates. To do this
+we use a 3-dimensional numpy array <code class="docutils literal notranslate"><span class="pre">a</span></code> of dimensions m <span class="math notranslate nohighlight">\(\times\)</span>
+n <span class="math notranslate nohighlight">\(\times\)</span> 3. Such array consists of three slices <code class="docutils literal notranslate"><span class="pre">a[:,:,</span> <span class="pre">0]</span></code>,
+<code class="docutils literal notranslate"><span class="pre">a[:,:,</span> <span class="pre">1]</span></code>, and <code class="docutils literal notranslate"><span class="pre">a[:,:,</span> <span class="pre">2]</span></code> that give RGB coordinates of colors in
+the image.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="c1">#create a 3-dimensional numpy array with randomly selected RGB coordinates</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">n</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">141</span><span class="p">)</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">r</span><span class="p">[:,:,[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">0</span>    <span class="c1">#set green and blue coordinates to 0; this will display reds only</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Red component&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">142</span><span class="p">)</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">g</span><span class="p">[:,:,[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">0</span>    <span class="c1">#set red and blue coordinates to 0 to show greens</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Green component&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">143</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">b</span><span class="p">[:,:,[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">0</span>    <span class="c1">#set red and green coordinates to 0 to show blues</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Blue component&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">144</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;RGB mixture&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/PT-image_processing4.svg"><img alt="../../../_images/PT-image_processing4.svg" class="align-center" src="../../../_images/PT-image_processing4.svg" width="700px" /></a>
+<p><strong>Exercise.</strong> Recreate the following image:</p>
+<a class="reference internal image-reference" href="../../../_images/PT-image_processing8.svg"><img alt="../../../_images/PT-image_processing8.svg" class="align-center" src="../../../_images/PT-image_processing8.svg" width="200px" /></a>
+</div>
+<div class="section" id="imread">
+<h2>imread<a class="headerlink" href="#imread" title="Permalink to this headline">¶</a></h2>
+<p>While <code class="docutils literal notranslate"><span class="pre">imshow()</span></code> and <code class="docutils literal notranslate"><span class="pre">imsave()</span></code> produce an image from a numpy array,
+the <code class="docutils literal notranslate"><span class="pre">imread()</span></code> function takes as its argument an image file and
+converts it into a numpy array. The following code uses the file
+<a class="reference external" href="../../_static/tiger.jpg">tiger.jpg</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">img_array</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;tiger.jpg&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">img_array</span></code> a 3-dimensional numpy array that describes RGB coordinates
+of all pixels of the image:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">img_array</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>[[[ 60  73  19]
+  [ 62  75  21]
+  [ 63  78  23]
+  …,
+  [211 212 170]
+  [216 221 181]
+  [221 227 191]]
+ [[ 53  65  15]
+  [ 53  67  16]
+  [ 55  69  16]
+  …,
+  [213 214 170]
+  [220 222 183]
+  [225 229 192]]
+ [[ 44  57  11]
+  [ 45  58  12]
+  [ 45  61  14]
+  …,
+  [215 214 170]
+  [220 222 182]
+  [227 229 192]]
+  …,
+ [[ 91 123  47]
+  [ 89 121  45]
+  [ 93 121  47]
+  …,
+  [ 81  75  39]
+  [ 75  62  30]
+  [ 76  59  29]]
+ [[ 96 128  52]
+  [ 87 117  43]
+  [ 79 106  35]
+  …,
+  [ 76  70  34]
+  [ 72  59  25]
+  [ 74  57  27]]
+ [[ 85 116  40]
+  [ 73 103  29]
+  [ 62  89  18]
+  …,
+  [ 74  68  32]
+  [ 72  59  25]
+  [ 77  61  28]]]</p>
+</div>
+<p>Notice that entries of <code class="docutils literal notranslate"><span class="pre">img_array</span></code> are positive integers. This is the case
+because, as it was mentioned above, in computer applications RGB coordinates are
+often represented by integers in the range 0-255. For the purposes of
+manipulating this array it will be convenient to convert its entries
+into floats in the range 0.0-1.0. This can be done by dividing all
+entries of <code class="docutils literal notranslate"><span class="pre">img_array</span></code> by 255:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tiger</span> <span class="o">=</span> <span class="n">img_array</span><span class="o">/</span><span class="mi">255</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tiger</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>[[[ 0.23529412  0.28627451  0.0745098 ]
+  [ 0.24313725  0.29411765  0.08235294]
+  [ 0.24705882  0.30588235  0.09019608]
+  …,
+  [ 0.82745098  0.83137255  0.66666667]
+  [ 0.84705882  0.86666667  0.70980392]
+  [ 0.86666667  0.89019608  0.74901961]]
+ [[ 0.20784314  0.25490196  0.05882353]
+  [ 0.20784314  0.2627451   0.0627451 ]
+  [ 0.21568627  0.27058824  0.0627451 ]
+  …,
+  [ 0.83529412  0.83921569  0.66666667]
+  [ 0.8627451   0.87058824  0.71764706]
+  [ 0.88235294  0.89803922  0.75294118]]
+ [[ 0.17254902  0.22352941  0.04313725]
+  [ 0.17647059  0.22745098  0.04705882]
+  [ 0.17647059  0.23921569  0.05490196]
+  …,
+  [ 0.84313725  0.83921569  0.66666667]
+  [ 0.8627451   0.87058824  0.71372549]
+  [ 0.89019608  0.89803922  0.75294118]]
+  …,
+ [[ 0.35686275  0.48235294  0.18431373]
+  [ 0.34901961  0.4745098   0.17647059]
+  [ 0.36470588  0.4745098   0.18431373]
+  …,
+  [ 0.31764706  0.29411765  0.15294118]
+  [ 0.29411765  0.24313725  0.11764706]
+  [ 0.29803922  0.23137255  0.11372549]]
+ [[ 0.37647059  0.50196078  0.20392157]
+  [ 0.34117647  0.45882353  0.16862745]
+  [ 0.30980392  0.41568627  0.1372549 ]
+  …,
+  [ 0.29803922  0.2745098   0.13333333]
+  [ 0.28235294  0.23137255  0.09803922]
+  [ 0.29019608  0.22352941  0.10588235]]
+ [[ 0.33333333  0.45490196  0.15686275]
+  [ 0.28627451  0.40392157  0.11372549]
+  [ 0.24313725  0.34901961  0.07058824]
+  …,
+  [ 0.29019608  0.26666667  0.1254902 ]
+  [ 0.28235294  0.23137255  0.09803922]
+  [ 0.30196078  0.23921569  0.10980392]]]</p>
+</div>
+<p>We can use <code class="docutils literal notranslate"><span class="pre">imshow()</span></code> to display the image:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">tiger</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/PT-image_processing5.svg"><img alt="../../../_images/PT-image_processing5.svg" class="align-center" src="../../../_images/PT-image_processing5.svg" width="450px" /></a>
+<p>The image can be modified by changing the numpy array. For example,
+if we multiply the array by a number <span class="math notranslate nohighlight">\(0\leq x \leq 1\)</span> we will darken
+the image:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="mf">0.2</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span> <span class="c1">#hide coordinate axes</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;x=</span><span class="si">{:.1f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">tiger</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/PT-image_processing6.svg"><img alt="../../../_images/PT-image_processing6.svg" class="align-center" src="../../../_images/PT-image_processing6.svg" width="550px" /></a>
+<p>We can crop the image by taking a slice of the array:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">tiger</span><span class="p">[:</span><span class="mi">300</span><span class="p">,</span><span class="mi">100</span><span class="p">:</span><span class="mi">400</span><span class="p">,:])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/PT-image_processing7.svg"><img alt="../../../_images/PT-image_processing7.svg" class="align-center" src="../../../_images/PT-image_processing7.svg" width="300px" /></a>
+<p>If we set elements of the array that give green and blue coordinates
+of RGB colors to 0, we will get the red part of the image:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">red_tiger</span> <span class="o">=</span> <span class="n">tiger</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="n">red_tiger</span><span class="p">[:,</span> <span class="p">:,[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">red_tiger</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/PT-image_processing9.svg"><img alt="../../../_images/PT-image_processing9.svg" class="align-center" src="../../../_images/PT-image_processing9.svg" width="450px" /></a>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      Last updated on Jan 18, 2023.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

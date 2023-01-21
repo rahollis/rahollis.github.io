@@ -1,0 +1,24 @@
+Week 10: Apr 11 - Apr 15
+========================
+
+Project 6
+~~~~~~~~~
+
+* :doc:`Making Friends </Projects/making_friends/making_friends>`
+
+
+Python
+~~~~~~
+
+* Animation
+
+Week 12 notebook
+~~~~~~~~~~~~~~~
+
+- `View online <../../_static/MTH_337/week10_in_class.html>`_
+- `Download  <../../_static/MTH_337/week10_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+
+Sample quiz
+~~~~~~~~~~~~~
+
+- :download:`Sample Quiz 7 <../Quizzes/quiz7_sample.pdf>`

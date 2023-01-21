@@ -1,0 +1,25 @@
+Week 12: April 25 - April 29
+============================
+
+Project 6
+~~~~~~~~~
+
+* :doc:`Computing with Text </Projects/computing_with_text/computing_with_text>`
+
+
+Python
+~~~~~~
+
+* Bar graphs
+* Requests library
+
+Week 12 notebook
+~~~~~~~~~~~~~~~
+
+- `View online <../../_static/MTH_337/week12_in_class.html>`_
+- `Download  <../../_static/MTH_337/week12_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+
+Sample quiz
+~~~~~~~~~~~~~
+
+- * :download:`Sample Quiz 8 <../Quizzes/quiz8_sample.pdf>`
