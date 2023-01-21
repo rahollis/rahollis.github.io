@@ -242,10 +242,10 @@ noise in these images, find locations where the photos were taken, take photos
 showing you at the same locations, and include these photos in your report.
 
 
--  :download:`ub\_noisy1.png <ub_noisy1.png>`
--  :download:`ub\_noisy2.png <ub_noisy2.png>`
--  :download:`ub\_noisy3.png <ub_noisy3.png>`
--  :download:`ub\_noisy4.png <ub_noisy4.png>`
+-  :download:`noisy\_ub1.png <noisy_ub1.png>`
+-  :download:`noisy\_ub2.png <noisy_ub2.png>`
+-  :download:`noisy\_ub3.png <noisy_ub3.png>`
+-  :download:`noisy\_ub4.png <noisy_ub4.png>`
 
 **Note 1.** To qualify for the extra credit your report must include
 both code producing images with noise removed to the extent that they are

@@ -1,0 +1,220 @@
+Redistricting
+=============
+
+.. rubric:: (due: Wednesday, Nov 2 at 11:59 PM)
+
+In the US, the people are represented in Congress by representatives elected by the people of their state.
+Each state is partitioned into several congressional districts, and one representative is elected from each
+district.  These congressional districts are also used when the state is distributing money for schools,
+infrastructure, social programs, and more.
+
+Every 10 years, after the decennial national census, the congressional district borders in every state are
+redrawn in a process known as *redistricting*.  There are many criteria that those in charge of the
+redistricting process use when redrawing the congressional district lines, including
+
+* equal population in each district,
+* shapes of the districts,
+* political lean of each district,
+* majority minority districts to ensure representation of the minority.
+
+In this project we will focus on the first three of these criteria.
+
+Equal population
+~~~~~~~~~~~~~~~~
+
+In order to guarantee that each person gets equal representation, each representative sent to Congress
+should be representing the same number of persons.  This means that a "good" district map should have
+districts with equal population.  For our model, we will assume that each "census block" has exactly 
+the same population.
+
+District shapes
+~~~~~~~~~~~~~~~
+
+Another desireable quality for congressional district maps is for the districts to have a "regular" shape.
+Consider the following district map, and notice the shape of the district labeled 19.
+
+.. figure:: new_york2020.jpeg
+    :width: 450px
+    :align: center
+
+This district does not have a "regular" shape.  The more "centralized" (circular) a district is, the better.
+
+Political lean
+~~~~~~~~~~~~~~
+
+A major problem with drawing district maps is that it is often done in order to favor one political party
+over another.  This is called "gerrymandering" and is accomplished by using two methods to cheat the system:
+"cracking" and "packing".  Cracking is when an area with a high concentration of people who favor the
+opposing party is split into two or more districts in order to dilute their political power.  Packing is
+when disparate communities are packed into an oddly shaped district in order to concentrate the political 
+power of the opposing party into one district.
+
+Scoring a district map
+~~~~~~~~~~~~~~~~~~~~~~
+
+For any given map, there is an astromonically large number of possible ways to draw the district borders,
+but not all of these are "good", in fact most of them are quite bad.  Imagine you are the person responsible
+for redrawing the district lines.  How do you compare two different district maps?  One way to do this would
+be to assign a numerical score to each district map and keep the map with the better score.  
+
+In reality, the way a map is scored can be very complicated due to all the factors taken into account.  We
+will make a few simplifying assumptions to make this more managable.  The first assumption is that we will 
+only be working with maps in which all the districts have the same size (or as close to the same size as
+possible).  We will also assume that each "census block" has exactly the same number of people, making all
+blocks equal population.  Thus we can measure population in terms of blocks, so the population of a district
+is equal to its area.
+
+To measure how regularly shaped the districts are, we can calculate the perimeter-area ratio (PAR) of each 
+district.  The shape with the lowest PAR is a circle with a value of 
+
+.. math:: PAR_{circ} = 2\sqrt{\frac{\pi}{A}}
+
+where :math:`A` is the area of the circle.  All other shapes with the same area will have a PAR larger than 
+this, and as the area increases, this lower bound will decrease to zero.  The shape metric will be the percent
+difference between the average of the district PARs and the PAR of a circle with the same area.
+
+There will be two political parties, party A and party B.  Assume we know the overall political lean of the 
+map in terms of a percentage favoring party A, :math:`p`.  We can calculate the percentage of the districts 
+that favor party A, :math:`p_{dist}` and measure how well the map reflects the overall political lean using 
+percent difference, :math:`\frac{|p-p_{dist}|}{p}`.
+
+Let the average PAR of the districts be :math:`PAR_{avg}`.  Then the map score is
+
+.. math:: \alpha\cdot\left(\frac{|PAR_{circ}-PAR_{avg}|}{PAR_{circ}}\right) + (1-\alpha)\cdot\left(\frac{|p-p_{map}|}{p}\right)
+
+where :math:`\alpha` is a parameter between 0 and 1 which indicates how much priority is given to the shape
+metric.
+
+Automating redistricting
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+The goal of this project is to write code that can model the redistricting process using the
+criteria listed above.  In particular, we will use a monte carlo Markov chain process to go from a starting
+map to an acceptable district map by making changes that will increase the map score in the long term.
+
+Our maps will consist of a :math:`n \times n` array of *census blocks*, each treated as having population 1. 
+The districts will be made up of groups of neighboring blocks with the same array value.  Below is an example
+of what this might look like with a 100x100 map of 7 districts.
+
+.. figure:: random_districts.png
+    :width: 450px
+    :align: center
+
+You will be given a map containing voter information for each census block in the form of an array of 0s and 
+1s.  A census block with a value of 1 indicates that it favors party A, and a block with value 0 favors party
+B.
+
+**Exercise:**  Write a function that will generate a starting district map of a given size and with a given 
+number of districts.  Remember that the districts should have as close to the same population as possible.
+
+**Exercise:**  Write a function that will calculate the map score of an given district map with given
+political lean.
+
+Monte carlo simulation
+~~~~~~~~~~~~~~~~~~~~~~
+
+A *monte carlo simulation* is a mathematical modeling technique where the state of a dynamical system 
+(system that changes over time) is updated to a new state by randomly choosing from the collection of all the 
+possible states based on the current state.
+
+For this project, we will update the district map by first randomly selecting a district and one of its
+neighboring districts.  Then a border block for each district is chosen at random and reassigned to the other
+district. This is effectively choosing at random a new map that differs from the current map in only two
+border positions.
+
+Markov Chain
+~~~~~~~~~~~~
+
+A *Markov chain* is a sequence of states of a system where each state is generated from the previous
+based on a set of stocastic rules (based on probability).
+
+Once a new district map is selected that differs from the current one in two border positions, the new map 
+and the old map will be scored, and the scores compared.  If the new map has a higher score (closer to 1), 
+we will keep it.  If the old map has a higher score, we have a probability :math:`p` of keeping it anyways.
+
+We are effectively trying to maximize the map score, but we do not want to settle for a local maximum.  The
+reason for using a Markov chain is to avoid getting stuck at a local maximum by giving a way of escaping
+by passing a probability test.
+
+**Exercise:**  Write a function that will update a given district map based on the rules described above.
+
+Project
+~~~~~~~
+
+This is a coding project, so there will be no narrative grade.  The grade breakdown is 70% code and 30% 
+presentation.
+
+Your task is to use your assigned vote map in order to generate a district map containing 5 districts that 
+adheres to the criteria set forth in the above description.  To figure out which map you will use, in the a 
+code cell at the top of your notebook type (your PN)%31.  The maps are included below as black and white PNG
+files.  Download the file and load it into Jupyter.  Remember that when you do so, it will come as a 3D array.
+
+You may simulate the redistricting process by animating the Markov chain using the following code.
+
+.. code:: python
+    
+    %matplotlib notebook
+    from matplotlib.animation import FuncAnimation
+    
+    dist_map = GenerateDistrictMap(size,num_districts)
+    
+    fig = plt.figure(figsize = (5,5))
+    ax = plt.subplot(111)
+    im = ax.imshow(dist_map)
+    
+    def animate(i):
+        global dist_map
+        
+        dist_map = UpdateDistrictMap(dist_map,vote_map,alpha)
+        im.set_data(dist_map)
+        return im
+    
+    anim = FuncAnimation(fig=fig, func=animate, interval=100, blit=True, repeat=False)
+    plt.show()
+
+
+**Extra Credit 1:** To make the simulation more realistic, allow the blocks to have different populations, and 
+update your map score calculation accordingly.
+
+**Extra Credit 2:** Add into your model a way to guarantee at least one majority minority district based on a
+demographic map.
+
+**Extra Credit 3:** Another way to measure the shape of a district is to use the *centering metric*.  This
+metric calculates the *center* of the district and takes the standard deviation of distance from the center
+of each block in the district.  Include this metric in your map score.  Be sure to calibrate using centering
+metric of a circle with area equal to that of the average district in your map.
+
+Vote map files
+~~~~~~~~~~~~~~
+
+0.  :download:`0.png<0.png>`
+1.  :download:`1.png<1.png>`
+2.  :download:`2.png<2.png>`
+3.  :download:`3.png<3.png>`
+4.  :download:`4.png<4.png>`
+5.  :download:`5.png<5.png>`
+6.  :download:`6.png<6.png>`
+7.  :download:`7.png<7.png>`
+8.  :download:`8.png<8.png>`
+9.  :download:`9.png<9.png>`
+10.  :download:`10.png<10.png>`
+11.  :download:`11.png<11.png>`
+12.  :download:`12.png<12.png>`
+13.  :download:`13.png<13.png>`
+14.  :download:`14.png<14.png>`
+15.  :download:`15.png<15.png>`
+16.  :download:`16.png<16.png>`
+17.  :download:`17.png<17.png>`
+18.  :download:`18.png<18.png>`
+19.  :download:`19.png<19.png>`
+20.  :download:`20.png<20.png>`
+21.  :download:`21.png<21.png>`
+22.  :download:`22.png<22.png>`
+23.  :download:`23.png<23.png>`
+24.  :download:`24.png<24.png>`
+25.  :download:`25.png<25.png>`
+26.  :download:`26.png<26.png>`
+27.  :download:`27.png<27.png>`
+28.  :download:`28.png<28.png>`
+29.  :download:`29.png<29.png>`
+30.  :download:`30.png<30.png>`

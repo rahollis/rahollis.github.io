@@ -1,0 +1,25 @@
+Week 12: Nov 12 - Nov 18
+============================
+
+Project 6
+~~~~~~~~~
+
+* :doc:`Encryption/decryption </Projects/message_decrypt/message_decrypt>`
+
+
+Math
+~~~~~~
+
+* Shift Cipher
+* Encrypting and decrypting a message
+
+Week 12 notebook
+~~~~~~~~~~~~~~~
+
+- `View online <../_static/week12_in_class.html>`_
+- `Download  <../_static/week12_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+
+Sample quiz
+~~~~~~~~~~~~~
+
+- * :download:`Sample Week 12 Quiz <../Quizzes/quiz12_sample.pdf>`

@@ -1,0 +1,27 @@
+Week 6: Oct 3 - Oct 7
+=====================
+
+Project 4
+~~~~~~~~~
+
+* :doc:`Image Denoising </Projects/image_denoise/image_denoise>`.
+
+
+Python
+~~~~~~
+
+* Numpy arrays
+* Images as arrays
+* 3D arrays
+
+
+Week 6 notebook
+~~~~~~~~~~~~~~~
+
+- `View online <../_static/week6_in_class.html>`_
+- `Download  <../_static/week6_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+
+Sample quiz
+~~~~~~~~~~~~~
+
+- :download:`Sample Quiz 5 <../Quizzes/quiz5_sample1.pdf>`
