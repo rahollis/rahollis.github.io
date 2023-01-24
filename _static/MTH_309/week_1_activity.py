@@ -8,7 +8,7 @@ def GenerateRandomREF(m,n):
     ref[1:,:1] = np.zeros((m-1,1))
     k = min(m,n)
     for i in range(1,k):
-        if random.random() < 1-(1/(k**1.3)):
+        if random.random() < 1-(1/k)**1.3:
             ref[i,i] = 1
             ref[i+1:,i:i+1] = np.zeros((m-i-1,1))
         else:

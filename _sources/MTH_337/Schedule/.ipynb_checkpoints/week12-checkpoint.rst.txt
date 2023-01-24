@@ -1,0 +1,32 @@
+Week 12: Nov 13 - Nov 19
+========================
+
+Quiz 11
+~~~~~~~
+
+.. rubric:: Tuesday, November 14
+
+* :download:`Sample Quiz 11 <../Quizzes/quiz11_sample.pdf>`
+
+What is covered:
+
+* Regular expressions
+
+Python
+~~~~~~
+
+* Sets
+* Numpy linalg
+
+
+Project 9
+~~~~~~~~~
+
+* :doc:`PageRank </Projects/pagerank/pagerank>`
+
+
+Week 12 notebook
+~~~~~~~~~~~~~~~~
+
+- `View online <../_static/week12_in_class.html>`_
+- `Download  <../_static/week12_in_class.ipynb>`_ (after downloading put it in the directory where you keep your Jupyter notebooks).
