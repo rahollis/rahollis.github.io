@@ -1,10 +1,10 @@
-Week 4: Feb 21 - Feb 25
+Week 4: Sep 19 - Sep 23
 =======================
 
 Project 2
 ~~~~~~~~~
 
-* :doc:`A Funny Function </Projects/funny_function/funny_function>`.
+* :doc:`Mayfly Model </Projects/mayfly_model/mayfly_model>`.
 
 Python
 ~~~~~~
@@ -15,14 +15,14 @@ Python
 Mathematics
 ~~~~~~~~~~~
 
-* Relatively prime integers
-* GCD
+* Population models
+* Bifurcation
 
 Week 4 notebook
 ~~~~~~~~~~~~~~~
 
-- `View online <../../_static/MTH_337/week4_in_class.html>`_
-- `Download  <../../_static/MTH_337/week4_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+- `View online <../_static/week4_in_class.html>`_
+- `Download  <../_static/week4_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
 
 Sample quiz 4
 ~~~~~~~~~~~~~

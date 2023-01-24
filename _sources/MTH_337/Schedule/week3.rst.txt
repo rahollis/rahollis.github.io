@@ -1,21 +1,30 @@
-Week 3: Feb 14 - Feb 18
+Week 3: Sep 12 - Sep 16
 =======================
 
-Project Report
-~~~~~~~~~~~~~~
+Project
+~~~~~~~
 
-* expectations
+Due Wednesday, Sep 21 at 11:59 PM
+
+* :doc:`Shuffle Them Cards </Projects/shuffle/shuffle>`.
+
+Math
+~~~~
+
+* Modeling a random process (Top card in at random)
 
 Python
 ~~~~~~
 
 * Plotting
+* Random library
+* Binomial function
 
 Week 3 notebook
 ~~~~~~~~~~~~~~~
 
-- `View online <../../_static/MTH_337/week3_in_class.html>`_
-- `Download  <../../_static/MTH_337/week3_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+- `View online <../_static/week3_in_class.html>`_
+- `Download  <../_static/week3_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
 
 Sample quiz 3
 ~~~~~~~~~~~~~

@@ -1,0 +1,14 @@
+.. _contents:
+
+Spring 2023 Courses
+=========================
+
+Choose your course:
+~~~~~~~~~~~~~~~~~~~
+
+
+.. toctree::
+   :maxdepth: 1
+
+   MTH 337 <MTH_337/mth337>
+   MTH 309 <MTH_309/mth309>

@@ -4,9 +4,10 @@ Syllabus
 =================
 
 | **MTH 309 Introduction to Linear Algebra**
-
+|
 | **Class times:** TuTh 8:00 - 9:20 AM,
-| Location: NSC 218
+| **Final Exam:** Tu 5/16/2023 8:00 - 10:00 AM
+| **Location:** NSC 218
 
 
 Instructor Information
@@ -129,7 +130,7 @@ There will be a total of seven proficiency exams, so to get a C, you must pass a
 If you passed at least 4 of the proficiency exams, you may opt out of the final exam.
 
 For those of you that end up taking the final exam, I will reduce the weight of the proficiency exams from 70% of the final grade to 50%, with the final exam making up the remaining 20%.
-The final exam will take place on TBA, and you will be given two hours to complete 8 questions.
+The final exam will take place on Tuesday May 16th at 8:00 AM, and you will be given two hours to complete 8 questions.
 
 
 Topics by Week
@@ -184,7 +185,7 @@ Topics by Week
 | Week 15 | | Tu: Exam 7 retake 1; numerical LA          |
 |         | | Th: Exam 7 retake 2; condition number      |
 +---------+----------------------------------------------+
-| Week 16 | Final exam, TBA                              |
+| Week 16 | | Tu: Final exam, 5/16/2023 at 8:00 AM       |
 +---------+----------------------------------------------+
 
 

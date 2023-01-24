@@ -1,26 +1,19 @@
-Week 2: Feb 7 - Feb 11
+Week 2: Sep 5 - Sep 9
 ======================
 
 
 Python
 ~~~~~~
 
-* If/else statements
-* :doc:`Functions </PT/PT-functions>`
-* Logical operators: ``not``, ``and``, ``or``
+* Plotting with :doc:`Matplotlib </PT/PT-matplotlib_plots/PT-matplotlib_plots>`.
 
-
-Mathematics
-~~~~~~~~~~~
-
-* Sequences and series
 
 Project 1
 ~~~~~~~~~
 
-Due: Friday Sep 17, 11:59 PM
+Due: Monday, Sep 12, 11:59 PM
 
-* :doc:`A Particular Sequence </Projects/part_sequence/part_sequence>`.
+* :doc:`Prime or Not </Projects/prime_or_not/prime_or_not>`.
 
 
 
@@ -28,8 +21,8 @@ Due: Friday Sep 17, 11:59 PM
 Week 2 notebook
 ~~~~~~~~~~~~~~~
 
-- `View online <../../_static/MTH_337/week2_in_class.html>`_
-- `Download  <../../_static/MTH_337/week2_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+- `View online <../_static/week2_in_class.html>`_
+- `Download  <../_static/week2_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
 
 Sample quiz 2
 ~~~~~~~~~~~~~

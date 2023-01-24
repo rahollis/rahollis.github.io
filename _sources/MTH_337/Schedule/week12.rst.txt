@@ -1,25 +1,25 @@
-Week 12: April 25 - April 29
+Week 12: Nov 12 - Nov 18
 ============================
 
 Project 6
 ~~~~~~~~~
 
-* :doc:`Computing with Text </Projects/computing_with_text/computing_with_text>`
+* :doc:`Encryption/decryption </Projects/message_decrypt/message_decrypt>`
 
 
-Python
+Math
 ~~~~~~
 
-* Bar graphs
-* Requests library
+* Shift Cipher
+* Encrypting and decrypting a message
 
 Week 12 notebook
 ~~~~~~~~~~~~~~~
 
-- `View online <../../_static/MTH_337/week12_in_class.html>`_
-- `Download  <../../_static/MTH_337/week12_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+- `View online <../_static/week12_in_class.html>`_
+- `Download  <../_static/week12_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
 
 Sample quiz
 ~~~~~~~~~~~~~
 
-- * :download:`Sample Quiz 8 <../Quizzes/quiz8_sample.pdf>`
+- * :download:`Sample Week 12 Quiz <../Quizzes/quiz12_sample.pdf>`

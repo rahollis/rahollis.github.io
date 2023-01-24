@@ -1,10 +1,10 @@
-Week 7: Mar 14 - Mar 18
+Week 7: Oct 10 - Oct 14
 =======================
 
 Project 4
 ~~~~~~~~~
 
-* :doc:`Tartans </Projects/tartans/tartans>`
+* :doc:`Image Denoising </Projects/image_denoise/image_denoise>`
 
 
 Python
@@ -16,10 +16,10 @@ Python
 Week 7 notebook
 ~~~~~~~~~~~~~~~~
 
-- `View online <../../_static/MTH_337/week7_in_class.html>`_
-- `Download  <../../_static/MTH_337/week7_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+- `View online <../_static/week7_in_class.html>`_
+- `Download  <../_static/week7_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
 
 Sample quiz
 ~~~~~~~~~~~~~
 
-- * :download:`Sample Quiz 5 <../Quizzes/quiz5_sample.pdf>`
+- No quiz.

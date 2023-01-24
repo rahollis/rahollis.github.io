@@ -1,7 +1,7 @@
 Mix 'Em Up
 ==========
 
-.. rubric:: (due: Monday, Sep 19 at 11:59 PM)
+.. rubric:: (due: Wednesday, Sep 21 at 11:59 PM)
 
 Shuffling cards
 ---------------
