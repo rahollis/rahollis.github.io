@@ -6,8 +6,9 @@ def GenerateRandomREF(m,n):
     ref = np.random.randint(-10,11,(m,n))
     ref[0,0] = 1
     ref[1:,:1] = np.zeros((m-1,1))
-    for i in range(1,min(m,n)):
-        if random.random() < 0.75:
+    k = min(m,n)
+    for i in range(1,k):
+        if random.random() < 1-(1/(k**1.3)):
             ref[i,i] = 1
             ref[i+1:,i:i+1] = np.zeros((m-i-1,1))
         else:
@@ -30,7 +31,7 @@ def PrintSystem(system,num_decimal):
 #%%
 def GaussianElimination(m,n):
     system = 1.0*np.matmul(np.random.randint(-3,4,(m,m)),GenerateRandomREF(m,n))
-    PrintSystem(system)
+    PrintSystem(system,1)
     while True:
         user_input = input('Type a row operation.  Use the syntax type,row operation, e.g.: 3,-8*R1+R3->R3. ')
         if user_input == '':
@@ -49,8 +50,7 @@ def GaussianElimination(m,n):
                 pivot_row,rest = rest.split('+')
                 pivot_row = int(pivot_row.replace('R',''))-1
                 system[target_row] += coeff*system[pivot_row]
-                system = np.round_(system,1)
-                PrintSystem(system)
+                PrintSystem(system,1)
             elif op_type == '2':
                 coeff,rest = op.split('*')
                 if '/' in coeff:
@@ -59,14 +59,13 @@ def GaussianElimination(m,n):
                     coeff = float(numerator)/float(denominator)
                 coeff = float(coeff)
                 system[target_row] = coeff*system[target_row]
-                system = np.round_(system,1)
-                PrintSystem(system)
+                PrintSystem(system,1)
             elif op_type == '1':
                 pivot_row = int(op.replace('R',''))-1
                 temp = np.copy(system[target_row])
                 system[target_row] = system[pivot_row]
                 system[pivot_row] = temp
-                PrintSystem(system)
+                PrintSystem(system,1)
             else:
                 print('Please indicate the row operation type.')
         except:
