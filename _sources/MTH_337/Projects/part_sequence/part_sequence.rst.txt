@@ -1,7 +1,7 @@
 A particular sequence
 ======================
 
-.. rubric:: due: Friday, Feb. 18, 11:59 PM
+.. rubric:: due: TBA
 
 A sequence is an ordered list of numbers (*terms*). A sequence with a finite number of terms is called *finite*, whereas a sequence with infinitely many terms is called *infinite*. The list of all positive even numbers is an example of infinite sequence
 
@@ -78,4 +78,5 @@ Explore the properties (length, highest number reached,...) of the sequences obt
 Sample Report
 -------------
 
-- `Sample A-report <../../_static/sample_project_report.html>`_
+..
+   - `Sample A-report <../../../_static/MTH_337/sample_project_report.html>`_

@@ -35,7 +35,7 @@ This is free software. Even if you have Python already installed on your compute
 distribution since it includes Jupyter notebook and several Python modules we will need.
 
 **Laptop.** Since we will be using Jupyter notebook every week, you should have a laptop or tablet with you during class.
-Lecture notes will also be digital.
+Lecture notes will also be digital and are available `here <https://ubuffalo-my.sharepoint.com/:o:/g/personal/rahollis_buffalo_edu/EswUZbK-oSBOtDAmC-kZ7ckBEmZ7AySvFVjmC3Tw1GkX9g?e=whQhtE>`_.
 
 **Useful links for Jupyter.**
 
@@ -87,6 +87,9 @@ Recitation Information
 
 Grade Information
 -----------------
+
+Grades are available in an online spreadsheet `here <https://ubuffalo-my.sharepoint.com/:x:/g/personal/rahollis_buffalo_edu/EcdVKftifvZMhhqkR4smi0EB4S-YI70T9dpcTcfQThQOPA?e=q0bYeZ>`_,
+and are listed by the alias you give me through `this form <https://forms.office.com/r/ViRRAJ6iN5>`_.
 
 Grades will be calculated as follows:
 

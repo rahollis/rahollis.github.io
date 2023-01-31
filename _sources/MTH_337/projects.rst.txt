@@ -9,29 +9,35 @@ Projects
    :titlesonly:
    :maxdepth: 2
 
+
+   A Particular Sequence <./Projects/part_sequence/part_sequence>
+..
+   Shuffle Them Cards <./Projects/shuffle/shuffle>
+..
+   The Mayfly Model <./Projects/mayfly_model/mayfly_model>
+..
+   Tartans <./Projects/tartans/tartans>
+..
+   Epidemic Model <./Projects/epidemic2/epidemic2>
+..
+   Computing with Text <./Projects/computing_with_text/computing_with_text>
+..
+   Decrypting a Message <./Projects/message_decrypt/message_decrypt>
+..
+   Wordle <./Projects/wordle/wordle>
 ..
    Prime or Not <./Projects/prime_or_not/prime_or_not>
 ..
-   Shuffle Them Cards </Projects/shuffle/shuffle>
+   Pythagorean Triples <./Projects/pythagorean_triples/pythagorean_triples>
 ..
-   A Particular Sequence </Projects/part_sequence/part_sequence>
+   A Funny Function <./Projects/funny_function/funny_function>
 ..
-   A Funny Function </Projects/funny_function/funny_function>
+   Image Denoising <./Prjects/image_denoise/image_denoise>
 ..
-   The Mayfly Model </Projects/mayfly_model/mayfly_model>
+   Redistricting <./Projects/redistricting/redistricting>
 ..
-   Image Denoising </Prjects/image_denoise/image_denoise>
+   Making Friends <./Projects/making_friends/making_friends>
 ..
-   Tartans </Projects/tartans/tartans>
+   Epidemic Model <./Projects/epidemic/epidemic>
 ..
-   Redistricting </Projects/redistricting/redistricting>
-..
-   Making Friends </Projects/making_friends/making_friends>
-..
-   Epidemic Model </Projects/epidemic/epidemic>
-..
-   Computing with Text </Projects/computing_with_text/computing_with_text>
-..
-   Decrypting a Message </Projects/message_decrypt/message_decrypt>
-..
-   Solving Sudoku </Projects/simple_sudoku/simple_sudoku>
+   Solving Sudoku <./Projects/simple_sudoku/simple_sudoku>
