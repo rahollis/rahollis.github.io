@@ -22,8 +22,6 @@ Python
 * Numbers in Python: integers and floats
 * Variable assignment
 * The ``print()`` function
-* Strings and string formatting
-* :doc:`Importing modules </PT/PT-importing_modules>`
 * ``for`` loops
 * Boolean expressions
 * The ``if`` statement
@@ -33,8 +31,8 @@ Python
 
 Week 1 notebook
 ~~~~~~~~~~~~~~~
-- `View online <../_static/week1_in_class.html>`_
-- `Download  <../_static/week1_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+- `View online <../../_static/MTH_337/week1_in_class.html>`_
+- `Download  <../../_static/MTH_337/week1_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
 
 
 Sample quiz 1

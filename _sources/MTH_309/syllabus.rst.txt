@@ -140,57 +140,56 @@ Topics by Week
 --------------
 
 
-+---------+----------------------------------------------+
-|  Week   | Topics and exam schedule                     |
-+=========+==============================================+
-| Week 1  | | Tu: Systems of equations                   |
-|         | | Th: The system matrix and elimination      |
-+---------+----------------------------------------------+
-| Week 2  | | Tu: Solving applications                   |
-|         | | Th: Exam 1; vector spaces                  |
-+---------+----------------------------------------------+
-| Week 3  | | Tu: Exam 1 retake 1; subspace and span     |
-|         | | Th: Linear independence and basis          |
-+---------+----------------------------------------------+
-| Week 4  | | Tu: Exam 1 retake 2; coordinates           |
-|         | | Th: Exam 2; linear transformations         |
-+---------+----------------------------------------------+
-| Week 5  | | Tu: Exam 2 retake 1; matrix representation |
-|         | | Th: 1-1 and onto                           |
-+---------+----------------------------------------------+
-| Week 6  | | Tu: Exam 2 retake 2; change of basis       |
-|         | | Th: Exam 3; matrix times vector            |
-+---------+----------------------------------------------+
-| Week 7  | | Tu: Exam 3 retake 1; matrix times matrix   |
-|         | | Th: Inverse of a matrix                    |
-+---------+----------------------------------------------+
-| Week 8  | | Tu: Exam 3 retake 2; applications          |
-|         | | Th: Exam 4; determinants                   | 
-+---------+----------------------------------------------+
-| Week 9  | | Tu: Exam 4 retake 1; systems of LODEs      |
-|         | | Th: Eigenvalues and eigenvectors           |
-+---------+----------------------------------------------+
-| Week 10 | | Tu: Exam 4 retake 2; diagonalization       |
-|         | | Th: Exam 5; length of a vector             |
-+---------+----------------------------------------------+
-| Week 11 | | Tu: Exam 5 retake 1; angle between vectors |
-|         | | Th: Projections and reflections            |
-+---------+----------------------------------------------+
-| Week 12 | | Tu: Exam 5 retake 2; orthogonal vectors    |
-|         | | Th: Exam 6; inconsistent systems           |
-+---------+----------------------------------------------+
-| Week 13 | | Tu: Exam 6 retake 1; least squares         |
-|         | | Th: Singular value decomposition           |
-+---------+----------------------------------------------+
-| Week 14 | | Tu: Exam 6 retake 2; applications          |
-|         | | Th: Exam 7; floating point numbers         |
-+---------+----------------------------------------------+
-| Week 15 | | Tu: Exam 7 retake 1; numerical LA          |
-|         | | Th: Exam 7 retake 2; condition number      |
-+---------+----------------------------------------------+
-| Week 16 | | Tu: Final exam, 5/16/2023 at 8:00 AM       |
-+---------+----------------------------------------------+
-
++-----------+----------------------------------------------+
+|  Week     | Topics and exam schedule                     |
++===========+==============================================+
+| Week 1    | | Tu: Systems of equations                   |
+| 1/30-2/3  | | Th: The system matrix and elimination      |
++-----------+----------------------------------------------+
+| Week 2    | | Tu: Solving applications                   |
+| 2/6-2/10  | | Th: Exam 1; vector spaces                  |
++-----------+----------------------------------------------+
+| Week 3    | | Tu: Exam 1 retake 1; subspace and span     |
+| 2/13-2/17 | | Th: Linear independence and basis          |
++-----------+----------------------------------------------+
+| Week 4    | | Tu: Exam 1 retake 2; coordinates           |
+| 2/20-2/24 | | Th: Exam 2; linear transformations         |
++-----------+----------------------------------------------+
+| Week 5    | | Tu: Exam 2 retake 1; matrix representation |
+| 2/27-3/3  | | Th: 1-1 and onto                           |
++-----------+----------------------------------------------+
+| Week 6    | | Tu: Exam 2 retake 2; change of basis       |
+| 3/6-3/10  | | Th: Exam 3; matrix times vector            |
++-----------+----------------------------------------------+
+| Week 7    | | Tu: Exam 3 retake 1; matrix times matrix   |
+| 3/13-3/17 | | Th: Inverse of a matrix                    |
++-----------+----------------------------------------------+
+| 3/20-3/24 | | Spring Break                               |
++-----------+----------------------------------------------+
+| Week 8    | | Tu: Exam 3 retake 2; applications          |
+| 3/27-3/31 | | Th: Exam 4; determinants                   | 
++-----------+----------------------------------------------+
+| Week 9    | | Tu: Exam 4 retake 1; systems of LODEs      |
+| 4/3-4/7   | | Th: Eigenvalues and eigenvectors           |
++-----------+----------------------------------------------+
+| Week 10   | | Tu: Exam 4 retake 2; diagonalization       |
+| 4/10-4/14 | | Th: Exam 5; length of a vector             |
++-----------+----------------------------------------------+
+| Week 11   | | Tu: Exam 5 retake 1; angle between vectors |
+| 4/17-4/21 | | Th: Projections and reflections            |
++-----------+----------------------------------------------+
+| Week 12   | | Tu: Exam 5 retake 2; orthogonal vectors    |
+| 4/24-4/28 | | Th: Exam 6; inconsistent systems           |
++-----------+----------------------------------------------+
+| Week 13   | | Tu: Exam 6 retake 1; least squares         |
+| 5/1-5/5   | | Th: Singular value decomposition           |
++-----------+----------------------------------------------+
+| Week 14   | | Tu: Exam 6 retake 2; applications          |
+| 5/8-5/12  | | Th: Exam 7; no retakes for this exam       |
++-----------+----------------------------------------------+
+| Week 15   | Tu: Final exam, 5/16/2023 at 8:00 AM         |
+| 5/15-5/19 |                                              |
++-----------+----------------------------------------------+
 
 Proficiency Exams by Topics:
 ----------------------------

@@ -1,7 +1,7 @@
 A particular sequence
 ======================
 
-.. rubric:: due: TBA
+.. rubric:: due: Wednesday Feb 15th, 11:59 PM
 
 A sequence is an ordered list of numbers (*terms*). A sequence with a finite number of terms is called *finite*, whereas a sequence with infinitely many terms is called *infinite*. The list of all positive even numbers is an example of infinite sequence
 
