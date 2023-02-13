@@ -1,4 +1,4 @@
-Week 2: Sep 5 - Sep 9
+Week 2: Feb 6 - Feb 10
 ======================
 
 
@@ -11,9 +11,9 @@ Python
 Project 1
 ~~~~~~~~~
 
-Due: Monday, Sep 12, 11:59 PM
+Due: Monday, Feb 15, 11:59 PM
 
-* :doc:`Prime or Not </Projects/prime_or_not/prime_or_not>`.
+* :doc:`Particular Sequence </Projects/part_sequence/part_sequence>`.
 
 
 
@@ -21,10 +21,10 @@ Due: Monday, Sep 12, 11:59 PM
 Week 2 notebook
 ~~~~~~~~~~~~~~~
 
-- `View online <../_static/week2_in_class.html>`_
-- `Download  <../_static/week2_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+- `View online <../../_static/MTH_337/week2_in_class.html>`_
+- `Download  <../../_static/MTH_337/week2_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
 
 Sample quiz 2
 ~~~~~~~~~~~~~
 
-- :download:`Sample Quiz 2 <../Quizzes/quiz2_sample.pdf>`
+- :download:`Sample Quiz 2 <../Quizzes/quiz2_sample2.pdf>`
