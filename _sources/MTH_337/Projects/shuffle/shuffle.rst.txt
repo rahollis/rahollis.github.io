@@ -1,7 +1,7 @@
 Mix 'Em Up
 ==========
 
-.. rubric:: (due: Wednesday, Sep 21 at 11:59 PM)
+.. rubric:: (due: Monday, Feb 27 at 11:59 PM)
 
 Shuffling cards
 ---------------
@@ -79,7 +79,9 @@ that takes a "deck of cards" as input and returns the shuffled deck.
 
 **Part 2:**  Compare the performance of the methods.  Which method acheived
 the most randomness?  Which method achieved an acceptable level of
-randomness the fastest?
+randomness the fastest?  Use plots to display your findings.
 
 **Extra credit:**  Write a function to perform a different shuffling
-method and compare to the other three.
+method and compare to the other three.  For credit, your new shuffle
+must be physically possible.  I may ask you to demonstrate your shuffle
+for me in office hours.

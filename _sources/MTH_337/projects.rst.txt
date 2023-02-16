@@ -11,8 +11,8 @@ Projects
 
 
    A Particular Sequence <./Projects/part_sequence/part_sequence>
-..
-   Shuffle Them Cards <./Projects/shuffle/shuffle>
+
+   Shuffling Cards <./Projects/shuffle/shuffle>
 ..
    The Mayfly Model <./Projects/mayfly_model/mayfly_model>
 ..
