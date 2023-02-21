@@ -13,7 +13,7 @@ I will not post a sample final exam or rubrics.
    :maxdepth: 2
    
    Exam 1 <./Exams/exam1>
-..
+
    Exam 2 <./Exams/exam2>
 ..
    Exam 3 <./Exams/exam3>

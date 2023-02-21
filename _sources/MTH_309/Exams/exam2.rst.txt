@@ -1,0 +1,106 @@
+
+Exam 1
+======
+
+`Sample exam 2 <../../_static/MTH_309/exam_2_sample.pdf>`_
+
+`Sample exam 2 answers <../../_static/MTH_309/exam_2_answers.pdf>`_
+
+Each question will be graded out of 4 points, with partial credit
+given for incomplete or incorrect answers.  To pass the exam, you
+will need at least 10 points total, which is an average of 2.5
+for each question.
+
+Next to each part of the rubrics, you will see error codes in
+square brackets.  These error codes are will be used to indicate
+why any points were taken off on your exam papers.
+
+Below are the rubrics for exam 2.
+
+Question 1
+~~~~~~~~~~
+
+*Is the subset a subspace?*
+
+(1 pt) Correct answer
+	(-1 pt) Missing or incorrect answer [IA]
+(3 pts) Explain answer
+	Answer YES
+		Provide reasoning (3 points possible)
+			(-1 pt) Reasoning is sound but not a proof [SR]
+			
+			(-3 pts) Reasoning is not sound [NS]
+		Provide an example (2 point possible)
+			(-0 pts) Example demonstrates closure axioms [EX]
+			
+			(-1 pt) Example does not demonstrate both axioms [ND]
+
+			(-2 pts) Example does not support answer [NX]
+	Answer NO
+		Provide reasoning (3 points possible)
+			(-0 pts) Reasoning explains why axioms are violated
+
+			(-2 pts) Reasoning is sound but not a proof [SR]
+
+			(-3 pts) Reasoning is not sound [NS]
+		Provide an example (3 points possible)
+			(-0 pts) Example shows that one of the closure axioms is violated
+
+			(-3 pts) Example does not show one of the axioms is violated [NX]
+
+Question 2
+~~~~~~~~~~
+
+*Find a basis.*
+
+(1 pt) All work included (including calculator steps)
+	(-1 pt) Most of the work is not included [MW]
+(1 pt) Correct echelon form
+	(-1 pt) Echelon form is incorrect [IE]
+(2 pts) Correct answer based on echelon form
+	(-2 pts) No work after echelon form [MA]
+
+	(-1 pt) Answer is missing or incorrect [IA]
+
+Question 3
+~~~~~~~~~~
+
+*True or False?*
+
+(1 pt) Correct answer
+	(-1 pt) Answer is either incorrect or missing [IA]
+(3 pts) Explain answer
+	Answer TRUE
+		Provided reasoning (3 points possible)
+			(-0 pts) Reasoning is sound and provides a proof
+
+			(-1 pt) Reasoning is sound but not a proof [SR]
+
+			(-3 pts) Reasoning is not sound [BS]
+		Provided an example (2 points possible)
+			(-2 pts) Example supports an answer of TRUE [EX]
+
+			(-0 pt) Example supports an answer of FALSE (is a counterexample) [CX]
+	Answer FALSE
+		Provided reasoning (3 points possible)
+			(-0 pts) Reasoning provides a proof of the negative
+
+			(-2 pts) Reasoning is sound but not a proof of the negative [SR]
+
+			(-3 pts) Reasoning is not sound [BS]
+		Provided an example (3 points possible)
+			(-3 pts) Example supports an answer of TRUE [EX]
+
+Question 4
+~~~~~~~~~~
+
+*Is the set a basis of :math:`\mathbb{R}^3`?*
+
+(1 pt) All work included (including calculator steps)
+	(-1 pt) Most of the work is not included [MW]
+(1 pt) Correct echelon form
+	(-1 pt) Echelon form is incorrect [IE]
+(2 pts) Correct answer based on echelon form
+	(-2 pts) No work after echelon form [MA]
+
+	(-1 pt) Answer is missing or incorrect [IA]

@@ -1,10 +1,10 @@
-Week 4: Sep 19 - Sep 23
+Week 4: Feb 20 - Feb 24
 =======================
 
 Project 2
 ~~~~~~~~~
 
-* :doc:`Mayfly Model </Projects/mayfly_model/mayfly_model>`.
+* :doc:`Shuffling Cards <../Projects/shuffle/shuffle>`.
 
 Python
 ~~~~~~
@@ -15,16 +15,16 @@ Python
 Mathematics
 ~~~~~~~~~~~
 
-* Population models
-* Bifurcation
+* Binomial distribution
+* Modeling random processes
 
 Week 4 notebook
 ~~~~~~~~~~~~~~~
 
-- `View online <../_static/week4_in_class.html>`_
-- `Download  <../_static/week4_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+- `View online <../../_static/MTH_337/week4_in_class.html>`_
+- `Download  <../../_static/MTH_337/week4_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
 
 Sample quiz 4
 ~~~~~~~~~~~~~
 
-- No quiz this week
+- No quiz next week
