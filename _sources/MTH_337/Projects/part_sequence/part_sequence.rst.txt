@@ -73,10 +73,3 @@ Project
 -------
 
 Explore the properties (length, highest number reached,...) of the sequences obtained and analyze the results. Can you find any patterns or similarities? 
-
-
-Sample Report
--------------
-
-..
-   - `Sample A-report <../../../_static/MTH_337/sample_project_report.html>`_

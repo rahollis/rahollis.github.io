@@ -3,6 +3,8 @@ Project Report Guide
 
 `Project rubric <../_static/MTH_337/rubric337.pdf>`_
 
+`Sample report <../_static/MTH_337/sample_project_report.html>`_
+
 Collaboration
 --------------
 
