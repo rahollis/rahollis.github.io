@@ -13,7 +13,7 @@ Projects
    A Particular Sequence <./Projects/part_sequence/part_sequence>
 
    Shuffling Cards <./Projects/shuffle/shuffle>
-..
+
    The Mayfly Model <./Projects/mayfly_model/mayfly_model>
 ..
    Tartans <./Projects/tartans/tartans>

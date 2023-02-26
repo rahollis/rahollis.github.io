@@ -20,22 +20,24 @@ Below are the rubrics for exam 2.
 Question 1
 ~~~~~~~~~~
 
-*Is the subset a subspace?*
+Is the subset a subspace?
 
 (1 pt) Correct answer
 	(-1 pt) Missing or incorrect answer [IA]
 (3 pts) Explain answer
 	Answer YES
 		Provide reasoning (3 points possible)
-			(-1 pt) Reasoning is sound but not a proof [SR]
+			(-0 pt) Prove that both axioms hold
 			
+			(-1 pt) Prove only one of the axioms [MA]
+			
+			(-2 pts) Attempt to show both axioms [IR]
+
 			(-3 pts) Reasoning is not sound [NS]
-		Provide an example (2 point possible)
-			(-0 pts) Example demonstrates closure axioms [EX]
+		Provide an example (1 point possible)
+			(-0 pts) Demonstrate both closure axioms [EX]
 			
 			(-1 pt) Example does not demonstrate both axioms [ND]
-
-			(-2 pts) Example does not support answer [NX]
 	Answer NO
 		Provide reasoning (3 points possible)
 			(-0 pts) Reasoning explains why axioms are violated
@@ -51,7 +53,7 @@ Question 1
 Question 2
 ~~~~~~~~~~
 
-*Find a basis.*
+Find a basis.
 
 (1 pt) All work included (including calculator steps)
 	(-1 pt) Most of the work is not included [MW]
@@ -60,12 +62,14 @@ Question 2
 (2 pts) Correct answer based on echelon form
 	(-2 pts) No work after echelon form [MA]
 
-	(-1 pt) Answer is missing or incorrect [IA]
+	(-2 pts) Answer is missing or has major error [IA]
+
+	(-1 pt) Answer has a minor error [ME]
 
 Question 3
 ~~~~~~~~~~
 
-*True or False?*
+True or False?
 
 (1 pt) Correct answer
 	(-1 pt) Answer is either incorrect or missing [IA]
@@ -76,31 +80,39 @@ Question 3
 
 			(-1 pt) Reasoning is sound but not a proof [SR]
 
-			(-3 pts) Reasoning is not sound [BS]
+			(-3 pts) Reasoning is not sound [NS]
 		Provided an example (2 points possible)
-			(-2 pts) Example supports an answer of TRUE [EX]
+			(-0 pts) Example supports an answer of TRUE [EX]
 
-			(-0 pt) Example supports an answer of FALSE (is a counterexample) [CX]
+			(-1 pt) Example supports an answer of FALSE (is a counterexample) [CX]
+
+			(-2 pts) Example is not relevant [NR]
 	Answer FALSE
 		Provided reasoning (3 points possible)
 			(-0 pts) Reasoning provides a proof of the negative
 
 			(-2 pts) Reasoning is sound but not a proof of the negative [SR]
 
-			(-3 pts) Reasoning is not sound [BS]
+			(-3 pts) Reasoning is not sound [NS]
 		Provided an example (3 points possible)
-			(-3 pts) Example supports an answer of TRUE [EX]
+			(-0 pts) Example supports an answer of FALSE (is a counterexample)
+
+			(-2 pts) Example supports an answer of TRUE [EX]
+
+			(-3 pts) Example is not relevant [NR]
 
 Question 4
 ~~~~~~~~~~
 
-*Is the set a basis of :math:`\mathbb{R}^3`?*
+Is the set a basis of :math:`\mathbb{R}^3`?
 
-(1 pt) All work included (including calculator steps)
-	(-1 pt) Most of the work is not included [MW]
 (1 pt) Correct echelon form
 	(-1 pt) Echelon form is incorrect [IE]
-(2 pts) Correct answer based on echelon form
-	(-2 pts) No work after echelon form [MA]
+(3 pts) Correct answer based on echelon form
+	(-1 pt) Answer is missing [MA]
 
-	(-1 pt) Answer is missing or incorrect [IA]
+	(-1 pt) Answer is incorrect [IA]
+
+	(-2 pt) Explanation is missing or has a major error [EE]
+
+	(-1 pt) Explanation has a minor error [ME]
