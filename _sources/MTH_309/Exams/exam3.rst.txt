@@ -1,10 +1,10 @@
 
-Exam 2
+Exam 3
 ======
 
-`Sample exam 2 <../../_static/MTH_309/exam_2_sample.pdf>`_
+`Sample exam 3 <../../_static/MTH_309/exam_3_sample.pdf>`_
 
-`Sample exam 2 answers <../../_static/MTH_309/exam_2_answers.pdf>`_
+`Sample exam 3 answers <../../_static/MTH_309/exam_3_answers.pdf>`_
 
 Each question will be graded out of 4 points, with partial credit
 given for incomplete or incorrect answers.  To pass the exam, you
@@ -15,12 +15,12 @@ Next to each part of the rubrics, you will see error codes in
 square brackets.  These error codes are will be used to indicate
 why any points were taken off on your exam papers.
 
-Below are the rubrics for exam 2.
+Below are the rubrics for exam 3.
 
 Question 1
 ~~~~~~~~~~
 
-Is the subset a subspace?
+Is the function a linear transformation?
 
 (1 pt) Correct answer
 	(-1 pt) Missing or incorrect answer [IA]
@@ -35,7 +35,7 @@ Is the subset a subspace?
 
 			(-3 pts) Reasoning is not sound [NS]
 		Provide an example (1 point possible)
-			(-0 pts) Demonstrate both closure axioms [EX]
+			(-0 pts) Demonstrate both axioms [EX]
 			
 			(-1 pt) Example does not demonstrate both axioms [ND]
 	Answer NO
@@ -46,25 +46,23 @@ Is the subset a subspace?
 
 			(-3 pts) Reasoning is not sound [NS]
 		Provide an example (3 points possible)
-			(-0 pts) Example shows that one of the closure axioms is violated
+			(-0 pts) Example shows that one of the axioms is violated
 
 			(-3 pts) Example does not show one of the axioms is violated [NX]
 
 Question 2
 ~~~~~~~~~~
 
-Find a basis.
+Find the matrix representation.
 
-(1 pt) All work included (including calculator steps)
-	(-1 pt) Most of the work is not included [MW]
-(1 pt) Correct echelon form
-	(-1 pt) Echelon form is incorrect [IE]
-(2 pts) Correct answer based on echelon form
-	(-2 pts) No work after echelon form [MA]
+(1 pt) Correct answer
+	(-1 pt) Missing or incorrect answer [IA]
+(2 pts) What happens to basis vectors
+	(-1 pt) One of the basis vectors is missing or incorrect [IB]
 
-	(-2 pts) Answer is missing or has major error [IA]
-
-	(-1 pt) Answer has a minor error [ME]
+	(-2 pt) Both of the basis vectors are missing or incorrect [IB2]
+(1 pt) Arrange outputs into matrix
+	(-1 pt) Did not arrange into matrix, or matrix is incorrect [IM]
 
 Question 3
 ~~~~~~~~~~
@@ -104,15 +102,22 @@ True or False?
 Question 4
 ~~~~~~~~~~
 
-Is the set a basis of :math:`\mathbb{R}^3`?
+Is the linear transformation 1-1 (or onto)?
 
-(1 pt) Correct echelon form
-	(-1 pt) Echelon form is incorrect [IE]
-(3 pts) Correct answer based on echelon form
-	(-1 pt) Answer is missing [MA]
+(1 pt) Find matrix representation.
+	(-1 pt) Matrix representation is incorrect [MR]
+(1 pt) Compute echelon form and locate pivots.
+	(-1 pt) Echelon form is incorrect [EF]
+(2 pts) Answer question and explain.
+	Answer YES
+		(-0 pts) Pivot in every row (or column)
 
-	(-1 pt) Answer is incorrect [IA]
+		(-1 pt) Pivot location does not match answer (e.g. say it is onto because pivot in every column) [PL]
 
-	(-2 pt) Explanation is missing or has a major error [EE]
+		(-2 pts) Answer does not mention pivots [NP]
+	Answer NO
+		(-0 pts) Row or column missing a pivot
 
-	(-1 pt) Explanation has a minor error [ME]
+		(-1 pt) Missing pivot does not match answer (e.g. say it is not 1-1 because row missing pivot) [PL]
+
+		(-2 pts) Answer does not mention pivots [NP]
