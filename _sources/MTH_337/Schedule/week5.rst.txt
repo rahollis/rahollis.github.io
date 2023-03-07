@@ -1,10 +1,10 @@
-Week 5: Sep 26 - Sep 30
+Week 5: Feb 27 - Mar 3
 =======================
 
 Project 3
 ~~~~~~~~~
 
-* :doc:`Mayfly Model </Projects/mayfly_model/mayfly_model>`.
+* :doc:`Mayfly Model <../Projects/mayfly_model/mayfly_model>`.
 
 
 Mathematics
@@ -14,14 +14,20 @@ Mathematics
 * Model dependence on parameters
 * Bifurcation diagrams
 
+Python
+~~~~~~
+
+* String formatting
+* Subplots and plotting in a loop
+
 
 Week 5 notebook
 ~~~~~~~~~~~~~~~
 
-- `View online <../_static/week5_in_class.html>`_
-- `Download  <../_static/week5_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+- `View online <../../_static/MTH_337/week5_in_class.html>`_
+- `Download  <../../_static/MTH_337/week5_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
 
 Sample quiz
 ~~~~~~~~~~~~~
 
-- No quiz
+- :download:`Sample Quiz 4 <../Quizzes/quiz4_sample2.pdf>`

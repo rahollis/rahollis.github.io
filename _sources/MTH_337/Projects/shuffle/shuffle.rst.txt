@@ -18,7 +18,7 @@ In other words, you want to return a list of integers between 1 and
 :math:`n`.
 
 We will consider three methods of shuffling:  the classic riffle,
-the middle-out method, and the top-to-bottom re-stack.
+the middle-out method, and the overhand shuffle.
 
 *The classic riffle*
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -37,12 +37,13 @@ Simpler than the riffle, this method first divides the deck into
 roughly thirds.  The middle third is then placed randomly on the top
 or the bottom of the deck.
 
-*Top-to-bottom re-stack*
+*Overhand shuffle*
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-This methods begins by dividing the deck into a random number of
-sections.  Then the deck is "re-stacked" by reversing the order of 
-the sections.
+For this shuffle, the originial deck is held in the right hand and the shuffled 
+deck is the left hand.  A section of cards is moved from the top of
+the original deck to the top of the shuffled deck.  This is repeated until there
+are no more cards left in the original deck.
 
 Measuring randomness
 --------------------
