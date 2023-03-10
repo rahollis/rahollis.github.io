@@ -10,13 +10,13 @@ Projects
    :maxdepth: 2
 
 
-   A Particular Sequence <./Projects/part_sequence/part_sequence>
+   A Particular Sequence (due: Wednesday, Feb 15 at 11:59 PM) <./Projects/part_sequence/part_sequence>
 
-   Shuffling Cards <./Projects/shuffle/shuffle>
+   Shuffling Cards (due: Monday, Feb 27 at 11:59 PM) <./Projects/shuffle/shuffle>
 
-   The Mayfly Model <./Projects/mayfly_model/mayfly_model>
-..
-   Tartans <./Projects/tartans/tartans>
+   The Mayfly Model (due: Friday, March 10 at 11:59 PM) <./Projects/mayfly_model/mayfly_model>
+
+   Tartans (due: Wednesday, March 29 at 11:59 PM) <./Projects/tartans/tartans>
 ..
    Epidemic Model <./Projects/epidemic2/epidemic2>
 ..

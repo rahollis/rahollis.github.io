@@ -2,7 +2,7 @@
 Tartans
 =======
 
-.. rubric:: (due: Friday, Apr 1 11:59 PM)
+.. rubric:: 
 
 
 Tartan is a traditional Scottish fabric pattern consisting of
