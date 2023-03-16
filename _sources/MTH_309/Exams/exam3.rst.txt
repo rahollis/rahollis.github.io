@@ -55,14 +55,14 @@ Question 2
 
 Find the matrix representation.
 
-(1 pt) Correct answer
-	(-1 pt) Missing or incorrect answer [IA]
 (2 pts) What happens to basis vectors
 	(-1 pt) One of the basis vectors is missing or incorrect [IB]
 
 	(-2 pt) Both of the basis vectors are missing or incorrect [IB2]
-(1 pt) Arrange outputs into matrix
-	(-1 pt) Did not arrange into matrix, or matrix is incorrect [IM]
+(2 pts) Arrange outputs into matrix
+	(-1 pt) One of the outputs is not arranged into matrix correctly [IM]
+
+	(-2 pt) Both of the outputs is not arranged into matrix correctly [IM2]
 
 Question 3
 ~~~~~~~~~~
@@ -74,9 +74,9 @@ True or False?
 (3 pts) Explain answer
 	Answer TRUE
 		Provided reasoning (3 points possible)
-			(-0 pts) Reasoning is sound and provides a proof
+			(-1 pt) Reasoning is sound but not a proof [RS]
 
-			(-1 pt) Reasoning is sound but not a proof [SR]
+			(-2 pts) Some of the reasoning is sound [PS]
 
 			(-3 pts) Reasoning is not sound [NS]
 		Provided an example (2 points possible)
@@ -84,20 +84,20 @@ True or False?
 
 			(-1 pt) Example supports an answer of FALSE (is a counterexample) [CX]
 
-			(-2 pts) Example is not relevant [NR]
+			(-2 pts) Example is incorrect or not relevant [NX]
 	Answer FALSE
 		Provided reasoning (3 points possible)
-			(-0 pts) Reasoning provides a proof of the negative
+			(-1 pt) Reasoning is sound but not a proof of the negative [RS]
 
-			(-2 pts) Reasoning is sound but not a proof of the negative [SR]
+			(-2 pts) Some of the reasoning is sound [PS]
 
 			(-3 pts) Reasoning is not sound [NS]
 		Provided an example (3 points possible)
-			(-0 pts) Example supports an answer of FALSE (is a counterexample)
+			(-0 pts) Counterexample [CX]
 
 			(-2 pts) Example supports an answer of TRUE [EX]
 
-			(-3 pts) Example is not relevant [NR]
+			(-3 pts) Example is incorrect or not relevant [NX]
 
 Question 4
 ~~~~~~~~~~
@@ -106,18 +106,20 @@ Is the linear transformation 1-1 (or onto)?
 
 (1 pt) Find matrix representation.
 	(-1 pt) Matrix representation is incorrect [MR]
-(1 pt) Compute echelon form and locate pivots.
-	(-1 pt) Echelon form is incorrect [EF]
-(2 pts) Answer question and explain.
+(3 pts) Answer question and explain.
 	Answer YES
 		(-0 pts) Pivot in every row (or column)
 
 		(-1 pt) Pivot location does not match answer (e.g. say it is onto because pivot in every column) [PL]
 
-		(-2 pts) Answer does not mention pivots [NP]
+		(-2 pts) Answer mentions pivots but is incorrect. [IP]
+
+		(-3 pts) Answer does not mention pivots [NP]
 	Answer NO
 		(-0 pts) Row or column missing a pivot
 
 		(-1 pt) Missing pivot does not match answer (e.g. say it is not 1-1 because row missing pivot) [PL]
+
+		(-2 pts) Answer mentions pivots but is incorrect. [IP]
 
 		(-2 pts) Answer does not mention pivots [NP]

@@ -76,9 +76,9 @@ True or False?
 (3 pts) Explain answer
 	Answer TRUE
 		Provided reasoning (3 points possible)
-			(-0 pts) Reasoning is sound and provides a proof
+			(-1 pt) Reasoning is sound but not a proof [RS]
 
-			(-1 pt) Reasoning is sound but not a proof [SR]
+			(-2 pts) Some of the reasoning is sound [PS]
 
 			(-3 pts) Reasoning is not sound [NS]
 		Provided an example (2 points possible)
@@ -86,20 +86,20 @@ True or False?
 
 			(-1 pt) Example supports an answer of FALSE (is a counterexample) [CX]
 
-			(-2 pts) Example is not relevant [NR]
+			(-2 pts) Example is incorrect or not relevant [NX]
 	Answer FALSE
 		Provided reasoning (3 points possible)
-			(-0 pts) Reasoning provides a proof of the negative
+			(-1 pt) Reasoning is sound but not a proof of the negative [RS]
 
-			(-2 pts) Reasoning is sound but not a proof of the negative [SR]
+			(-2 pts) Some of the reasoning is sound [PS]
 
 			(-3 pts) Reasoning is not sound [NS]
 		Provided an example (3 points possible)
-			(-0 pts) Example supports an answer of FALSE (is a counterexample)
+			(-0 pts) Counterexample [CX]
 
 			(-2 pts) Example supports an answer of TRUE [EX]
 
-			(-3 pts) Example is not relevant [NR]
+			(-3 pts) Example is incorrect or not relevant [NX]
 
 Question 4
 ~~~~~~~~~~
