@@ -17,7 +17,7 @@ I will not post a sample final exam or rubrics.
    Exam 2 <./Exams/exam2>
 
    Exam 3 <./Exams/exam3>
-..
+
    Exam 4 <./Exams/exam4>
 ..
    Exam 5 <./Exams/exam5>

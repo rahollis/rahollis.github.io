@@ -1,0 +1,96 @@
+
+Exam 4
+======
+
+`Sample exam 4 <../../_static/MTH_309/exam_4_sample.pdf>`_
+
+`Sample exam 4 answers <../../_static/MTH_309/exam_4_answers.pdf>`_
+
+Each question will be graded out of 4 points, with partial credit
+given for incomplete or incorrect answers.  To pass the exam, you
+will need at least 10 points total, which is an average of 2.5
+for each question.
+
+Next to each part of the rubrics, you will see error codes in
+square brackets.  These error codes are will be used to indicate
+why any points were taken off on your exam papers.
+
+Below are the rubrics for exam 4.
+
+Question 1
+~~~~~~~~~~
+
+How many paths?
+
+(1 pt) Correct adjacency matrix
+	(-1 pt) Adjacency matrix is significantly incorrect [IM]
+(2 pt) Compute :math:`A^3`
+	(-1 pt) Minor issue with computation [MinE]
+
+	(-2 pts) Major issue with computation [MajE]
+(1 pt) Correct answer
+	(-1 pt) Answer is missing or incorrect (based on work so far) [IA]
+
+Question 2
+~~~~~~~~~~
+
+Use matrix multiplication to prove trig identity.
+
+(1 pt) Identify matrix representation of rotation
+	(-1 pt) Matrix representation is missing or incorrect [IM]
+(2 pts) Multiply matrices
+	(-1 pt) Minor error in multiplication [MinE]
+
+	(-2 pts) Major error in multiplication [MajE]
+(1 pt) Compare entry of product to entry to composite rotation matrix
+	(-1 pt) Comparison missing or incorrect [IC]
+
+Question 3
+~~~~~~~~~~
+
+True or False?
+
+(1 pt) Correct answer
+	(-1 pt) Answer is either incorrect or missing [IA]
+(3 pts) Explain answer
+	Answer TRUE
+		Provided reasoning (3 points possible)
+			(-1 pt) Reasoning is sound but not a proof [RS]
+
+			(-2 pts) Some of the reasoning is sound [PS]
+
+			(-3 pts) Reasoning is not sound [NS]
+		Provided an example (2 points possible)
+			(-0 pts) Example supports an answer of TRUE [EX]
+
+			(-1 pt) Example supports an answer of FALSE (is a counterexample) [CX]
+
+			(-2 pts) Example is incorrect or not relevant [NX]
+	Answer FALSE
+		Provided reasoning (3 points possible)
+			(-1 pt) Reasoning is sound but not a proof of the negative [RS]
+
+			(-2 pts) Some of the reasoning is sound [PS]
+
+			(-3 pts) Reasoning is not sound [NS]
+		Provided an example (3 points possible)
+			(-0 pts) Counterexample [CX]
+
+			(-2 pts) Example supports an answer of TRUE [EX]
+
+			(-3 pts) Example is incorrect or not relevant [NX]
+
+Question 4
+~~~~~~~~~~
+
+When is the matrix invertible?
+
+(1 pt) Correct answer
+	(-1 pt) Answer is incorrect or missing [IA]
+(2 pts) Compute answer 	
+	(-1 pt) Minor error in computations [MinE]
+
+	(-2 pts) Major error in computations [MajE]
+(1 pt) Explain computations		
+	(-1 pt) Computations not explained [NE]
+	
