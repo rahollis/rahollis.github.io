@@ -20,7 +20,7 @@ Weekly Schedule
    Week 6 <./Schedule/week6>
 
    Week 7 <./Schedule/week7>
-..
+
    Week 8 <./Schedule/week8>
 ..
    Week 9 <./Schedule/week9>

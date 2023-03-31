@@ -1,29 +1,26 @@
-Week 8: Oct 17 - Oct 21
+Week 8: Mar 27 - Mar 31
 =======================
 
-Project 5
+Project 4
 ~~~~~~~~~
 
-* :doc:`Redistricting </Projects/redistricting/redistricting>`.
+* :doc:`Making a tartan <../Projects/tartans/tartans>`
+
 
 Python
 ~~~~~~
 
-* dictionaries
-
-Mathematics
-~~~~~~~~~~~
-
-* Percent change formula
-
+* 3D numpy arrays.
+* Color coordinates.
+* Dictionaries.
 
 Week 8 notebook
-~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
 
-- `View online <../_static/week8_in_class.html>`_
-- `Download  <../_static/week8_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+- `View online <../../_static/MTH_337/week8_in_class.html>`_
+- `Download  <../../_static/MTH_337/week8_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
 
 Sample quiz
-~~~~~~~~~~~
+~~~~~~~~~~~~~
 
-- :download:`Sample Week 8 Quiz <../Quizzes/quiz8_sample.pdf>`
+- No quiz next week.
