@@ -1,7 +1,7 @@
 Epidemic
 ========
 
-.. rubric:: (due: Sunday, March 21, 11:59 PM)
+.. rubric:: 
 
 In this project we will be working with the following model of a spread of
 a contagious disease.

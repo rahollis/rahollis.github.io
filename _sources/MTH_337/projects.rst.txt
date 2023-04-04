@@ -17,8 +17,8 @@ Projects
    The Mayfly Model (due: Friday, March 10 at 11:59 PM) <./Projects/mayfly_model/mayfly_model>
 
    Tartans (due: Monday, April 3 at 11:59 PM) <./Projects/tartans/tartans>
-..
-   Epidemic Model <./Projects/epidemic2/epidemic2>
+
+   Modeling an Epidemic (due: Monday, April 17 at 11:59 PM) <./Projects/epidemic/epidemic>
 ..
    Computing with Text <./Projects/computing_with_text/computing_with_text>
 ..
