@@ -13,3 +13,5 @@ You can then open the file by launching Jupyter, navigating to your MTH 309 fold
 * :download:`Week 4 Activity <./Activities/activity_4.pdf>`
 * :download:`Week 5 Activity <./Activities/activity_5.pdf>`
 * :download:`Week 6 Notebook <./Activities/activity_6_notebook.ipynb>`
+* :download:`Week 7 Activity <./Activities/activity_7.pdf>`
+* :download:`Week 7 Notebook <./Activities/activity_7_notebook.ipynb>`
