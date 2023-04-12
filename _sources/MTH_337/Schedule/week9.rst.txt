@@ -1,25 +1,26 @@
-Week 9: Oct 24 - Oct 28
-=======================
+Week 9: April 10 - April 14
+===========================
 
 Project 5
 ~~~~~~~~~
 
-* :doc:`Redistricting </Projects/redistricting/redistricting>`.
+* :doc:`Modeling an Epidemic <../Projects/epidemic/epidemic>`.
 
 
 Python
 ~~~~~~
 
-* Animations using FuncAnimation
+* np.shape, np.sum, np.roll
+* array borders to avoid index issues at the edges
 
 
 Week 9 notebook
 ~~~~~~~~~~~~~~~
 
-- `View online <../_static/week9_in_class.html>`_
-- `Download  <../_static/week9_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+- `View online <../../_static/MTH_337/week9_in_class.html>`_
+- `Download  <../../_static/MTH_337/week9_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
 
 Sample quiz
 ~~~~~~~~~~~~~
 
-- :download:`Sample week 9 quiz <../Quizzes/quiz9_sample.pdf>`
+- :download:`Sample quiz <../Quizzes/quiz9_sample.pdf>`
