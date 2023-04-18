@@ -21,10 +21,21 @@ Question 1
 ~~~~~~~~~~
 
 
+
+
 Question 2
 ~~~~~~~~~~
 
+Given e-val, find basis of e-space.
 
+(1 pt) Plug into :math:`A-\lambda I`
+	(-1 pt) Matrix is missing or incorrect [IM]
+(2 pts) Find solutions
+	(-1 pt) Minor error in computation [MinE]
+
+	(-2 pts) Major error in computation [MajE]
+(1 pt) Identify basis
+	(-1 pt) Basis is missing or incorrect [MB]
 
 Question 3
 ~~~~~~~~~~
@@ -64,3 +75,14 @@ True or False?
 Question 4
 ~~~~~~~~~~
 
+Find general solution.
+
+(3 pts) Calculate e-vals and e-vecs.
+	(2 pts) Eigenvalues
+		(-1 pt) Minor error in computation [MinE]
+
+		(-2 pts) Major error in computation [MajE]
+	(1 pt) Eigenvectors
+		(-1 pt) E-vecs are missing or incorrect [IV]
+(1 pt) Put into general solution formula.
+	(-1 pt) Multiple or major errors in formula [IA]

@@ -18,11 +18,11 @@ Projects
 
    Tartans (due: Monday, April 3 at 11:59 PM) <./Projects/tartans/tartans>
 
-   Modeling an Epidemic (due: Monday, April 17 at 11:59 PM) <./Projects/epidemic/epidemic>
+   Modeling an Epidemic (due: Wednesday, April 19 at 11:59 PM) <./Projects/epidemic/epidemic>
+
+   Decrypting a Message (due: Monday, May 1 at 11:59 PM) <./Projects/message_decrypt/message_decrypt>
 ..
    Computing with Text <./Projects/computing_with_text/computing_with_text>
-..
-   Decrypting a Message <./Projects/message_decrypt/message_decrypt>
 ..
    Wordle <./Projects/wordle/wordle>
 ..
