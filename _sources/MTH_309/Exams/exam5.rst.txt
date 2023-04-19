@@ -20,8 +20,16 @@ Below are the rubrics for exam 5.
 Question 1
 ~~~~~~~~~~
 
+Find area of transformed triangle.
 
+(1 pt) Find area of given triangle (geometrically or using det)
+	(-1 pt) Area is incorrect or missing work [IA]
+(3 pts) Find area of transformed triangle (several good methods)
+	(-1 pt) Minor arithmetic error [MinE]
 
+	(-2 pts) Major mathematical error [MajE]
+
+	(-3 pts) Method is not sound or work is missing [NS]
 
 Question 2
 ~~~~~~~~~~
