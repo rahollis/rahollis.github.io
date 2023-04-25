@@ -1,0 +1,94 @@
+
+Exam 6
+======
+
+`Sample exam 6 <../../_static/MTH_309/exam_6_sample.pdf>`_
+
+`Sample exam 6 answers <../../_static/MTH_309/exam_6_answers.pdf>`_
+
+Each question will be graded out of 4 points, with partial credit
+given for incomplete or incorrect answers.  To pass the exam, you
+will need at least 10 points total, which is an average of 2.5
+for each question.
+
+Next to each part of the rubrics, you will see error codes in
+square brackets.  These error codes are will be used to indicate
+why any points were taken off on your exam papers.
+
+Below are the rubrics for exam 6.
+
+Question 1
+~~~~~~~~~~
+
+Compute the projection.
+
+(4 pts) Compute using formula
+	(-1 pt) Minor arithmetic error [MinE]
+
+	(-1 pt) Answer is incorrect or missing [IA]
+
+	(-2 pts) Major mathematical error [MajE]
+
+	(-3 pts) Work is missing [MW]
+
+Question 2
+~~~~~~~~~~
+
+(4 pts) Set dot products equal to zero and solve
+	(-1-2 pt) Minor arithmetic error (up to two times) [MinE]
+
+	(-1 pt) Answer is incorrect or missing [IA]
+
+	(-2 pts) Major mathematical error [MajE]
+
+	(-3 pts) Work is missing [MW]
+
+Question 3
+~~~~~~~~~~
+
+True or False?
+
+(1 pt) Correct answer
+	(-1 pt) Answer is either incorrect or missing [IA]
+(3 pts) Explain answer
+	Answer TRUE
+		Provided reasoning (3 points possible)
+			(-1 pt) Reasoning is sound but not a proof [RS]
+
+			(-2 pts) Some of the reasoning is sound [PS]
+
+			(-3 pts) Reasoning is not sound [NS]
+		Provided an example (2 points possible)
+			(-0 pts) Example supports an answer of TRUE [EX]
+
+			(-1 pt) Example supports an answer of FALSE (is a counterexample) [CX]
+
+			(-2 pts) Example is incorrect or not relevant [NX]
+	Answer FALSE
+		Provided reasoning (3 points possible)
+			(-1 pt) Reasoning is sound but not a proof of the negative [RS]
+
+			(-2 pts) Some of the reasoning is sound [PS]
+
+			(-3 pts) Reasoning is not sound [NS]
+		Provided an example (3 points possible)
+			(-0 pts) Counterexample [CX]
+
+			(-2 pts) Example supports an answer of TRUE [EX]
+
+			(-3 pts) Example is incorrect or not relevant [NX]
+
+Question 4
+~~~~~~~~~~
+
+Find orthonormal basis.
+
+(3 pts) Make orthogonal by subtracting projection
+	(-1 pt) Minor arithmetic error [MinE]
+
+	(-2 pts) Major mathematical error [MajE]
+
+	(-3 pts) Work is missing or not sound [MW]
+
+(1 pt) Make normal by dividing by lengths
+	(-1 pt) Did not divide by lengths [UV]
