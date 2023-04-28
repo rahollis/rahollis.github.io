@@ -1,25 +1,34 @@
-Week 12: Nov 12 - Nov 18
+Week 12: April 24 - April 28
 ============================
 
 Project 6
 ~~~~~~~~~
 
-* :doc:`Encryption/decryption </Projects/message_decrypt/message_decrypt>`
+* :doc:`Encryption/decryption <../Projects/message_decrypt/message_decrypt>`
 
 
 Math
 ~~~~~~
 
 * Shift Cipher
+* Transpose Cipher
 * Encrypting and decrypting a message
+
+Python
+~~~~~~~
+
+* string methods `replace`, `join`
+* list method `insert`
+* text file encoding
+* array methods `np.empty` and `np.reshape`
 
 Week 12 notebook
 ~~~~~~~~~~~~~~~
 
-- `View online <../_static/week12_in_class.html>`_
-- `Download  <../_static/week12_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+- `View online <../../_static/MTH_337/week12_in_class.html>`_
+- `Download  <../../_static/MTH_337/week12_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
 
 Sample quiz
 ~~~~~~~~~~~~~
 
-- * :download:`Sample Week 12 Quiz <../Quizzes/quiz12_sample.pdf>`
+- * :download:`Sample Quiz 13 <../Quizzes/quiz13_sample.pdf>`
