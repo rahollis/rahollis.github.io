@@ -2,13 +2,17 @@
 Worlde
 ==================
 
-.. rubric:: (due: Sunday, Dec 11, 11:59 PM)
+.. rubric:: 
 
 **Wordle** is a word puzzle where you try to guess a hidden word.  Each time you make a guess, you are told
 which letters are correct, which letters are correct but in the wrong position, and which letters are
 incorrect.  The best way to learn is to play. `<https://www.nytimes.com/games/wordle/index.html>`__.
 
 The standard wordle uses a hidden 5-letter word, and the player has 6 guesses to get the right answer.
+Each time the player makes a guess, the letters from the guess that are in the hidden word are highlighted:
+green if the letter is in the right position, yellow if it is not in the right position.  The game also
+keeps track of all the letters the player has used along with whether or not the used letters appear in the
+hidden word.
 
 Project
 -------

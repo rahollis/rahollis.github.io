@@ -21,10 +21,8 @@ Projects
    Modeling an Epidemic (due: Wednesday, April 19 at 11:59 PM) <./Projects/epidemic/epidemic>
 
    Decrypting a Message (due: Monday, May 1 at 11:59 PM) <./Projects/message_decrypt/message_decrypt>
-..
-   Computing with Text <./Projects/computing_with_text/computing_with_text>
-..
-   Wordle <./Projects/wordle/wordle>
+
+   Wordle (due: Sunday, May 14 at 11:59 PM) <./Projects/wordle/wordle>
 ..
    Prime or Not <./Projects/prime_or_not/prime_or_not>
 ..
@@ -41,3 +39,5 @@ Projects
    Epidemic Model <./Projects/epidemic/epidemic>
 ..
    Solving Sudoku <./Projects/simple_sudoku/simple_sudoku>
+..
+   Computing with Text <./Projects/computing_with_text/computing_with_text>
