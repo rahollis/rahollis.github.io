@@ -1,10 +1,10 @@
-Week 12: Nov 28 - Dec 2
+Week 12: May 1 - May 5
 ============================
 
-Project 6
+Project 7
 ~~~~~~~~~
 
-* :doc:`Wordle </Projects/wordle/wordle>`
+* :doc:`Wordle <../Projects/wordle/wordle>`
 
 
 Python
@@ -16,8 +16,8 @@ Python
 Week 12 notebook
 ~~~~~~~~~~~~~~~
 
-- `View online <../_static/week13_in_class.html>`_
-- `Download  <../_static/week13_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+- `View online <../../_static/MTH_337/week13_in_class.html>`_
+- `Download  <../../_static/MTH_337/week13_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
 
 Sample quiz
 ~~~~~~~~~~~~~

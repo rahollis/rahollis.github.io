@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>week13-14_in_class</title>
+<title>week13_in_class</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13095,16 +13095,13 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Weeks-13-14">Weeks 13-14<a class="anchor-link" href="#Weeks-13-14">&#182;</a></h1><h2 id="Quiz">Quiz<a class="anchor-link" href="#Quiz">&#182;</a></h2><ol>
-<li>Use a shift cipher with a shift of 7 to encode the message "Excelsior" using the alphabet</li>
-</ol>
-<p><code>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz</code>.</p>
-<ol>
-<li>What is the frame rate for the animation produced with the command</li>
-</ol>
-<p><code>FuncAnimation(fig=fig, func=animate, interval=50, blit=True, repeat=False)</code>?</p>
-<ol>
-<li>What inputs are expected by the function <code>plt.bar</code>?</li>
+<h1 id="Week-13">Week 13<a class="anchor-link" href="#Week-13">&#182;</a></h1><h2 id="Quiz">Quiz<a class="anchor-link" href="#Quiz">&#182;</a></h2><ol>
+<li><p>Write a function that converts an array of characters into a string.</p>
+</li>
+<li><p>How would you open a text file in Python so that you don't get weird characters like &euro; or &trade;?</p>
+</li>
+<li><p>What method is used to erase all the &amp;'s in a decrypted message?</p>
+</li>
 </ol>
 
 </div>
@@ -13113,7 +13110,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Answers">Answers<a class="anchor-link" href="#Answers">&#182;</a></h3>
+<h4 id="Answers:">Answers:<a class="anchor-link" href="#Answers:">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13122,7 +13119,13 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;LEjlszpvy&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">arr_to_string1</span><span class="p">(</span><span class="n">arr_of_char</span><span class="p">):</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">r</span><span class="p">,</span><span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">arr_of_char</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">rows</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">cols</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+            <span class="n">message</span> <span class="o">+=</span> <span class="n">arr_of_char</span><span class="p">[</span><span class="n">r</span><span class="p">,</span><span class="n">c</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">message</span>
 </pre></div>
 
     </div>
@@ -13135,15 +13138,11 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">shift_encryption</span><span class="p">(</span><span class="n">message</span><span class="p">,</span><span class="n">alphabet</span><span class="p">,</span><span class="n">shift</span><span class="p">):</span>
-    <span class="n">encrypted_message</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">message</span><span class="p">:</span>
-        <span class="n">ind</span> <span class="o">=</span> <span class="n">alphabet</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
-        <span class="n">ind</span> <span class="o">+=</span> <span class="n">shift</span>
-        <span class="n">ind</span> <span class="o">=</span> <span class="n">ind</span><span class="o">%</span><span class="k">len</span>(alphabet)
-        <span class="n">encrypted_char</span> <span class="o">=</span> <span class="n">alphabet</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span>
-        <span class="n">encrypted_message</span> <span class="o">+=</span> <span class="n">encrypted_char</span>
-    <span class="k">return</span> <span class="n">encrypted_message</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">arr_to_string2</span><span class="p">(</span><span class="n">arr_of_char</span><span class="p">):</span>
+    <span class="n">r</span><span class="p">,</span><span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">arr_of_char</span><span class="p">)</span>
+    <span class="n">one_row</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">arr_of_char</span><span class="p">,(</span><span class="mi">1</span><span class="p">,</span><span class="n">r</span><span class="o">*</span><span class="n">c</span><span class="p">))</span>
+    <span class="n">out_str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">one_row</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">out_str</span>
 </pre></div>
 
     </div>
@@ -13156,9 +13155,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">alphabet</span> <span class="o">=</span> <span class="s1">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz &#39;</span>
-<span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;Excelsior&#39;</span>
-<span class="n">shift_encryption</span><span class="p">(</span><span class="n">message</span><span class="p">,</span><span class="n">alphabet</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13171,26 +13168,22 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">1000</span><span class="o">/</span><span class="mi">50</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">decrypted_message</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;&amp;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+<span class="n">index</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">decrypted_message</span><span class="p">)):</span>
+    <span class="k">if</span> <span class="n">decrypted_message</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;&amp;&#39;</span><span class="p">:</span>
+        <span class="n">index</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">index</span><span class="o">.</span><span class="n">reverse</span><span class="p">():</span>
+    <span class="n">decrypted_message</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    
+<span class="n">decrypted_message</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;&amp;&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Any two of</p>
-<ul>
-<li>data (need this)</li>
-<li>positions</li>
-<li>labels</li>
-</ul>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13204,7 +13197,56 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">decryption</span> <span class="kn">import</span> <span class="o">*</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Word-Games">Word Games<a class="anchor-link" href="#Word-Games">&#182;</a></h3><p>In a classic word game, a player tries to guess a hidden word or phrase by guessing letters one at a time.  They can keep guessing letters until they have used up their allotted number of guesses.  Once they have used up their guesses, they are asked to guess the word.</p>
+<p>We will refine the rules a bit.</p>
+<ul>
+<li>limit to hidden words only, no phrases</li>
+<li>number of guesses based on the length of the word</li>
+</ul>
+<p>Let's play a round.  Pair up, one person come up with a hidden word, the other person has to guess it.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Putting-it-into-code">Putting it into code<a class="anchor-link" href="#Putting-it-into-code">&#182;</a></h3><p>What are the sequential steps of the game? (Flow diagram on board)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="How-can-we-automatically-pick-a-hidden-word?">How can we automatically pick a hidden word?<a class="anchor-link" href="#How-can-we-automatically-pick-a-hidden-word?">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">FileToWords</span><span class="p">(</span><span class="n">file</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">text_list</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="n">word_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">string</span> <span class="ow">in</span> <span class="n">text_list</span><span class="p">:</span>
+        <span class="n">word_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;,.!?-</span><span class="se">\&#39;\&quot;</span><span class="s1">:;&#39;</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">word_list</span>
 </pre></div>
 
     </div>
@@ -13217,7 +13259,24 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">DecryptFile</span><span class="p">(</span><span class="s1">&#39;text29.txt&#39;</span><span class="p">,[</span><span class="mi">25</span><span class="p">,</span><span class="mi">100</span><span class="p">],</span><span class="s1">&#39;dictionary.txt&#39;</span><span class="p">,</span><span class="mf">0.8</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">PickWord</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="n">word_list</span> <span class="o">=</span> <span class="n">FileToWords</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="n">hidden_word</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">word_list</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">hidden_word</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hidden_word</span> <span class="o">=</span> <span class="n">PickWord</span><span class="p">(</span><span class="s1">&#39;../../dictionary.txt&#39;</span><span class="p">)</span>
+<span class="n">hidden_word</span>
 </pre></div>
 
     </div>
@@ -13230,63 +13289,15 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[12]:</div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>30
-They look upon fraud as a greater crime than theft, and therefore seldom
-fail to punish it with death; for they allege, that care and vigilance,
-with a very common understanding, may preserve a man’s goods from
-thieves, but honesty has no defence against superior cunning; and, since
-it is necessary that there should be a perpetual intercourse of buying
-and selling, and dealing upon credit, where fraud is permitted and
-connived at, or has no law to punish it, the honest dealer is always
-undone, and the knave gets the advantage.  I remember, when I was once
-interceding with the emperor for a criminal who had wronged his master of
-a great sum of money, which he had received by order and ran away with;
-and happening to tell his majesty, by way of extenuation, that it was
-only a breach of trust, the emperor thought it monstrous in me to offer
-as a defence the greatest aggravation of the crime; and truly I had
-little to say in return, farther than the common answer, that different
-nations had different customs; for, I confess, I was heartily ashamed.
-{330}
 
-Although we usually call reward and punishment the two hinges upon which
-all government turns, yet I could never observe this maxim to be put in
-practice by any nation except that of Lilliput.  Whoever can there bring
-sufficient proof, that he has strictly observed the laws of his country
-for seventy-three moons, has a claim to certain privileges, according to
-his quality or condition of life, with a proportionable sum of money out
-of a fund appropriated for that use: he likewise acquires the title of
-_snilpall_, or legal, which is added to his name, but does not descend to
-his posterity.  And these people thought it a prodigious defect of policy
-among us, when I told them that our laws were enforced only by penalties,
-without any mention of reward.  It is upon this account that the image of
-Justice, in their courts of judicature, is formed with six eyes, two
-before, as many behind, and on each side one, to signify circumspection;
-with a bag of gold open in her right hand, and a sword sheathed in her
-left, to show she is more disposed to reward than to punish.
 
-In choosing persons for all employments, they have more regard to good
-morals than to great abilities; for, since government is necessary to
-mankind, they believe, that the common size of human understanding is
-fitted to some station or other; and that Providence never intended to
-make the management of public affairs a mystery to be comprehended only
-by a few persons of sublime genius, of which there seldom are three born
-in an age: but they suppose truth, justice, temperance, and the like, to
-be in every man’s power; the practice of which virtues, assisted by
-experience and a good intention, would qualify any man for the service of
-his country, except where a course of study is required.  But they
-thought the want of moral virtues was so far from being supplied by
-superior endowments of the mind, that employments could never be put into
-such dangerous hands as those of persons so qualified; and, at least,
-that the mistakes committed by ignorance, in a virtuous disposition,
-would never be of such fatal consequence to the public weal, as the
-practices of a man, whose inclinations led him to be corrupt, and who had
-great abilities to manage, to multiply, and defend his corruptions.
-</pre>
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;OBIT&#39;</pre>
 </div>
+
 </div>
 
 </div>
@@ -13296,91 +13307,16 @@ great abilities to manage, to multiply, and defend his corruptions.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Input-function"><code>Input</code> function<a class="anchor-link" href="#Input-function">&#182;</a></h4>
+<h4 id="Soliciting-a-guess-from-the-user.">Soliciting a guess from the user.<a class="anchor-link" href="#Soliciting-a-guess-from-the-user.">&#182;</a></h4>
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Guess a word:&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Guess a word:word
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[3]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;word&#39;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">guess</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Guess a word: &#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Guess a word: word
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">guess</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Type your guess here:  &#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13390,6 +13326,17 @@ great abilities to manage, to multiply, and defend his corruptions.
 <div class="output_wrapper">
 <div class="output">
 
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Type your guess here:  a
+</pre>
+</div>
+</div>
 
 <div class="output_area">
 
@@ -13399,7 +13346,7 @@ great abilities to manage, to multiply, and defend his corruptions.
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;word&#39;</pre>
+<pre>&#39;a&#39;</pre>
 </div>
 
 </div>
@@ -13407,13 +13354,27 @@ great abilities to manage, to multiply, and defend his corruptions.
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The first of two variants of the function <code>SolicitGuess</code> uses recursion only accept a valid guess input.  If the guess is not valid, the function returns itself, essentially resetting the process.  This will keep happening until the user inputs a valid guess.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">wordle</span> <span class="kn">import</span> <span class="o">*</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">SolicitGuess1</span><span class="p">():</span>
+    <span class="n">guess</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Guess a letter:  &#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">guess</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="s1">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">guess</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;That is not a letter.&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">SolicitGuess1</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -13426,7 +13387,7 @@ great abilities to manage, to multiply, and defend his corruptions.
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">PlayWordle</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="s1">&#39;dictionary.txt&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">SolicitGuess1</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -13443,57 +13404,26 @@ great abilities to manage, to multiply, and defend his corruptions.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Input a word with 5 letters:  noise
-Guess 1: noise
-&#34;n&#34; is not in the word.
-&#34;o&#34; is not in the word.
-&#34;i&#34; is not in the word.
-&#34;s&#34; is not in the word.
-&#34;e&#34; is not in the word.
-Input a word with 5 letters:  aught
-Guess 2: aught
-&#34;a&#34; is in the word, but in a different position.
-&#34;u&#34; is in the correct position.
-&#34;g&#34; is not in the word.
-&#34;h&#34; is not in the word.
-&#34;t&#34; is not in the word.
-Input a word with 5 letters:  fudge
-Guess 3: fudge
-&#34;f&#34; is not in the word.
-&#34;u&#34; is in the correct position.
-&#34;d&#34; is not in the word.
-&#34;g&#34; is not in the word.
-&#34;e&#34; is not in the word.
-Input a word with 5 letters:  bunny
-Guess 4: bunny
-&#34;b&#34; is not in the word.
-&#34;u&#34; is in the correct position.
-&#34;n&#34; is not in the word.
-&#34;n&#34; is not in the word.
-&#34;y&#34; is not in the word.
-Input a word with 5 letters:  banana
-Input is not the correct length.
-Input a word with 5 letters:  pukal
-Input is not a word.
-Input a word with 5 letters:  lucky
-Guess 5: lucky
-&#34;l&#34; is not in the word.
-&#34;u&#34; is in the correct position.
-&#34;c&#34; is not in the word.
-&#34;k&#34; is in the word, but in a different position.
-&#34;y&#34; is not in the word.
-Input a word with 5 letters:  lupka
-Input is not a word.
-Input a word with 5 letters:  flunk
-Guess 6: flunk
-&#34;f&#34; is not in the word.
-&#34;l&#34; is not in the word.
-&#34;u&#34; is in the word, but in a different position.
-&#34;n&#34; is not in the word.
-&#34;k&#34; is in the correct position.
-The word was &#34;quark&#34;. Better luck next time.
+<pre>Guess a letter:  3
+That is not a letter.
+Guess a letter:  HI
+That is not a letter.
+Guess a letter:  l
 </pre>
 </div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[7]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;L&#39;</pre>
+</div>
+
 </div>
 
 </div>
@@ -13503,7 +13433,8 @@ The word was &#34;quark&#34;. Better luck next time.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Recursion">Recursion<a class="anchor-link" href="#Recursion">&#182;</a></h4>
+<p>The second variant of the function does the same thing, but uses an infinite while loop that will only break when the user inputs a valid guess.</p>
+
 </div>
 </div>
 </div>
@@ -13512,12 +13443,11 @@ The word was &#34;quark&#34;. Better luck next time.
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">type_banana</span><span class="p">():</span>
-    <span class="n">word</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Type the word &quot;banana&quot;. &#39;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">word</span> <span class="o">==</span> <span class="s1">&#39;banana&#39;</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">type_banana</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">SolicitGuess2</span><span class="p">():</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">guess</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Guess a letter:  &#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">guess</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="s1">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">guess</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -13530,7 +13460,7 @@ The word was &#34;quark&#34;. Better luck next time.
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">type_banana</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">SolicitGuess2</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -13547,7 +13477,9 @@ The word was &#34;quark&#34;. Better luck next time.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Type the word &#34;banana&#34;. banana
+<pre>Guess a letter:  3
+Guess a letter:  HI
+Guess a letter:  l
 </pre>
 </div>
 </div>
@@ -13560,7 +13492,7 @@ The word was &#34;quark&#34;. Better luck next time.
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
+<pre>&#39;L&#39;</pre>
 </div>
 
 </div>
@@ -13568,13 +13500,36 @@ The word was &#34;quark&#34;. Better luck next time.
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Check-the-guess-and-give-user-feedback.">Check the guess and give user feedback.<a class="anchor-link" href="#Check-the-guess-and-give-user-feedback.">&#182;</a></h4>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">type_banana</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">MakeBoard</span><span class="p">(</span><span class="n">hidden_word</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">hidden_word</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;-&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">n</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">board</span> <span class="o">=</span> <span class="n">MakeBoard</span><span class="p">(</span><span class="n">hidden_word</span><span class="p">)</span>
+<span class="n">board</span>
 </pre></div>
 
     </div>
@@ -13587,27 +13542,13 @@ The word was &#34;quark&#34;. Better luck next time.
 
 <div class="output_area">
 
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Type the word &#34;banana&#34;. apple
-Type the word &#34;banana&#34;. grapes
-Type the word &#34;banana&#34;. grapefruit
-Type the word &#34;banana&#34;. banana
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[10]:</div>
+    <div class="prompt output_prompt">Out[14]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
+<pre>[&#39;-&#39;, &#39;-&#39;, &#39;-&#39;, &#39;-&#39;]</pre>
 </div>
 
 </div>
@@ -13618,14 +13559,95 @@ Type the word &#34;banana&#34;. banana
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="n">num</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Type a number between 0 and 10. &#39;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">10</span> <span class="ow">and</span> <span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">break</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">CheckGuess</span><span class="p">(</span><span class="n">guess</span><span class="p">,</span><span class="n">hidden_word</span><span class="p">,</span><span class="n">board</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">hidden_word</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">guess</span> <span class="o">==</span> <span class="n">hidden_word</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+            <span class="n">board</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">guess</span>
+    <span class="k">return</span> <span class="n">board</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">CheckGuess</span><span class="p">(</span><span class="s1">&#39;T&#39;</span><span class="p">,</span><span class="n">hidden_word</span><span class="p">,</span><span class="n">board</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[17]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;-&#39;, &#39;-&#39;, &#39;-&#39;, &#39;T&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Put-it-all-together-and-make-the-final-guess">Put it all together and make the final guess<a class="anchor-link" href="#Put-it-all-together-and-make-the-final-guess">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">PlayHiddenWord</span><span class="p">(</span><span class="n">num_of_guesses</span><span class="p">,</span><span class="n">word_filename</span><span class="p">):</span>
+    <span class="n">hidden_word</span> <span class="o">=</span> <span class="n">PickWord</span><span class="p">(</span><span class="n">word_filename</span><span class="p">)</span>
+    <span class="n">board</span> <span class="o">=</span> <span class="n">MakeBoard</span><span class="p">(</span><span class="n">hidden_word</span><span class="p">)</span>
+    <span class="n">guessed_letters</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">count</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_of_guesses</span><span class="p">):</span>
+        <span class="n">guess</span> <span class="o">=</span> <span class="n">SolicitGuess1</span><span class="p">()</span>
+        <span class="n">guessed_letters</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">guess</span><span class="p">)</span>
+        <span class="n">board</span> <span class="o">=</span> <span class="n">CheckGuess</span><span class="p">(</span><span class="n">guess</span><span class="p">,</span><span class="n">hidden_word</span><span class="p">,</span><span class="n">board</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hidden word: &quot;</span><span class="o">+</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">board</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Letters guessed: &quot;</span><span class="o">+</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">guessed_letters</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You have </span><span class="si">{}</span><span class="s2"> guesses left.</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num_of_guesses</span><span class="o">-</span><span class="n">count</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">final_guess</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is the word?  &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">final_guess</span> <span class="o">==</span> <span class="n">hidden_word</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You got it right!&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sorry, the hidden word was </span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">hidden_word</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">PlayHiddenWord</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;../../dictionary.txt&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13642,11 +13664,38 @@ Type the word &#34;banana&#34;. banana
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Type a number between 0 and 10. 45
-Type a number between 0 and 10. 32
-Type a number between 0 and 10. -64
-Type a number between 0 and 10. 7
-7
+<pre>Guess a letter:  R
+Hidden word: ----R------
+Letters guessed: R
+You have 4 guesses left.
+
+
+Guess a letter:  S
+Hidden word: --S-R------
+Letters guessed: RS
+You have 3 guesses left.
+
+
+Guess a letter:  T
+Hidden word: --S-R---T--
+Letters guessed: RST
+You have 2 guesses left.
+
+
+Guess a letter:  l
+Hidden word: --S-R---T--
+Letters guessed: RSTL
+You have 1 guesses left.
+
+
+Guess a letter:  e
+Hidden word: --S-R-E-TE-
+Letters guessed: RSTLE
+You have 0 guesses left.
+
+
+What is the word?  banana
+Sorry, the hidden word was DISORIENTED.
 </pre>
 </div>
 </div>
