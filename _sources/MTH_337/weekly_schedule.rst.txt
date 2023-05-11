@@ -30,5 +30,5 @@ Weekly Schedule
    Week 12 <./Schedule/week12>
 
    Week 13 <./Schedule/week13>
-..
+
    Week 14 <./Schedule/week14>
