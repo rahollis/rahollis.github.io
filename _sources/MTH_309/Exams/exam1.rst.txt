@@ -4,8 +4,6 @@ Exam 1
 
 `Sample exam 1 <../../_static/MTH_309/exam_1_sample.pdf>`_
 
-`Sample exam 1 answers <../../_static/MTH_309/exam_1_answers.pdf>`_
-
 Each question will be graded out of 4 points, with partial credit
 given for incomplete or incorrect answers.  To pass the exam, you
 will need at least 10 points total, which is an average of 2.5

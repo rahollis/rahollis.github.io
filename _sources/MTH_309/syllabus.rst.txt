@@ -5,9 +5,9 @@ Syllabus
 
 | **MTH 309 Introduction to Linear Algebra**
 |
-| **Class times:** TuTh 8:00 - 9:20 AM,
-| **Final Exam:** Tu 5/16/2023 8:00 - 10:00 AM
-| **Location:** NSC 218
+| **Class times:** TuTh 11:00 - 12:20
+| **Final Exam:** Th 12/14/2023 11:45 - 1:45
+| **Location:** Clemen 322
 
 
 Instructor Information
@@ -17,7 +17,7 @@ Instructor Information
 | Preferred pronouns: He, Him, His
 | **Office:** 321 Mathematics Building
 | **E-mail:** `rahollis@buffalo.edu <rahollis@buffalo.edu>`_
-| **Office Hours:** Tu 1:30 - 2:30 PM and by appointment
+| **Office Hours:** Tu 10:00 - 10:45 PM and by appointment
 |
 | I am a mathematician specializing in linear algebra research.  I also have an interest in numerical analysis and approximation theory.  
 | This is my third year at UB, and I am looking forward to teaching the subject that I love.
@@ -30,12 +30,14 @@ Course Information
 **Text book:** "Introduction to Applied Linear Algebra: Vectors, Matrices, and Least Squares" by Boyd and Vandenberghe.
 You can find the book as a free PDF `here <https://web.stanford.edu/~boyd/vmls/>`_.
 
+**Lecture Outlines:** You will find `here <https://ubuffalo-my.sharepoint.com/:o:/g/personal/rahollis_buffalo_edu/EsGsB_StmhpPqo1aph7u2UQBitrdYfPfLxtveUOXEk1G2w?e=gEcKVd>`_ the outlines that I use for preparing my lectures.  I encourage you to use
+these outlines as templates for your own notes.
+
 **Software.** We will be using the `Anaconda distribution of Python 3.8 <https://www.anaconda.com/distribution/>`_.
 This is free software. Even if you have Python already installed on your computer you should install this
 distribution since it includes Jupyter notebook and several Python modules we will need.
 
 **Laptop.** Since we will be using Jupyter notebook every week, you should have a laptop or tablet with you during class.
-Lecture notes will also be digital and are available `here <https://ubuffalo-my.sharepoint.com/:o:/g/personal/rahollis_buffalo_edu/EswUZbK-oSBOtDAmC-kZ7ckBEmZ7AySvFVjmC3Tw1GkX9g?e=whQhtE>`_.
 
 **Useful links for Jupyter.**
 
@@ -79,10 +81,10 @@ Lecture notes will also be digital and are available `here <https://ubuffalo-my.
 Recitation Information
 ----------------------
 
-| **Instructor:** Baoming Zhang
-| **Section 19218:** Tu 9:30 - 10:20 AM in Obrian 214
-| **Section 19219:** Tu 11:00 - 11:50 AM in Obrian 209
-| **Office hours:** M 2:00 - 4:00 PM in Math 140
+| **Instructor:** Roudan Liu
+| **Section 309 U1:** Wed 9:00 - 9:50 AM in Baldy 108
+| **Section 309 U2:** Wed 10:00 - 10:50 AM in Capen 110
+| **Office hours:** TBA
 
 
 Grade Information
@@ -93,46 +95,46 @@ and are listed by the alias you give me through `this form <https://forms.office
 
 Grades will be calculated as follows:
 
-+----------+--------------------------+-------------------+------------+
-| Homework | Recitation Participation | Proficiency Exams | Final Exam |
-+----------+--------------------------+-------------------+------------+
-|   20%    |           10%            |         70%       |     20%    |
-+----------+--------------------------+-------------------+------------+
++-------+----------+------------+---------------+------------+
+| Exams | Homework | Activities | Participation | Final Exam |
++-------+----------+------------+---------------+------------+
+| 65%   | 15%      |  15%       | 5%            |     20%    |
++-------+----------+------------+---------------+------------+
 This table adds up to 120%! For an explanation, check under *Final Exam*.
 
-Grades will be calculated using a 4-pt scale:
+Grades will be calculated using the standard grade scale:
 
 +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
 |  F  |  D  |  D+ |  C- |  C  |  C+ |  B- |  B  |  B+ |  A- |  A  |
 +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
-| 0.0 | 1.0 | 1.3 | 1.6 | 1.9 | 2.2 | 2.5 | 2.8 | 3.1 | 3.4 | 3.7 |
+| 0   | 60  | 64  | 67  | 70  | 74  | 77  | 80  | 84  | 87  | 90  |
 +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
 Please note that the values in this table are the lower threshold for each letter grade.
 
-*Homework:* We will be using `UBx <https://learning.buffalo.edu/>`_ for homework.  There will be one assignment every week, but assignments will all be due at the end of the semester.
+*Homework:* We will be using `UBx <https://learning.buffalo.edu/>`_ for homework.  There will be one assignment every 2 weeks, due on Fridays.  For specific due dates consult the tentative calendar near the end of this syllabus.
 
 UBx uses Python to automatically generate and grade questions.  In addition that are some problems that will require you to work in Jupyter notebook, so you will need to download and install the latest version of `Anaconda <https://www.anaconda.com/>`_.
 Don't worry, any programming you will need to do will be thoroughly explained in the problem.
 
-*In-class activities:* In addition to weekly homework, I plan on posting a Jupyter notebook activity `here <activities>`_ every week.  These activities will be done during class or recitation and will not be graded.
+*In-class activities:* In addition to the biweekly homework, we will have `in-class activities <activities>`_ every week.  These activities will be done during class, turned in, and graded for completion.  The lowest 2 grades will be dropped.
 
-*Recitation participation:* It couldn't be easier to get 10% of the final grade, just show up and engage.  Participation will be evaluated by the TA on a weekly basis.
+*Recitation participation:* It couldn't be easier to get 5% of the final grade, just show up and engage.  Participation in recitation will be evaluated by the TA on a weekly basis.  You will be allowed 2 absences without a grade penalty.
 
 *Proficiency exams:* Exams in this class will be handled differently than what you may be used to.  
-Instead of having one or two midterms covering multiple sections of material, we will have short, 30 minute exams **every other Thursday at the beginning of class** covering only the material from the previous 4 classes.
+Instead of having one or two midterms covering multiple sections of material, we will have short, 30 minute exams **every other Tuesday at the beginning of class** covering only the material from the previous 2 weeks.
 
-Each exam will have 4 questions worth 4 points each for a total of 16 points.  If your score is 10 or more, you pass the exam and will receive full credit.
-If your score is less than 10, you do not pass and will need to retake the exam.  You can retake each exam up to 2 additional times. 
-**Exam retakes will take place during the first 30 minutes of class on Tuesdays.**
-If you do not need to retake the exam, you do not need to show up to the first 30 minutes of class on that Tuesday.
+Each exam will have 4 questions worth 4 points each for a total of 16 points.  If your score is 12 or more, you pass the exam and will receive full credit.  If your score is 10 or 11, it will be considered a marginal pass and you will receive half credit.
+If your score is less than 10, you do not pass and will need to retake the exam.  You may only retake an exam if you did not pass the exam the first time; that is, you cannot skip the first attempt and then take the retake. 
+**Exam retakes will take place during the first 30 minutes of class on the Tuesday following the first attempt.**
+If you do not need to retake the exam, you do not need to show up to the first 30 minutes of class on that Tuesday.  **We will still cover new material after exams and make-ups.**
 
-Your aggregate score for the proficiency exams portion of the final grade will be the average of the individual exam grades (4.0 for passing, 0.0 for failing).
-There will be a total of seven proficiency exams, so to get a C, you must pass at least four of the seven exams.
+Your aggregate score for the proficiency exams portion of the final grade will be the average of the individual exam grades (100 for passing, 70 for a marginal pass, 0 for failing).
+There will be a total of six proficiency exams.
 
-*Final exam:* **If you did not pass at least 4 proficiency exams**, you will be required to take the final exam.
-If you passed at least 4 of the proficiency exams, you may opt out of the final exam.
+*Final exam:* **If you did not pass at least 5 proficiency exams**, you will be required to take the final exam.
+If you passed at least 5 of the proficiency exams, you may opt out of the final exam.
 
-For those of you that end up taking the final exam, I will reduce the weight of the proficiency exams from 70% of the final grade to 50%, with the final exam making up the remaining 20%.
+For those of you that end up taking the final exam, I will reduce the weight of the proficiency exams from 65% of the final grade to 45%, with the final exam making up the remaining 20%.
 The final exam will take place on Tuesday May 16th at 8:00 AM, and you will be given two hours to complete 8 questions.
 
 
@@ -140,76 +142,92 @@ Topics by Week
 --------------
 
 
-+-----------+----------------------------------------------+
-|  Week     | Topics and exam schedule                     |
-+===========+==============================================+
-| Week 1    | | Tu: Systems of equations                   |
-| 1/30-2/3  | | Th: The system matrix and elimination      |
-+-----------+----------------------------------------------+
-| Week 2    | | Tu: Solving applications                   |
-| 2/6-2/10  | | Th: Exam 1; vector spaces                  |
-+-----------+----------------------------------------------+
-| Week 3    | | Tu: Exam 1 retake 1; subspace and span     |
-| 2/13-2/17 | | Th: Linear independence and basis          |
-+-----------+----------------------------------------------+
-| Week 4    | | Tu: Exam 1 retake 2; coordinates           |
-| 2/20-2/24 | | Th: Exam 2; linear transformations         |
-+-----------+----------------------------------------------+
-| Week 5    | | Tu: Exam 2 retake 1; matrix representation |
-| 2/27-3/3  | | Th: 1-1 and onto                           |
-+-----------+----------------------------------------------+
-| Week 6    | | Tu: Exam 2 retake 2; change of basis       |
-| 3/6-3/10  | | Th: Exam 3; matrix times vector            |
-+-----------+----------------------------------------------+
-| Week 7    | | Tu: Exam 3 retake 1; matrix times matrix   |
-| 3/13-3/17 | | Th: Inverse of a matrix                    |
-+-----------+----------------------------------------------+
-| 3/20-3/24 | | Spring Break                               |
-+-----------+----------------------------------------------+
-| Week 8    | | Tu: Exam 3 retake 2; applications          |
-| 3/27-3/31 | | Th: Exam 4; determinants                   | 
-+-----------+----------------------------------------------+
-| Week 9    | | Tu: Exam 4 retake 1; systems of LODEs      |
-| 4/3-4/7   | | Th: Eigenvalues and eigenvectors           |
-+-----------+----------------------------------------------+
-| Week 10   | | Tu: Exam 4 retake 2; diagonalization       |
-| 4/10-4/14 | | Th: Exam 5; length of a vector             |
-+-----------+----------------------------------------------+
-| Week 11   | | Tu: Exam 5 retake 1; angle between vectors |
-| 4/17-4/21 | | Th: Projections and reflections            |
-+-----------+----------------------------------------------+
-| Week 12   | | Tu: Exam 5 retake 2; orthogonal vectors    |
-| 4/24-4/28 | | Th: Exam 6; inconsistent systems           |
-+-----------+----------------------------------------------+
-| Week 13   | | Tu: Exam 6 retake 1; least squares         |
-| 5/1-5/5   | | Th: More least squares                     |
-+-----------+----------------------------------------------+
-| Week 14   | | Tu: Exam 6 retake 2; SVD                   |
-| 5/8-5/12  | | Th: Applications of SVD                    |
-+-----------+----------------------------------------------+
-| Week 15   | Tu: Final exam, 5/16/2023 at 8:00 AM         |
-| 5/15-5/19 |                                              |
-+-----------+----------------------------------------------+
++---------+----------------------------------------------------------+
+|  Week   | Topics and exam schedule                                 |
++=========+==========================================================+
+| Week 1  | | Tue 8/29: Systems of equations, system matrix          | 
+|         | | Thu 8/31: Gaussian elimination; activity 1             |
+|         | | Fri 9/1: Register for UBx                              |
++---------+----------------------------------------------------------+
+| Week 2  | | Tue 9/5: Applications                                  |
+|         | | Thu 9/7: Solving linear systems, Activity 2            |
+|         | | Fri 9/8: Homework 1 due                                |  
++---------+----------------------------------------------------------+
+| Week 3  | | Tue 9/12: Exam 1; Vector spaces                        |
+|         | | Thu 9/14: Subspaces and span, Activity 3               |
+|         | | Fri 9/15:                                              |
++---------+----------------------------------------------------------+
+| Week 4  | | Tue 9/19: Exam 1 retake; Linear independence and basis |
+|         | | Thu 9/21: Coordinates, Activity 4                      |
+|         | | Fri 9/22: Homework 2 due                               |
++---------+----------------------------------------------------------+
+| Week 5  | | Tue 9/26: Exam 2; linear transformations               |
+|         | | Thu 9/28: matrix representation, Activity 5            |
+|         | | Fri 9/29:                                              |
++---------+----------------------------------------------------------+
+| Week 6  | | Tue 10/3: Exam 2 retake; 1-1 and onto                  |
+|         | | Thu 10/5: Change of basis, Activity 6                  |
+|         | | Fri 10/6: Homework 3 due                               |
++---------+----------------------------------------------------------+
+| Week 7  | | Tue 10/10: No class                                    |
+|         | | Thu 10/12: Exam 3; matrix muliplication, Activity 7    |
+|         | | Fri 10/13:                                             |
++---------+----------------------------------------------------------+
+| Week 8  | | Tue 10/17: Exam 3 retake; Inverse of a matrix          |
+|         | | Thu 10/19: Applications, Activity 8                    | 
+|         | | Fri 10/20: Homework 4 due                              |
++---------+----------------------------------------------------------+
+| Week 9  | | Tue 10/24: Exam 4; determinants                        |
+|         | | Thu 10/26: systems of LODEs, Activity 9                |
+|         | | Fri 10/27:                                             |
++---------+----------------------------------------------------------+
+| Week 10 | | Tue 10/31: Exam 4 retake; Eigenvalues and eigenvectors |
+|         | | Thu 11/2: Diagonalization, Activity 10                 |
+|         | | Fri 11/3: Homework 5 due                               |
++---------+----------------------------------------------------------+
+| Week 11 | | Tue 11/7: Exam 5; length of a vector                   |
+|         | | Thu 11/9: Angle between vectors, Activity 11           |
+|         | | Fri 11/10:                                             |
++---------+----------------------------------------------------------+
+| Week 12 | | Tue 11/14: Exam 5 retake; Projections and reflections  |
+|         | | Thu 11/16: Orthogonality and Gram-Schmidt, Activity 12 |
+|         | | Fri 11/17: Homework 6 due                              |
++---------+----------------------------------------------------------+
+| Week 13 | | Tue 11/21: Exam 6; Inconsistent systems                |
+|         | | Wed 11/23: No class                                    |
+|         | | Fri 11/24:                                             |
++---------+----------------------------------------------------------+
+| Week 14 | | Tue 11/28: Exam 6 retake; Least squares                |
+|         | | Thu 11/30: Activity 13                                 |
+|         | | Fri 12/1:                                              |
++---------+----------------------------------------------------------+
+| Week 15 | | Tue 12/5: Singular value decomposition                 |
+|         | | Thu 12/7: Applications of SVD, Activity 14             |
+|         | | Fri 12/8: Homework 7 due                               |
++---------+----------------------------------------------------------+
+| Week 16 | Thu 12/14: Final exam at 11:45 AM                        |
++---------+----------------------------------------------------------+
+
 
 Proficiency Exams by Topics:
 ----------------------------
 
 
-+--------+------------------------------------------------------------------------+
-| Exam 1 | Systems of linear equations, solutions, matrix equations, applications |
-+--------+------------------------------------------------------------------------+
-| Exam 2 | Vector spaces, subspaces, basis, dimension, coordinates                |
-+--------+------------------------------------------------------------------------+
-| Exam 3 | Linear transformations, matrix representation, 1-1 and onto            |
-+--------+------------------------------------------------------------------------+
-| Exam 4 | Matrix algebra and its applications                                    |
-+--------+------------------------------------------------------------------------+
-| Exam 5 | Determinant, eigenvalues and eigenvectors, systems of LODEs            |
-+--------+------------------------------------------------------------------------+
-| Exam 6 | Vector geometry, norms, inner products, orthogonality                  |
-+--------+------------------------------------------------------------------------+
-| Final  | One questions from each of the above exams with one more on NLA        |
-+--------+------------------------------------------------------------------------+
++--------+-----------------------------------------------------------------------------------+
+| Exam 1 | Systems of linear equations, solutions, matrix equations, applications            |
++--------+-----------------------------------------------------------------------------------+
+| Exam 2 | Vector spaces, subspaces, basis, dimension, coordinates                           |
++--------+-----------------------------------------------------------------------------------+
+| Exam 3 | Linear transformations, matrix representation, 1-1 and onto                       |
++--------+-----------------------------------------------------------------------------------+
+| Exam 4 | Matrix algebra and its applications                                               |
++--------+-----------------------------------------------------------------------------------+
+| Exam 5 | Determinant, eigenvalues and eigenvectors, systems of LODEs                       |
++--------+-----------------------------------------------------------------------------------+
+| Exam 6 | Vector geometry, norms, inner products, orthogonality                             |
++--------+-----------------------------------------------------------------------------------+
+| Final  | One questions from each of the above exams with two more on least squares and SVD |
++--------+-----------------------------------------------------------------------------------+
 
 
 Useful Information
@@ -223,11 +241,13 @@ stay home and contact me via email.  For more information at the pandemic health
 
 **Important Dates:**
 	
-        * Jan 30: first day of classes
-        * Feb 6: last day to add/drop
-        * Mar 20 - 25: Spring break
-	* April 21: last day to resign
-	* May 12: last day of classes
+        * Aug 28: first day of classes
+        * Sep 4: labor day, no classes
+        * Sep 5: last day to add/drop
+        * Oct 9-10: Fall break
+        * Nov 1: 60% participation date
+	* Nov 10: last day to resign
+	* Dec 11: last day of classes
 
 **Academic Integrity.**
 Academic integrity is critical to the learning process. It is your responsibility as a student to

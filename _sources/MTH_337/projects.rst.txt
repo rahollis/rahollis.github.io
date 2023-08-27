@@ -9,19 +9,19 @@ Projects
    :titlesonly:
    :maxdepth: 2
 
-
+..
    A Particular Sequence (due: Wednesday, Feb 15 at 11:59 PM) <./Projects/part_sequence/part_sequence>
-
+..
    Shuffling Cards (due: Monday, Feb 27 at 11:59 PM) <./Projects/shuffle/shuffle>
-
+..
    The Mayfly Model (due: Friday, March 10 at 11:59 PM) <./Projects/mayfly_model/mayfly_model>
-
+..
    Tartans (due: Monday, April 3 at 11:59 PM) <./Projects/tartans/tartans>
-
+..
    Modeling an Epidemic (due: Wednesday, April 19 at 11:59 PM) <./Projects/epidemic/epidemic>
-
+..
    Decrypting a Message (due: Monday, May 1 at 11:59 PM) <./Projects/message_decrypt/message_decrypt>
-
+..
    Wordle (due: Sunday, May 14 at 11:59 PM) <./Projects/wordle/wordle>
 ..
    Prime or Not <./Projects/prime_or_not/prime_or_not>

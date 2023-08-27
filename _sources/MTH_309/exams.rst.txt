@@ -3,25 +3,24 @@ Proficiency Exams
 ===================
 
 On this page, you will find links to pages containing sample rubrics for each of the proficiency exams.
-At the top of each rubric will be links to sample exams (from last semester) along with answer sheets for those sample exams.
-*Please note* that the rubrics need not match the exams given in class.  They are meant to give you an idea for how I will grade each exam.
+At the top of each rubric will be links to sample exams (from last semester).  I will not post answers.
+*Please note* that the rubrics are only meant to give you an idea for how I will grade each problem and may change.
 
-I will not post a sample final exam or rubrics.
+The final exam will be composed mainly of questions from these 6 exams, so I will not post a sample final exam or rubrics.
 
 .. toctree::
    :titlesonly:
    :maxdepth: 2
-   
+..   
    Exam 1 <./Exams/exam1>
-
-   Exam 2 <./Exams/exam2>
-
-   Exam 3 <./Exams/exam3>
-
-   Exam 4 <./Exams/exam4>
-
-   Exam 5 <./Exams/exam5>
-
-   Exam 6 <./Exams/exam6>
 ..
-   Exam 7 <./Exams/exam7>
+   Exam 2 <./Exams/exam2>
+..
+   Exam 3 <./Exams/exam3>
+..
+   Exam 4 <./Exams/exam4>
+..
+   Exam 5 <./Exams/exam5>
+..
+   Exam 6 <./Exams/exam6>
+

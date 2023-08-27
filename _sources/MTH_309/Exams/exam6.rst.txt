@@ -4,8 +4,6 @@ Exam 6
 
 `Sample exam 6 <../../_static/MTH_309/exam_6_sample.pdf>`_
 
-`Sample exam 6 answers <../../_static/MTH_309/exam_6_answers.pdf>`_
-
 Each question will be graded out of 4 points, with partial credit
 given for incomplete or incorrect answers.  To pass the exam, you
 will need at least 10 points total, which is an average of 2.5
@@ -20,7 +18,7 @@ Below are the rubrics for exam 6.
 Question 1
 ~~~~~~~~~~
 
-Compute the projection.
+Compute the normal vector to the line.
 
 (4 pts) Compute using formula
 	(-1 pt) Minor arithmetic error [MinE]
@@ -33,6 +31,8 @@ Compute the projection.
 
 Question 2
 ~~~~~~~~~~
+
+When are the vectors orthogonal?
 
 (4 pts) Set dot products equal to zero and solve
 	(-1-2 pt) Minor arithmetic error (up to two times) [MinE]

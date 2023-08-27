@@ -5,8 +5,8 @@ Syllabus
 
 | **MTH 337 Introduction to Scientific and Mathematical Computing**
 
-| **Class times:** TuTh 11:00 AM - 12:50 PM,
-| Location: Math 150
+| **Class times:** TuTh 2:00 - 3:50 PM,
+| Location: Math 250
 
 Instructor
 ----------
@@ -16,7 +16,7 @@ Instructor
 | Preferred pronouns: He, Him, His
 | **Office:** 321 Mathematics Building
 | **E-mail:** `rahollis@buffalo.edu <rahollis@buffalo.edu>`_
-| **Office Hours:** Th 1:30 AM - 2:30 PM
+| **Office Hours:** Th 10:00 - 10:45 AM
 |
 
 Course Resources
@@ -100,11 +100,13 @@ stay home and contact me via email.  For more information at the pandemic health
 
 **Important Dates:**
 	
-        * Jan 30: first day of classes
-        * Feb 6: last day to add/drop
-        * Mar 20 - 25: Spring break
-	* April 21: last day to resign
-	* May 12: last day of classes
+        * Aug 28: first day of classes
+        * Sep 4: labor day, no classes
+        * Sep 5: last day to add/drop
+        * Oct 9-10: Fall break
+        * Nov 1: 60% participation date
+	* Nov 10: last day to resign
+	* Dec 11: last day of classes
 
 **Academic Integrity.**
 Academic integrity is critical to the learning process. It is your responsibility as a student to
