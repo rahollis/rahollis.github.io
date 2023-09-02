@@ -1,4 +1,4 @@
-Week 1: Aug 29 - Sep 2
+Week 1: Aug 28 - Sep 1
 ======================
 
 Logistics
@@ -10,7 +10,6 @@ Jupyter Notebook
 ~~~~~~~~~~~~~~~~
 
 * Working with files and folders
-* Copying/deleting/moving cells
 * Code cells and markdown cells
 * Markdown basics
 

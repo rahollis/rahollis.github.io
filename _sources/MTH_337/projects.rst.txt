@@ -9,8 +9,10 @@ Projects
    :titlesonly:
    :maxdepth: 2
 
+
+   Prime or Not (due: Wednesday, Sep 13 at 11:59 PM) <./Projects/prime_or_not/prime_or_not>
 ..
-   A Particular Sequence (due: Wednesday, Feb 15 at 11:59 PM) <./Projects/part_sequence/part_sequence>
+   A Particular Sequence (due: Wednesday, Sep 13 at 11:59 PM) <./Projects/part_sequence/part_sequence>
 ..
    Shuffling Cards (due: Monday, Feb 27 at 11:59 PM) <./Projects/shuffle/shuffle>
 ..
@@ -23,8 +25,6 @@ Projects
    Decrypting a Message (due: Monday, May 1 at 11:59 PM) <./Projects/message_decrypt/message_decrypt>
 ..
    Wordle (due: Sunday, May 14 at 11:59 PM) <./Projects/wordle/wordle>
-..
-   Prime or Not <./Projects/prime_or_not/prime_or_not>
 ..
    Pythagorean Triples <./Projects/pythagorean_triples/pythagorean_triples>
 ..
