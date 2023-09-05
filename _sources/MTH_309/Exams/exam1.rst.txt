@@ -85,8 +85,8 @@ Question 4
 
 *How many solutions?*
 
-(1 pt) Compute RREF
-	(-1 pt) Computed RREF is incorrect or missing [CE]
+(1 pt) Compute REF
+	(-1 pt) Computed REF is incorrect or missing [CE]
 (1 pt) Identify pivot columns
 	(-1 pt) Incorrectly identify pivots [IP]
 (2 pts) Use number and locations of pivot columns to determine number of solutions
