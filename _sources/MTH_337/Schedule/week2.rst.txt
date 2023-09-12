@@ -1,19 +1,22 @@
-Week 2: Feb 6 - Feb 10
+Week 2: Sep 4 - Sep 8
 ======================
 
 
 Python
 ~~~~~~
 
-* Plotting with :doc:`Matplotlib </PT/PT-matplotlib_plots/PT-matplotlib_plots>`.
+* While loops
+* Functions
+* Libraries and import
+..
+  * Plotting with :doc:`Matplotlib </PT/PT-matplotlib_plots/PT-matplotlib_plots>`.
 
 
 Project 1
 ~~~~~~~~~
 
-Due: Monday, Feb 15, 11:59 PM
 
-* :doc:`Particular Sequence <../Projects/part_sequence/part_sequence>`.
+* :doc:`False Primes <../Projects/prime_or_not/prime_or_not>`.
 
 
 
@@ -27,4 +30,4 @@ Week 2 notebook
 Sample quiz 2
 ~~~~~~~~~~~~~
 
-- :download:`Sample Quiz 2 <../Quizzes/quiz2_sample2.pdf>`
+- :download:`Sample Quiz 2 <../Quizzes/quiz2_sample.pdf>`
