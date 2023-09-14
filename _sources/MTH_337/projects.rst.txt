@@ -10,7 +10,9 @@ Projects
    :maxdepth: 2
 
 
-   Prime or Not (due: Wednesday, Sep 13 at 11:59 PM) <./Projects/prime_or_not/prime_or_not>
+   Prime or Not (due: Wed, Sep 13 at 11:59 PM) <./Projects/prime_or_not/prime_or_not>
+
+   Pythagorean Triples (due: Wed, Sep 20 at 11:59 PM)  <./Projects/pythagorean_triples/pythagorean_triples>
 ..
    A Particular Sequence (due: Wednesday, Sep 13 at 11:59 PM) <./Projects/part_sequence/part_sequence>
 ..
@@ -25,8 +27,6 @@ Projects
    Decrypting a Message (due: Monday, May 1 at 11:59 PM) <./Projects/message_decrypt/message_decrypt>
 ..
    Wordle (due: Sunday, May 14 at 11:59 PM) <./Projects/wordle/wordle>
-..
-   Pythagorean Triples <./Projects/pythagorean_triples/pythagorean_triples>
 ..
    A Funny Function <./Projects/funny_function/funny_function>
 ..

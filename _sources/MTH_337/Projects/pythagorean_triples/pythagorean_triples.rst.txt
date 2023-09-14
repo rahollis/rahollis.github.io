@@ -2,7 +2,7 @@
 Pythagorean triples
 ===================
 
-.. rubric:: due: Sunday, Feb 28, 11:59 PM
+.. rubric:: 
 
 The Pythagorean Theorem says that positive numbers :math:`a`,
 :math:`b`, :math:`c` are lengths of sides of a right triangle if and
