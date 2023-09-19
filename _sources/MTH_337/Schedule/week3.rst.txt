@@ -1,24 +1,23 @@
-Week 3: Sep 12 - Sep 16
+Week 3: Sep 11 - Sep 15
 =======================
 
 Project
 ~~~~~~~
 
-Due Monday, Feb 27 at 11:59 PM
+Due Wednesday, Sep 20 at 11:59 PM
 
-* :doc:`Shuffling Cards <../Projects/shuffle/shuffle>`.
+* :doc:`Pythagorean Triples <../Projects/pythagorean_triples/pythagorean_triples>`.
 
 Math
 ~~~~
 
-* Modeling a random process (Top card in at random)
 
 Python
 ~~~~~~
 
 * Plotting
-* Random library
-* Binomial function
+* matplotlib library
+* List comprehension
 
 Week 3 notebook
 ~~~~~~~~~~~~~~~
@@ -29,4 +28,4 @@ Week 3 notebook
 Sample quiz 3
 ~~~~~~~~~~~~~
 
-- :download:`Sample Quiz 3 <../Quizzes/quiz3_sample.pdf>`
+- :download:`Sample Quiz 3 <../Quizzes/quiz3_sample1.pdf>`
