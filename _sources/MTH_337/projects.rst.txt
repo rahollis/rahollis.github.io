@@ -12,11 +12,11 @@ Projects
 
    Prime or Not (due: Wed, Sep 13 at 11:59 PM) <./Projects/prime_or_not/prime_or_not>
 
-   Pythagorean Triples (due: Wed, Sep 20 at 11:59 PM)  <./Projects/pythagorean_triples/pythagorean_triples>
+   Pythagorean Triples (due: Fri, Sep 22 at 11:59 PM)  <./Projects/pythagorean_triples/pythagorean_triples>
+
+   Shuffling Cards (due: Mon, Oct 2 at 11:59 PM) <./Projects/shuffle/shuffle>
 ..
    A Particular Sequence (due: Wednesday, Sep 13 at 11:59 PM) <./Projects/part_sequence/part_sequence>
-..
-   Shuffling Cards (due: Monday, Feb 27 at 11:59 PM) <./Projects/shuffle/shuffle>
 ..
    The Mayfly Model (due: Friday, March 10 at 11:59 PM) <./Projects/mayfly_model/mayfly_model>
 ..

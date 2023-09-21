@@ -1,7 +1,7 @@
-Week 4: Feb 20 - Feb 24
+Week 4: Sep 18 - Sep 22
 =======================
 
-Project 2
+Project 3
 ~~~~~~~~~
 
 * :doc:`Shuffling Cards <../Projects/shuffle/shuffle>`.
@@ -11,6 +11,7 @@ Python
 
 * :doc:`Plotting with Matplotlib </PT/PT-matplotlib_plots/PT-matplotlib_plots>`
 * :doc:`List comprehensions </PT/PT-list_comprehensions/PT-list_comprehensions>`
+* Random library
 
 Mathematics
 ~~~~~~~~~~~
@@ -27,4 +28,4 @@ Week 4 notebook
 Sample quiz 4
 ~~~~~~~~~~~~~
 
-- No quiz next week
+- :download:`Sample Quiz 3 <../Quizzes/quiz3_sample.pdf>`
