@@ -65,7 +65,7 @@ deck
 .. math::
    [1,27,2,28,3,29,4,30,...,26,52].
 
-The above measure would be about 23.25, about as high as possible;
+The above measure would be about 25.02, about as high as possible;
 however, we can clearly see that this is not a random deck.  How
 might we modify the measure to avoid this drawback?
 

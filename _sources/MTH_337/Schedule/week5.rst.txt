@@ -4,22 +4,20 @@ Week 5: Feb 27 - Mar 3
 Project 3
 ~~~~~~~~~
 
-* :doc:`Mayfly Model <../Projects/mayfly_model/mayfly_model>`.
+* :doc:`Shuffling Cards <../Projects/shuffle/shuffle>`.
 
 
 Mathematics
 ~~~~~~~~~~~
 
-* Population models
-* Model dependence on parameters
-* Bifurcation diagrams
+* Probability distributions
+* Modeling random events
 
 Python
 ~~~~~~
 
-* String formatting
-* Subplots and plotting in a loop
-
+* random library
+* bar graphs
 
 Week 5 notebook
 ~~~~~~~~~~~~~~~
@@ -30,4 +28,4 @@ Week 5 notebook
 Sample quiz
 ~~~~~~~~~~~~~
 
-- :download:`Sample Quiz 4 <../Quizzes/quiz4_sample2.pdf>`
+- No Quiz
