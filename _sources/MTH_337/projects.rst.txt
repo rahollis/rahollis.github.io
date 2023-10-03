@@ -15,14 +15,14 @@ Projects
    Pythagorean Triples (due: Fri, Sep 22 at 11:59 PM)  <./Projects/pythagorean_triples/pythagorean_triples>
 
    Shuffling Cards (due: Mon, Oct 2 at 11:59 PM) <./Projects/shuffle/shuffle>
+
+   Epidemic Model (due: Mon, Oct 16 at 11:59 PM) <./Projects/epidemic/epidemic>
 ..
    A Particular Sequence (due: Wednesday, Sep 13 at 11:59 PM) <./Projects/part_sequence/part_sequence>
 ..
    The Mayfly Model (due: Friday, March 10 at 11:59 PM) <./Projects/mayfly_model/mayfly_model>
 ..
    Tartans (due: Monday, April 3 at 11:59 PM) <./Projects/tartans/tartans>
-..
-   Modeling an Epidemic (due: Wednesday, April 19 at 11:59 PM) <./Projects/epidemic/epidemic>
 ..
    Decrypting a Message (due: Monday, May 1 at 11:59 PM) <./Projects/message_decrypt/message_decrypt>
 ..
@@ -35,8 +35,6 @@ Projects
    Redistricting <./Projects/redistricting/redistricting>
 ..
    Making Friends <./Projects/making_friends/making_friends>
-..
-   Epidemic Model <./Projects/epidemic/epidemic>
 ..
    Solving Sudoku <./Projects/simple_sudoku/simple_sudoku>
 ..

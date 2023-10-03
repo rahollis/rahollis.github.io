@@ -124,7 +124,7 @@ Don't worry, any programming you will need to do will be thoroughly explained in
 Instead of having one or two midterms covering multiple sections of material, we will have short, 30 minute exams **every other Tuesday at the beginning of class** covering only the material from the previous 2 weeks.
 
 Each exam will have 4 questions worth 4 points each for a total of 16 points.  If your score is 12 or more, you pass the exam and will receive full credit.  If your score is 10 or 11, it will be considered a marginal pass and you will receive half credit.
-If your score is less than 10, you fail the exam.  If you are unhappy with your score on the exam, you will have the opportunity to retake it.  You must have made an honest attempt the first time to be permitted to retake an exam. 
+If your score is less than 10, you do not pass the exam.  If you are unhappy with your score on the exam, you will have the opportunity to retake it.  *If you opt to retake an exam, only your retake grade will be counted.*  You must have made an honest attempt the first time to be permitted to retake an exam. 
 **Exam retakes will take place during the first 30 minutes of class on the Tuesday following the first attempt.**
 If you do not need to retake the exam, you do not need to show up to the first 30 minutes of class on that Tuesday.  **We will still cover new material after exams and make-ups.**
 
