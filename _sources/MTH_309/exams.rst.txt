@@ -15,7 +15,7 @@ The final exam will be composed mainly of questions from these 6 exams, so I wil
    Exam 1 <./Exams/exam1>
 
    Exam 2 <./Exams/exam2>
-..
+
    Exam 3 <./Exams/exam3>
 ..
    Exam 4 <./Exams/exam4>
