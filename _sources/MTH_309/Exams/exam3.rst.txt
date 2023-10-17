@@ -100,13 +100,13 @@ True or False?
 Question 4
 ~~~~~~~~~~
 
-Is the linear transformation 1-1 (or onto)?
+Is the linear transformation invertible?
 
 (1 pt) Find matrix representation.
 	(-1 pt) Matrix representation is incorrect [MR]
 (3 pts) Answer question and explain.
 	Answer YES
-		(-0 pts) Pivot in every row (or column)
+		(-0 pts) Pivot in every row and column
 
 		(-1 pt) Pivot location does not match answer (e.g. say it is onto because pivot in every column) [PL]
 
