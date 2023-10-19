@@ -16,7 +16,7 @@ Projects
 
    Shuffling Cards (due: Mon, Oct 2 at 11:59 PM) <./Projects/shuffle/shuffle>
 
-   Epidemic Model (due: Wed, Oct 18 at 11:59 PM) <./Projects/epidemic/epidemic>
+   Epidemic Model (due: Fri, Oct 20 at 11:59 PM) <./Projects/epidemic/epidemic>
 ..
    A Particular Sequence (due: Wednesday, Sep 13 at 11:59 PM) <./Projects/part_sequence/part_sequence>
 ..
