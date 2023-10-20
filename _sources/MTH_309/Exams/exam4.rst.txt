@@ -32,16 +32,16 @@ How many paths?
 Question 2
 ~~~~~~~~~~
 
-Use matrix multiplication to prove trig identity.
+Is the function invertible.
 
-(1 pt) Identify matrix representation of rotation
+(1 pt) Identify matrix representation of the function
 	(-1 pt) Matrix representation is missing or incorrect [IM]
-(2 pts) Multiply matrices
-	(-1 pt) Minor error in multiplication [MinE]
+(1 pt) Compute REF
+	(-1 pt) Major error in computation [MajE]
+(2 pts) Answer and explanation.
+	(-1 pt) Answer missing or incorrect [IC]
 
-	(-2 pts) Major error in multiplication [MajE]
-(1 pt) Compare entry of product to entry to composite rotation matrix
-	(-1 pt) Comparison missing or incorrect [IC]
+	(-1 pt) Explanation is missing or incorrect.
 
 Question 3
 ~~~~~~~~~~

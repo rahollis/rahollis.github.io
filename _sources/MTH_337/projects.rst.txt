@@ -17,6 +17,8 @@ Projects
    Shuffling Cards (due: Mon, Oct 2 at 11:59 PM) <./Projects/shuffle/shuffle>
 
    Epidemic Model (due: Fri, Oct 20 at 11:59 PM) <./Projects/epidemic/epidemic>
+
+   Computing with Text (due: Mon, Oct 30 at 11:59 PM) <./Projects/computing_with_text/computing_with_text>
 ..
    A Particular Sequence (due: Wednesday, Sep 13 at 11:59 PM) <./Projects/part_sequence/part_sequence>
 ..
@@ -37,5 +39,3 @@ Projects
    Making Friends <./Projects/making_friends/making_friends>
 ..
    Solving Sudoku <./Projects/simple_sudoku/simple_sudoku>
-..
-   Computing with Text <./Projects/computing_with_text/computing_with_text>

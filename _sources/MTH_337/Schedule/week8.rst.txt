@@ -1,18 +1,18 @@
-Week 8: Mar 27 - Mar 31
+Week 8: Oct 16 - Oct 20
 =======================
 
 Project 4
 ~~~~~~~~~
 
-* :doc:`Making a tartan <../Projects/tartans/tartans>`
+* :doc:`Epidemics <../Projects/epidemic/epidemic>`
 
 
 Python
 ~~~~~~
 
-* 3D numpy arrays.
-* Color coordinates.
-* Dictionaries.
+* Animations.
+* np.roll
+* Avoiding big for loops when possible
 
 Week 8 notebook
 ~~~~~~~~~~~~~~~~
@@ -23,4 +23,4 @@ Week 8 notebook
 Sample quiz
 ~~~~~~~~~~~~~
 
-- No quiz next week.
+- No quiz.
