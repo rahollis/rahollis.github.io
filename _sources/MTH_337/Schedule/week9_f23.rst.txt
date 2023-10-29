@@ -1,0 +1,26 @@
+Week 9: Oct 23 - Oct 27
+===========================
+
+Project 5
+~~~~~~~~~
+
+* :doc:`Computing with Text <../Projects/computing_with_text/computing_with_text>`.
+
+
+Python
+~~~~~~
+
+* strings
+* working with files
+* dictionaries
+
+Week 9 notebook
+~~~~~~~~~~~~~~~
+
+- `View online <../../_static/MTH_337/week9_in_class.html>`_
+- `Download  <../../_static/MTH_337/week9_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+
+Sample quiz
+~~~~~~~~~~~~~
+
+- :download:`Sample quiz <../Quizzes/quiz8_sample.pdf>`
