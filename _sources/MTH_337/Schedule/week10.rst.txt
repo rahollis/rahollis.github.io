@@ -1,25 +1,24 @@
-Week 10: Oct 31 - Nov 4
+Week 10: Oct 30 - Nov 3
 ========================
 
 Project 6
 ~~~~~~~~~
 
-* :doc:`Reading Books </Projects/computing_with_text/computing_with_text>`
+* :doc:`Message Decryption </Projects/message_decrypt/message_decrypt>`
 
 
-Python
+Math
 ~~~~~~
 
-* Text files
-* Working with strings
+* Shift Cipher
 
 Week 12 notebook
 ~~~~~~~~~~~~~~~
 
-- `View online <../_static/week10_in_class.html>`_
-- `Download  <../_static/week10_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+- `View online <../../_static/MTH_337/week10_in_class.html>`_
+- `Download  <../../_static/MTH_337/week10_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
 
 Sample quiz
 ~~~~~~~~~~~~~
 
-- No Quiz
+- :download:`Sample Quiz <../Quizzes/quiz12_sample.pdf>`
