@@ -20,7 +20,9 @@ Projects
 
    Computing with Text (due: Mon, Oct 30 at 11:59 PM) <./Projects/computing_with_text/computing_with_text>
 
-   Decrypting a Message (due: Monday, Nov 13 at 11:59 PM) <./Projects/message_decrypt/message_decrypt>
+   Decrypting a Message (due: Mon, Nov 13 at 11:59 PM) <./Projects/message_decrypt/message_decrypt>
+
+   Redistricting (due: Wed, Nov 29 at 11:59 PM) <./Projects/redistricting/redistricting>
 ..
    A Particular Sequence (due: Wednesday, Sep 13 at 11:59 PM) <./Projects/part_sequence/part_sequence>
 ..
@@ -33,8 +35,6 @@ Projects
    A Funny Function <./Projects/funny_function/funny_function>
 ..
    Image Denoising <./Prjects/image_denoise/image_denoise>
-..
-   Redistricting <./Projects/redistricting/redistricting>
 ..
    Making Friends <./Projects/making_friends/making_friends>
 ..

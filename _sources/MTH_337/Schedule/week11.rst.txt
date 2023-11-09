@@ -1,4 +1,4 @@
-Week 11: April 17 - April 21
+Week 11: Nov 6 - Nov 10
 ============================
 
 Project 6
@@ -10,8 +10,7 @@ Project 6
 Python
 ~~~~~~
 
-* Bar graphs
-* Requests
+* Avoiding loops in the array of characters
 
 Week 11 notebook
 ~~~~~~~~~~~~~~~~
@@ -22,4 +21,4 @@ Week 11 notebook
 Sample quiz
 ~~~~~~~~~~~
 
-- :download:`Sample Quiz 11 <../Quizzes/quiz11_sample.pdf>`
+- no quiz next week

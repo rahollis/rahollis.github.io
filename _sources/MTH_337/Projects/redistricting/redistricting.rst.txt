@@ -1,7 +1,7 @@
 Redistricting
 =============
 
-.. rubric:: (due: Wednesday, Nov 2 at 11:59 PM)
+.. rubric:: 
 
 In the US, the people are represented in Congress by representatives elected by the people of their state.
 Each state is partitioned into several congressional districts, and one representative is elected from each
@@ -47,7 +47,7 @@ over another.  This is called "gerrymandering" and is accomplished by using two 
 "cracking" and "packing".  Cracking is when an area with a high concentration of people who favor the
 opposing party is split into two or more districts in order to dilute their political power.  Packing is
 when disparate communities are packed into an oddly shaped district in order to concentrate the political 
-power of the opposing party into one district.
+power of the opposing party into only one district.
 
 Scoring a district map
 ~~~~~~~~~~~~~~~~~~~~~~
