@@ -208,7 +208,12 @@ redistricting process use when redrawing the congressional district lines, inclu
 <p>In order to guarantee that each person gets equal representation, each representative sent to Congress
 should be representing the same number of persons.  This means that a “good” district map should have
 districts with equal population.  For our model, we will assume that each “census block” has exactly
-the same population.</p>
+the same population, which leads to the simplification that the population of a district is equal to its
+area.</p>
+<p>To measure how equally distributed the population is, we can calculate the standard deviation from
+the mean of the areas.</p>
+<div class="math notranslate nohighlight">
+\[SDA = \sqrt{\frac{1}{n}\sum_{i=0}^{n-1}(A_i - \bar A)^2}\]</div>
 </div>
 <div class="section" id="district-shapes">
 <h2>District shapes<a class="headerlink" href="#district-shapes" title="Permalink to this headline">¶</a></h2>
@@ -218,6 +223,14 @@ Consider the following district map, and notice the shape of the district labele
 <a class="reference internal image-reference" href="../../../_images/new_york2020.jpeg"><img alt="../../../_images/new_york2020.jpeg" src="../../../_images/new_york2020.jpeg" style="width: 450px;" /></a>
 </div>
 <p>This district does not have a “regular” shape.  The more “centralized” (circular) a district is, the better.</p>
+<p>To measure how regularly shaped the districts are, we can calculate the perimeter-area ratio (PAR) of each
+district and then calculate the average variance from the ideal.  The shape with the lowest PAR is a circle
+with a value of</p>
+<div class="math notranslate nohighlight">
+\[PAR_{circ}(\bar A) = 2\sqrt{\frac{\pi}{\bar A}}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\bar A\)</span> is the average area of the districts. The average variance is</p>
+<div class="math notranslate nohighlight">
+\[VAR = \sqrt{\frac{1}{n}\sum_{i=0}^{n-1} (PAR_i - PAR_{circ})}\]</div>
 </div>
 <div class="section" id="political-lean">
 <h2>Political lean<a class="headerlink" href="#political-lean" title="Permalink to this headline">¶</a></h2>
@@ -227,41 +240,30 @@ over another.  This is called “gerrymandering” and is accomplished by using 
 opposing party is split into two or more districts in order to dilute their political power.  Packing is
 when disparate communities are packed into an oddly shaped district in order to concentrate the political
 power of the opposing party into only one district.</p>
+<p>To measure how well the map represents the political make up of the state, we can calculate the percent
+difference</p>
+<div class="math notranslate nohighlight">
+\[POL = \frac{|lean_{map} - lean_{state}|}{lean_{state}}\]</div>
+<p>where <span class="math notranslate nohighlight">\(lean_{map}\)</span> is the percentage of districts that favors party A and <span class="math notranslate nohighlight">\(lean_{state}\)</span> is the
+percentage of the population that favors party A.</p>
 </div>
 <div class="section" id="scoring-a-district-map">
 <h2>Scoring a district map<a class="headerlink" href="#scoring-a-district-map" title="Permalink to this headline">¶</a></h2>
 <p>For any given map, there is an astromonically large number of possible ways to draw the district borders,
-but not all of these are “good”, in fact most of them are quite bad.  Imagine you are the person responsible
-for redrawing the district lines.  How do you compare two different district maps?  One way to do this would
-be to assign a numerical score to each district map and keep the map with the better score.</p>
+but not all of these are “good”, in fact most of them are quite bad.  To compare different maps, We will
+assign a numerical score to each district map.</p>
 <p>In reality, the way a map is scored can be very complicated due to all the factors taken into account.  We
-will make a few simplifying assumptions to make this more managable.  The first assumption is that we will
-only be working with maps in which all the districts have the same size (or as close to the same size as
-possible).  We will also assume that each “census block” has exactly the same number of people, making all
-blocks equal population.  Thus we can measure population in terms of blocks, so the population of a district
-is equal to its area.</p>
-<p>To measure how regularly shaped the districts are, we can calculate the perimeter-area ratio (PAR) of each
-district.  The shape with the lowest PAR is a circle with a value of</p>
+have made several simplifying assumptions so that our score comes down to three terms:</p>
 <div class="math notranslate nohighlight">
-\[PAR_{circ} = 2\sqrt{\frac{\pi}{A}}\]</div>
-<p>where <span class="math notranslate nohighlight">\(A\)</span> is the area of the circle.  All other shapes with the same area will have a PAR larger than
-this, and as the area increases, this lower bound will decrease to zero.  The shape metric will be the percent
-difference between the average of the district PARs and the PAR of a circle with the same area.</p>
-<p>There will be two political parties, party A and party B.  Assume we know the overall political lean of the
-map in terms of a percentage favoring party A, <span class="math notranslate nohighlight">\(p\)</span>.  We can calculate the percentage of the districts
-that favor party A, <span class="math notranslate nohighlight">\(p_{dist}\)</span> and measure how well the map reflects the overall political lean using
-percent difference, <span class="math notranslate nohighlight">\(\frac{|p-p_{dist}|}{p}\)</span>.</p>
-<p>Let the average PAR of the districts be <span class="math notranslate nohighlight">\(PAR_{avg}\)</span>.  Then the map score is</p>
-<div class="math notranslate nohighlight">
-\[\alpha\cdot\left(\frac{|PAR_{circ}-PAR_{avg}|}{PAR_{circ}}\right) + (1-\alpha)\cdot\left(\frac{|p-p_{map}|}{p}\right)\]</div>
-<p>where <span class="math notranslate nohighlight">\(\alpha\)</span> is a parameter between 0 and 1 which indicates how much priority is given to the shape
-metric.</p>
+\[SCORE = \alpha\cdot SDA + \beta\cdot VAR + POL\]</div>
+<p>where <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> are regularizing factors so that each term is
+between 0 and 1.  For this score, a smaller value close to zero is better.</p>
 </div>
 <div class="section" id="automating-redistricting">
 <h2>Automating redistricting<a class="headerlink" href="#automating-redistricting" title="Permalink to this headline">¶</a></h2>
 <p>The goal of this project is to write code that can model the redistricting process using the
-criteria listed above.  In particular, we will use a monte carlo Markov chain process to go from a starting
-map to an acceptable district map by making changes that will increase the map score in the long term.</p>
+criteria listed above.  In particular, we will go from a starting
+map to an acceptable district map by making changes that will decrease the map score in the long term.</p>
 <p>Our maps will consist of a <span class="math notranslate nohighlight">\(n \times n\)</span> array of <em>census blocks</em>, each treated as having population 1.
 The districts will be made up of groups of neighboring blocks with the same array value.  Below is an example
 of what this might look like with a 100x100 map of 7 districts.</p>
@@ -281,19 +283,18 @@ political lean.</p>
 <p>A <em>monte carlo simulation</em> is a mathematical modeling technique where the state of a dynamical system
 (system that changes over time) is updated to a new state by randomly choosing from the collection of all the
 possible states based on the current state.</p>
-<p>For this project, we will update the district map by first randomly selecting a district and one of its
-neighboring districts.  Then a border block for each district is chosen at random and reassigned to the other
-district. This is effectively choosing at random a new map that differs from the current map in only two
-border positions.</p>
+<p>For this project, we will update the district map by randomly flipping a border block from the largest
+district to one of its neighbors. This is effectively choosing at random a new map that differs from the
+current map in only one block.</p>
 </div>
 <div class="section" id="markov-chain">
 <h2>Markov Chain<a class="headerlink" href="#markov-chain" title="Permalink to this headline">¶</a></h2>
-<p>A <em>Markov chain</em> is a sequence of states of a system where each state is generated from the previous
+<p>A <em>Markov chain</em> is a sequence of states of a dynamical system where each state is generated from the previous
 based on a set of stocastic rules (based on probability).</p>
-<p>Once a new district map is selected that differs from the current one in two border positions, the new map
-and the old map will be scored, and the scores compared.  If the new map has a higher score (closer to 1),
-we will keep it.  If the old map has a higher score, we have a probability <span class="math notranslate nohighlight">\(p\)</span> of keeping it anyways.</p>
-<p>We are effectively trying to maximize the map score, but we do not want to settle for a local maximum.  The
+<p>Once a new district map is selected, the new map and the old map will be scored, and the scores compared.
+If the new map has a better score (lower), we will keep it.  If the old map has the better score, we will flip
+a coin to decide whether or not to keep the new map, despite its worse score.</p>
+<p>We are effectively trying to minimize the map score, but we do not want to settle for a local minimum.  The
 reason for using a Markov chain is to avoid getting stuck at a local maximum by giving a way of escaping
 by passing a probability test.</p>
 <p><strong>Exercise:</strong>  Write a function that will update a given district map based on the rules described above.</p>
@@ -385,7 +386,7 @@ metric of a circle with area equal to that of the average district in your map.<
 
   <div role="contentinfo">
     <p>
-      Last updated on Nov 09, 2023.
+      Last updated on Nov 13, 2023.
 
     </p>
   </div> 
