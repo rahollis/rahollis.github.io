@@ -53,7 +53,7 @@ with a value of
 
 where :math:`\bar A` is the average area of the districts. The average variance is
 
-.. math:: VAR = \sqrt{\frac{1}{n}\sum_{i=0}^{n-1} (PAR_i - PAR_{circ})}
+.. math:: VAR = \sqrt{\frac{1}{n}\sum_{i=0}^{n-1} (PAR_i - PAR_{circ})^2}
 
 Political lean
 ~~~~~~~~~~~~~~
