@@ -1,26 +1,23 @@
-Week 12: April 24 - April 28
+Week 12: Nov 13 - Nov 17
 ============================
 
-Project 6
+Project 7
 ~~~~~~~~~
 
-* :doc:`Encryption/decryption <../Projects/message_decrypt/message_decrypt>`
+* :doc:`Redistricting <../Projects/redistricting/redistricting>`
 
 
 Math
 ~~~~~~
 
-* Shift Cipher
-* Transpose Cipher
-* Encrypting and decrypting a message
+* Standard deviation, variance
+* Monte Carlo simulation
+* Markov chains
 
 Python
 ~~~~~~~
 
-* string methods `replace`, `join`
-* list method `insert`
-* text file encoding
-* array methods `np.empty` and `np.reshape`
+* Object level computation
 
 Week 12 notebook
 ~~~~~~~~~~~~~~~
@@ -31,4 +28,4 @@ Week 12 notebook
 Sample quiz
 ~~~~~~~~~~~~~
 
-- * :download:`Sample Quiz 13 <../Quizzes/quiz13_sample.pdf>`
+- * :download:`Sample Quiz <../Quizzes/quiz10_sample.pdf>`

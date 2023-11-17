@@ -13092,94 +13092,86 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Week-12">Week 12<a class="anchor-link" href="#Week-12">&#182;</a></h1><h2 id="Quiz">Quiz<a class="anchor-link" href="#Quiz">&#182;</a></h2><ol>
-<li><p>What do you need in order to encrypt a message using a shift cipher?</p>
-</li>
-<li><p>How would you break a sentence down into individual words using Python?</p>
-</li>
-<li><p>What is wrong with the follow code?</p>
-</li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;sample.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">text</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">FileNotFoundError</span>                         Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">~\AppData\Local\Temp/ipykernel_24572/4146508717.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span><span class="ansi-green-intense-fg ansi-bold">with</span> open<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#39;sample.txt&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-green-intense-fg ansi-bold">as</span> f<span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">      2</span>     text <span class="ansi-yellow-intense-fg ansi-bold">=</span> f<span class="ansi-yellow-intense-fg ansi-bold">.</span>read<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-
-<span class="ansi-red-intense-fg ansi-bold">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;sample.txt&#39;</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Answers:">Answers:<a class="anchor-link" href="#Answers:">&#182;</a></h3><ol>
-<li>To encrypt you need<ul>
-<li>the message</li>
-<li>the alphabet</li>
-<li>the shift value</li>
-</ul>
-</li>
-<li>To break down a sentence (a string) into words<ul>
-<li>use the split method to break it apart wherever there is a space or \n</li>
-<li>use the strip method to get rid of unwanted characters like punctuation</li>
-</ul>
-</li>
-<li>There is nothing wrong with the code.  The problem is the text file is not in the same directory as the notebook.  To fix the problem, either move the text file into the directory containing the notebook (or vice versa) or give the full file path as the file name.</li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Notes">Notes<a class="anchor-link" href="#Notes">&#182;</a></h2><p>Some useful functions for the decryption project.</p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">random</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Notes">Notes<a class="anchor-link" href="#Notes">&#182;</a></h1><h3 id="Redistricting">Redistricting<a class="anchor-link" href="#Redistricting">&#182;</a></h3><ul>
+<li>Project 7</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Exercise:</strong>  Write a function that will generate a starting district map of a given size and with a given number of districts. Remember that the districts should have as close to the same population as possible.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_starting_map</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">k</span><span class="p">):</span>
+    <span class="n">district_map</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n</span><span class="p">,</span><span class="n">n</span><span class="p">),</span><span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+    <span class="n">centers</span> <span class="o">=</span> <span class="p">[(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">)]</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="p">[(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]:</span>
+        <span class="n">distances</span> <span class="o">=</span> <span class="p">[</span><span class="nb">abs</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="n">a</span><span class="p">)</span> <span class="o">+</span> <span class="nb">abs</span><span class="p">(</span><span class="n">j</span><span class="o">-</span><span class="n">b</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="ow">in</span> <span class="n">centers</span><span class="p">]</span>
+        <span class="n">min_dist</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">distances</span><span class="p">)</span>
+        <span class="n">district</span> <span class="o">=</span> <span class="n">distances</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">min_dist</span><span class="p">)</span>
+        <span class="n">district_map</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">district</span>
+    <span class="k">return</span> <span class="n">district_map</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Exercise:</strong> Write a function that extracts the voting data as an array of 0s and 1s from the vote map picture file.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;0.png&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13192,7 +13184,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -13205,20 +13198,15 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[30]:</div>
+    <div class="prompt"></div>
 
 
 
 
-<div class="output_text output_subarea output_execute_result">
-<pre>array([[&#39;&#39;, &#39;&#39;, &#39;&#39;],
-       [&#39;&#39;, &#39;&#39;, &#39;&#39;],
-       [&#39;&#39;, &#39;&#39;, &#39;&#39;],
-       [&#39;&#39;, &#39;&#39;, &#39;&#39;],
-       [&#39;&#39;, &#39;&#39;, &#39;&#39;],
-       [&#39;&#39;, &#39;&#39;, &#39;&#39;],
-       [&#39;&#39;, &#39;&#39;, &#39;&#39;],
-       [&#39;&#39;, &#39;&#39;, &#39;&#39;]], dtype=&#39;&lt;U1&#39;)</pre>
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
 </div>
 
 </div>
@@ -13229,12 +13217,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;Luke, I am your father&amp;&amp;&#39;</span>
-<span class="n">mlist</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">mlist</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13251,7 +13237,55 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;L&#39;, &#39;u&#39;, &#39;k&#39;, &#39;e&#39;, &#39;,&#39;, &#39; &#39;, &#39;I&#39;, &#39; &#39;, &#39;a&#39;, &#39;m&#39;, &#39; &#39;, &#39;y&#39;, &#39;o&#39;, &#39;u&#39;, &#39;r&#39;, &#39; &#39;, &#39;f&#39;, &#39;a&#39;, &#39;t&#39;, &#39;h&#39;, &#39;e&#39;, &#39;r&#39;, &#39;&amp;&#39;, &#39;&amp;&#39;]
+<pre>[[[1. 1. 1. 1.]
+  [1. 1. 1. 1.]
+  [1. 1. 1. 1.]
+  ...
+  [0. 0. 0. 1.]
+  [0. 0. 0. 1.]
+  [0. 0. 0. 1.]]
+
+ [[1. 1. 1. 1.]
+  [1. 1. 1. 1.]
+  [1. 1. 1. 1.]
+  ...
+  [0. 0. 0. 1.]
+  [0. 0. 0. 1.]
+  [0. 0. 0. 1.]]
+
+ [[1. 1. 1. 1.]
+  [1. 1. 1. 1.]
+  [1. 1. 1. 1.]
+  ...
+  [0. 0. 0. 1.]
+  [0. 0. 0. 1.]
+  [0. 0. 0. 1.]]
+
+ ...
+
+ [[0. 0. 0. 1.]
+  [0. 0. 0. 1.]
+  [0. 0. 0. 1.]
+  ...
+  [0. 0. 0. 1.]
+  [0. 0. 0. 1.]
+  [0. 0. 0. 1.]]
+
+ [[0. 0. 0. 1.]
+  [0. 0. 0. 1.]
+  [0. 0. 0. 1.]
+  ...
+  [0. 0. 0. 1.]
+  [0. 0. 0. 1.]
+  [0. 0. 0. 1.]]
+
+ [[0. 0. 0. 1.]
+  [0. 0. 0. 1.]
+  [0. 0. 0. 1.]
+  ...
+  [0. 0. 0. 1.]
+  [0. 0. 0. 1.]
+  [0. 0. 0. 1.]]]
 </pre>
 </div>
 </div>
@@ -13262,11 +13296,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">marr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">mlist</span><span class="p">)</span>
-<span class="n">marr</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">arr</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -13279,203 +13312,30 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[17]:</div>
+    <div class="prompt output_prompt">Out[33]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([&#39;L&#39;, &#39;u&#39;, &#39;k&#39;, &#39;e&#39;, &#39;,&#39;, &#39; &#39;, &#39;I&#39;, &#39; &#39;, &#39;a&#39;, &#39;m&#39;, &#39; &#39;, &#39;y&#39;, &#39;o&#39;,
-       &#39;u&#39;, &#39;r&#39;, &#39; &#39;, &#39;f&#39;, &#39;a&#39;, &#39;t&#39;, &#39;h&#39;, &#39;e&#39;, &#39;r&#39;, &#39;&amp;&#39;, &#39;&amp;&#39;], dtype=&#39;&lt;U1&#39;)</pre>
+<pre>&lt;matplotlib.image.AxesImage at 0x1d0902230d0&gt;</pre>
 </div>
 
 </div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">marr</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[18]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>24</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">marr</span><span class="p">,(</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-<span class="n">arr</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[32]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([[&#39;L&#39;, &#39;u&#39;, &#39;k&#39;],
-       [&#39;e&#39;, &#39;,&#39;, &#39; &#39;],
-       [&#39;I&#39;, &#39; &#39;, &#39;a&#39;],
-       [&#39;m&#39;, &#39; &#39;, &#39;y&#39;],
-       [&#39;o&#39;, &#39;u&#39;, &#39;r&#39;],
-       [&#39; &#39;, &#39;f&#39;, &#39;a&#39;],
-       [&#39;t&#39;, &#39;h&#39;, &#39;e&#39;],
-       [&#39;r&#39;, &#39;&amp;&#39;, &#39;&amp;&#39;]], dtype=&#39;&lt;U1&#39;)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tarr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
-<span class="n">tarr</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[20]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([[&#39;L&#39;, &#39;e&#39;, &#39;I&#39;, &#39;m&#39;, &#39;o&#39;, &#39; &#39;, &#39;t&#39;, &#39;r&#39;],
-       [&#39;u&#39;, &#39;,&#39;, &#39; &#39;, &#39; &#39;, &#39;u&#39;, &#39;f&#39;, &#39;h&#39;, &#39;&amp;&#39;],
-       [&#39;k&#39;, &#39; &#39;, &#39;a&#39;, &#39;y&#39;, &#39;r&#39;, &#39;a&#39;, &#39;e&#39;, &#39;&amp;&#39;]], dtype=&#39;&lt;U1&#39;)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">emarr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">tarr</span><span class="p">,(</span><span class="mi">1</span><span class="p">,</span><span class="mi">24</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">encrypted_message</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">emarr</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">encrypted_message</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
 
 <div class="output_area">
 
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>LeImo tru,  ufh&amp;k ayrae&amp;
-</pre>
-</div>
-</div>
 
-</div>
-</div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">noamps</span> <span class="o">=</span> <span class="n">encrypted_message</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;&amp;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">noamps</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>LeImo tru,  ufhk ayrae
-</pre>
-</div>
 </div>
 
 </div>
@@ -13485,51 +13345,125 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Exercise:</strong>  Write a function that encrypts a message using the cipher described in the project.</p>
+<p><strong>Exercise:</strong> Write a function that calculates the score for a district map, given the district map and the vote map.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">EncryptMessage</span><span class="p">(</span><span class="n">message</span><span class="p">,</span><span class="n">key</span><span class="p">):</span>
-    <span class="n">amps</span> <span class="o">=</span> <span class="n">key</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">message</span><span class="p">)</span><span class="o">%</span><span class="k">key</span>
-    <span class="n">message</span> <span class="o">+=</span> <span class="s1">&#39;&amp;&#39;</span><span class="o">*</span><span class="n">amps</span>
-    <span class="n">mlist</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
-    <span class="n">marr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">mlist</span><span class="p">)</span>
-    <span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">marr</span><span class="p">,(</span><span class="nb">len</span><span class="p">(</span><span class="n">message</span><span class="p">)</span><span class="o">//</span><span class="n">key</span><span class="p">,</span><span class="n">key</span><span class="p">))</span>
-    <span class="n">tarr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
-    <span class="n">emarr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">tarr</span><span class="p">,(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">message</span><span class="p">)))</span>
-    <span class="n">encrypted_message</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">emarr</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-    <span class="k">return</span> <span class="n">encrypted_message</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">make_starting_map</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPUAAAD4CAYAAAA0L6C7AAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjQuMywgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy/MnkTPAAAACXBIWXMAAAsTAAALEwEAmpwYAAAKJklEQVR4nO3df6jddR3H8derO9N0ylhZ2baaMhlIkJOxkJHQrJgp2h/9sYFSEviX4kzwR//1Z/+I/SHSmJrgUmoqiJkmqKiQppur3A9jDWu3aVNCdJqN6as/7hlMvet+77nf7/mevXk+4LJ77jnc8z5sz32/53vO+X6cRADq+FTfAwBoF1EDxRA1UAxRA8UQNVDMvC5+6cT8UzJv4cIufnWvTtz3bt8jdObDBaeM7L5O+uJ/RnZfVR187aDef+t9T3ddJ1HPW7hQX7p+Qxe/ulfLrnuu7xE6896ar4/svpbduHNk91XVb3/w0DGvY/cbKIaogWKIGiiGqIFiiBoohqiBYogaKIaogWKIGiimUdS219p+xfYe2zd1PRSA4c0Yte0JSbdJukjSOZLW2z6n68EADKfJlnqVpD1J9iY5JOk+SZd1OxaAYTWJepGkfUddnhz87CNsX2X7RdsvfnCw7qeZgHHXJOrpPt71ibMVJtmYZGWSlRPzR/cxPgAf1STqSUlLjrq8WNL+bsYBMFdNon5B0tm2z7T9aUnrJB37w5wAejXjSRKSHLZ9taTHJE1IujPJjs4nAzCURmc+SfKIpEc6ngVAC3hHGVAMUQPFEDVQDFEDxRA1UAxRA8UQNVAMUQPFEDVQDFEDxRA1UAxRA8UQNVAMUQPFEDVQDFEDxRA1UAxRA8U0WaHjTtsHbL88ioEAzE2TLfUvJa3teA4ALZkx6iRPS/r3CGYB0ILWnlOz7A4wHlqLmmV3gPHA0W+gGKIGimnykta9kv4gabntSds/6n4sAMNqspbW+lEMAqAd7H4DxRA1UAxRA8UQNVAMUQPFEDVQDFEDxRA1UAxRA8UQNVAMUQPFEDVQDFEDxRA1UAxRA8UQNVAMUQPFEDVQTJNzlC2x/aTtXbZ32L52FIMBGM6M5yiTdFjS9Um22T5V0lbbjyfZ2fFsAIbQZNmd15JsG3z/jqRdkhZ1PRiA4czqObXtpZJWSHp+mutYdgcYA42jtj1f0v2SNiR5++PXs+wOMB4aRW37BE0FvTnJA92OBGAumhz9tqQ7JO1Kckv3IwGYiyZb6tWSrpC0xvb2wdd3O54LwJCaLLvzrCSPYBYALeAdZUAxRA0UQ9RAMUQNFEPUQDFEDRRD1EAxRA0UQ9RAMUQNFEPUQDFEDRRD1EAxRA0UQ9RAMUQNFEPUQDFEDRTT5MSDJ9n+o+0/DZbd+ekoBgMwnCbL7vxX0pokBwenCn7W9u+SPNfxbACG0OTEg5F0cHDxhMFXuhwKwPCansx/wvZ2SQckPZ6EZXeAMdUo6iQfJDlX0mJJq2x/dZrbsOwOMAZmdfQ7yVuSnpK0tothAMxdk6Pfp9teMPj+M5K+JWl3x3MBGFKTo99nSLrb9oSm/hP4dZKHux0LwLCaHP3+s6bWpAZwHOAdZUAxRA0UQ9RAMUQNFEPUQDFEDRRD1EAxRA0U0+QdZUCr9vzsnJHd17Ibd47svsYFW2qgGKIGiiFqoBiiBoohaqAYogaKIWqgGKIGiiFqoBiiBoppHPXghP4v2eakg8AYm82W+lpJu7oaBEA7mi67s1jSxZI2dTsOgLlquqW+VdINkj481g1YSwsYD01W6LhE0oEkW//f7VhLCxgPTbbUqyVdavtVSfdJWmP7nk6nAjC0GaNOcnOSxUmWSlon6Ykkl3c+GYCh8Do1UMysTmeU5ClNLWULYEyxpQaKIWqgGKIGiiFqoBiiBoohaqAYogaKYdkdlDbKJX6k8Vjmhy01UAxRA8UQNVAMUQPFEDVQDFEDxRA1UAxRA8UQNVAMUQPFNHqb6OBMou9I+kDS4SQruxwKwPBm897vbyZ5s7NJALSC3W+gmKZRR9LvbW+1fdV0N2DZHWA8NN39Xp1kv+3PS3rc9u4kTx99gyQbJW2UpBO/vCQtzwmgoUZb6iT7B38ekPSgpFVdDgVgeE0WyDvF9qlHvpf0HUkvdz0YgOE02f3+gqQHbR+5/a+SPNrpVACGNmPUSfZK+toIZgHQAl7SAoohaqAYogaKIWqgGKIGiiFqoBiiBoo57pfdWXbdc32PUMIzt/2i7xFKuPIf3+h7BLbUQDVEDRRD1EAxRA0UQ9RAMUQNFEPUQDFEDRRD1EAxRA0U0yhq2wtsb7G92/Yu2+d3PRiA4TR97/fPJT2a5Pu2Py3p5A5nAjAHM0Zt+zRJF0j6oSQlOSTpULdjARhWk93vsyS9Ieku2y/Z3jQ4//dHsOwOMB6aRD1P0nmSbk+yQtK7km76+I2SbEyyMsnKifmfaB7AiDSJelLSZJLnB5e3aCpyAGNoxqiTvC5pn+3lgx9dKGlnp1MBGFrTo9/XSNo8OPK9V9KV3Y0EYC4aRZ1ku6SV3Y4CoA28owwohqiBYogaKIaogWKIGiiGqIFiiBoohqiBYogaKIaogWKIGiiGqIFiiBoohqiBYogaKIaogWKIGiiGqIFiZoza9nLb24/6etv2hhHMBmAIM56jLMkrks6VJNsTkv4p6cFuxwIwrNnufl8o6W9J/t7FMADmbrZRr5N073RXsOwOMB4aRz045/elkn4z3fUsuwOMh9lsqS+StC3Jv7oaBsDczSbq9TrGrjeA8dEoatsnS/q2pAe6HQfAXDVdduc9SZ/teBYALeAdZUAxRA0UQ9RAMUQNFEPUQDFEDRRD1EAxRA0U4yTt/1L7DUmz/Xjm5yS92fow46HqY+Nx9ecrSU6f7opOoh6G7ReTrOx7ji5UfWw8rvHE7jdQDFEDxYxT1Bv7HqBDVR8bj2sMjc1zagDtGKctNYAWEDVQzFhEbXut7Vds77F9U9/ztMH2EttP2t5le4fta/ueqU22J2y/ZPvhvmdpk+0FtrfY3j34uzu/75lmq/fn1IMFAv6qqdMlTUp6QdL6JDt7HWyObJ8h6Ywk22yfKmmrpO8d74/rCNs/lrRS0mlJLul7nrbYvlvSM0k2Dc6ge3KSt3oea1bGYUu9StKeJHuTHJJ0n6TLep5pzpK8lmTb4Pt3JO2StKjfqdphe7GkiyVt6nuWNtk+TdIFku6QpCSHjregpfGIepGkfUddnlSRf/xH2F4qaYWk53sepS23SrpB0oc9z9G2syS9IemuwVOLTbaPu5PYj0PUnuZnZV5nsz1f0v2SNiR5u+955sr2JZIOJNna9ywdmCfpPEm3J1kh6V1Jx90xnnGIelLSkqMuL5a0v6dZWmX7BE0FvTlJldMrr5Z0qe1XNfVUaY3te/odqTWTkiaTHNmj2qKpyI8r4xD1C5LOtn3m4MDEOkkP9TzTnNm2pp6b7UpyS9/ztCXJzUkWJ1mqqb+rJ5Jc3vNYrUjyuqR9tpcPfnShpOPuwGaj8353Kclh21dLekzShKQ7k+zoeaw2rJZ0haS/2N4++NlPkjzS30ho4BpJmwcbmL2Srux5nlnr/SUtAO0ah91vAC0iaqAYogaKIWqgGKIGiiFqoBiiBor5H3QhgFZireQCAAAAAElFTkSuQmCC
+"
+>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>For decrypting, the <code>insert</code> function may be useful.</p>
+
+</div>
 
 </div>
 </div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">absolute</span><span class="p">((</span><span class="n">A</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">4</span><span class="p">))</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[0. 0. 0. 0. 1. 0. 0. 0.]
+ [0. 0. 0. 0. 1. 0. 0. 0.]
+ [0. 0. 0. 0. 1. 0. 0. 0.]
+ [0. 0. 0. 0. 1. 0. 0. 0.]
+ [0. 0. 0. 0. 1. 1. 0. 0.]
+ [0. 0. 0. 0. 1. 1. 1. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0.]]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">absolute</span><span class="p">((</span><span class="n">A</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">4</span><span class="p">))</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[61]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>9.0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;LeImo tru,  ufhk ayrae&#39;</span>
-<span class="n">mlist</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
-<span class="n">mlist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;&amp;&#39;</span><span class="p">)</span>
-<span class="n">mlist</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="o">-</span><span class="mi">8</span><span class="p">,</span><span class="s1">&#39;&amp;&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">mlist</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13542,141 +13476,17 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;L&#39;, &#39;e&#39;, &#39;I&#39;, &#39;m&#39;, &#39;o&#39;, &#39; &#39;, &#39;t&#39;, &#39;r&#39;, &#39;u&#39;, &#39;,&#39;, &#39; &#39;, &#39; &#39;, &#39;u&#39;, &#39;f&#39;, &#39;h&#39;, &#39;&amp;&#39;, &#39;k&#39;, &#39; &#39;, &#39;a&#39;, &#39;y&#39;, &#39;r&#39;, &#39;a&#39;, &#39;e&#39;, &#39;&amp;&#39;]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Text-file-encoding">Text file encoding<a class="anchor-link" href="#Text-file-encoding">&#182;</a></h4><p>The following functions take a text file and return a string containing all the characters that appear in the text file.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">FileToAlphabet</span><span class="p">(</span><span class="n">file</span><span class="p">):</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-        <span class="n">text</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-    <span class="n">tset</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-    <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">tset</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">FileToAlphabet1</span><span class="p">(</span><span class="n">file</span><span class="p">):</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-        <span class="n">text</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-    <span class="n">tset</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-    <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">tset</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The characters without encoding specified.  Compare these characters to what you see when you open the file in your text editor.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">FileToAlphabet</span><span class="p">(</span><span class="s1">&#39;../../text0.txt&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[64]:</div>
+    <div class="prompt output_prompt">Out[62]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;iuTeso\n_x jkcwPba:Yfqvn,rA.lzIS™tyhâ€gm(d);p&#39;</pre>
+<pre>4</pre>
 </div>
 
 </div>
 
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The characters with the encoding specified.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">FileToAlphabet1</span><span class="p">(</span><span class="s1">&#39;../../text0.txt&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[65]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;iuTeso\n_x jkcwPba:Yfqvn,rA.lzIS’tyhgm(d);p&#39;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
 </div>
 </div>
 
