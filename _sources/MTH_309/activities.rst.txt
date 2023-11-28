@@ -34,3 +34,5 @@ You can then open the file by launching Jupyter, navigating to your MTH 309 fold
   * :download:`Activity 13 (Jupyter notebook) <./Activities/activity_13.ipynb>`
 
   * :download:`Activity 13 (PDF) <./Activities/activity_13.pdf>`
+
+  * :download:`Activity 14 <./Activities/activity_14.pdf>`

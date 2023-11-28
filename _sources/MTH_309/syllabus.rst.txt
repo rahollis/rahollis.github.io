@@ -116,9 +116,9 @@ Please note that the values in this table are the lower threshold for each lette
 UBx uses Python to automatically generate and grade questions.  In addition that are some problems that will require you to work in Jupyter notebook, so you will need to download and install the latest version of `Anaconda <https://www.anaconda.com/>`_.
 Don't worry, any programming you will need to do will be thoroughly explained in the problem.
 
-*In-class activities:* In addition to the biweekly homework, we will have `in-class activities <activities>`_ every week.  These activities will be done during class, turned in, and graded for completion.  The lowest 2 grades will be dropped.
+*In-class activities:* In addition to the biweekly homework, we will have `in-class activities <activities>`_ every week.  These activities will be done during class, turned in, and graded for completion.  The lowest grade will be dropped.
 
-*Recitation participation:* It couldn't be easier to get 5% of the final grade, just show up and engage.  Participation in recitation will be evaluated by the TA on a weekly basis.  You will be allowed 2 absences without a grade penalty.
+*Recitation participation:* It couldn't be easier to get 5% of the final grade, just show up and engage.  Participation in recitation will be evaluated by the TA on a weekly basis.  You will be allowed 1 absence without a grade penalty.
 
 *Proficiency exams:* Exams in this class will be handled differently than what you may be used to.  
 Instead of having one or two midterms covering multiple sections of material, we will have short, 30 minute exams **every other Tuesday at the beginning of class** covering only the material from the previous 2 weeks.
@@ -193,16 +193,16 @@ Topics by Week
 |         | | Thu 11/16: Orthogonality and Gram-Schmidt, Activity 12 |
 |         | | Fri 11/17: Homework 6 due                              |
 +---------+----------------------------------------------------------+
-| Week 13 | | Tue 11/21: Exam 6; Inconsistent systems                |
+| Week 13 | | Tue 11/21: Exam 6; Activity 13                         |
 |         | | Wed 11/23: No class                                    |
 |         | | Fri 11/24:                                             |
 +---------+----------------------------------------------------------+
-| Week 14 | | Tue 11/28: Exam 6 retake; Least squares                |
-|         | | Thu 11/30: Activity 13                                 |
+| Week 14 | | Tue 11/28: Singular value decomposition                |
+|         | | Thu 11/30: Exam 6 retake; Inconsistent sys, Activity 14|
 |         | | Fri 12/1:                                              |
 +---------+----------------------------------------------------------+
-| Week 15 | | Tue 12/5: Singular value decomposition                 |
-|         | | Thu 12/7: Applications of SVD, Activity 14             |
+| Week 15 | | Tue 12/5: Least squares                                |
+|         | | Thu 12/7: Applications of SVD, Activity 15             |
 |         | | Fri 12/8: Homework 7 due                               |
 +---------+----------------------------------------------------------+
 | Week 16 | Thu 12/14: Final exam at 11:45 AM                        |
