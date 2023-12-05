@@ -116,9 +116,9 @@ Please note that the values in this table are the lower threshold for each lette
 UBx uses Python to automatically generate and grade questions.  In addition that are some problems that will require you to work in Jupyter notebook, so you will need to download and install the latest version of `Anaconda <https://www.anaconda.com/>`_.
 Don't worry, any programming you will need to do will be thoroughly explained in the problem.
 
-*In-class activities:* In addition to the biweekly homework, we will have `in-class activities <activities>`_ every week.  These activities will be done during class, turned in, and graded for completion.  The lowest grade will be dropped.
+*In-class activities:* In addition to the biweekly homework, we will have `in-class activities <activities>`_ every week.  These activities will be done during class, turned in, and graded for completion.  The lowest two grades will be dropped, with the exception of the final two activities.
 
-*Recitation participation:* It couldn't be easier to get 5% of the final grade, just show up and engage.  Participation in recitation will be evaluated by the TA on a weekly basis.  You will be allowed 1 absence without a grade penalty.
+*Recitation participation:* It couldn't be easier to get 5% of the final grade, just show up and engage.  Participation in recitation will be evaluated by the TA on a weekly basis.  You will be allowed 2 absences without a grade penalty, with the exception of the final two recitations.
 
 *Proficiency exams:* Exams in this class will be handled differently than what you may be used to.  
 Instead of having one or two midterms covering multiple sections of material, we will have short, 30 minute exams **every other Tuesday at the beginning of class** covering only the material from the previous 2 weeks.

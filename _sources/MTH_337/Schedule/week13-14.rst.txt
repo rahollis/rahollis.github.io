@@ -1,0 +1,35 @@
+Week 14: Nov 20 - Dec 1
+============================
+
+Project 7
+~~~~~~~~~
+
+* :doc:`Redistricting <../Projects/redistricting/redistricting>`
+
+Project 8
+~~~~~~~~~
+
+* :doc:`Sudoku <../Projects/simple_sudoku/simple_sudoku>`
+
+Math
+~~~~~~
+
+* Standard deviation, variance
+* Monte Carlo simulation
+* Markov chains
+
+Python
+~~~~~~~
+
+* Object level computation
+
+Week 12 notebook
+~~~~~~~~~~~~~~~
+
+- `View online <../../_static/MTH_337/week13-14_in_class.html>`_
+- `Download  <../../_static/MTH_337/week13-14_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+
+Sample quiz
+~~~~~~~~~~~~~
+
+- * Quiz on Thursday :download:`Sample Quiz <../Quizzes/quiz14_sample.pdf>`
