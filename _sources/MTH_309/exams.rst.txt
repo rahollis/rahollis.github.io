@@ -11,16 +11,18 @@ The final exam will be composed mainly of questions from these 6 exams, so I wil
 .. toctree::
    :titlesonly:
    :maxdepth: 2
-   
+
+..   
    Exam 1 <./Exams/exam1>
-
+..
    Exam 2 <./Exams/exam2>
-
+..
    Exam 3 <./Exams/exam3>
-
+..
    Exam 4 <./Exams/exam4>
-
+..
    Exam 5 <./Exams/exam5>
-
+..
    Exam 6 <./Exams/exam6>
-
+..
+   Exam 7 <./Exams/exam7>

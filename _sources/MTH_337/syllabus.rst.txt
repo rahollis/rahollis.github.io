@@ -5,7 +5,7 @@ Syllabus
 
 | **MTH 337 Introduction to Scientific and Mathematical Computing**
 
-| **Class times:** TuTh 2:00 - 3:50 PM,
+| **Class times:** MW 10:00 - 11:50 PM,
 | Location: Math 250
 
 Instructor
@@ -16,7 +16,7 @@ Instructor
 | Preferred pronouns: He, Him, His
 | **Office:** 321 Mathematics Building
 | **E-mail:** `rahollis@buffalo.edu <rahollis@buffalo.edu>`_
-| **Office Hours:** Th 10:00 - 10:45 AM
+| **Office Hours:** TBA and by appointment
 |
 
 Course Resources
