@@ -6,10 +6,11 @@ All in-class activities are available here as downloadable files.
 For Jupyter notebooks, download the file by clicking the link, then move the file into a folder for this class.
 You can then open the file by launching Jupyter, navigating to your MTH 309 folder, and selecting the file.
 
+
+
+  * :download:`Activity 1 <./Activities/activity_2.pdf>`
 ..
-  * :download:`Activity 1 (Jupyter notebook) <./Activities/activity_1.ipynb>`
-..
-  * :download:`Activity 2 <./Activities/activity_2.pdf>`
+  * :download:`Activity 2 (Jupyter notebook) <./Activities/activity_1.ipynb>`
 ..
   * :download:`Activity 3 <./Activities/activity_3.pdf>`
 ..

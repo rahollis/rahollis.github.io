@@ -20,7 +20,7 @@ Instructor Information
 | **Office Hours:** TBA and by appointment
 |
 | I am a mathematician specializing in linear algebra research.  I also have an interest in numerical analysis and approximation theory.  
-| This is my third year at UB, and I am looking forward to teaching the subject that I love.
+| This is my fourth year at UB, and I am looking forward to teaching the subject that I love.
 | Outside of academics, I enjoy hiking, biking, snowboarding, XC skiing, and playing MMORPGs on my Xbox.
 
 
@@ -93,7 +93,7 @@ Grade Information
 
 Grades are available in an online spreadsheet 
 `here <https://ubuffalo-my.sharepoint.com/:x:/g/personal/rahollis_buffalo_edu/EcdVKftifvZMhhqkR4smi0EB4S-YI70T9dpcTcfQThQOPA?e=q0bYeZ>`_,
-and are listed by the alias you give me through `this form <https://forms.office.com/r/ViRRAJ6iN5>`_.
+and are listed by a grade code that I will email you during week 2.
 
 Grades will be calculated as follows:
 
