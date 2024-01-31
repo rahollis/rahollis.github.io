@@ -5,8 +5,8 @@ Syllabus
 
 | **MTH 309 Introduction to Linear Algebra**
 |
-| **Class times:** MWF 1:00 - 1:50
-| **Final Exam:** TBA
+| **Class times:** MWF 1:00 - 1:50 PM
+| **Final Exam:** W 5/15 11:45 AM
 | **Location:** Clemen 322
 
 
@@ -17,7 +17,7 @@ Instructor Information
 | Preferred pronouns: He, Him, His
 | **Office:** 321 Mathematics Building
 | **E-mail:** `rahollis@buffalo.edu <rahollis@buffalo.edu>`_
-| **Office Hours:** TBA and by appointment
+| **Office Hours:** F 12:00 - 12:45 PM and by appointment
 |
 | I am a mathematician specializing in linear algebra research.  I also have an interest in numerical analysis and approximation theory.  
 | This is my fourth year at UB, and I am looking forward to teaching the subject that I love.
@@ -82,10 +82,10 @@ distribution since it includes Jupyter notebook and several Python modules we wi
 Recitation Information
 ----------------------
 
-| **Instructor:** TBA
-| **Section 309 U1:** Wed 2:00 - 2:50 PM in Baldy 117
-| **Section 309 U2:** Wed 3:00 - 3:50 PM in Park 440
-| **Office hours:** TBA
+| **Instructor:** Adhish Rele
+| **Section 309 F1:** Wed 2:00 - 2:50 PM in Norton 216
+| **Section 309 F2:** Wed 3:00 - 3:50 PM in Park 440
+| **Office hours:** Tue 4:00 - 6:00 PM in MTH 140
 
 
 Grade Information
@@ -160,8 +160,8 @@ with the final exam making up the remaining 20%.
 The final exam will have one question from each of the 7 proficiency exams, and you will have 1.5 hours to complete it.  The exam 7 retake will take place
 after the final exam has been collected, and you will be given 25 minutes to complete it.
 
-The final exam will be TBA.
-The exam 7 retake will be TBA.
+The final exam will be Wednesday, May 15 11:45 AM - 1:15 PM.
+The exam 7 retake will be Wednesday, May 15 1:20 - 1:45 PM.
 
 
 Tentative Schedule
@@ -177,7 +177,7 @@ Tentative Schedule
 +---------+----------------------------------------------------------+
 | Week 2  | | Mon 1/29: Applications; Activity 2                     |
 |         | | Wed 1/31: Number of solutions                          |
-|         | | Fri 2/2:  Solution sets; HW 1 due                      |  
+|         | | Fri 2/2:  Solution sets; HW 1 due Sunday at midnight   |  
 +---------+----------------------------------------------------------+
 | Week 3  | | Mon 2/5: Exam 1; Vector spaces                         |
 |         | | Wed 2/7: Subspaces and span, Activity 3                |
@@ -185,7 +185,7 @@ Tentative Schedule
 +---------+----------------------------------------------------------+
 | Week 4  | | Mon 2/12: Exam 1 retake; Basis                         |
 |         | | Wed 2/14: Coordinates, Activity 4                      |
-|         | | Fri 2/16: Change of basis; HW 2 due                    |
+|         | | Fri 2/16: Change of basis; HW 2 due Sunday at midnight |
 +---------+----------------------------------------------------------+
 | Week 5  | | Mon 2/19: Exam 2; linear transformations               |
 |         | | Wed 2/21: Matrix representation, Activity 5            |
@@ -193,7 +193,7 @@ Tentative Schedule
 +---------+----------------------------------------------------------+
 | Week 6  | | Mon 2/26: Exam 2 retake; Range and onto                |
 |         | | Wed 2/28: Invertibility, Activity 6                    |
-|         | | Fri 3/1: Activity 6; HW 3 due                          |
+|         | | Fri 3/1: Activity 6; HW 3 due Sunday at midnight       |
 +---------+----------------------------------------------------------+
 | Week 7  | | Mon 3/4: Exam 3; Matrix algebra                        |
 |         | | Wed 3/6: Matrix muliplication                          |
@@ -201,7 +201,7 @@ Tentative Schedule
 +---------+----------------------------------------------------------+
 | Week 8  | | Mon 3/11: Exam 3 retake; Applications                  |
 |         | | Wed 3/13: Activity 8                                   | 
-|         | | Fri 3/15: Inverse; HW 4 due                            |
+|         | | Fri 3/15: Inverse; HW 4 due Sunday at midnight         |
 +---------+----------------------------------------------------------+
 | Week 9  | | Mon 3/25: Exam 4; Determinants                         |
 |         | | Wed 3/27: Area of parallelogram, Activity 9            |
@@ -209,7 +209,7 @@ Tentative Schedule
 +---------+----------------------------------------------------------+
 | Week 10 | | Mon 4/1: Exam 4 retake; Eigenvalues and eigenvectors   |
 |         | | Wed 4/3: Applications, Activity 10.5                   |
-|         | | Fri 4/5: Diagonalization; HW 5 due                     |
+|         | | Fri 4/5: Diagonalization; HW 5 due Sunday at midnight  |
 +---------+----------------------------------------------------------+
 | Week 11 | | Mon 4/8: Exam 5; Describing vectors                    |
 |         | | Wed 4/10: Vector geometry, Activity 11                 |
@@ -217,7 +217,7 @@ Tentative Schedule
 +---------+----------------------------------------------------------+
 | Week 12 | | Mon 4/15: Exam 5 retake; Projections and reflections   |
 |         | | Wed 4/17: Orthogonality, Activity 12                   |
-|         | | Fri 4/19: Gram-Schmidt; HW 6 due                       |
+|         | | Fri 4/19: Gram-Schmidt; HW 6 due Sunday at midnight    |
 +---------+----------------------------------------------------------+
 | Week 13 | | Mon 4/22: Exam 6; Inconsistent systems                 |
 |         | | Wed 4/24: Activity 13                                  |
@@ -225,13 +225,13 @@ Tentative Schedule
 +---------+----------------------------------------------------------+
 | Week 14 | | Mon 4/29: Exam 6 retake; Pseudo-inverse                |
 |         | | Wed 5/1: Unit circle under transformation, Activity 14 |
-|         | | Fri 5/3: SVD, Activity 15; HW 7 due                    |
+|         | | Fri 5/3: SVD, Activity 15; HW 7 due Sunday at midnight |
 +---------+----------------------------------------------------------+
 | Week 15 | | Mon 5/6: Exam 7                                        |
 |         | | Wed 5/8:                                               |
 |         | | Fri 5/10:                                              |
 +---------+----------------------------------------------------------+
-| Week 16 | Thu 12/14: Final exam at 11:45 AM                        |
+| Week 16 | Wed 5/15: Final exam at 11:45 AM                        |
 +---------+----------------------------------------------------------+
 
 
