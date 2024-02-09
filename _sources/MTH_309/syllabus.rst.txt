@@ -231,7 +231,7 @@ Tentative Schedule
 |         | | Wed 5/8:                                               |
 |         | | Fri 5/10:                                              |
 +---------+----------------------------------------------------------+
-| Week 16 | Wed 5/15: Final exam at 11:45 AM                        |
+| Week 16 | Wed 5/15: Final exam at 11:45 AM                         |
 +---------+----------------------------------------------------------+
 
 
@@ -251,6 +251,8 @@ Proficiency Exams by Topics:
 | Exam 5 | Determinant, eigenvalues and eigenvectors, systems of LODEs                       |
 +--------+-----------------------------------------------------------------------------------+
 | Exam 6 | Vector geometry, norms, inner products, orthogonality                             |
++--------+-----------------------------------------------------------------------------------+
+| Exam 7 | Least squares, singular value decomposition                                       |
 +--------+-----------------------------------------------------------------------------------+
 | Final  | One questions from each of the above exams with two more on least squares and SVD |
 +--------+-----------------------------------------------------------------------------------+

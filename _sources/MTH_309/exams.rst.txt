@@ -12,7 +12,7 @@ The final exam will be composed mainly of questions from these 6 exams, so I wil
    :titlesonly:
    :maxdepth: 2
 
-..   
+   
    Exam 1 <./Exams/exam1>
 ..
    Exam 2 <./Exams/exam2>

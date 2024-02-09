@@ -10,7 +10,7 @@ Projects
    :maxdepth: 2
 
 
-   Prime or Not (due: Wed, Sep 13 at 11:59 PM) <./Projects/prime_or_not/prime_or_not>
+   Prime or Not (due: Tue, Feb 13 at 11:59 PM) <./Projects/prime_or_not/prime_or_not>
 ..
    Pythagorean Triples (due: Fri, Sep 22 at 11:59 PM)  <./Projects/pythagorean_triples/pythagorean_triples>
 ..
