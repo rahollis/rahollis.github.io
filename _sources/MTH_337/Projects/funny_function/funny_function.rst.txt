@@ -1,22 +1,22 @@
 
-A funny function
-================
+A Relatively Prime function
+===========================
 
-.. rubric:: due: Wednesday, Mar 2, 11:59 PM
+.. rubric:: 
 
 Consider the function of positive integers where for each 
 positive integer :math:`n`, :math:`\phi(n)` is equal to the number
-of integers between 0 and :math:`n` are relatively prime to :math:`n`.
+of integers between 0 and :math:`n` are relatively prime (or coprime) to :math:`n`.
 
 Relative primeness is an important concept in many areas of mathematics
 from number theory to linear algebra.  Two positive integers are relatively 
-prime if they have no divisors in common; 
+prime, also known as coprime, if they have no divisors in common other than 1; 
 i.e. their GCD (greatest common divisor) is 1.
 
 In order to calculate the values of this function for a given 
-:math:`n`, it is important to be able to calculate the GCD of any
-two positive integers :math:`a` and :math:`b`.  One way to do this is to use
-the Euclidean division algorithm.
+:math:`n`, we will use the GCD.  The GCD of any
+two positive integers :math:`a` and :math:`b` is the largest integer that divides both.
+One way to calculate the GCD is to use the Euclidean division algorithm.
 
 Assume that :math:`a\geq b`.  The algorithm works by first dividing :math:`b`
 into :math:`a` to get the quotient :math:`q_1` and remainder :math:`r_1` so
@@ -49,7 +49,29 @@ is that you are not only thinking deeply about the patterns and trying to explai
 them, but also following through with your hypotheses by designed some simple 
 Python experiments.
 
-**Values of** :math:`\phi(n)`. The first 20 values of the function are given below, 
-starting with the input of 1.
+**Values of** :math:`\phi(n)`. The first 10 values of the function are given below.
 
-0,1,2,2,4,2,6,4,6,4,10,4,12,6,8,8,16,6,18,8
++----+-----------------+
+| n  | :math:`\phi(n)` |
++====+=================+
+| 1  |       0         |
++----+-----------------+
+| 2  |       1         |
++----+-----------------+
+| 3  |       2         |
++----+-----------------+
+| 4  |       2         |
++----+-----------------+
+| 5  |       4         |
++----+-----------------+
+| 6  |       2         |
++----+-----------------+
+| 7  |       6         |
++----+-----------------+
+| 8  |       4         |
++----+-----------------+
+| 9  |       6         |
++----+-----------------+
+| 10 |       4         |
++----+-----------------+
+

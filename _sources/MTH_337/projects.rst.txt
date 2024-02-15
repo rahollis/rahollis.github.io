@@ -10,7 +10,9 @@ Projects
    :maxdepth: 2
 
 
-   Prime or Not (due: Tue, Feb 13 at 11:59 PM) <./Projects/prime_or_not/prime_or_not>
+   Prime or Not (due: Thurs, Feb 15 at 11:59 PM) <./Projects/prime_or_not/prime_or_not>
+
+   A Relatively Prime Function (due: Thurs, Feb 22 at 11:59 PM) <./Projects/funny_function/funny_function>
 ..
    Pythagorean Triples (due: Fri, Sep 22 at 11:59 PM)  <./Projects/pythagorean_triples/pythagorean_triples>
 ..
@@ -33,8 +35,6 @@ Projects
    Tartans (due: Monday, April 3 at 11:59 PM) <./Projects/tartans/tartans>
 ..
    Wordle (due: Sunday, May 14 at 11:59 PM) <./Projects/wordle/wordle>
-..
-   A Funny Function <./Projects/funny_function/funny_function>
 ..
    Image Denoising <./Prjects/image_denoise/image_denoise>
 ..

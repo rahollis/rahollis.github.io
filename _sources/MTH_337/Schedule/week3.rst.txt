@@ -1,16 +1,13 @@
-Week 3: Sep 11 - Sep 15
+Week 3: Feb 12 - Feb 16
 =======================
 
 Project
 ~~~~~~~
 
-Due Wednesday, Sep 20 at 11:59 PM
-
-* :doc:`Pythagorean Triples <../Projects/pythagorean_triples/pythagorean_triples>`.
+* :doc:`A Relatively Prime Function <../Projects/funny_function/funny_function>`.
 
 Math
 ~~~~
-
 
 Python
 ~~~~~~
