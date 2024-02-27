@@ -4,7 +4,7 @@ Week 4: Feb 21 - Feb 25
 Project 2
 ~~~~~~~~~
 
-* :doc:`A Funny Function </Projects/funny_function/funny_function>`.
+* :doc:`A Relatively Prime Function </Projects/funny_function/funny_function>`.
 
 Python
 ~~~~~~
