@@ -14,8 +14,8 @@ Weekly Schedule
    Week 3 <./Schedule/week3>
 
    Week 4 <./Schedule/week4_s22>
-..
-   Week 5 <./Schedule/week5>
+
+   Week 5 <./Schedule/week5_s22>
 ..
    Week 6/7 <./Schedule/week6-7>
 ..
