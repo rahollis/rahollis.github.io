@@ -1,0 +1,26 @@
+Week 7: Mar 11 - Mar 22
+=======================
+
+Project 4
+~~~~~~~~~
+
+* :doc:`Epidemic Model <../Projects/epidemics/epidemics>`.
+
+
+Python
+~~~~~~
+
+* Numpy arrays
+* Color arrays
+
+
+Week 7 notebook
+~~~~~~~~~~~~~~~
+
+- `View online <../../_static/MTH_337/week7_in_class.html>`_
+- `Download  <../../_static/MTH_337/week7_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+
+Sample quiz
+~~~~~~~~~~~~~
+
+- :download:`Sample Quiz <../Quizzes/quiz5_sample2.pdf>`
