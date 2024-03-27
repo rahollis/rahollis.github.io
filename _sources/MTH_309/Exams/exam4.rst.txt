@@ -81,14 +81,14 @@ True or False?
 Question 4
 ~~~~~~~~~~
 
-When is the matrix invertible?
+Zero Product
 
-(1 pt) Correct answer
-	(-1 pt) Answer is incorrect or missing [IA]
-(2 pts) Compute answer 	
-	(-1 pt) Minor error in computations [MinE]
+(1 pt) At least one column is nonzero
+	(-1 pt) Matrix is the zero matrix [ZM]
+(2 pts) Product is zero 	
+	(-1 pt) Minor error [MinE]
 
-	(-2 pts) Major error in computations [MajE]
-(1 pt) Explain computations		
-	(-1 pt) Computations not explained [NE]
+	(-2 pts) Major error [MajE]
+(1 pt) Matrix is 4x4		
+	(-1 pt) Missing rows or columns [4x4]
 	
