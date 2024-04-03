@@ -17,6 +17,8 @@ Projects
    The Mayfly Model (due: Sun, March 10 at 11:59 PM) <./Projects/mayfly_model/mayfly_model>
 
    Epidemic Model (due: Sun, March 31 at 11:59 PM) <./Projects/epidemic/epidemic>
+
+   Tartans (due: Sunday, April 14 at 11:59 PM) <./Projects/tartans/tartans>
 ..
    Pythagorean Triples (due: Fri, Sep 22 at 11:59 PM)  <./Projects/pythagorean_triples/pythagorean_triples>
 ..
@@ -31,8 +33,6 @@ Projects
    Solving Sudoku (due: Mon, Dec 11 at 11:59 PM) <./Projects/simple_sudoku/simple_sudoku>
 ..
    A Particular Sequence (due: Wednesday, Sep 13 at 11:59 PM) <./Projects/part_sequence/part_sequence>
-..
-   Tartans (due: Monday, April 3 at 11:59 PM) <./Projects/tartans/tartans>
 ..
    Wordle (due: Sunday, May 14 at 11:59 PM) <./Projects/wordle/wordle>
 ..
