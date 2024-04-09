@@ -1,7 +1,7 @@
-Week 9: April 10 - April 14
+Week 9: Mar 25 - Mar 29
 ===========================
 
-Project 5
+Project 4
 ~~~~~~~~~
 
 * :doc:`Modeling an Epidemic <../Projects/epidemic/epidemic>`.
@@ -23,4 +23,4 @@ Week 9 notebook
 Sample quiz
 ~~~~~~~~~~~~~
 
-- :download:`Sample quiz <../Quizzes/quiz9_sample.pdf>`
+- 

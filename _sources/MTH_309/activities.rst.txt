@@ -29,7 +29,7 @@ You can then open the file by launching Jupyter, navigating to your MTH 309 fold
   * :download:`Activity 10 <./Activities/activity_10a.pdf>`
 
   * :download:`Activity 10.5 <./Activities/activity_10.pdf>`
-..
+
   * :download:`Activity 11 <./Activities/activity_11.pdf>`
 ..
   * :download:`Activity 12 <./Activities/activity_12.pdf>`

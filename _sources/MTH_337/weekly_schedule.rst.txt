@@ -20,12 +20,12 @@ Weekly Schedule
    Week 6 <./Schedule/week6_s24>
 
    Week 7 <./Schedule/week7_s24>
-..
+
    Week 8 <./Schedule/week8>
-..
-   Week 9 <./Schedule/week9_f23>
-..
-   Week 10 <./Schedule/week10>
+
+   Week 9 <./Schedule/week9>
+
+   Week 10 <./Schedule/week10_s24>
 ..
    Week 11 <./Schedule/week11>
 ..
