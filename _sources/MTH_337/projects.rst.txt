@@ -18,13 +18,9 @@ Projects
 
    Epidemic Model (due: Sun, March 31 at 11:59 PM) <./Projects/epidemic/epidemic>
 
-   Tartans (due: Sunday, April 14 at 11:59 PM) <./Projects/tartans/tartans>
-..
-   Pythagorean Triples (due: Fri, Sep 22 at 11:59 PM)  <./Projects/pythagorean_triples/pythagorean_triples>
-..
-   Shuffling Cards (due: Mon, Oct 2 at 11:59 PM) <./Projects/shuffle/shuffle>
-..
-   Computing with Text (due: Mon, Oct 30 at 11:59 PM) <./Projects/computing_with_text/computing_with_text>
+   Tartans (due: Tue, April 16 at 11:59 PM) <./Projects/tartans/tartans>
+
+   Computing with Text (due: Tue, April 23 at 11:59 PM) <./Projects/computing_with_text/computing_with_text>
 ..
    Decrypting a Message (due: Mon, Nov 13 at 11:59 PM) <./Projects/message_decrypt/message_decrypt>
 ..
@@ -39,3 +35,8 @@ Projects
    Image Denoising <./Prjects/image_denoise/image_denoise>
 ..
    Making Friends <./Projects/making_friends/making_friends>
+..
+   Pythagorean Triples (due: Fri, Sep 22 at 11:59 PM)  <./Projects/pythagorean_triples/pythagorean_triples>
+..
+   Shuffling Cards (due: Mon, Oct 2 at 11:59 PM) <./Projects/shuffle/shuffle>
+
