@@ -1,0 +1,28 @@
+Week 11/12: April 8 - 19
+============================
+
+Projects
+~~~~~~~~~
+
+* :doc:`Tartans <../Projects/tartans/tartans>`
+
+* :doc:`Computing with text <../Projects/computing_with_text/computing_with_text>`
+
+
+Python
+~~~~~~
+
+* opening files, reading files, manipulating text
+* bar graphs
+* downloading files using requests
+
+Week 11 notebook
+~~~~~~~~~~~~~~~~
+
+- `View online <../../_static/MTH_337/week11-12_in_class.html>`_
+- `Download  <../../_static/MTH_337/week11-12_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+
+Sample quiz
+~~~~~~~~~~~
+
+- :download:`Sample Quiz <../Quizzes/quiz5_sample.pdf>` 
