@@ -21,8 +21,8 @@ Projects
    Tartans (due: Tue, April 16 at 11:59 PM) <./Projects/tartans/tartans>
 
    Computing with Text (due: Tue, April 23 at 11:59 PM) <./Projects/computing_with_text/computing_with_text>
-..
-   Decrypting a Message (due: Mon, Nov 13 at 11:59 PM) <./Projects/message_decrypt/message_decrypt>
+
+   Decrypting a Message (due: Mon, May 6 at 11:59 PM) <./Projects/message_decrypt/message_decrypt>
 ..
    Redistricting (due: Wed, Nov 29 at 11:59 PM) <./Projects/redistricting/redistricting>
 ..
