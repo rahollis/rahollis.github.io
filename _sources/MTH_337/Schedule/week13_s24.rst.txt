@@ -1,0 +1,29 @@
+Week 13: April 22 - April 26
+============================
+
+Project 7
+~~~~~~~~~
+
+* :doc:`Encryption/decryption <../Projects/decryption/decryption>`
+
+
+Math
+~~~~~~
+
+* Shift cipher
+
+Python
+~~~~~~~
+
+* Encryption function
+
+Week 13 notebook
+~~~~~~~~~~~~~~~
+
+- `View online <../../_static/MTH_337/week13_in_class.html>`_
+- `Download  <../../_static/MTH_337/week13_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+
+Sample quiz
+~~~~~~~~~~~~~
+
+- :download:`Sample Quiz <../Quizzes/quiz13_sample.pdf>`

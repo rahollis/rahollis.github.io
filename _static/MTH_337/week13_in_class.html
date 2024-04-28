@@ -13095,12 +13095,12 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Week-13">Week 13<a class="anchor-link" href="#Week-13">&#182;</a></h1><h2 id="Quiz">Quiz<a class="anchor-link" href="#Quiz">&#182;</a></h2><ol>
-<li><p>Write a function that converts an array of characters into a string.</p>
+<h1 id="Week-13">Week 13<a class="anchor-link" href="#Week-13">&#182;</a></h1><h2 id="Quizz">Quizz<a class="anchor-link" href="#Quizz">&#182;</a></h2><ol>
+<li><p>Write code to create an array with colored stripes [red, yellow,green,cyan,blue].</p>
 </li>
-<li><p>How would you open a text file in Python so that you don't get weird characters like &euro; or &trade;?</p>
+<li><p>Why might an array of RGB colors look washed out (too light) when displaying using imshow?</p>
 </li>
-<li><p>What method is used to erase all the &amp;'s in a decrypted message?</p>
+<li><p>Write a function that takes a string (e.g. DG14) as input and separates the letters and numbers into a tuple (e.g. (DG,14)).</p>
 </li>
 </ol>
 
@@ -13110,127 +13110,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Answers:">Answers:<a class="anchor-link" href="#Answers:">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">arr_to_string1</span><span class="p">(</span><span class="n">arr_of_char</span><span class="p">):</span>
-    <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-    <span class="n">r</span><span class="p">,</span><span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">arr_of_char</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">rows</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">cols</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
-            <span class="n">message</span> <span class="o">+=</span> <span class="n">arr_of_char</span><span class="p">[</span><span class="n">r</span><span class="p">,</span><span class="n">c</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">message</span>
-</pre></div>
+<h4 id="Answers">Answers<a class="anchor-link" href="#Answers">&#182;</a></h4><p>1.</p>
 
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">arr_to_string2</span><span class="p">(</span><span class="n">arr_of_char</span><span class="p">):</span>
-    <span class="n">r</span><span class="p">,</span><span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">arr_of_char</span><span class="p">)</span>
-    <span class="n">one_row</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">arr_of_char</span><span class="p">,(</span><span class="mi">1</span><span class="p">,</span><span class="n">r</span><span class="o">*</span><span class="n">c</span><span class="p">))</span>
-    <span class="n">out_str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">one_row</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-    <span class="k">return</span> <span class="n">out_str</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">decrypted_message</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;&amp;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-
-<span class="n">index</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">decrypted_message</span><span class="p">)):</span>
-    <span class="k">if</span> <span class="n">decrypted_message</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;&amp;&#39;</span><span class="p">:</span>
-        <span class="n">index</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">index</span><span class="o">.</span><span class="n">reverse</span><span class="p">():</span>
-    <span class="n">decrypted_message</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-    
-<span class="n">decrypted_message</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;&amp;&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Notes">Notes<a class="anchor-link" href="#Notes">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Word-Games">Word Games<a class="anchor-link" href="#Word-Games">&#182;</a></h3><p>In a classic word game, a player tries to guess a hidden word or phrase by guessing letters one at a time.  They can keep guessing letters until they have used up their allotted number of guesses.  Once they have used up their guesses, they are asked to guess the word.</p>
-<p>We will refine the rules a bit.</p>
-<ul>
-<li>limit to hidden words only, no phrases</li>
-<li>number of guesses based on the length of the word</li>
-</ul>
-<p>Let's play a round.  Pair up, one person come up with a hidden word, the other person has to guess it.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Putting-it-into-code">Putting it into code<a class="anchor-link" href="#Putting-it-into-code">&#182;</a></h3><p>What are the sequential steps of the game? (Flow diagram on board)</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="How-can-we-automatically-pick-a-hidden-word?">How can we automatically pick a hidden word?<a class="anchor-link" href="#How-can-we-automatically-pick-a-hidden-word?">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13239,14 +13120,13 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">FileToWords</span><span class="p">(</span><span class="n">file</span><span class="p">):</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-        <span class="n">text</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-    <span class="n">text_list</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-    <span class="n">word_list</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">string</span> <span class="ow">in</span> <span class="n">text_list</span><span class="p">:</span>
-        <span class="n">word_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;,.!?-</span><span class="se">\&#39;\&quot;</span><span class="s1">:;&#39;</span><span class="p">))</span>
-    <span class="k">return</span> <span class="n">word_list</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">height</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">width</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">stripes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">height</span><span class="p">,</span><span class="n">width</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">stripes</span><span class="p">[:,:</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">stripes</span><span class="p">[:,</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">stripes</span><span class="p">[:,</span><span class="mi">3</span><span class="p">:,</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
 </pre></div>
 
     </div>
@@ -13259,64 +13139,9 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">PickWord</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
-    <span class="n">word_list</span> <span class="o">=</span> <span class="n">FileToWords</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-    <span class="n">hidden_word</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">word_list</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">hidden_word</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hidden_word</span> <span class="o">=</span> <span class="n">PickWord</span><span class="p">(</span><span class="s1">&#39;../../dictionary.txt&#39;</span><span class="p">)</span>
-<span class="n">hidden_word</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[12]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;OBIT&#39;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Soliciting-a-guess-from-the-user.">Soliciting a guess from the user.<a class="anchor-link" href="#Soliciting-a-guess-from-the-user.">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Type your guess here:  &#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">stripes</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -13332,21 +13157,12 @@ div#notebook {
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Type your guess here:  a
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[5]:</div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;a&#39;</pre>
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZgAAAGdCAYAAAAv9mXmAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjUuMiwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy8qNh9FAAAACXBIWXMAAA9hAAAPYQGoP6dpAAARzklEQVR4nO3dX2id9f3A8c9ppalozsHoWig5StnGnJQItm5EdH9sFwgidle7kNL9uSnE0tKbrXoxtpsIuxp0FjvB3Uwqw7UKm8XAlkQRoQmGFS8EQUigdp0Dz0kDO8X4/C5+PzP665+ck/STc07zesG5yOM5fT48+XrePM+Tk5SKoigCAG6yDe0eAIBbk8AAkEJgAEghMACkEBgAUggMACkEBoAUAgNAitvWeodffPFFnD9/Pnp7e6NUKq317gFYhaIoYn5+PrZt2xYbNtz4HGXNA3P+/PmoVqtrvVsAbqK5ubno7++/4XPWPDC9vb0RETEXEeW13nm3qbV7gO5QafcAXcOCaooFtYx6RFSX3stvZM0D8+VlsXIIzLIcIG4qC4qbp5lbHG7yA5BCYABIITAApBAYAFIIDAApBAaAFAIDQAqBASCFwACQQmAASCEwAKQQGABSCAwAKQQGgBQCA0AKgQEghcAAkEJgAEghMACkEBgAUggMACkEBoAUAgNACoEBIIXAAJBCYABIITAApBAYAFIIDAApVhSYF154IbZv3x6bN2+OnTt3xttvv32z5wKgy7UcmFdffTUOHz4czz33XLz//vvx2GOPxfDwcMzOzmbMB0CXKhVFUbTygm9/+9vx0EMPxfHjx5e2ffOb34y9e/fG6Ojosq+v1+tRqVSiFhHllsddZ1r6zqxfpXYP0DUsqKZYUMuoR0QlarValMs3fhdv6Qzm8uXLMT09HUNDQ1dsHxoainfffbflMQG4dd3WypM//fTTWFxcjK1bt16xfevWrXHhwoVrvqbRaESj0Vj6ul6vr2BMALrNim7yl0pXnkMWRXHVti+Njo5GpVJZelSr1ZXsEoAu01Jg7rnnnti4ceNVZysXL1686qzmS0ePHo1arbb0mJubW/m0AHSNlgKzadOm2LlzZ4yNjV2xfWxsLB555JFrvqanpyfK5fIVDwBufS3dg4mIOHLkSOzbty927doVg4ODceLEiZidnY0DBw5kzAdAl2o5MD/60Y/i3//+d/z617+OTz75JHbs2BF//etf47777suYD4Au1fLnYFbL52Ba4GMLTfGxhWZZUE2xoJaR9DkYAGiWwACQQmAASCEwAKQQGABSCAwAKQQGgBQCA0AKgQEghcAAkEJgAEghMACkEBgAUggMACkEBoAUAgNACoEBIIXAAJBCYABIITAApBAYAFIIDAApBAaAFAIDQAqBASCFwACQQmAASCEwAKQQGABSCAwAKQQGgBQCA0AKgQEghcAAkEJgAEghMACkEBgAUggMACkEBoAUAgNACoEBIIXAAJBCYABIITAApBAYAFIIDAApBAaAFAIDQAqBASCFwACQQmAASCEwAKQQGABSCAwAKQQGgBQCA0AKgQEghcAAkEJgAEghMACkEBgAUggMACkEBoAULQdmcnIynnzyydi2bVuUSqU4ffp0wlgAdLuWA7OwsBAPPvhgHDt2LGMeAG4Rt7X6guHh4RgeHs6YBYBbiHswAKRo+QymVY1GIxqNxtLX9Xo9e5cAdID0M5jR0dGoVCpLj2q1mr1LADpAemCOHj0atVpt6TE3N5e9SwA6QPolsp6enujp6cneDQAdpuXAXLp0KT766KOlrz/++OOYmZmJvr6+uPfee2/qcAB0r1JRFEUrLxgfH4/vf//7V23fv39//OEPf1j29fV6PSqVStQiotzKjtejlr4z61ep3QN0DQuqKRbUMuoRUYlarRbl8o3fxVs+g/ne974XLTYJgHXI52AASCEwAKQQGABSCAwAKQQGgBQCA0AKgQEghcAAkEJgAEghMACkEBgAUggMACkEBoAUAgNACoEBIIXAAJBCYABIITAApBAYAFIIDAApBAaAFAIDQAqBASCFwACQQmAASCEwAKQQGABSCAwAKQQGgBQCA0AKgQEghcAAkEJgAEghMACkEBgAUggMACkEBoAUAgNACoEBIIXAAJBCYABIITAApBAYAFIIDAApBAaAFAIDQAqBASCFwACQQmAASCEwAKQQGABSCAwAKQQGgBQCA0AKgQEghcAAkEJgAEghMACkEBgAUggMACkEBoAUAgNACoEBIEVLgRkdHY2HH344ent7Y8uWLbF379748MMPs2YDoIu1FJiJiYkYGRmJ9957L8bGxuLzzz+PoaGhWFhYyJoPgC5VKoqiWOmL//Wvf8WWLVtiYmIivvOd7zT1mnq9HpVKJWoRUV7pjteLFX9n1pdSuwfoGhZUUyyoZdQjohK1Wi3K5Ru/i9+2mt3UarWIiOjr67vucxqNRjQajf+OVq+vZpcAdIkV3+QviiKOHDkSjz76aOzYseO6zxsdHY1KpbL0qFarK90lAF1kxZfIRkZG4i9/+Uu888470d/ff93nXesMplqtukTWDFc0muKKRrMsqKZYUMtIvkR28ODBeOONN2JycvKGcYmI6OnpiZ6enpXsBoAu1lJgiqKIgwcPxqlTp2J8fDy2b9+eNRcAXa6lwIyMjMQrr7wSr7/+evT29saFCxciIqJSqcTtt9+eMiAA3amlezCl0rUvTr788svx4x//uKl/w48pt8Al86a4ZN4sC6opFtQyku7BrOIjMwCsM34XGQApBAaAFAIDQAqBASCFwACQQmAASCEwAKQQGABSCAwAKQQGgBQCA0AKgQEghcAAkEJgAEghMACkEBgAUggMACkEBoAUAgNACoEBIIXAAJBCYABIITAApBAYAFIIDAApBAaAFAIDQAqBASCFwACQQmAASCEwAKQQGABSCAwAKQQGgBQCA0AKgQEghcAAkEJgAEghMACkEBgAUggMACkEBoAUAgNACoEBIIXAAJBCYABIITAApBAYAFIIDAApBAaAFAIDQAqBASCFwACQQmAASCEwAKQQGABSCAwAKQQGgBQCA0AKgQEghcAAkEJgAEghMACkaCkwx48fj4GBgSiXy1Eul2NwcDDefPPNrNkA6GItBaa/vz+ef/75mJqaiqmpqXj88cfjqaeeig8++CBrPgC6VKkoimI1/0BfX1/85je/iZ/97GdNPb9er0elUolaRJRXs+P1YFXfmfWj1O4BuoYF1RQLahn1iKhErVaLcvnG7+K3rXQXi4uL8ac//SkWFhZicHDwus9rNBrRaDT+O1q9vtJdAtBFWr7Jf+7cubjzzjujp6cnDhw4EKdOnYoHHnjgus8fHR2NSqWy9KhWq6saGIDu0PIlssuXL8fs7Gx89tln8dprr8VLL70UExMT143Mtc5gqtWqS2TNcEWjKa5oNMuCaooFtYzmL5Gt+h7Mnj174qtf/Wq8+OKLzY3mHkzzvB80xftBsyyoplhQy2g+MKv+HExRFFecoQBARIs3+Z999tkYHh6OarUa8/PzcfLkyRgfH48zZ85kzQdAl2opMP/85z9j37598cknn0SlUomBgYE4c+ZM/OAHP8iaD4Autep7MK1yD6YFLpk3xSXzZllQTbGglrGG92AA4FoEBoAUAgNACoEBIIXAAJBCYABIITAApBAYAFIIDAApBAaAFAIDQAqBASCFwACQQmAASCEwAKQQGABSCAwAKQQGgBQCA0AKgQEghcAAkEJgAEghMACkEBgAUggMACkEBoAUAgNACoEBIIXAAJBCYABIITAApBAYAFIIDAApBAaAFAIDQAqBASCFwACQQmAASCEwAKQQGABSCAwAKQQGgBQCA0AKgQEghcAAkEJgAEghMACkEBgAUggMACkEBoAUAgNACoEBIIXAAJBCYABIITAApBAYAFIIDAApBAaAFAIDQAqBASCFwACQQmAASCEwAKRYVWBGR0ejVCrF4cOHb9I4ANwqVhyYs2fPxokTJ2JgYOBmzgPALWJFgbl06VI8/fTT8fvf/z7uuuuumz0TALeAFQVmZGQknnjiidizZ8+yz200GlGv1694AHDru63VF5w8eTKmp6djamqqqeePjo7Gr371q5YHA6C7tXQGMzc3F4cOHYo//vGPsXnz5qZec/To0ajVakuPubm5FQ0KQHcpFUVRNPvk06dPxw9/+MPYuHHj0rbFxcUolUqxYcOGaDQaV/y3a6nX61GpVKIWEeUVj71ONP2dWd9K7R6ga1hQTbGgllGPiErUarUol2/8Lt7SJbLdu3fHuXPnrtj2k5/8JO6///74+c9/vmxcAFg/WgpMb29v7Nix44ptd9xxR9x9991XbQdgffNJfgBStPxTZP/f+Pj4TRgDgFuNMxgAUggMACkEBoAUAgNACoEBIIXAAJBCYABIITAApBAYAFIIDAApBAaAFAIDQAqBASCFwACQQmAASCEwAKQQGABSCAwAKQQGgBQCA0AKgQEghcAAkEJgAEghMACkEBgAUggMACkEBoAUAgNACoEBIMVta73DoigiIqK+1jvuRg4SN5UFxc3wv+voy/fyG1nzwMzPz0dERHWtd9yNKu0egFuLBcXNMz8/H5XKjddUqWgmQzfRF198EefPn4/e3t4olUpruevrqtfrUa1WY25uLsrlcrvH6UiOUXMcp+Y4Ts3pxONUFEXMz8/Htm3bYsOGG99lWfMzmA0bNkR/f/9a77Yp5XK5Y76Jncoxao7j1BzHqTmddpyWO3P5kpv8AKQQGABSCExE9PT0xC9/+cvo6elp9ygdyzFqjuPUHMepOd1+nNb8Jj8A64MzGABSCAwAKQQGgBQCA0CKdR+YF154IbZv3x6bN2+OnTt3xttvv93ukTrO5ORkPPnkk7Ft27YolUpx+vTpdo/UcUZHR+Phhx+O3t7e2LJlS+zduzc+/PDDdo/VcY4fPx4DAwNLHxwcHByMN998s91jdbTR0dEolUpx+PDhdo/SsnUdmFdffTUOHz4czz33XLz//vvx2GOPxfDwcMzOzrZ7tI6ysLAQDz74YBw7dqzdo3SsiYmJGBkZiffeey/Gxsbi888/j6GhoVhYWGj3aB2lv78/nn/++Ziamoqpqal4/PHH46mnnooPPvig3aN1pLNnz8aJEydiYGCg3aOsTLGOfetb3yoOHDhwxbb777+/+MUvftGmiTpfRBSnTp1q9xgd7+LFi0VEFBMTE+0epePdddddxUsvvdTuMTrO/Px88fWvf70YGxsrvvvd7xaHDh1q90gtW7dnMJcvX47p6ekYGhq6YvvQ0FC8++67bZqKW0WtVouIiL6+vjZP0rkWFxfj5MmTsbCwEIODg+0ep+OMjIzEE088EXv27Gn3KCu25r/sslN8+umnsbi4GFu3br1i+9atW+PChQttmopbQVEUceTIkXj00Udjx44d7R6n45w7dy4GBwfjP//5T9x5551x6tSpeOCBB9o9Vkc5efJkTE9Px9TUVLtHWZV1G5gv/f8/GVAURcf8GQG60zPPPBP/+Mc/4p133mn3KB3pG9/4RszMzMRnn30Wr732Wuzfvz8mJiZE5v/Mzc3FoUOH4q233orNmze3e5xVWbeBueeee2Ljxo1Xna1cvHjxqrMaaNbBgwfjjTfeiMnJyY79sxTttmnTpvja174WERG7du2Ks2fPxm9/+9t48cUX2zxZZ5ieno6LFy/Gzp07l7YtLi7G5ORkHDt2LBqNRmzcuLGNEzZv3d6D2bRpU+zcuTPGxsau2D42NhaPPPJIm6aiWxVFEc8880z8+c9/jr/97W+xffv2do/UNYqiiEaj0e4xOsbu3bvj3LlzMTMzs/TYtWtXPP300zEzM9M1cYlYx2cwERFHjhyJffv2xa5du2JwcDBOnDgRs7OzceDAgXaP1lEuXboUH3300dLXH3/8cczMzERfX1/ce++9bZysc4yMjMQrr7wSr7/+evT29i6dGVcqlbj99tvbPF3nePbZZ2N4eDiq1WrMz8/HyZMnY3x8PM6cOdPu0TpGb2/vVffu7rjjjrj77ru7755ee3+Irf1+97vfFffdd1+xadOm4qGHHvJjpdfw97//vYiIqx779+9v92gd41rHJyKKl19+ud2jdZSf/vSnS/+/feUrXyl2795dvPXWW+0eq+N1648p+3X9AKRYt/dgAMglMACkEBgAUggMACkEBoAUAgNACoEBIIXAAJBCYABIITAApBAYAFIIDAAp/gf8+w7SpMzwtgAAAABJRU5ErkJggg==
+"
+>
 </div>
 
 </div>
@@ -13358,153 +13174,11 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The first of two variants of the function <code>SolicitGuess</code> uses recursion only accept a valid guess input.  If the guess is not valid, the function returns itself, essentially resetting the process.  This will keep happening until the user inputs a valid guess.</p>
+<ol>
+<li>If we are using RGB color coordinates as integers between 0 and 255, we need to divide by 255 before plotting.</li>
+<li></li>
+</ol>
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">SolicitGuess1</span><span class="p">():</span>
-    <span class="n">guess</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Guess a letter:  &#39;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">guess</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="s1">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">guess</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;That is not a letter.&#39;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">SolicitGuess1</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">SolicitGuess1</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Guess a letter:  3
-That is not a letter.
-Guess a letter:  HI
-That is not a letter.
-Guess a letter:  l
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[7]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;L&#39;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The second variant of the function does the same thing, but uses an infinite while loop that will only break when the user inputs a valid guess.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">SolicitGuess2</span><span class="p">():</span>
-    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-        <span class="n">guess</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Guess a letter:  &#39;</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">guess</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="s1">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;</span><span class="p">):</span>
-            <span class="k">return</span> <span class="n">guess</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">SolicitGuess2</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Guess a letter:  3
-Guess a letter:  HI
-Guess a letter:  l
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[9]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;L&#39;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Check-the-guess-and-give-user-feedback.">Check the guess and give user feedback.<a class="anchor-link" href="#Check-the-guess-and-give-user-feedback.">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13513,9 +13187,15 @@ Guess a letter:  l
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">MakeBoard</span><span class="p">(</span><span class="n">hidden_word</span><span class="p">):</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">hidden_word</span><span class="p">)</span>
-    <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;-&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">n</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">separate_nums</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
+    <span class="n">num</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+    <span class="n">let</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">string</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">char</span><span class="o">.</span><span class="n">isdigit</span><span class="p">():</span>
+            <span class="n">num</span> <span class="o">+=</span> <span class="n">char</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">let</span> <span class="o">+=</span> <span class="n">char</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">let</span><span class="p">,</span><span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -13525,11 +13205,10 @@ Guess a letter:  l
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">board</span> <span class="o">=</span> <span class="n">MakeBoard</span><span class="p">(</span><span class="n">hidden_word</span><span class="p">)</span>
-<span class="n">board</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">separate_nums</span><span class="p">(</span><span class="s1">&#39;DG14&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13542,15 +13221,232 @@ Guess a letter:  l
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[14]:</div>
+    <div class="prompt output_prompt">Out[11]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&#39;-&#39;, &#39;-&#39;, &#39;-&#39;, &#39;-&#39;]</pre>
+<pre>(&#39;DG&#39;, 14)</pre>
 </div>
 
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Notes">Notes<a class="anchor-link" href="#Notes">&#182;</a></h2><h3 id="Encryption/decryption">Encryption/decryption<a class="anchor-link" href="#Encryption/decryption">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To encrypt a message using the shift cipher, we need</p>
+<ul>
+<li>the message</li>
+<li>the shift value</li>
+<li>the alphabet</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">shift_cipher</span><span class="p">(</span><span class="n">message</span><span class="p">,</span><span class="n">shift</span><span class="p">,</span><span class="n">alphabet</span><span class="p">):</span>
+    <span class="n">encrypted_message</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">message</span><span class="p">:</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="n">alphabet</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>    <span class="c1">#gives us the index</span>
+        <span class="n">new_index</span> <span class="o">=</span> <span class="p">(</span><span class="n">index</span><span class="o">+</span><span class="n">shift</span><span class="p">)</span><span class="o">%</span><span class="k">len</span>(alphabet)
+        <span class="n">new_char</span> <span class="o">=</span> <span class="n">alphabet</span><span class="p">[</span><span class="n">new_index</span><span class="p">]</span>
+        <span class="n">encrypted_message</span> <span class="o">+=</span> <span class="n">new_char</span>
+    <span class="k">return</span> <span class="n">encrypted_message</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;HELLO MY NAME IS GRIZBORD BLIPBLOP&#39;</span>
+<span class="n">alphabet</span> <span class="o">=</span> <span class="s1">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ &#39;</span>
+<span class="n">encrypted</span> <span class="o">=</span> <span class="n">shift_cipher</span><span class="p">(</span><span class="n">message</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="n">alphabet</span><span class="p">)</span>
+<span class="n">encrypted</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[18]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;URYYAMZKM NZRMVEMTDVLOADQMOYVBOYAB&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Exercise:</strong> Build a decryption function assuming you know all the required information.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">shift_cipher</span><span class="p">(</span><span class="n">encrypted</span><span class="p">,</span><span class="o">-</span><span class="mi">13</span><span class="p">,</span><span class="n">alphabet</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[3]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;MATH IS VERY FUN&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Exercise:</strong> Build a decryption function assuming you only know the encrypted message and alphabet.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Strategy:</p>
+<ol>
+<li>Try all possible shifts.  Infinitely many??<ul>
+<li>There are only 27 distinct shift values.</li>
+</ul>
+</li>
+<li>Check each message to see if it contains English words.<ul>
+<li>We need a list of English words from a dictionary.</li>
+<li>Create a list of words for each message.</li>
+<li>Check if each word is in the dictionary.</li>
+<li>Determine if the message has been decrypted.</li>
+</ul>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">encrypted</span> <span class="o">=</span> <span class="s1">&#39;URYYAMZKM NZRMVEMTDVLOADQMOYVBOYAB&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">shift</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">27</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">((</span><span class="n">shift</span><span class="p">,</span><span class="n">shift_cipher</span><span class="p">(</span><span class="n">encrypted</span><span class="p">,</span><span class="o">-</span><span class="n">shift</span><span class="p">,</span><span class="n">alphabet</span><span class="p">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(0, &#39;URYYAMZKM NZRMVEMTDVLOADQMOYVBOYAB&#39;)
+(1, &#39;TQXX LYJLZMYQLUDLSCUKN CPLNXUANX A&#39;)
+(2, &#39;SPWWZKXIKYLXPKTCKRBTJMZBOKMWT MWZ &#39;)
+(3, &#39;ROVVYJWHJXKWOJSBJQASILYANJLVSZLVYZ&#39;)
+(4, &#39;QNUUXIVGIWJVNIRAIP RHKX MIKURYKUXY&#39;)
+(5, &#39;PMTTWHUFHVIUMHQ HOZQGJWZLHJTQXJTWX&#39;)
+(6, &#39;OLSSVGTEGUHTLGPZGNYPFIVYKGISPWISVW&#39;)
+(7, &#39;NKRRUFSDFTGSKFOYFMXOEHUXJFHROVHRUV&#39;)
+(8, &#39;MJQQTERCESFRJENXELWNDGTWIEGQNUGQTU&#39;)
+(9, &#39;LIPPSDQBDREQIDMWDKVMCFSVHDFPMTFPST&#39;)
+(10, &#39;KHOORCPACQDPHCLVCJULBERUGCEOLSEORS&#39;)
+(11, &#39;JGNNQBO BPCOGBKUBITKADQTFBDNKRDNQR&#39;)
+(12, &#39;IFMMPANZAOBNFAJTAHSJ CPSEACMJQCMPQ&#39;)
+(13, &#39;HELLO MY NAME IS GRIZBORD BLIPBLOP&#39;)
+(14, &#39;GDKKNZLXZM LDZHRZFQHYANQCZAKHOAKNO&#39;)
+(15, &#39;FCJJMYKWYLZKCYGQYEPGX MPBY JGN JMN&#39;)
+(16, &#39;EBIILXJVXKYJBXFPXDOFWZLOAXZIFMZILM&#39;)
+(17, &#39;DAHHKWIUWJXIAWEOWCNEVYKN WYHELYHKL&#39;)
+(18, &#39;C GGJVHTVIWH VDNVBMDUXJMZVXGDKXGJK&#39;)
+(19, &#39;BZFFIUGSUHVGZUCMUALCTWILYUWFCJWFIJ&#39;)
+(20, &#39;AYEEHTFRTGUFYTBLT KBSVHKXTVEBIVEHI&#39;)
+(21, &#39; XDDGSEQSFTEXSAKSZJARUGJWSUDAHUDGH&#39;)
+(22, &#39;ZWCCFRDPRESDWR JRYI QTFIVRTC GTCFG&#39;)
+(23, &#39;YVBBEQCOQDRCVQZIQXHZPSEHUQSBZFSBEF&#39;)
+(24, &#39;XUAADPBNPCQBUPYHPWGYORDGTPRAYERADE&#39;)
+(25, &#39;WT  COAMOBPATOXGOVFXNQCFSOQ XDQ CD&#39;)
+(26, &#39;VSZZBN LNAO SNWFNUEWMPBERNPZWCPZBC&#39;)
+</pre>
+</div>
 </div>
 
 </div>
@@ -13559,14 +13455,14 @@ Guess a letter:  l
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">CheckGuess</span><span class="p">(</span><span class="n">guess</span><span class="p">,</span><span class="n">hidden_word</span><span class="p">,</span><span class="n">board</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">hidden_word</span><span class="p">)):</span>
-        <span class="k">if</span> <span class="n">guess</span> <span class="o">==</span> <span class="n">hidden_word</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
-            <span class="n">board</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">guess</span>
-    <span class="k">return</span> <span class="n">board</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dictionary</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;dictionary.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">np</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">np</span><span class="p">:</span>
+        <span class="n">word</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">dictionary</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
 </pre></div>
 
     </div>
@@ -13579,7 +13475,7 @@ Guess a letter:  l
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">CheckGuess</span><span class="p">(</span><span class="s1">&#39;T&#39;</span><span class="p">,</span><span class="n">hidden_word</span><span class="p">,</span><span class="n">board</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dictionary</span>
 </pre></div>
 
     </div>
@@ -13598,7 +13494,1007 @@ Guess a letter:  l
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&#39;-&#39;, &#39;-&#39;, &#39;-&#39;, &#39;T&#39;]</pre>
+<pre>[&#39;A&#39;,
+ &#39;A&#39;,
+ &#39;AACHEN&#39;,
+ &#39;AALBORG&#39;,
+ &#39;AARDVARK&#39;,
+ &#39;AARHUS&#39;,
+ &#39;AARON&#39;,
+ &#39;AB&#39;,
+ &#39;AB&#39;,
+ &#39;ABACI&#39;,
+ &#39;ABACK&#39;,
+ &#39;ABACUS&#39;,
+ &#39;ABADAN&#39;,
+ &#39;ABAFT&#39;,
+ &#39;ABALONE&#39;,
+ &#39;ABANDON&#39;,
+ &#39;ABANDONED&#39;,
+ &#39;ABANDONEDLY&#39;,
+ &#39;ABANDONMENT&#39;,
+ &#39;ABASE&#39;,
+ &#39;ABASEMENT&#39;,
+ &#39;ABASH&#39;,
+ &#39;ABASHED&#39;,
+ &#39;ABASHEDLY&#39;,
+ &#39;ABASHMENT&#39;,
+ &#39;ABATE&#39;,
+ &#39;ABATEMENT&#39;,
+ &#39;ABATTOIR&#39;,
+ &#39;ABBACY&#39;,
+ &#39;ABBE&#39;,
+ &#39;ABBESS&#39;,
+ &#39;ABBEY&#39;,
+ &#39;ABBOT&#39;,
+ &#39;ABBOTT&#39;,
+ &#39;ABBREVIATE&#39;,
+ &#39;ABBREVIATED&#39;,
+ &#39;ABBREVIATION&#39;,
+ &#39;ABBREVIATOR&#39;,
+ &#39;ABBY&#39;,
+ &#39;ABC&#39;,
+ &#39;ABCS&#39;,
+ &#39;ABD&#39;,
+ &#39;ABDIAS&#39;,
+ &#39;ABDICATE&#39;,
+ &#39;ABDICATION&#39;,
+ &#39;ABDICATOR&#39;,
+ &#39;ABDOMEN&#39;,
+ &#39;ABDOMINAL&#39;,
+ &#39;ABDOMINALLY&#39;,
+ &#39;ABDUCT&#39;,
+ &#39;ABDUCTION&#39;,
+ &#39;ABDUCTOR&#39;,
+ &#39;ABEAM&#39;,
+ &#39;ABECEDARIAN&#39;,
+ &#39;ABED&#39;,
+ &#39;ABEL&#39;,
+ &#39;ABELARD&#39;,
+ &#39;ABENAKI&#39;,
+ &#39;ABERDEEN&#39;,
+ &#39;ABERDONIAN&#39;,
+ &#39;ABERNATHY&#39;,
+ &#39;ABERRANCE&#39;,
+ &#39;ABERRANCY&#39;,
+ &#39;ABERRANT&#39;,
+ &#39;ABERRANTLY&#39;,
+ &#39;ABERRATION&#39;,
+ &#39;ABERRATIONAL&#39;,
+ &#39;ABET&#39;,
+ &#39;ABETMENT&#39;,
+ &#39;ABETTER&#39;,
+ &#39;ABETTOR&#39;,
+ &#39;ABEYANCE&#39;,
+ &#39;ABEYANT&#39;,
+ &#39;ABHOR&#39;,
+ &#39;ABHORRENCE&#39;,
+ &#39;ABHORRENT&#39;,
+ &#39;ABHORRENTLY&#39;,
+ &#39;ABHORRER&#39;,
+ &#39;ABIB&#39;,
+ &#39;ABIDANCE&#39;,
+ &#39;ABIDE&#39;,
+ &#39;ABIDER&#39;,
+ &#39;ABIDING&#39;,
+ &#39;ABIDINGLY&#39;,
+ &#39;ABIDJAN&#39;,
+ &#39;ABIGAIL&#39;,
+ &#39;ABILENE&#39;,
+ &#39;ABILITY&#39;,
+ &#39;ABIOTIC&#39;,
+ &#39;ABJECT&#39;,
+ &#39;ABJECTION&#39;,
+ &#39;ABJECTLY&#39;,
+ &#39;ABJECTNESS&#39;,
+ &#39;ABJURATION&#39;,
+ &#39;ABJURATORY&#39;,
+ &#39;ABJURE&#39;,
+ &#39;ABJURER&#39;,
+ &#39;ABKHAZIA&#39;,
+ &#39;ABKHAZIAN&#39;,
+ &#39;ABLATE&#39;,
+ &#39;ABLATION&#39;,
+ &#39;ABLATIVE&#39;,
+ &#39;ABLAUT&#39;,
+ &#39;ABLAZE&#39;,
+ &#39;ABLE&#39;,
+ &#39;ABLEISM&#39;,
+ &#39;ABLEIST&#39;,
+ &#39;ABLOOM&#39;,
+ &#39;ABLUTION&#39;,
+ &#39;ABLUTIONS&#39;,
+ &#39;ABLY&#39;,
+ &#39;ABM&#39;,
+ &#39;ABNAKI&#39;,
+ &#39;ABNEGATE&#39;,
+ &#39;ABNEGATION&#39;,
+ &#39;ABNEGATOR&#39;,
+ &#39;ABNER&#39;,
+ &#39;ABNORMAL&#39;,
+ &#39;ABNORMALITY&#39;,
+ &#39;ABNORMALLY&#39;,
+ &#39;ABOARD&#39;,
+ &#39;ABODE&#39;,
+ &#39;ABOLISH&#39;,
+ &#39;ABOLISHER&#39;,
+ &#39;ABOLISHMENT&#39;,
+ &#39;ABOLITION&#39;,
+ &#39;ABOLITIONISM&#39;,
+ &#39;ABOLITIONIST&#39;,
+ &#39;ABOLITIONIST&#39;,
+ &#39;ABOMINABLE&#39;,
+ &#39;ABOMINABLY&#39;,
+ &#39;ABOMINATE&#39;,
+ &#39;ABOMINATION&#39;,
+ &#39;ABOMINATOR&#39;,
+ &#39;ABORIGINAL&#39;,
+ &#39;ABORIGINAL&#39;,
+ &#39;ABORIGINALLY&#39;,
+ &#39;ABORIGINE&#39;,
+ &#39;ABORIGINE&#39;,
+ &#39;ABORNING&#39;,
+ &#39;ABORT&#39;,
+ &#39;ABORTIFACIENT&#39;,
+ &#39;ABORTION&#39;,
+ &#39;ABORTIONIST&#39;,
+ &#39;ABORTIVE&#39;,
+ &#39;ABORTIVELY&#39;,
+ &#39;ABOULIA&#39;,
+ &#39;ABOUND&#39;,
+ &#39;ABOUT&#39;,
+ &#39;ABOVE&#39;,
+ &#39;ABOVEBOARD&#39;,
+ &#39;ABRACADABRA&#39;,
+ &#39;ABRADE&#39;,
+ &#39;ABRADER&#39;,
+ &#39;ABRAHAM&#39;,
+ &#39;ABRASION&#39;,
+ &#39;ABRASIVE&#39;,
+ &#39;ABRASIVELY&#39;,
+ &#39;ABRASIVENESS&#39;,
+ &#39;ABREAST&#39;,
+ &#39;ABRIDGE&#39;,
+ &#39;ABRIDGEMENT&#39;,
+ &#39;ABRIDGER&#39;,
+ &#39;ABRIDGMENT&#39;,
+ &#39;ABROAD&#39;,
+ &#39;ABROGATE&#39;,
+ &#39;ABROGATION&#39;,
+ &#39;ABROGATOR&#39;,
+ &#39;ABRUPT&#39;,
+ &#39;ABRUPTION&#39;,
+ &#39;ABRUPTLY&#39;,
+ &#39;ABRUPTNESS&#39;,
+ &#39;ABRUZZI&#39;,
+ &#39;ABS&#39;,
+ &#39;ABSALOM&#39;,
+ &#39;ABSCESS&#39;,
+ &#39;ABSCESSED&#39;,
+ &#39;ABSCIND&#39;,
+ &#39;ABSCISE&#39;,
+ &#39;ABSCISSA&#39;,
+ &#39;ABSCISSAE&#39;,
+ &#39;ABSCISSION&#39;,
+ &#39;ABSCOND&#39;,
+ &#39;ABSCONDER&#39;,
+ &#39;ABSEIL&#39;,
+ &#39;ABSENCE&#39;,
+ &#39;ABSENT&#39;,
+ &#39;ABSENTEE&#39;,
+ &#39;ABSENTEEISM&#39;,
+ &#39;ABSENTLY&#39;,
+ &#39;ABSENTMINDED&#39;,
+ &#39;ABSENTMINDEDLY&#39;,
+ &#39;ABSENTMINDEDNESS&#39;,
+ &#39;ABSINTH&#39;,
+ &#39;ABSINTHE&#39;,
+ &#39;ABSOLUTE&#39;,
+ &#39;ABSOLUTELY&#39;,
+ &#39;ABSOLUTENESS&#39;,
+ &#39;ABSOLUTION&#39;,
+ &#39;ABSOLUTISM&#39;,
+ &#39;ABSOLUTIST&#39;,
+ &#39;ABSOLUTISTIC&#39;,
+ &#39;ABSOLUTIZATION&#39;,
+ &#39;ABSOLUTIZE&#39;,
+ &#39;ABSOLVABLE&#39;,
+ &#39;ABSOLVE&#39;,
+ &#39;ABSOLVER&#39;,
+ &#39;ABSORB&#39;,
+ &#39;ABSORBABLE&#39;,
+ &#39;ABSORBANT&#39;,
+ &#39;ABSORBED&#39;,
+ &#39;ABSORBENCY&#39;,
+ &#39;ABSORBENT&#39;,
+ &#39;ABSORBER&#39;,
+ &#39;ABSORBING&#39;,
+ &#39;ABSORBINGLY&#39;,
+ &#39;ABSORPTION&#39;,
+ &#39;ABSORPTIVE&#39;,
+ &#39;ABSORPTIVITY&#39;,
+ &#39;ABSQUATULATE&#39;,
+ &#39;ABSQUATULATION&#39;,
+ &#39;ABSTAIN&#39;,
+ &#39;ABSTAINER&#39;,
+ &#39;ABSTEMIOUS&#39;,
+ &#39;ABSTEMIOUSLY&#39;,
+ &#39;ABSTEMIOUSNESS&#39;,
+ &#39;ABSTENTION&#39;,
+ &#39;ABSTINENCE&#39;,
+ &#39;ABSTINENT&#39;,
+ &#39;ABSTINENTLY&#39;,
+ &#39;ABSTRACT&#39;,
+ &#39;ABSTRACTED&#39;,
+ &#39;ABSTRACTEDLY&#39;,
+ &#39;ABSTRACTEDNESS&#39;,
+ &#39;ABSTRACTER&#39;,
+ &#39;ABSTRACTION&#39;,
+ &#39;ABSTRACTLY&#39;,
+ &#39;ABSTRACTNESS&#39;,
+ &#39;ABSTRUSE&#39;,
+ &#39;ABSTRUSELY&#39;,
+ &#39;ABSTRUSENESS&#39;,
+ &#39;ABSURD&#39;,
+ &#39;ABSURDISM&#39;,
+ &#39;ABSURDIST&#39;,
+ &#39;ABSURDITY&#39;,
+ &#39;ABSURDLY&#39;,
+ &#39;ABSURDNESS&#39;,
+ &#39;ABUJA&#39;,
+ &#39;ABULIA&#39;,
+ &#39;ABULIC&#39;,
+ &#39;ABUNDANCE&#39;,
+ &#39;ABUNDANT&#39;,
+ &#39;ABUNDANTLY&#39;,
+ &#39;ABUSE&#39;,
+ &#39;ABUSER&#39;,
+ &#39;ABUSIVE&#39;,
+ &#39;ABUSIVELY&#39;,
+ &#39;ABUSIVENESS&#39;,
+ &#39;ABUT&#39;,
+ &#39;ABUTMENT&#39;,
+ &#39;ABUTTER&#39;,
+ &#39;ABUZZ&#39;,
+ &#39;ABYSM&#39;,
+ &#39;ABYSMAL&#39;,
+ &#39;ABYSMALLY&#39;,
+ &#39;ABYSS&#39;,
+ &#39;ABYSSAL&#39;,
+ &#39;ABYSSINIA&#39;,
+ &#39;ABYSSINIAN&#39;,
+ &#39;ACACIA&#39;,
+ &#39;ACADEME&#39;,
+ &#39;ACADEMIA&#39;,
+ &#39;ACADEMIC&#39;,
+ &#39;ACADEMICALLY&#39;,
+ &#39;ACADEMICIAN&#39;,
+ &#39;ACADEMICISM&#39;,
+ &#39;ACADEMICS&#39;,
+ &#39;ACADEMISM&#39;,
+ &#39;ACADEMY&#39;,
+ &#39;ACADIA&#39;,
+ &#39;ACADIAN&#39;,
+ &#39;ACANTHI&#39;,
+ &#39;ACANTHUS&#39;,
+ &#39;ACAPULCO&#39;,
+ &#39;ACCEDE&#39;,
+ &#39;ACCEDENCE&#39;,
+ &#39;ACCELERANDI&#39;,
+ &#39;ACCELERANDO&#39;,
+ &#39;ACCELERATE&#39;,
+ &#39;ACCELERATION&#39;,
+ &#39;ACCELERATIVE&#39;,
+ &#39;ACCELERATOR&#39;,
+ &#39;ACCELEROMETER&#39;,
+ &#39;ACCENT&#39;,
+ &#39;ACCENTED&#39;,
+ &#39;ACCENTUAL&#39;,
+ &#39;ACCENTUATE&#39;,
+ &#39;ACCENTUATION&#39;,
+ &#39;ACCEPT&#39;,
+ &#39;ACCEPTABILITY&#39;,
+ &#39;ACCEPTABLE&#39;,
+ &#39;ACCEPTABLENESS&#39;,
+ &#39;ACCEPTABLY&#39;,
+ &#39;ACCEPTANCE&#39;,
+ &#39;ACCEPTATION&#39;,
+ &#39;ACCEPTED&#39;,
+ &#39;ACCEPTER&#39;,
+ &#39;ACCEPTOR&#39;,
+ &#39;ACCESS&#39;,
+ &#39;ACCESSARY&#39;,
+ &#39;ACCESSIBILITY&#39;,
+ &#39;ACCESSIBLE&#39;,
+ &#39;ACCESSIBLENESS&#39;,
+ &#39;ACCESSIBLY&#39;,
+ &#39;ACCESSION&#39;,
+ &#39;ACCESSIONAL&#39;,
+ &#39;ACCESSORY&#39;,
+ &#39;ACCIDENT&#39;,
+ &#39;ACCIDENTAL&#39;,
+ &#39;ACCIDENTALLY&#39;,
+ &#39;ACCIDENTLY&#39;,
+ &#39;ACCIDIE&#39;,
+ &#39;ACCIPITER&#39;,
+ &#39;ACCLAIM&#39;,
+ &#39;ACCLAIMED&#39;,
+ &#39;ACCLAIMER&#39;,
+ &#39;ACCLAMATION&#39;,
+ &#39;ACCLAMATORY&#39;,
+ &#39;ACCLIMATE&#39;,
+ &#39;ACCLIMATION&#39;,
+ &#39;ACCLIMATIZATION&#39;,
+ &#39;ACCLIMATIZE&#39;,
+ &#39;ACCLIVITOUS&#39;,
+ &#39;ACCLIVITY&#39;,
+ &#39;ACCOLADE&#39;,
+ &#39;ACCOMMODATE&#39;,
+ &#39;ACCOMMODATING&#39;,
+ &#39;ACCOMMODATINGLY&#39;,
+ &#39;ACCOMMODATION&#39;,
+ &#39;ACCOMMODATIONISM&#39;,
+ &#39;ACCOMMODATIONIST&#39;,
+ &#39;ACCOMMODATIONS&#39;,
+ &#39;ACCOMPANIMENT&#39;,
+ &#39;ACCOMPANIST&#39;,
+ &#39;ACCOMPANY&#39;,
+ &#39;ACCOMPLICE&#39;,
+ &#39;ACCOMPLISH&#39;,
+ &#39;ACCOMPLISHED&#39;,
+ &#39;ACCOMPLISHER&#39;,
+ &#39;ACCOMPLISHMENT&#39;,
+ &#39;ACCORD&#39;,
+ &#39;ACCORDANCE&#39;,
+ &#39;ACCORDANT&#39;,
+ &#39;ACCORDING&#39;,
+ &#39;ACCORDINGLY&#39;,
+ &#39;ACCORDION&#39;,
+ &#39;ACCORDIONIST&#39;,
+ &#39;ACCOST&#39;,
+ &#39;ACCOUCHEMENT&#39;,
+ &#39;ACCOUNT&#39;,
+ &#39;ACCOUNTABILITY&#39;,
+ &#39;ACCOUNTABLE&#39;,
+ &#39;ACCOUNTABLENESS&#39;,
+ &#39;ACCOUNTABLY&#39;,
+ &#39;ACCOUNTANCY&#39;,
+ &#39;ACCOUNTANT&#39;,
+ &#39;ACCOUNTING&#39;,
+ &#39;ACCOUNTS&#39;,
+ &#39;ACCOUTER&#39;,
+ &#39;ACCOUTERMENT&#39;,
+ &#39;ACCOUTERMENTS&#39;,
+ &#39;ACCOUTRE&#39;,
+ &#39;ACCOUTREMENT&#39;,
+ &#39;ACCOUTREMENTS&#39;,
+ &#39;ACCRA&#39;,
+ &#39;ACCREDIT&#39;,
+ &#39;ACCREDITATION&#39;,
+ &#39;ACCREDITED&#39;,
+ &#39;ACCRETE&#39;,
+ &#39;ACCRETION&#39;,
+ &#39;ACCRETIONARY&#39;,
+ &#39;ACCRETIVE&#39;,
+ &#39;ACCRUAL&#39;,
+ &#39;ACCRUE&#39;,
+ &#39;ACCULTURATE&#39;,
+ &#39;ACCULTURATION&#39;,
+ &#39;ACCULTURATIVE&#39;,
+ &#39;ACCUMBENT&#39;,
+ &#39;ACCUMULATE&#39;,
+ &#39;ACCUMULATION&#39;,
+ &#39;ACCUMULATIVE&#39;,
+ &#39;ACCUMULATOR&#39;,
+ &#39;ACCURACY&#39;,
+ &#39;ACCURATE&#39;,
+ &#39;ACCURATELY&#39;,
+ &#39;ACCURATENESS&#39;,
+ &#39;ACCURSED&#39;,
+ &#39;ACCURSEDLY&#39;,
+ &#39;ACCURSEDNESS&#39;,
+ &#39;ACCURST&#39;,
+ &#39;ACCUSATION&#39;,
+ &#39;ACCUSATIVE&#39;,
+ &#39;ACCUSATORY&#39;,
+ &#39;ACCUSE&#39;,
+ &#39;ACCUSED&#39;,
+ &#39;ACCUSER&#39;,
+ &#39;ACCUSINGLY&#39;,
+ &#39;ACCUSTOM&#39;,
+ &#39;ACCUSTOMED&#39;,
+ &#39;ACE&#39;,
+ &#39;ACEDIA&#39;,
+ &#39;ACERB&#39;,
+ &#39;ACERBATE&#39;,
+ &#39;ACERBIC&#39;,
+ &#39;ACERBICALLY&#39;,
+ &#39;ACERBITY&#39;,
+ &#39;ACETAMINOPHEN&#39;,
+ &#39;ACETANILIDE&#39;,
+ &#39;ACETATE&#39;,
+ &#39;ACETIC&#39;,
+ &#39;ACETONE&#39;,
+ &#39;ACETONIC&#39;,
+ &#39;ACETYLCHOLINE&#39;,
+ &#39;ACETYLENE&#39;,
+ &#39;ACHAEAN&#39;,
+ &#39;ACHATES&#39;,
+ &#39;ACHE&#39;,
+ &#39;ACHEBE&#39;,
+ &#39;ACHENE&#39;,
+ &#39;ACHERNAR&#39;,
+ &#39;ACHERON&#39;,
+ &#39;ACHESON&#39;,
+ &#39;ACHIEVABLE&#39;,
+ &#39;ACHIEVE&#39;,
+ &#39;ACHIEVEMENT&#39;,
+ &#39;ACHIEVER&#39;,
+ &#39;ACHILLES&#39;,
+ &#39;ACHINESS&#39;,
+ &#39;ACHROMATIC&#39;,
+ &#39;ACHROMATICALLY&#39;,
+ &#39;ACHROMATISM&#39;,
+ &#39;ACHY&#39;,
+ &#39;ACID&#39;,
+ &#39;ACIDIC&#39;,
+ &#39;ACIDIFICATION&#39;,
+ &#39;ACIDIFIER&#39;,
+ &#39;ACIDIFY&#39;,
+ &#39;ACIDITY&#39;,
+ &#39;ACIDLY&#39;,
+ &#39;ACIDNESS&#39;,
+ &#39;ACIDOSIS&#39;,
+ &#39;ACIDOTIC&#39;,
+ &#39;ACIDULATE&#39;,
+ &#39;ACIDULOUS&#39;,
+ &#39;ACIDURIA&#39;,
+ &#39;ACKNOWLEDGE&#39;,
+ &#39;ACKNOWLEDGEABLE&#39;,
+ &#39;ACKNOWLEDGEMENT&#39;,
+ &#39;ACKNOWLEDGMENT&#39;,
+ &#39;ACME&#39;,
+ &#39;ACNE&#39;,
+ &#39;ACNED&#39;,
+ &#39;ACOLYTE&#39;,
+ &#39;ACONCAGUA&#39;,
+ &#39;ACONITE&#39;,
+ &#39;ACORN&#39;,
+ &#39;ACOUSTIC&#39;,
+ &#39;ACOUSTICAL&#39;,
+ &#39;ACOUSTICALLY&#39;,
+ &#39;ACOUSTICIAN&#39;,
+ &#39;ACOUSTICS&#39;,
+ &#39;ACQUAINT&#39;,
+ &#39;ACQUAINTANCE&#39;,
+ &#39;ACQUAINTANCESHIP&#39;,
+ &#39;ACQUAINTED&#39;,
+ &#39;ACQUIESCE&#39;,
+ &#39;ACQUIESCENCE&#39;,
+ &#39;ACQUIESCENT&#39;,
+ &#39;ACQUIESCENTLY&#39;,
+ &#39;ACQUIRABLE&#39;,
+ &#39;ACQUIRE&#39;,
+ &#39;ACQUIRED&#39;,
+ &#39;ACQUIREMENT&#39;,
+ &#39;ACQUISITION&#39;,
+ &#39;ACQUISITIVE&#39;,
+ &#39;ACQUISITIVELY&#39;,
+ &#39;ACQUISITIVENESS&#39;,
+ &#39;ACQUIT&#39;,
+ &#39;ACQUITTAL&#39;,
+ &#39;ACQUITTANCE&#39;,
+ &#39;ACRE&#39;,
+ &#39;ACREAGE&#39;,
+ &#39;ACRID&#39;,
+ &#39;ACRIDITY&#39;,
+ &#39;ACRIDLY&#39;,
+ &#39;ACRIDNESS&#39;,
+ &#39;ACRIMONIOUS&#39;,
+ &#39;ACRIMONIOUSLY&#39;,
+ &#39;ACRIMONIOUSNESS&#39;,
+ &#39;ACRIMONY&#39;,
+ &#39;ACROBAT&#39;,
+ &#39;ACROBATIC&#39;,
+ &#39;ACROBATICALLY&#39;,
+ &#39;ACROBATICS&#39;,
+ &#39;ACROMEGALIC&#39;,
+ &#39;ACROMEGALY&#39;,
+ &#39;ACRONYM&#39;,
+ &#39;ACRONYMIC&#39;,
+ &#39;ACRONYMOUS&#39;,
+ &#39;ACROPHOBIA&#39;,
+ &#39;ACROPHOBIC&#39;,
+ &#39;ACROPOLIS&#39;,
+ &#39;ACROPOLIS&#39;,
+ &#39;ACROSS&#39;,
+ &#39;ACROSTIC&#39;,
+ &#39;ACRYLIC&#39;,
+ &#39;ACT&#39;,
+ &#39;ACTH&#39;,
+ &#39;ACTIN&#39;,
+ &#39;ACTING&#39;,
+ &#39;ACTINIC&#39;,
+ &#39;ACTINIDE&#39;,
+ &#39;ACTINISM&#39;,
+ &#39;ACTINIUM&#39;,
+ &#39;ACTINOMYCIN&#39;,
+ &#39;ACTION&#39;,
+ &#39;ACTIONABLE&#39;,
+ &#39;ACTIONABLY&#39;,
+ &#39;ACTIONLESS&#39;,
+ &#39;ACTIONS&#39;,
+ &#39;ACTIUM&#39;,
+ &#39;ACTIVATE&#39;,
+ &#39;ACTIVATION&#39;,
+ &#39;ACTIVATOR&#39;,
+ &#39;ACTIVE&#39;,
+ &#39;ACTIVELY&#39;,
+ &#39;ACTIVENESS&#39;,
+ &#39;ACTIVISM&#39;,
+ &#39;ACTIVIST&#39;,
+ &#39;ACTIVISTIC&#39;,
+ &#39;ACTIVITY&#39;,
+ &#39;ACTOR&#39;,
+ &#39;ACTRESS&#39;,
+ &#39;ACTS&#39;,
+ &#39;ACTUAL&#39;,
+ &#39;ACTUALITIES&#39;,
+ &#39;ACTUALITY&#39;,
+ &#39;ACTUALIZATION&#39;,
+ &#39;ACTUALIZE&#39;,
+ &#39;ACTUALLY&#39;,
+ &#39;ACTUARIAL&#39;,
+ &#39;ACTUARIALLY&#39;,
+ &#39;ACTUARILY&#39;,
+ &#39;ACTUARY&#39;,
+ &#39;ACTUATE&#39;,
+ &#39;ACTUATION&#39;,
+ &#39;ACTUATOR&#39;,
+ &#39;ACUITY&#39;,
+ &#39;ACUMEN&#39;,
+ &#39;ACUPRESSURE&#39;,
+ &#39;ACUPUNCTURE&#39;,
+ &#39;ACUPUNCTURIST&#39;,
+ &#39;ACUTE&#39;,
+ &#39;ACUTELY&#39;,
+ &#39;ACUTENESS&#39;,
+ &#39;ACYCLIC&#39;,
+ &#39;ACYCLOVIR&#39;,
+ &#39;AD&#39;,
+ &#39;ADA&#39;,
+ &#39;ADAGE&#39;,
+ &#39;ADAGIO&#39;,
+ &#39;ADAM&#39;,
+ &#39;ADAMANCE&#39;,
+ &#39;ADAMANCY&#39;,
+ &#39;ADAMANT&#39;,
+ &#39;ADAMANTINE&#39;,
+ &#39;ADAMANTLY&#39;,
+ &#39;ADAMS&#39;,
+ &#39;ADANA&#39;,
+ &#39;ADAPT&#39;,
+ &#39;ADAPTABILITY&#39;,
+ &#39;ADAPTABLE&#39;,
+ &#39;ADAPTATION&#39;,
+ &#39;ADAPTATIONAL&#39;,
+ &#39;ADAPTER&#39;,
+ &#39;ADAPTIVE&#39;,
+ &#39;ADAPTIVENESS&#39;,
+ &#39;ADAPTIVITY&#39;,
+ &#39;ADAPTOR&#39;,
+ &#39;ADAR&#39;,
+ &#39;ADD&#39;,
+ &#39;ADDABLE&#39;,
+ &#39;ADDAMS&#39;,
+ &#39;ADDED&#39;,
+ &#39;ADDEND&#39;,
+ &#39;ADDENDA&#39;,
+ &#39;ADDENDUM&#39;,
+ &#39;ADDER&#39;,
+ &#39;ADDIBLE&#39;,
+ &#39;ADDICT&#39;,
+ &#39;ADDICTED&#39;,
+ &#39;ADDICTION&#39;,
+ &#39;ADDICTIVE&#39;,
+ &#39;ADDISON&#39;,
+ &#39;ADDISONIAN&#39;,
+ &#39;ADDITION&#39;,
+ &#39;ADDITIONAL&#39;,
+ &#39;ADDITIONALLY&#39;,
+ &#39;ADDITIVE&#39;,
+ &#39;ADDITIVITY&#39;,
+ &#39;ADDLE&#39;,
+ &#39;ADDRESS&#39;,
+ &#39;ADDRESSABLE&#39;,
+ &#39;ADDRESSEE&#39;,
+ &#39;ADDUCE&#39;,
+ &#39;ADDUCEABLE&#39;,
+ &#39;ADDUCER&#39;,
+ &#39;ADDUCIBLE&#39;,
+ &#39;ADDUCTOR&#39;,
+ &#39;ADELA&#39;,
+ &#39;ADELAIDE&#39;,
+ &#39;ADELBERT&#39;,
+ &#39;ADELE&#39;,
+ &#39;ADELINE&#39;,
+ &#39;ADEN&#39;,
+ &#39;ADENAUER&#39;,
+ &#39;ADENINE&#39;,
+ &#39;ADENOID&#39;,
+ &#39;ADENOIDAL&#39;,
+ &#39;ADENOIDS&#39;,
+ &#39;ADEPT&#39;,
+ &#39;ADEPTLY&#39;,
+ &#39;ADEPTNESS&#39;,
+ &#39;ADEQUACY&#39;,
+ &#39;ADEQUATE&#39;,
+ &#39;ADEQUATELY&#39;,
+ &#39;ADEQUATENESS&#39;,
+ &#39;ADHERE&#39;,
+ &#39;ADHERENCE&#39;,
+ &#39;ADHERENT&#39;,
+ &#39;ADHESION&#39;,
+ &#39;ADHESIVE&#39;,
+ &#39;ADHESIVELY&#39;,
+ &#39;ADHESIVENESS&#39;,
+ &#39;ADIABATIC&#39;,
+ &#39;ADIABATICALLY&#39;,
+ &#39;ADIEU&#39;,
+ &#39;ADIEUX&#39;,
+ &#39;ADIOS&#39;,
+ &#39;ADIPOSE&#39;,
+ &#39;ADIPOSITY&#39;,
+ &#39;ADIRONDACK&#39;,
+ &#39;ADIRONDACKS&#39;,
+ &#39;ADJACENCY&#39;,
+ &#39;ADJACENT&#39;,
+ &#39;ADJACENTLY&#39;,
+ &#39;ADJECTIVAL&#39;,
+ &#39;ADJECTIVALLY&#39;,
+ &#39;ADJECTIVE&#39;,
+ &#39;ADJOIN&#39;,
+ &#39;ADJOINING&#39;,
+ &#39;ADJOURN&#39;,
+ &#39;ADJOURNMENT&#39;,
+ &#39;ADJUDGE&#39;,
+ &#39;ADJUDGEMENT&#39;,
+ &#39;ADJUDGMENT&#39;,
+ &#39;ADJUDICATE&#39;,
+ &#39;ADJUDICATION&#39;,
+ &#39;ADJUDICATIVE&#39;,
+ &#39;ADJUDICATOR&#39;,
+ &#39;ADJUDICATORY&#39;,
+ &#39;ADJUNCT&#39;,
+ &#39;ADJUNCTIVE&#39;,
+ &#39;ADJURATION&#39;,
+ &#39;ADJURATORY&#39;,
+ &#39;ADJURE&#39;,
+ &#39;ADJUST&#39;,
+ &#39;ADJUSTABLE&#39;,
+ &#39;ADJUSTER&#39;,
+ &#39;ADJUSTMENT&#39;,
+ &#39;ADJUSTOR&#39;,
+ &#39;ADJUTANCY&#39;,
+ &#39;ADJUTANT&#39;,
+ &#39;ADJUVANT&#39;,
+ &#39;ADLER&#39;,
+ &#39;ADLERIAN&#39;,
+ &#39;ADMAN&#39;,
+ &#39;ADMINISTER&#39;,
+ &#39;ADMINISTRABLE&#39;,
+ &#39;ADMINISTRANT&#39;,
+ &#39;ADMINISTRATE&#39;,
+ &#39;ADMINISTRATION&#39;,
+ &#39;ADMINISTRATION&#39;,
+ &#39;ADMINISTRATIVE&#39;,
+ &#39;ADMINISTRATIVELY&#39;,
+ &#39;ADMINISTRATOR&#39;,
+ &#39;ADMIRABILITY&#39;,
+ &#39;ADMIRABLE&#39;,
+ &#39;ADMIRABLENESS&#39;,
+ &#39;ADMIRABLY&#39;,
+ &#39;ADMIRAL&#39;,
+ &#39;ADMIRAL&#39;,
+ &#39;ADMIRALTY&#39;,
+ &#39;ADMIRALTY&#39;,
+ &#39;ADMIRATION&#39;,
+ &#39;ADMIRE&#39;,
+ &#39;ADMIRER&#39;,
+ &#39;ADMIRING&#39;,
+ &#39;ADMIRINGLY&#39;,
+ &#39;ADMISSIBILITY&#39;,
+ &#39;ADMISSIBLE&#39;,
+ &#39;ADMISSIBLENESS&#39;,
+ &#39;ADMISSION&#39;,
+ &#39;ADMISSIONS&#39;,
+ &#39;ADMISSIVE&#39;,
+ &#39;ADMIT&#39;,
+ &#39;ADMITTANCE&#39;,
+ &#39;ADMITTEDLY&#39;,
+ &#39;ADMIX&#39;,
+ &#39;ADMIXTURE&#39;,
+ &#39;ADMONISH&#39;,
+ &#39;ADMONISHER&#39;,
+ &#39;ADMONISHINGLY&#39;,
+ &#39;ADMONISHMENT&#39;,
+ &#39;ADMONITION&#39;,
+ &#39;ADMONITORY&#39;,
+ &#39;ADO&#39;,
+ &#39;ADOBE&#39;,
+ &#39;ADOLESCENCE&#39;,
+ &#39;ADOLESCENT&#39;,
+ &#39;ADOLPH&#39;,
+ &#39;ADONAI&#39;,
+ &#39;ADONIS&#39;,
+ &#39;ADONIS&#39;,
+ &#39;ADOPT&#39;,
+ &#39;ADOPTABLE&#39;,
+ &#39;ADOPTED&#39;,
+ &#39;ADOPTEE&#39;,
+ &#39;ADOPTER&#39;,
+ &#39;ADOPTION&#39;,
+ &#39;ADOPTIVE&#39;,
+ &#39;ADOPTIVELY&#39;,
+ &#39;ADORABLE&#39;,
+ &#39;ADORABLENESS&#39;,
+ &#39;ADORABLY&#39;,
+ &#39;ADORATION&#39;,
+ &#39;ADORE&#39;,
+ &#39;ADORER&#39;,
+ &#39;ADORING&#39;,
+ &#39;ADORINGLY&#39;,
+ &#39;ADORN&#39;,
+ &#39;ADORNER&#39;,
+ &#39;ADORNMENT&#39;,
+ &#39;ADRENAL&#39;,
+ &#39;ADRENALIN&#39;,
+ &#39;ADRENALIN&#39;,
+ &#39;ADRENALINE&#39;,
+ &#39;ADRIAN&#39;,
+ &#39;ADRIATIC&#39;,
+ &#39;ADRIENNE&#39;,
+ &#39;ADRIFT&#39;,
+ &#39;ADROIT&#39;,
+ &#39;ADROITLY&#39;,
+ &#39;ADROITNESS&#39;,
+ &#39;ADSORB&#39;,
+ &#39;ADSORBABLE&#39;,
+ &#39;ADSORBENT&#39;,
+ &#39;ADSORPTION&#39;,
+ &#39;ADSORPTIVE&#39;,
+ &#39;ADULATE&#39;,
+ &#39;ADULATION&#39;,
+ &#39;ADULATOR&#39;,
+ &#39;ADULATORY&#39;,
+ &#39;ADULT&#39;,
+ &#39;ADULTERANT&#39;,
+ &#39;ADULTERATE&#39;,
+ &#39;ADULTERATION&#39;,
+ &#39;ADULTERATOR&#39;,
+ &#39;ADULTERER&#39;,
+ &#39;ADULTERESS&#39;,
+ &#39;ADULTEROUS&#39;,
+ &#39;ADULTERY&#39;,
+ &#39;ADULTHOOD&#39;,
+ &#39;ADUMBRATE&#39;,
+ &#39;ADUMBRATION&#39;,
+ &#39;ADUMBRATIVE&#39;,
+ &#39;ADVANCE&#39;,
+ &#39;ADVANCED&#39;,
+ &#39;ADVANCEMENT&#39;,
+ &#39;ADVANCER&#39;,
+ &#39;ADVANCES&#39;,
+ &#39;ADVANTAGE&#39;,
+ &#39;ADVANTAGEOUS&#39;,
+ &#39;ADVANTAGEOUSLY&#39;,
+ &#39;ADVECTION&#39;,
+ &#39;ADVENT&#39;,
+ &#39;ADVENT&#39;,
+ &#39;ADVENTIST&#39;,
+ &#39;ADVENTITIOUS&#39;,
+ &#39;ADVENTITIOUSLY&#39;,
+ &#39;ADVENTURE&#39;,
+ &#39;ADVENTURER&#39;,
+ &#39;ADVENTURESOME&#39;,
+ &#39;ADVENTURESS&#39;,
+ &#39;ADVENTURISM&#39;,
+ &#39;ADVENTURIST&#39;,
+ &#39;ADVENTUROUS&#39;,
+ &#39;ADVENTUROUSLY&#39;,
+ &#39;ADVENTUROUSNESS&#39;,
+ &#39;ADVERB&#39;,
+ &#39;ADVERBIAL&#39;,
+ &#39;ADVERBIALLY&#39;,
+ &#39;ADVERSARIAL&#39;,
+ &#39;ADVERSARIALLY&#39;,
+ &#39;ADVERSARY&#39;,
+ &#39;ADVERSE&#39;,
+ &#39;ADVERSELY&#39;,
+ &#39;ADVERSITY&#39;,
+ &#39;ADVERT&#39;,
+ &#39;ADVERTISE&#39;,
+ &#39;ADVERTISEMENT&#39;,
+ &#39;ADVERTISER&#39;,
+ &#39;ADVERTISING&#39;,
+ &#39;ADVERTIZE&#39;,
+ &#39;ADVERTIZEMENT&#39;,
+ &#39;ADVERTORIAL&#39;,
+ &#39;ADVICE&#39;,
+ &#39;ADVISABILITY&#39;,
+ &#39;ADVISABLE&#39;,
+ &#39;ADVISABLY&#39;,
+ &#39;ADVISE&#39;,
+ &#39;ADVISED&#39;,
+ &#39;ADVISEDLY&#39;,
+ &#39;ADVISEMENT&#39;,
+ &#39;ADVISER&#39;,
+ &#39;ADVISOR&#39;,
+ &#39;ADVISORY&#39;,
+ &#39;ADVOCACY&#39;,
+ &#39;ADVOCATE&#39;,
+ &#39;ADVOCATION&#39;,
+ &#39;ADVOCATOR&#39;,
+ &#39;ADZ&#39;,
+ &#39;ADZE&#39;,
+ &#39;AEGEAN&#39;,
+ &#39;AEGIS&#39;,
+ &#39;AELFRIC&#39;,
+ &#39;AENEAS&#39;,
+ &#39;AEOLIA&#39;,
+ &#39;AEOLIAN&#39;,
+ &#39;AEOLIAN&#39;,
+ &#39;AEOLIS&#39;,
+ &#39;AEOLUS&#39;,
+ &#39;AEON&#39;,
+ &#39;AEONIAN&#39;,
+ &#39;AERATE&#39;,
+ &#39;AERATION&#39;,
+ &#39;AERATOR&#39;,
+ &#39;AERIAL&#39;,
+ &#39;AERIALIST&#39;,
+ &#39;AERIALLY&#39;,
+ &#39;AERIE&#39;,
+ &#39;AEROBATICS&#39;,
+ &#39;AEROBE&#39;,
+ &#39;AEROBIC&#39;,
+ &#39;AEROBICALLY&#39;,
+ &#39;AEROBICS&#39;,
+ &#39;AERODROME&#39;,
+ &#39;AERODYNAMIC&#39;,
+ &#39;AERODYNAMICAL&#39;,
+ &#39;AERODYNAMICALLY&#39;,
+ &#39;AERODYNAMICIST&#39;,
+ &#39;AERODYNAMICS&#39;,
+ &#39;AEROMETER&#39;,
+ &#39;AERONAUT&#39;,
+ &#39;AERONAUTIC&#39;,
+ &#39;AERONAUTICAL&#39;,
+ &#39;AERONAUTICS&#39;,
+ &#39;AEROPAUSE&#39;,
+ &#39;AEROPLANE&#39;,
+ &#39;AEROPONICS&#39;,
+ &#39;AEROSOL&#39;,
+ &#39;AEROSPACE&#39;,
+ &#39;AERY&#39;,
+ &#39;AESCHYLEAN&#39;,
+ &#39;AESCHYLUS&#39;,
+ &#39;AESCULAPIUS&#39;,
+ &#39;AESOP&#39;,
+ &#39;AESOPIAN&#39;,
+ &#39;AESOPIC&#39;,
+ &#39;AESTHESIA&#39;,
+ &#39;AESTHETE&#39;,
+ &#39;AESTHETIC&#39;,
+ &#39;AESTHETICALLY&#39;,
+ &#39;AESTHETICIAN&#39;,
+ &#39;AESTHETICISM&#39;,
+ &#39;AESTHETICS&#39;,
+ &#39;AESTIVAL&#39;,
+ &#39;AESTIVATE&#39;,
+ &#39;AETIOLOGY&#39;,
+ &#39;AFAR&#39;,
+ &#39;AFFABILITY&#39;,
+ &#39;AFFABLE&#39;,
+ &#39;AFFABLY&#39;,
+ &#39;AFFAIR&#39;,
+ &#39;AFFAIRS&#39;,
+ &#39;AFFECT&#39;,
+ &#39;AFFECTATION&#39;,
+ &#39;AFFECTED&#39;,
+ &#39;AFFECTEDLY&#39;,
+ &#39;AFFECTING&#39;,
+ &#39;AFFECTINGLY&#39;,
+ &#39;AFFECTION&#39;,
+ &#39;AFFECTIONATE&#39;,
+ &#39;AFFECTIONATELY&#39;,
+ &#39;AFFECTIVE&#39;,
+ &#39;AFFECTIVELY&#39;,
+ &#39;AFFECTIVENESS&#39;,
+ &#39;AFFECTLESS&#39;,
+ &#39;AFFECTLESSNESS&#39;,
+ &#39;AFFERENT&#39;,
+ &#39;AFFIANCE&#39;,
+ &#39;AFFIDAVIT&#39;,
+ &#39;AFFILIATE&#39;,
+ &#39;AFFILIATED&#39;,
+ &#39;AFFILIATION&#39;,
+ &#39;AFFILIATIVE&#39;,
+ &#39;AFFINITY&#39;,
+ &#39;AFFIRM&#39;,
+ &#39;AFFIRMABLE&#39;,
+ &#39;AFFIRMANT&#39;,
+ &#39;AFFIRMATION&#39;,
+ &#39;AFFIRMATIVE&#39;,
+ &#39;AFFIRMATIVELY&#39;,
+ &#39;AFFIRMER&#39;,
+ &#39;AFFIX&#39;,
+ &#39;AFFIXATION&#39;,
+ &#39;AFFLATUS&#39;,
+ &#39;AFFLICT&#39;,
+ &#39;AFFLICTION&#39;,
+ &#39;AFFLICTIVE&#39;,
+ &#39;AFFLICTIVELY&#39;,
+ &#39;AFFLUENCE&#39;,
+ &#39;AFFLUENT&#39;,
+ &#39;AFFLUENTLY&#39;,
+ &#39;AFFLUX&#39;,
+ &#39;AFFORD&#39;,
+ &#39;AFFORDABILITY&#39;,
+ &#39;AFFORDABLE&#39;,
+ &#39;AFFORDABLY&#39;,
+ &#39;AFFOREST&#39;,
+ &#39;AFFORESTATION&#39;,
+ &#39;AFFRAY&#39;,
+ &#39;AFFRIGHT&#39;,
+ &#39;AFFRONT&#39;,
+ &#39;AFFRONTED&#39;,
+ &#39;AFGHAN&#39;,
+ &#39;AFGHAN&#39;,
+ &#39;AFGHANI&#39;,
+ &#39;AFGHANISTAN&#39;,
+ &#39;AFICIONADO&#39;,
+ &#39;AFIELD&#39;,
+ &#39;AFIRE&#39;,
+ &#39;AFLAME&#39;,
+ &#39;AFLATOXIN&#39;,
+ &#39;AFLOAT&#39;,
+ &#39;AFLUTTER&#39;,
+ &#39;AFOOT&#39;,
+ &#39;AFOREMENTIONED&#39;,
+ &#39;AFORESAID&#39;,
+ &#39;AFORETHOUGHT&#39;,
+ &#39;AFOUL&#39;,
+ &#39;AFRAID&#39;,
+ &#39;AFRESH&#39;,
+ &#39;AFRICA&#39;,
+ &#39;AFRICAN&#39;,
+ &#39;AFRICANA&#39;,
+ &#39;AFRIKAANS&#39;,
+ &#39;AFRIKANER&#39;,
+ &#39;AFRO&#39;,
+ &#39;AFROCENTRIC&#39;,
+ &#39;AFROCENTRISM&#39;,
+ &#39;AFROCENTRIST&#39;,
+ &#39;AFT&#39;,
+ &#39;AFTER&#39;,
+ &#39;AFTERBIRTH&#39;,
+ &#39;AFTERBURNER&#39;,
+ &#39;AFTERCARE&#39;,
+ &#39;AFTERDECK&#39;,
+ &#39;AFTEREFFECT&#39;,
+ &#39;AFTERGLOW&#39;,
+ &#39;AFTERIMAGE&#39;,
+ &#39;AFTERLIFE&#39;,
+ &#39;AFTERMARKET&#39;,
+ &#39;AFTERMATH&#39;,
+ &#39;AFTERNOON&#39;,
+ &#39;AFTERSCHOOL&#39;,
+ &#39;AFTERSHAVE&#39;,
+ &#39;AFTERSHOCK&#39;,
+ &#39;AFTERTASTE&#39;,
+ &#39;AFTERTHOUGHT&#39;,
+ ...]</pre>
 </div>
 
 </div>
@@ -13606,48 +14502,17 @@ Guess a letter:  l
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Put-it-all-together-and-make-the-final-guess">Put it all together and make the final guess<a class="anchor-link" href="#Put-it-all-together-and-make-the-final-guess">&#182;</a></h4>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">PlayHiddenWord</span><span class="p">(</span><span class="n">num_of_guesses</span><span class="p">,</span><span class="n">word_filename</span><span class="p">):</span>
-    <span class="n">hidden_word</span> <span class="o">=</span> <span class="n">PickWord</span><span class="p">(</span><span class="n">word_filename</span><span class="p">)</span>
-    <span class="n">board</span> <span class="o">=</span> <span class="n">MakeBoard</span><span class="p">(</span><span class="n">hidden_word</span><span class="p">)</span>
-    <span class="n">guessed_letters</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">count</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_of_guesses</span><span class="p">):</span>
-        <span class="n">guess</span> <span class="o">=</span> <span class="n">SolicitGuess1</span><span class="p">()</span>
-        <span class="n">guessed_letters</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">guess</span><span class="p">)</span>
-        <span class="n">board</span> <span class="o">=</span> <span class="n">CheckGuess</span><span class="p">(</span><span class="n">guess</span><span class="p">,</span><span class="n">hidden_word</span><span class="p">,</span><span class="n">board</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hidden word: &quot;</span><span class="o">+</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">board</span><span class="p">))</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Letters guessed: &quot;</span><span class="o">+</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">guessed_letters</span><span class="p">))</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You have </span><span class="si">{}</span><span class="s2"> guesses left.</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num_of_guesses</span><span class="o">-</span><span class="n">count</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
-    <span class="n">final_guess</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is the word?  &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
-    <span class="k">if</span> <span class="n">final_guess</span> <span class="o">==</span> <span class="n">hidden_word</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You got it right!&quot;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sorry, the hidden word was </span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">hidden_word</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">PlayHiddenWord</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;../../dictionary.txt&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;dictionary.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="n">text</span>
 </pre></div>
 
     </div>
@@ -13660,44 +14525,1015 @@ Guess a letter:  l
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[14]:</div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Guess a letter:  R
-Hidden word: ----R------
-Letters guessed: R
-You have 4 guesses left.
 
 
-Guess a letter:  S
-Hidden word: --S-R------
-Letters guessed: RS
-You have 3 guesses left.
-
-
-Guess a letter:  T
-Hidden word: --S-R---T--
-Letters guessed: RST
-You have 2 guesses left.
-
-
-Guess a letter:  l
-Hidden word: --S-R---T--
-Letters guessed: RSTL
-You have 1 guesses left.
-
-
-Guess a letter:  e
-Hidden word: --S-R-E-TE-
-Letters guessed: RSTLE
-You have 0 guesses left.
-
-
-What is the word?  banana
-Sorry, the hidden word was DISORIENTED.
-</pre>
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;A&#39;,
+ &#39;A&#39;,
+ &#39;AACHEN&#39;,
+ &#39;AALBORG&#39;,
+ &#39;AARDVARK&#39;,
+ &#39;AARHUS&#39;,
+ &#39;AARON&#39;,
+ &#39;AB&#39;,
+ &#39;AB&#39;,
+ &#39;ABACI&#39;,
+ &#39;ABACK&#39;,
+ &#39;ABACUS&#39;,
+ &#39;ABADAN&#39;,
+ &#39;ABAFT&#39;,
+ &#39;ABALONE&#39;,
+ &#39;ABANDON&#39;,
+ &#39;ABANDONED&#39;,
+ &#39;ABANDONEDLY&#39;,
+ &#39;ABANDONMENT&#39;,
+ &#39;ABASE&#39;,
+ &#39;ABASEMENT&#39;,
+ &#39;ABASH&#39;,
+ &#39;ABASHED&#39;,
+ &#39;ABASHEDLY&#39;,
+ &#39;ABASHMENT&#39;,
+ &#39;ABATE&#39;,
+ &#39;ABATEMENT&#39;,
+ &#39;ABATTOIR&#39;,
+ &#39;ABBACY&#39;,
+ &#39;ABBE&#39;,
+ &#39;ABBESS&#39;,
+ &#39;ABBEY&#39;,
+ &#39;ABBOT&#39;,
+ &#39;ABBOTT&#39;,
+ &#39;ABBREVIATE&#39;,
+ &#39;ABBREVIATED&#39;,
+ &#39;ABBREVIATION&#39;,
+ &#39;ABBREVIATOR&#39;,
+ &#39;ABBY&#39;,
+ &#39;ABC&#39;,
+ &#39;ABCS&#39;,
+ &#39;ABD&#39;,
+ &#39;ABDIAS&#39;,
+ &#39;ABDICATE&#39;,
+ &#39;ABDICATION&#39;,
+ &#39;ABDICATOR&#39;,
+ &#39;ABDOMEN&#39;,
+ &#39;ABDOMINAL&#39;,
+ &#39;ABDOMINALLY&#39;,
+ &#39;ABDUCT&#39;,
+ &#39;ABDUCTION&#39;,
+ &#39;ABDUCTOR&#39;,
+ &#39;ABEAM&#39;,
+ &#39;ABECEDARIAN&#39;,
+ &#39;ABED&#39;,
+ &#39;ABEL&#39;,
+ &#39;ABELARD&#39;,
+ &#39;ABENAKI&#39;,
+ &#39;ABERDEEN&#39;,
+ &#39;ABERDONIAN&#39;,
+ &#39;ABERNATHY&#39;,
+ &#39;ABERRANCE&#39;,
+ &#39;ABERRANCY&#39;,
+ &#39;ABERRANT&#39;,
+ &#39;ABERRANTLY&#39;,
+ &#39;ABERRATION&#39;,
+ &#39;ABERRATIONAL&#39;,
+ &#39;ABET&#39;,
+ &#39;ABETMENT&#39;,
+ &#39;ABETTER&#39;,
+ &#39;ABETTOR&#39;,
+ &#39;ABEYANCE&#39;,
+ &#39;ABEYANT&#39;,
+ &#39;ABHOR&#39;,
+ &#39;ABHORRENCE&#39;,
+ &#39;ABHORRENT&#39;,
+ &#39;ABHORRENTLY&#39;,
+ &#39;ABHORRER&#39;,
+ &#39;ABIB&#39;,
+ &#39;ABIDANCE&#39;,
+ &#39;ABIDE&#39;,
+ &#39;ABIDER&#39;,
+ &#39;ABIDING&#39;,
+ &#39;ABIDINGLY&#39;,
+ &#39;ABIDJAN&#39;,
+ &#39;ABIGAIL&#39;,
+ &#39;ABILENE&#39;,
+ &#39;ABILITY&#39;,
+ &#39;ABIOTIC&#39;,
+ &#39;ABJECT&#39;,
+ &#39;ABJECTION&#39;,
+ &#39;ABJECTLY&#39;,
+ &#39;ABJECTNESS&#39;,
+ &#39;ABJURATION&#39;,
+ &#39;ABJURATORY&#39;,
+ &#39;ABJURE&#39;,
+ &#39;ABJURER&#39;,
+ &#39;ABKHAZIA&#39;,
+ &#39;ABKHAZIAN&#39;,
+ &#39;ABLATE&#39;,
+ &#39;ABLATION&#39;,
+ &#39;ABLATIVE&#39;,
+ &#39;ABLAUT&#39;,
+ &#39;ABLAZE&#39;,
+ &#39;ABLE&#39;,
+ &#39;ABLEISM&#39;,
+ &#39;ABLEIST&#39;,
+ &#39;ABLOOM&#39;,
+ &#39;ABLUTION&#39;,
+ &#39;ABLUTIONS&#39;,
+ &#39;ABLY&#39;,
+ &#39;ABM&#39;,
+ &#39;ABNAKI&#39;,
+ &#39;ABNEGATE&#39;,
+ &#39;ABNEGATION&#39;,
+ &#39;ABNEGATOR&#39;,
+ &#39;ABNER&#39;,
+ &#39;ABNORMAL&#39;,
+ &#39;ABNORMALITY&#39;,
+ &#39;ABNORMALLY&#39;,
+ &#39;ABOARD&#39;,
+ &#39;ABODE&#39;,
+ &#39;ABOLISH&#39;,
+ &#39;ABOLISHER&#39;,
+ &#39;ABOLISHMENT&#39;,
+ &#39;ABOLITION&#39;,
+ &#39;ABOLITIONISM&#39;,
+ &#39;ABOLITIONIST&#39;,
+ &#39;ABOLITIONIST&#39;,
+ &#39;ABOMINABLE&#39;,
+ &#39;ABOMINABLY&#39;,
+ &#39;ABOMINATE&#39;,
+ &#39;ABOMINATION&#39;,
+ &#39;ABOMINATOR&#39;,
+ &#39;ABORIGINAL&#39;,
+ &#39;ABORIGINAL&#39;,
+ &#39;ABORIGINALLY&#39;,
+ &#39;ABORIGINE&#39;,
+ &#39;ABORIGINE&#39;,
+ &#39;ABORNING&#39;,
+ &#39;ABORT&#39;,
+ &#39;ABORTIFACIENT&#39;,
+ &#39;ABORTION&#39;,
+ &#39;ABORTIONIST&#39;,
+ &#39;ABORTIVE&#39;,
+ &#39;ABORTIVELY&#39;,
+ &#39;ABOULIA&#39;,
+ &#39;ABOUND&#39;,
+ &#39;ABOUT&#39;,
+ &#39;ABOVE&#39;,
+ &#39;ABOVEBOARD&#39;,
+ &#39;ABRACADABRA&#39;,
+ &#39;ABRADE&#39;,
+ &#39;ABRADER&#39;,
+ &#39;ABRAHAM&#39;,
+ &#39;ABRASION&#39;,
+ &#39;ABRASIVE&#39;,
+ &#39;ABRASIVELY&#39;,
+ &#39;ABRASIVENESS&#39;,
+ &#39;ABREAST&#39;,
+ &#39;ABRIDGE&#39;,
+ &#39;ABRIDGEMENT&#39;,
+ &#39;ABRIDGER&#39;,
+ &#39;ABRIDGMENT&#39;,
+ &#39;ABROAD&#39;,
+ &#39;ABROGATE&#39;,
+ &#39;ABROGATION&#39;,
+ &#39;ABROGATOR&#39;,
+ &#39;ABRUPT&#39;,
+ &#39;ABRUPTION&#39;,
+ &#39;ABRUPTLY&#39;,
+ &#39;ABRUPTNESS&#39;,
+ &#39;ABRUZZI&#39;,
+ &#39;ABS&#39;,
+ &#39;ABSALOM&#39;,
+ &#39;ABSCESS&#39;,
+ &#39;ABSCESSED&#39;,
+ &#39;ABSCIND&#39;,
+ &#39;ABSCISE&#39;,
+ &#39;ABSCISSA&#39;,
+ &#39;ABSCISSAE&#39;,
+ &#39;ABSCISSION&#39;,
+ &#39;ABSCOND&#39;,
+ &#39;ABSCONDER&#39;,
+ &#39;ABSEIL&#39;,
+ &#39;ABSENCE&#39;,
+ &#39;ABSENT&#39;,
+ &#39;ABSENTEE&#39;,
+ &#39;ABSENTEEISM&#39;,
+ &#39;ABSENTLY&#39;,
+ &#39;ABSENTMINDED&#39;,
+ &#39;ABSENTMINDEDLY&#39;,
+ &#39;ABSENTMINDEDNESS&#39;,
+ &#39;ABSINTH&#39;,
+ &#39;ABSINTHE&#39;,
+ &#39;ABSOLUTE&#39;,
+ &#39;ABSOLUTELY&#39;,
+ &#39;ABSOLUTENESS&#39;,
+ &#39;ABSOLUTION&#39;,
+ &#39;ABSOLUTISM&#39;,
+ &#39;ABSOLUTIST&#39;,
+ &#39;ABSOLUTISTIC&#39;,
+ &#39;ABSOLUTIZATION&#39;,
+ &#39;ABSOLUTIZE&#39;,
+ &#39;ABSOLVABLE&#39;,
+ &#39;ABSOLVE&#39;,
+ &#39;ABSOLVER&#39;,
+ &#39;ABSORB&#39;,
+ &#39;ABSORBABLE&#39;,
+ &#39;ABSORBANT&#39;,
+ &#39;ABSORBED&#39;,
+ &#39;ABSORBENCY&#39;,
+ &#39;ABSORBENT&#39;,
+ &#39;ABSORBER&#39;,
+ &#39;ABSORBING&#39;,
+ &#39;ABSORBINGLY&#39;,
+ &#39;ABSORPTION&#39;,
+ &#39;ABSORPTIVE&#39;,
+ &#39;ABSORPTIVITY&#39;,
+ &#39;ABSQUATULATE&#39;,
+ &#39;ABSQUATULATION&#39;,
+ &#39;ABSTAIN&#39;,
+ &#39;ABSTAINER&#39;,
+ &#39;ABSTEMIOUS&#39;,
+ &#39;ABSTEMIOUSLY&#39;,
+ &#39;ABSTEMIOUSNESS&#39;,
+ &#39;ABSTENTION&#39;,
+ &#39;ABSTINENCE&#39;,
+ &#39;ABSTINENT&#39;,
+ &#39;ABSTINENTLY&#39;,
+ &#39;ABSTRACT&#39;,
+ &#39;ABSTRACTED&#39;,
+ &#39;ABSTRACTEDLY&#39;,
+ &#39;ABSTRACTEDNESS&#39;,
+ &#39;ABSTRACTER&#39;,
+ &#39;ABSTRACTION&#39;,
+ &#39;ABSTRACTLY&#39;,
+ &#39;ABSTRACTNESS&#39;,
+ &#39;ABSTRUSE&#39;,
+ &#39;ABSTRUSELY&#39;,
+ &#39;ABSTRUSENESS&#39;,
+ &#39;ABSURD&#39;,
+ &#39;ABSURDISM&#39;,
+ &#39;ABSURDIST&#39;,
+ &#39;ABSURDITY&#39;,
+ &#39;ABSURDLY&#39;,
+ &#39;ABSURDNESS&#39;,
+ &#39;ABUJA&#39;,
+ &#39;ABULIA&#39;,
+ &#39;ABULIC&#39;,
+ &#39;ABUNDANCE&#39;,
+ &#39;ABUNDANT&#39;,
+ &#39;ABUNDANTLY&#39;,
+ &#39;ABUSE&#39;,
+ &#39;ABUSER&#39;,
+ &#39;ABUSIVE&#39;,
+ &#39;ABUSIVELY&#39;,
+ &#39;ABUSIVENESS&#39;,
+ &#39;ABUT&#39;,
+ &#39;ABUTMENT&#39;,
+ &#39;ABUTTER&#39;,
+ &#39;ABUZZ&#39;,
+ &#39;ABYSM&#39;,
+ &#39;ABYSMAL&#39;,
+ &#39;ABYSMALLY&#39;,
+ &#39;ABYSS&#39;,
+ &#39;ABYSSAL&#39;,
+ &#39;ABYSSINIA&#39;,
+ &#39;ABYSSINIAN&#39;,
+ &#39;ACACIA&#39;,
+ &#39;ACADEME&#39;,
+ &#39;ACADEMIA&#39;,
+ &#39;ACADEMIC&#39;,
+ &#39;ACADEMICALLY&#39;,
+ &#39;ACADEMICIAN&#39;,
+ &#39;ACADEMICISM&#39;,
+ &#39;ACADEMICS&#39;,
+ &#39;ACADEMISM&#39;,
+ &#39;ACADEMY&#39;,
+ &#39;ACADIA&#39;,
+ &#39;ACADIAN&#39;,
+ &#39;ACANTHI&#39;,
+ &#39;ACANTHUS&#39;,
+ &#39;ACAPULCO&#39;,
+ &#39;ACCEDE&#39;,
+ &#39;ACCEDENCE&#39;,
+ &#39;ACCELERANDI&#39;,
+ &#39;ACCELERANDO&#39;,
+ &#39;ACCELERATE&#39;,
+ &#39;ACCELERATION&#39;,
+ &#39;ACCELERATIVE&#39;,
+ &#39;ACCELERATOR&#39;,
+ &#39;ACCELEROMETER&#39;,
+ &#39;ACCENT&#39;,
+ &#39;ACCENTED&#39;,
+ &#39;ACCENTUAL&#39;,
+ &#39;ACCENTUATE&#39;,
+ &#39;ACCENTUATION&#39;,
+ &#39;ACCEPT&#39;,
+ &#39;ACCEPTABILITY&#39;,
+ &#39;ACCEPTABLE&#39;,
+ &#39;ACCEPTABLENESS&#39;,
+ &#39;ACCEPTABLY&#39;,
+ &#39;ACCEPTANCE&#39;,
+ &#39;ACCEPTATION&#39;,
+ &#39;ACCEPTED&#39;,
+ &#39;ACCEPTER&#39;,
+ &#39;ACCEPTOR&#39;,
+ &#39;ACCESS&#39;,
+ &#39;ACCESSARY&#39;,
+ &#39;ACCESSIBILITY&#39;,
+ &#39;ACCESSIBLE&#39;,
+ &#39;ACCESSIBLENESS&#39;,
+ &#39;ACCESSIBLY&#39;,
+ &#39;ACCESSION&#39;,
+ &#39;ACCESSIONAL&#39;,
+ &#39;ACCESSORY&#39;,
+ &#39;ACCIDENT&#39;,
+ &#39;ACCIDENTAL&#39;,
+ &#39;ACCIDENTALLY&#39;,
+ &#39;ACCIDENTLY&#39;,
+ &#39;ACCIDIE&#39;,
+ &#39;ACCIPITER&#39;,
+ &#39;ACCLAIM&#39;,
+ &#39;ACCLAIMED&#39;,
+ &#39;ACCLAIMER&#39;,
+ &#39;ACCLAMATION&#39;,
+ &#39;ACCLAMATORY&#39;,
+ &#39;ACCLIMATE&#39;,
+ &#39;ACCLIMATION&#39;,
+ &#39;ACCLIMATIZATION&#39;,
+ &#39;ACCLIMATIZE&#39;,
+ &#39;ACCLIVITOUS&#39;,
+ &#39;ACCLIVITY&#39;,
+ &#39;ACCOLADE&#39;,
+ &#39;ACCOMMODATE&#39;,
+ &#39;ACCOMMODATING&#39;,
+ &#39;ACCOMMODATINGLY&#39;,
+ &#39;ACCOMMODATION&#39;,
+ &#39;ACCOMMODATIONISM&#39;,
+ &#39;ACCOMMODATIONIST&#39;,
+ &#39;ACCOMMODATIONS&#39;,
+ &#39;ACCOMPANIMENT&#39;,
+ &#39;ACCOMPANIST&#39;,
+ &#39;ACCOMPANY&#39;,
+ &#39;ACCOMPLICE&#39;,
+ &#39;ACCOMPLISH&#39;,
+ &#39;ACCOMPLISHED&#39;,
+ &#39;ACCOMPLISHER&#39;,
+ &#39;ACCOMPLISHMENT&#39;,
+ &#39;ACCORD&#39;,
+ &#39;ACCORDANCE&#39;,
+ &#39;ACCORDANT&#39;,
+ &#39;ACCORDING&#39;,
+ &#39;ACCORDINGLY&#39;,
+ &#39;ACCORDION&#39;,
+ &#39;ACCORDIONIST&#39;,
+ &#39;ACCOST&#39;,
+ &#39;ACCOUCHEMENT&#39;,
+ &#39;ACCOUNT&#39;,
+ &#39;ACCOUNTABILITY&#39;,
+ &#39;ACCOUNTABLE&#39;,
+ &#39;ACCOUNTABLENESS&#39;,
+ &#39;ACCOUNTABLY&#39;,
+ &#39;ACCOUNTANCY&#39;,
+ &#39;ACCOUNTANT&#39;,
+ &#39;ACCOUNTING&#39;,
+ &#39;ACCOUNTS&#39;,
+ &#39;ACCOUTER&#39;,
+ &#39;ACCOUTERMENT&#39;,
+ &#39;ACCOUTERMENTS&#39;,
+ &#39;ACCOUTRE&#39;,
+ &#39;ACCOUTREMENT&#39;,
+ &#39;ACCOUTREMENTS&#39;,
+ &#39;ACCRA&#39;,
+ &#39;ACCREDIT&#39;,
+ &#39;ACCREDITATION&#39;,
+ &#39;ACCREDITED&#39;,
+ &#39;ACCRETE&#39;,
+ &#39;ACCRETION&#39;,
+ &#39;ACCRETIONARY&#39;,
+ &#39;ACCRETIVE&#39;,
+ &#39;ACCRUAL&#39;,
+ &#39;ACCRUE&#39;,
+ &#39;ACCULTURATE&#39;,
+ &#39;ACCULTURATION&#39;,
+ &#39;ACCULTURATIVE&#39;,
+ &#39;ACCUMBENT&#39;,
+ &#39;ACCUMULATE&#39;,
+ &#39;ACCUMULATION&#39;,
+ &#39;ACCUMULATIVE&#39;,
+ &#39;ACCUMULATOR&#39;,
+ &#39;ACCURACY&#39;,
+ &#39;ACCURATE&#39;,
+ &#39;ACCURATELY&#39;,
+ &#39;ACCURATENESS&#39;,
+ &#39;ACCURSED&#39;,
+ &#39;ACCURSEDLY&#39;,
+ &#39;ACCURSEDNESS&#39;,
+ &#39;ACCURST&#39;,
+ &#39;ACCUSATION&#39;,
+ &#39;ACCUSATIVE&#39;,
+ &#39;ACCUSATORY&#39;,
+ &#39;ACCUSE&#39;,
+ &#39;ACCUSED&#39;,
+ &#39;ACCUSER&#39;,
+ &#39;ACCUSINGLY&#39;,
+ &#39;ACCUSTOM&#39;,
+ &#39;ACCUSTOMED&#39;,
+ &#39;ACE&#39;,
+ &#39;ACEDIA&#39;,
+ &#39;ACERB&#39;,
+ &#39;ACERBATE&#39;,
+ &#39;ACERBIC&#39;,
+ &#39;ACERBICALLY&#39;,
+ &#39;ACERBITY&#39;,
+ &#39;ACETAMINOPHEN&#39;,
+ &#39;ACETANILIDE&#39;,
+ &#39;ACETATE&#39;,
+ &#39;ACETIC&#39;,
+ &#39;ACETONE&#39;,
+ &#39;ACETONIC&#39;,
+ &#39;ACETYLCHOLINE&#39;,
+ &#39;ACETYLENE&#39;,
+ &#39;ACHAEAN&#39;,
+ &#39;ACHATES&#39;,
+ &#39;ACHE&#39;,
+ &#39;ACHEBE&#39;,
+ &#39;ACHENE&#39;,
+ &#39;ACHERNAR&#39;,
+ &#39;ACHERON&#39;,
+ &#39;ACHESON&#39;,
+ &#39;ACHIEVABLE&#39;,
+ &#39;ACHIEVE&#39;,
+ &#39;ACHIEVEMENT&#39;,
+ &#39;ACHIEVER&#39;,
+ &#39;ACHILLES&#39;,
+ &#39;ACHINESS&#39;,
+ &#39;ACHROMATIC&#39;,
+ &#39;ACHROMATICALLY&#39;,
+ &#39;ACHROMATISM&#39;,
+ &#39;ACHY&#39;,
+ &#39;ACID&#39;,
+ &#39;ACIDIC&#39;,
+ &#39;ACIDIFICATION&#39;,
+ &#39;ACIDIFIER&#39;,
+ &#39;ACIDIFY&#39;,
+ &#39;ACIDITY&#39;,
+ &#39;ACIDLY&#39;,
+ &#39;ACIDNESS&#39;,
+ &#39;ACIDOSIS&#39;,
+ &#39;ACIDOTIC&#39;,
+ &#39;ACIDULATE&#39;,
+ &#39;ACIDULOUS&#39;,
+ &#39;ACIDURIA&#39;,
+ &#39;ACKNOWLEDGE&#39;,
+ &#39;ACKNOWLEDGEABLE&#39;,
+ &#39;ACKNOWLEDGEMENT&#39;,
+ &#39;ACKNOWLEDGMENT&#39;,
+ &#39;ACME&#39;,
+ &#39;ACNE&#39;,
+ &#39;ACNED&#39;,
+ &#39;ACOLYTE&#39;,
+ &#39;ACONCAGUA&#39;,
+ &#39;ACONITE&#39;,
+ &#39;ACORN&#39;,
+ &#39;ACOUSTIC&#39;,
+ &#39;ACOUSTICAL&#39;,
+ &#39;ACOUSTICALLY&#39;,
+ &#39;ACOUSTICIAN&#39;,
+ &#39;ACOUSTICS&#39;,
+ &#39;ACQUAINT&#39;,
+ &#39;ACQUAINTANCE&#39;,
+ &#39;ACQUAINTANCESHIP&#39;,
+ &#39;ACQUAINTED&#39;,
+ &#39;ACQUIESCE&#39;,
+ &#39;ACQUIESCENCE&#39;,
+ &#39;ACQUIESCENT&#39;,
+ &#39;ACQUIESCENTLY&#39;,
+ &#39;ACQUIRABLE&#39;,
+ &#39;ACQUIRE&#39;,
+ &#39;ACQUIRED&#39;,
+ &#39;ACQUIREMENT&#39;,
+ &#39;ACQUISITION&#39;,
+ &#39;ACQUISITIVE&#39;,
+ &#39;ACQUISITIVELY&#39;,
+ &#39;ACQUISITIVENESS&#39;,
+ &#39;ACQUIT&#39;,
+ &#39;ACQUITTAL&#39;,
+ &#39;ACQUITTANCE&#39;,
+ &#39;ACRE&#39;,
+ &#39;ACREAGE&#39;,
+ &#39;ACRID&#39;,
+ &#39;ACRIDITY&#39;,
+ &#39;ACRIDLY&#39;,
+ &#39;ACRIDNESS&#39;,
+ &#39;ACRIMONIOUS&#39;,
+ &#39;ACRIMONIOUSLY&#39;,
+ &#39;ACRIMONIOUSNESS&#39;,
+ &#39;ACRIMONY&#39;,
+ &#39;ACROBAT&#39;,
+ &#39;ACROBATIC&#39;,
+ &#39;ACROBATICALLY&#39;,
+ &#39;ACROBATICS&#39;,
+ &#39;ACROMEGALIC&#39;,
+ &#39;ACROMEGALY&#39;,
+ &#39;ACRONYM&#39;,
+ &#39;ACRONYMIC&#39;,
+ &#39;ACRONYMOUS&#39;,
+ &#39;ACROPHOBIA&#39;,
+ &#39;ACROPHOBIC&#39;,
+ &#39;ACROPOLIS&#39;,
+ &#39;ACROPOLIS&#39;,
+ &#39;ACROSS&#39;,
+ &#39;ACROSTIC&#39;,
+ &#39;ACRYLIC&#39;,
+ &#39;ACT&#39;,
+ &#39;ACTH&#39;,
+ &#39;ACTIN&#39;,
+ &#39;ACTING&#39;,
+ &#39;ACTINIC&#39;,
+ &#39;ACTINIDE&#39;,
+ &#39;ACTINISM&#39;,
+ &#39;ACTINIUM&#39;,
+ &#39;ACTINOMYCIN&#39;,
+ &#39;ACTION&#39;,
+ &#39;ACTIONABLE&#39;,
+ &#39;ACTIONABLY&#39;,
+ &#39;ACTIONLESS&#39;,
+ &#39;ACTIONS&#39;,
+ &#39;ACTIUM&#39;,
+ &#39;ACTIVATE&#39;,
+ &#39;ACTIVATION&#39;,
+ &#39;ACTIVATOR&#39;,
+ &#39;ACTIVE&#39;,
+ &#39;ACTIVELY&#39;,
+ &#39;ACTIVENESS&#39;,
+ &#39;ACTIVISM&#39;,
+ &#39;ACTIVIST&#39;,
+ &#39;ACTIVISTIC&#39;,
+ &#39;ACTIVITY&#39;,
+ &#39;ACTOR&#39;,
+ &#39;ACTRESS&#39;,
+ &#39;ACTS&#39;,
+ &#39;ACTUAL&#39;,
+ &#39;ACTUALITIES&#39;,
+ &#39;ACTUALITY&#39;,
+ &#39;ACTUALIZATION&#39;,
+ &#39;ACTUALIZE&#39;,
+ &#39;ACTUALLY&#39;,
+ &#39;ACTUARIAL&#39;,
+ &#39;ACTUARIALLY&#39;,
+ &#39;ACTUARILY&#39;,
+ &#39;ACTUARY&#39;,
+ &#39;ACTUATE&#39;,
+ &#39;ACTUATION&#39;,
+ &#39;ACTUATOR&#39;,
+ &#39;ACUITY&#39;,
+ &#39;ACUMEN&#39;,
+ &#39;ACUPRESSURE&#39;,
+ &#39;ACUPUNCTURE&#39;,
+ &#39;ACUPUNCTURIST&#39;,
+ &#39;ACUTE&#39;,
+ &#39;ACUTELY&#39;,
+ &#39;ACUTENESS&#39;,
+ &#39;ACYCLIC&#39;,
+ &#39;ACYCLOVIR&#39;,
+ &#39;AD&#39;,
+ &#39;ADA&#39;,
+ &#39;ADAGE&#39;,
+ &#39;ADAGIO&#39;,
+ &#39;ADAM&#39;,
+ &#39;ADAMANCE&#39;,
+ &#39;ADAMANCY&#39;,
+ &#39;ADAMANT&#39;,
+ &#39;ADAMANTINE&#39;,
+ &#39;ADAMANTLY&#39;,
+ &#39;ADAMS&#39;,
+ &#39;ADANA&#39;,
+ &#39;ADAPT&#39;,
+ &#39;ADAPTABILITY&#39;,
+ &#39;ADAPTABLE&#39;,
+ &#39;ADAPTATION&#39;,
+ &#39;ADAPTATIONAL&#39;,
+ &#39;ADAPTER&#39;,
+ &#39;ADAPTIVE&#39;,
+ &#39;ADAPTIVENESS&#39;,
+ &#39;ADAPTIVITY&#39;,
+ &#39;ADAPTOR&#39;,
+ &#39;ADAR&#39;,
+ &#39;ADD&#39;,
+ &#39;ADDABLE&#39;,
+ &#39;ADDAMS&#39;,
+ &#39;ADDED&#39;,
+ &#39;ADDEND&#39;,
+ &#39;ADDENDA&#39;,
+ &#39;ADDENDUM&#39;,
+ &#39;ADDER&#39;,
+ &#39;ADDIBLE&#39;,
+ &#39;ADDICT&#39;,
+ &#39;ADDICTED&#39;,
+ &#39;ADDICTION&#39;,
+ &#39;ADDICTIVE&#39;,
+ &#39;ADDISON&#39;,
+ &#39;ADDISONIAN&#39;,
+ &#39;ADDITION&#39;,
+ &#39;ADDITIONAL&#39;,
+ &#39;ADDITIONALLY&#39;,
+ &#39;ADDITIVE&#39;,
+ &#39;ADDITIVITY&#39;,
+ &#39;ADDLE&#39;,
+ &#39;ADDRESS&#39;,
+ &#39;ADDRESSABLE&#39;,
+ &#39;ADDRESSEE&#39;,
+ &#39;ADDUCE&#39;,
+ &#39;ADDUCEABLE&#39;,
+ &#39;ADDUCER&#39;,
+ &#39;ADDUCIBLE&#39;,
+ &#39;ADDUCTOR&#39;,
+ &#39;ADELA&#39;,
+ &#39;ADELAIDE&#39;,
+ &#39;ADELBERT&#39;,
+ &#39;ADELE&#39;,
+ &#39;ADELINE&#39;,
+ &#39;ADEN&#39;,
+ &#39;ADENAUER&#39;,
+ &#39;ADENINE&#39;,
+ &#39;ADENOID&#39;,
+ &#39;ADENOIDAL&#39;,
+ &#39;ADENOIDS&#39;,
+ &#39;ADEPT&#39;,
+ &#39;ADEPTLY&#39;,
+ &#39;ADEPTNESS&#39;,
+ &#39;ADEQUACY&#39;,
+ &#39;ADEQUATE&#39;,
+ &#39;ADEQUATELY&#39;,
+ &#39;ADEQUATENESS&#39;,
+ &#39;ADHERE&#39;,
+ &#39;ADHERENCE&#39;,
+ &#39;ADHERENT&#39;,
+ &#39;ADHESION&#39;,
+ &#39;ADHESIVE&#39;,
+ &#39;ADHESIVELY&#39;,
+ &#39;ADHESIVENESS&#39;,
+ &#39;ADIABATIC&#39;,
+ &#39;ADIABATICALLY&#39;,
+ &#39;ADIEU&#39;,
+ &#39;ADIEUX&#39;,
+ &#39;ADIOS&#39;,
+ &#39;ADIPOSE&#39;,
+ &#39;ADIPOSITY&#39;,
+ &#39;ADIRONDACK&#39;,
+ &#39;ADIRONDACKS&#39;,
+ &#39;ADJACENCY&#39;,
+ &#39;ADJACENT&#39;,
+ &#39;ADJACENTLY&#39;,
+ &#39;ADJECTIVAL&#39;,
+ &#39;ADJECTIVALLY&#39;,
+ &#39;ADJECTIVE&#39;,
+ &#39;ADJOIN&#39;,
+ &#39;ADJOINING&#39;,
+ &#39;ADJOURN&#39;,
+ &#39;ADJOURNMENT&#39;,
+ &#39;ADJUDGE&#39;,
+ &#39;ADJUDGEMENT&#39;,
+ &#39;ADJUDGMENT&#39;,
+ &#39;ADJUDICATE&#39;,
+ &#39;ADJUDICATION&#39;,
+ &#39;ADJUDICATIVE&#39;,
+ &#39;ADJUDICATOR&#39;,
+ &#39;ADJUDICATORY&#39;,
+ &#39;ADJUNCT&#39;,
+ &#39;ADJUNCTIVE&#39;,
+ &#39;ADJURATION&#39;,
+ &#39;ADJURATORY&#39;,
+ &#39;ADJURE&#39;,
+ &#39;ADJUST&#39;,
+ &#39;ADJUSTABLE&#39;,
+ &#39;ADJUSTER&#39;,
+ &#39;ADJUSTMENT&#39;,
+ &#39;ADJUSTOR&#39;,
+ &#39;ADJUTANCY&#39;,
+ &#39;ADJUTANT&#39;,
+ &#39;ADJUVANT&#39;,
+ &#39;ADLER&#39;,
+ &#39;ADLERIAN&#39;,
+ &#39;ADMAN&#39;,
+ &#39;ADMINISTER&#39;,
+ &#39;ADMINISTRABLE&#39;,
+ &#39;ADMINISTRANT&#39;,
+ &#39;ADMINISTRATE&#39;,
+ &#39;ADMINISTRATION&#39;,
+ &#39;ADMINISTRATION&#39;,
+ &#39;ADMINISTRATIVE&#39;,
+ &#39;ADMINISTRATIVELY&#39;,
+ &#39;ADMINISTRATOR&#39;,
+ &#39;ADMIRABILITY&#39;,
+ &#39;ADMIRABLE&#39;,
+ &#39;ADMIRABLENESS&#39;,
+ &#39;ADMIRABLY&#39;,
+ &#39;ADMIRAL&#39;,
+ &#39;ADMIRAL&#39;,
+ &#39;ADMIRALTY&#39;,
+ &#39;ADMIRALTY&#39;,
+ &#39;ADMIRATION&#39;,
+ &#39;ADMIRE&#39;,
+ &#39;ADMIRER&#39;,
+ &#39;ADMIRING&#39;,
+ &#39;ADMIRINGLY&#39;,
+ &#39;ADMISSIBILITY&#39;,
+ &#39;ADMISSIBLE&#39;,
+ &#39;ADMISSIBLENESS&#39;,
+ &#39;ADMISSION&#39;,
+ &#39;ADMISSIONS&#39;,
+ &#39;ADMISSIVE&#39;,
+ &#39;ADMIT&#39;,
+ &#39;ADMITTANCE&#39;,
+ &#39;ADMITTEDLY&#39;,
+ &#39;ADMIX&#39;,
+ &#39;ADMIXTURE&#39;,
+ &#39;ADMONISH&#39;,
+ &#39;ADMONISHER&#39;,
+ &#39;ADMONISHINGLY&#39;,
+ &#39;ADMONISHMENT&#39;,
+ &#39;ADMONITION&#39;,
+ &#39;ADMONITORY&#39;,
+ &#39;ADO&#39;,
+ &#39;ADOBE&#39;,
+ &#39;ADOLESCENCE&#39;,
+ &#39;ADOLESCENT&#39;,
+ &#39;ADOLPH&#39;,
+ &#39;ADONAI&#39;,
+ &#39;ADONIS&#39;,
+ &#39;ADONIS&#39;,
+ &#39;ADOPT&#39;,
+ &#39;ADOPTABLE&#39;,
+ &#39;ADOPTED&#39;,
+ &#39;ADOPTEE&#39;,
+ &#39;ADOPTER&#39;,
+ &#39;ADOPTION&#39;,
+ &#39;ADOPTIVE&#39;,
+ &#39;ADOPTIVELY&#39;,
+ &#39;ADORABLE&#39;,
+ &#39;ADORABLENESS&#39;,
+ &#39;ADORABLY&#39;,
+ &#39;ADORATION&#39;,
+ &#39;ADORE&#39;,
+ &#39;ADORER&#39;,
+ &#39;ADORING&#39;,
+ &#39;ADORINGLY&#39;,
+ &#39;ADORN&#39;,
+ &#39;ADORNER&#39;,
+ &#39;ADORNMENT&#39;,
+ &#39;ADRENAL&#39;,
+ &#39;ADRENALIN&#39;,
+ &#39;ADRENALIN&#39;,
+ &#39;ADRENALINE&#39;,
+ &#39;ADRIAN&#39;,
+ &#39;ADRIATIC&#39;,
+ &#39;ADRIENNE&#39;,
+ &#39;ADRIFT&#39;,
+ &#39;ADROIT&#39;,
+ &#39;ADROITLY&#39;,
+ &#39;ADROITNESS&#39;,
+ &#39;ADSORB&#39;,
+ &#39;ADSORBABLE&#39;,
+ &#39;ADSORBENT&#39;,
+ &#39;ADSORPTION&#39;,
+ &#39;ADSORPTIVE&#39;,
+ &#39;ADULATE&#39;,
+ &#39;ADULATION&#39;,
+ &#39;ADULATOR&#39;,
+ &#39;ADULATORY&#39;,
+ &#39;ADULT&#39;,
+ &#39;ADULTERANT&#39;,
+ &#39;ADULTERATE&#39;,
+ &#39;ADULTERATION&#39;,
+ &#39;ADULTERATOR&#39;,
+ &#39;ADULTERER&#39;,
+ &#39;ADULTERESS&#39;,
+ &#39;ADULTEROUS&#39;,
+ &#39;ADULTERY&#39;,
+ &#39;ADULTHOOD&#39;,
+ &#39;ADUMBRATE&#39;,
+ &#39;ADUMBRATION&#39;,
+ &#39;ADUMBRATIVE&#39;,
+ &#39;ADVANCE&#39;,
+ &#39;ADVANCED&#39;,
+ &#39;ADVANCEMENT&#39;,
+ &#39;ADVANCER&#39;,
+ &#39;ADVANCES&#39;,
+ &#39;ADVANTAGE&#39;,
+ &#39;ADVANTAGEOUS&#39;,
+ &#39;ADVANTAGEOUSLY&#39;,
+ &#39;ADVECTION&#39;,
+ &#39;ADVENT&#39;,
+ &#39;ADVENT&#39;,
+ &#39;ADVENTIST&#39;,
+ &#39;ADVENTITIOUS&#39;,
+ &#39;ADVENTITIOUSLY&#39;,
+ &#39;ADVENTURE&#39;,
+ &#39;ADVENTURER&#39;,
+ &#39;ADVENTURESOME&#39;,
+ &#39;ADVENTURESS&#39;,
+ &#39;ADVENTURISM&#39;,
+ &#39;ADVENTURIST&#39;,
+ &#39;ADVENTUROUS&#39;,
+ &#39;ADVENTUROUSLY&#39;,
+ &#39;ADVENTUROUSNESS&#39;,
+ &#39;ADVERB&#39;,
+ &#39;ADVERBIAL&#39;,
+ &#39;ADVERBIALLY&#39;,
+ &#39;ADVERSARIAL&#39;,
+ &#39;ADVERSARIALLY&#39;,
+ &#39;ADVERSARY&#39;,
+ &#39;ADVERSE&#39;,
+ &#39;ADVERSELY&#39;,
+ &#39;ADVERSITY&#39;,
+ &#39;ADVERT&#39;,
+ &#39;ADVERTISE&#39;,
+ &#39;ADVERTISEMENT&#39;,
+ &#39;ADVERTISER&#39;,
+ &#39;ADVERTISING&#39;,
+ &#39;ADVERTIZE&#39;,
+ &#39;ADVERTIZEMENT&#39;,
+ &#39;ADVERTORIAL&#39;,
+ &#39;ADVICE&#39;,
+ &#39;ADVISABILITY&#39;,
+ &#39;ADVISABLE&#39;,
+ &#39;ADVISABLY&#39;,
+ &#39;ADVISE&#39;,
+ &#39;ADVISED&#39;,
+ &#39;ADVISEDLY&#39;,
+ &#39;ADVISEMENT&#39;,
+ &#39;ADVISER&#39;,
+ &#39;ADVISOR&#39;,
+ &#39;ADVISORY&#39;,
+ &#39;ADVOCACY&#39;,
+ &#39;ADVOCATE&#39;,
+ &#39;ADVOCATION&#39;,
+ &#39;ADVOCATOR&#39;,
+ &#39;ADZ&#39;,
+ &#39;ADZE&#39;,
+ &#39;AEGEAN&#39;,
+ &#39;AEGIS&#39;,
+ &#39;AELFRIC&#39;,
+ &#39;AENEAS&#39;,
+ &#39;AEOLIA&#39;,
+ &#39;AEOLIAN&#39;,
+ &#39;AEOLIAN&#39;,
+ &#39;AEOLIS&#39;,
+ &#39;AEOLUS&#39;,
+ &#39;AEON&#39;,
+ &#39;AEONIAN&#39;,
+ &#39;AERATE&#39;,
+ &#39;AERATION&#39;,
+ &#39;AERATOR&#39;,
+ &#39;AERIAL&#39;,
+ &#39;AERIALIST&#39;,
+ &#39;AERIALLY&#39;,
+ &#39;AERIE&#39;,
+ &#39;AEROBATICS&#39;,
+ &#39;AEROBE&#39;,
+ &#39;AEROBIC&#39;,
+ &#39;AEROBICALLY&#39;,
+ &#39;AEROBICS&#39;,
+ &#39;AERODROME&#39;,
+ &#39;AERODYNAMIC&#39;,
+ &#39;AERODYNAMICAL&#39;,
+ &#39;AERODYNAMICALLY&#39;,
+ &#39;AERODYNAMICIST&#39;,
+ &#39;AERODYNAMICS&#39;,
+ &#39;AEROMETER&#39;,
+ &#39;AERONAUT&#39;,
+ &#39;AERONAUTIC&#39;,
+ &#39;AERONAUTICAL&#39;,
+ &#39;AERONAUTICS&#39;,
+ &#39;AEROPAUSE&#39;,
+ &#39;AEROPLANE&#39;,
+ &#39;AEROPONICS&#39;,
+ &#39;AEROSOL&#39;,
+ &#39;AEROSPACE&#39;,
+ &#39;AERY&#39;,
+ &#39;AESCHYLEAN&#39;,
+ &#39;AESCHYLUS&#39;,
+ &#39;AESCULAPIUS&#39;,
+ &#39;AESOP&#39;,
+ &#39;AESOPIAN&#39;,
+ &#39;AESOPIC&#39;,
+ &#39;AESTHESIA&#39;,
+ &#39;AESTHETE&#39;,
+ &#39;AESTHETIC&#39;,
+ &#39;AESTHETICALLY&#39;,
+ &#39;AESTHETICIAN&#39;,
+ &#39;AESTHETICISM&#39;,
+ &#39;AESTHETICS&#39;,
+ &#39;AESTIVAL&#39;,
+ &#39;AESTIVATE&#39;,
+ &#39;AETIOLOGY&#39;,
+ &#39;AFAR&#39;,
+ &#39;AFFABILITY&#39;,
+ &#39;AFFABLE&#39;,
+ &#39;AFFABLY&#39;,
+ &#39;AFFAIR&#39;,
+ &#39;AFFAIRS&#39;,
+ &#39;AFFECT&#39;,
+ &#39;AFFECTATION&#39;,
+ &#39;AFFECTED&#39;,
+ &#39;AFFECTEDLY&#39;,
+ &#39;AFFECTING&#39;,
+ &#39;AFFECTINGLY&#39;,
+ &#39;AFFECTION&#39;,
+ &#39;AFFECTIONATE&#39;,
+ &#39;AFFECTIONATELY&#39;,
+ &#39;AFFECTIVE&#39;,
+ &#39;AFFECTIVELY&#39;,
+ &#39;AFFECTIVENESS&#39;,
+ &#39;AFFECTLESS&#39;,
+ &#39;AFFECTLESSNESS&#39;,
+ &#39;AFFERENT&#39;,
+ &#39;AFFIANCE&#39;,
+ &#39;AFFIDAVIT&#39;,
+ &#39;AFFILIATE&#39;,
+ &#39;AFFILIATED&#39;,
+ &#39;AFFILIATION&#39;,
+ &#39;AFFILIATIVE&#39;,
+ &#39;AFFINITY&#39;,
+ &#39;AFFIRM&#39;,
+ &#39;AFFIRMABLE&#39;,
+ &#39;AFFIRMANT&#39;,
+ &#39;AFFIRMATION&#39;,
+ &#39;AFFIRMATIVE&#39;,
+ &#39;AFFIRMATIVELY&#39;,
+ &#39;AFFIRMER&#39;,
+ &#39;AFFIX&#39;,
+ &#39;AFFIXATION&#39;,
+ &#39;AFFLATUS&#39;,
+ &#39;AFFLICT&#39;,
+ &#39;AFFLICTION&#39;,
+ &#39;AFFLICTIVE&#39;,
+ &#39;AFFLICTIVELY&#39;,
+ &#39;AFFLUENCE&#39;,
+ &#39;AFFLUENT&#39;,
+ &#39;AFFLUENTLY&#39;,
+ &#39;AFFLUX&#39;,
+ &#39;AFFORD&#39;,
+ &#39;AFFORDABILITY&#39;,
+ &#39;AFFORDABLE&#39;,
+ &#39;AFFORDABLY&#39;,
+ &#39;AFFOREST&#39;,
+ &#39;AFFORESTATION&#39;,
+ &#39;AFFRAY&#39;,
+ &#39;AFFRIGHT&#39;,
+ &#39;AFFRONT&#39;,
+ &#39;AFFRONTED&#39;,
+ &#39;AFGHAN&#39;,
+ &#39;AFGHAN&#39;,
+ &#39;AFGHANI&#39;,
+ &#39;AFGHANISTAN&#39;,
+ &#39;AFICIONADO&#39;,
+ &#39;AFIELD&#39;,
+ &#39;AFIRE&#39;,
+ &#39;AFLAME&#39;,
+ &#39;AFLATOXIN&#39;,
+ &#39;AFLOAT&#39;,
+ &#39;AFLUTTER&#39;,
+ &#39;AFOOT&#39;,
+ &#39;AFOREMENTIONED&#39;,
+ &#39;AFORESAID&#39;,
+ &#39;AFORETHOUGHT&#39;,
+ &#39;AFOUL&#39;,
+ &#39;AFRAID&#39;,
+ &#39;AFRESH&#39;,
+ &#39;AFRICA&#39;,
+ &#39;AFRICAN&#39;,
+ &#39;AFRICANA&#39;,
+ &#39;AFRIKAANS&#39;,
+ &#39;AFRIKANER&#39;,
+ &#39;AFRO&#39;,
+ &#39;AFROCENTRIC&#39;,
+ &#39;AFROCENTRISM&#39;,
+ &#39;AFROCENTRIST&#39;,
+ &#39;AFT&#39;,
+ &#39;AFTER&#39;,
+ &#39;AFTERBIRTH&#39;,
+ &#39;AFTERBURNER&#39;,
+ &#39;AFTERCARE&#39;,
+ &#39;AFTERDECK&#39;,
+ &#39;AFTEREFFECT&#39;,
+ &#39;AFTERGLOW&#39;,
+ &#39;AFTERIMAGE&#39;,
+ &#39;AFTERLIFE&#39;,
+ &#39;AFTERMARKET&#39;,
+ &#39;AFTERMATH&#39;,
+ &#39;AFTERNOON&#39;,
+ &#39;AFTERSCHOOL&#39;,
+ &#39;AFTERSHAVE&#39;,
+ &#39;AFTERSHOCK&#39;,
+ &#39;AFTERTASTE&#39;,
+ &#39;AFTERTHOUGHT&#39;,
+ ...]</pre>
 </div>
+
 </div>
 
 </div>

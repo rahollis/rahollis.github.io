@@ -28,9 +28,7 @@ Weekly Schedule
    Week 10 <./Schedule/week10_s24>
 
    Week 11/12 <./Schedule/week11-12>
-..
-   Week 12 <./Schedule/week12>
-..
-   Week 13/14 <./Schedule/week13-14>
+
+   Week 13 <./Schedule/week13_s24>
 ..
    Week 14 <./Schedule/week14>
