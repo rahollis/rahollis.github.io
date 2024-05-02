@@ -1,15 +1,15 @@
-Week 14: May 8 - May 12
-=======================
+Week 14: April 29 - May 3
+=========================
 
 Project 7
 ~~~~~~~~~
 
-* :doc:`Worlde <../Projects/wordle/wordle>`
+* :doc:`Encryption/decryption <../Projects/message_decrypt/message_decrypt>`
 
 Python
 ~~~~~~
 
-* Colorama
+* 
 
 Week 14 notebook
 ~~~~~~~~~~~~~~~

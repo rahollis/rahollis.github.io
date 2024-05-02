@@ -19,14 +19,38 @@ Below are the rubrics for exam 7.
 Question 1
 ~~~~~~~~~~
 
-Find the vector in the column space that is closest to the given vector.
+Solve least squares problem.
+
+(4 pts) Projection method
+	(-1 pt) Basis of column space not orthogonal.
+	
+	(-1 pt) Error in projection.
+
+	(-1 pt) Error in solving system.
+
+	(-1 pt) Missing work.
+(4 pts) Pseudo-inverse method
+	(-1 pt) Minor computational error
+
+	(-2 pt) Major mathematical error
+
+	(-1 pt) Missing work
+
+	(-1 pt) Answer is missing or incorrect
 
 
 
 Question 2
 ~~~~~~~~~~
 
-Find the line of best fit.
+Project onto subspace.
+
+(2 pts) Orthogonal basis
+	(-2 pts) Basis is not orthogonal
+(2 pts) Projection
+	(-1 pt) Formula incorrect
+
+	(-1 pt) Answer incorrect or missing
 
 
 Question 3
@@ -68,4 +92,12 @@ Question 4
 ~~~~~~~~~~
 
 Compute the singular values.
+
+(-1 pt) Minor computational error
+
+(-2 pt) Major mathematical error
+
+(-1 pt) Answer is incorrect or missing
+
+(-1 pt) Work is missing
 
